@@ -1,0 +1,217 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #111;
+}
+
+.nav-right a.active {
+    color: #0A84FF;
+}
+
+/* --------------------------------------------- */
+/* PREMIUM HERO (NEW) */
+/* --------------------------------------------- */
+
+.hero-premium {
+    position: relative;
+    background: url('assets/racing_bg_dark.jpg') center/cover no-repeat;
+    padding: 120px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(2px);
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.15;
+}
+
+.hero-sub {
+    font-size: 1.25rem;
+    max-width: 520px;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+.cta-large {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    background: #00e676;
+    color: #000;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.cta-large:hover {
+    background: #00c864;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mockup-frame {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.mockup-img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 10px;
+}
+
+/* MOBILE HERO */
+@media (max-width: 900px) {
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-sub {
+        margin: 0 auto 30px;
+    }
+}
+
+/* --------------------------------------------- */
+/* WHY SECTION */
+/* --------------------------------------------- */
+
+.why {
+    padding: 60px 80px;
+    background: #f8f8f8;
+}
+
+.why h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.why-grid {
+    display: flex;
+    gap: 40px;
+}
+
+.why-item {
+    flex: 1;
+}
+
+.why-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* --------------------------------------------- */
+/* TRACKIQ PREVIEW */
+/* --------------------------------------------- */
+
+.trackiq-preview {
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.trackiq-preview h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* CTA (shared) */
+.cta {
+    display: inline-block;
+    background: #0A84FF;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --------------------------------------------- */
+/* FOOTER */
+/* --------------------------------------------- */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+/* --------------------------------------------- */
+/* TRACKIQ PAGE HERO */
+/* --------------------------------------------- */
+
+.trackiq-hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.hero-logo-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trackiq-logo {
+    height: 80px;
+    object-fit: contain;
+}
