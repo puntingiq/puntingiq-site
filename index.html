@@ -28,6 +28,8 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
+        html { scroll-behavior: smooth; }
+
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
             background: radial-gradient(circle at top, #10182a 0, #05070b 52%, #020308 100%);
@@ -36,6 +38,16 @@
         }
 
         a { color: inherit; text-decoration: none; }
+
+        button {
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        button:focus-visible {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
 
         .page { min-height: 100vh; display: flex; flex-direction: column; }
 
@@ -54,20 +66,24 @@
 
         .brand { display: flex; align-items: center; gap: 10px; }
 
+        .brand img { display: block; }
+
         .brand-text-main { font-weight: 650; letter-spacing: 0.06em; font-size: 13px; text-transform: uppercase; }
         .brand-text-sub { font-size: 11px; color: var(--text-muted); }
 
         .nav { display: flex; align-items: center; gap: 18px; font-size: 13px; color: var(--text-muted); }
         .nav a { padding: 6px 10px; border-radius: 999px; transition: background 0.18s ease, color 0.18s ease; }
-        .nav a:hover { background: rgba(15,23,36,0.9); color: var(--text-main); }
+        .nav a:hover, .nav a:focus-visible { background: rgba(15,23,36,0.9); color: var(--text-main); outline: none; }
 
         .nav-cta {
             padding: 7px 14px; border-radius: 999px;
             background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
-            color: #020308; font-weight: 600;
+            color: #020308; font-weight: 600; font-size: 13px;
             box-shadow: 0 0 0 1px rgba(2,3,8,0.9), var(--shadow-soft);
-            white-space: nowrap;
+            white-space: nowrap; border: none; cursor: pointer;
         }
+
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(2,3,8,0.9), 0 28px 70px rgba(0, 0, 0, 0.6); }
 
         /* HERO */
         .hero {
@@ -116,12 +132,18 @@
             color: #020308; font-weight: 600; font-size: 13px; box-shadow: var(--shadow-soft);
         }
 
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 28px 70px rgba(0, 0, 0, 0.6); }
+        .btn-primary:active { transform: translateY(0); }
+
         .btn-ghost {
             padding: 9px 16px; border-radius: 999px;
             border: 1px solid rgba(88,104,138,0.9);
             background: rgba(5,7,11,0.9); color: var(--text-main);
             font-size: 13px; cursor: pointer;
         }
+
+        .btn-ghost:hover { background: rgba(15,23,36,0.95); border-color: rgba(47,123,255,0.6); }
+        .btn-ghost:active { transform: translateY(0); }
 
         .hero-footnote { font-size: 11px; color: var(--text-muted); }
         .hero-footnote span { color: var(--accent-green); }
@@ -169,6 +191,8 @@
         .metric-tag { font-size: 10px; color: var(--accent-green); }
         .metric-tag.danger { color: var(--danger); }
 
+        .metric-note { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
         .hero-card-footer {
             margin-top: 8px; display: flex; justify-content: space-between;
             font-size: 10px; color: var(--text-muted);
@@ -203,6 +227,12 @@
             border-radius: var(--radius-md); background: rgba(5,7,11,0.9);
             border: 1px solid var(--border-subtle); padding: 14px;
             box-shadow: var(--shadow-subtle);
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .pillar:hover {
+            border-color: rgba(47,123,255,0.6);
+            background: rgba(10,16,26,0.95);
         }
 
         .pillar-label {
@@ -276,6 +306,7 @@
             text-transform: uppercase;
             letter-spacing: 0.12em;
             font-size: 10px;
+            font-weight: 600;
         }
 
         .trackiq-table-row:nth-child(odd) { background: rgba(5, 7, 11, 0.9); }
@@ -298,12 +329,14 @@
             height: 6px;
             border-radius: 999px;
             background: var(--accent-green);
+            box-shadow: 0 0 0 3px var(--accent-green-soft);
         }
 
         .trackiq-footnote {
             margin-top: 10px;
             font-size: 11px;
             color: var(--text-muted);
+            line-height: 1.6;
         }
 
         /* RESULTS SECTION */
@@ -320,6 +353,12 @@
             padding: 12px 12px 10px;
             font-size: 11px;
             color: var(--text-muted);
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .result-card:hover {
+            border-color: rgba(47,123,255,0.5);
+            background: var(--bg-elevated);
         }
 
         .result-label {
@@ -327,6 +366,7 @@
             letter-spacing: 0.14em;
             font-size: 10px;
             margin-bottom: 4px;
+            font-weight: 600;
         }
 
         .result-value {
@@ -338,6 +378,7 @@
 
         .result-note {
             font-size: 10px;
+            line-height: 1.4;
         }
 
         /* WHY SECTION */
@@ -360,6 +401,7 @@
         .why-list h4 {
             font-size: 13px;
             margin-bottom: 8px;
+            font-weight: 600;
         }
 
         .why-items {
@@ -375,24 +417,28 @@
             gap: 6px;
             font-size: 11px;
             color: var(--text-muted);
+            line-height: 1.5;
         }
 
         .why-item span {
-            margin-top: 2px;
+            margin-top: 5px;
             width: 6px;
             height: 6px;
             border-radius: 999px;
             background: var(--danger);
+            flex-shrink: 0;
         }
 
         .why-item.good span {
             background: var(--accent-green);
+            box-shadow: 0 0 0 4px var(--accent-green-soft);
         }
 
         .why-note {
             margin-top: 10px;
             font-size: 11px;
             color: var(--text-muted);
+            line-height: 1.6;
         }
 
         /* PRODUCT CARDS */
@@ -409,6 +455,12 @@
             padding: 14px 14px 12px;
             box-shadow: var(--shadow-subtle);
             font-size: 12px;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .product-card:hover {
+            border-color: rgba(47,123,255,0.5);
+            background: rgba(10,16,26,0.95);
         }
 
         .product-tag {
@@ -417,11 +469,13 @@
             letter-spacing: 0.16em;
             color: var(--accent-blue);
             margin-bottom: 4px;
+            font-weight: 600;
         }
 
         .product-title {
             font-size: 14px;
             margin-bottom: 4px;
+            font-weight: 600;
         }
 
         .product-body {
@@ -434,6 +488,7 @@
         .product-cta {
             font-size: 11px;
             color: var(--accent-green);
+            font-weight: 500;
         }
 
         /* SUBSCRIPTION SECTION */
@@ -453,9 +508,9 @@
 
         .subscribe-text { max-width: 520px; }
 
-        .subscribe-title { font-size: 18px; margin-bottom: 4px; }
+        .subscribe-title { font-size: 18px; margin-bottom: 4px; font-weight: 600; }
 
-        .subscribe-sub { font-size: 13px; color: var(--text-muted); }
+        .subscribe-sub { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
         .subscribe-cta {
             display: flex;
@@ -464,9 +519,31 @@
             min-width: 220px;
         }
 
+        .subscribe-cta button {
+            width: 100%;
+        }
+
         .subscribe-note {
             font-size: 11px;
             color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* RESULTS LINK */
+        .results-link {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 13px;
+            color: var(--accent-green);
+            font-weight: 500;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--accent-green);
+            transition: opacity 0.18s ease;
+        }
+
+        .results-link:hover, .results-link:focus-visible {
+            opacity: 0.75;
+            outline: none;
         }
 
         /* FOOTER */
@@ -488,7 +565,15 @@
             flex-wrap: wrap;
         }
 
-        .footer-links a { color: var(--text-muted); }
+        .footer-links a {
+            color: var(--text-muted);
+            transition: color 0.18s ease;
+        }
+
+        .footer-links a:hover, .footer-links a:focus-visible {
+            color: var(--accent-green);
+            outline: none;
+        }
 
         /* RESPONSIVE */
         @media (max-width: 900px) {
@@ -512,6 +597,10 @@
                 position: static;
                 border-radius: 14px;
             }
+            .trackiq-table-header,
+            .trackiq-table-row {
+                grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            }
         }
 
         @media (max-width: 600px) {
@@ -519,6 +608,22 @@
             .nav { display: none; }
             .results-grid { grid-template-columns: minmax(0, 1fr); }
             .hero { margin-top: 28px; }
+            .why-items {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .trackiq-table-header,
+            .trackiq-table-row {
+                grid-template-columns: minmax(0, 1fr);
+                font-size: 10px;
+            }
+            .subscribe {
+                flex-direction: column;
+                text-align: center;
+            }
+            .subscribe-cta {
+                width: 100%;
+                min-width: auto;
+            }
         }
     </style>
 </head>
@@ -530,7 +635,7 @@
 <!-- HEADER -->
 <header class="header">
     <div class="brand">
-        <img src="assets/PuntingIQheader.png" width="120"/>
+        <img src="assets/PuntingIQheader.png" width="120" alt="PuntingIQ logo"/>
         <div>
             <div class="brand-text-main">PuntingIQ</div>
             <div class="brand-text-sub">Racing Intelligence Layer</div>
@@ -539,19 +644,19 @@
 
     <nav class="nav">
         <a href="#trackiq">TrackIQ</a>
-        <a href="/results.html">Results</a>
+        <a href="results.html">Results</a>
         <a href="#why">Why PuntingIQ</a>
         <a href="#products">Products</a>
-        <a href="#subscribe" class="nav-cta">Become a member</a>
+        <button type="button" onclick="handleNavClick('#subscribe')" class="nav-cta">Become a member</button>
     </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" aria-label="Hero section">
     <div>
         <div class="hero-kicker">
             <div class="hero-kicker-dot"></div>
-            Racing Intelligence Layer
+            <span>Racing Intelligence Layer</span>
         </div>
 
         <h1 class="hero-title">
@@ -566,8 +671,8 @@
         </p>
 
         <div class="hero-ctas">
-            <button class="btn-primary" onclick="location.href='#trackiq'">Explore TrackIQ</button>
-            <button class="btn-ghost" onclick="location.href='#why'">How it works</button>
+            <button type="button" class="btn-primary" onclick="handleNavClick('#trackiq')">Explore TrackIQ</button>
+            <button type="button" class="btn-ghost" onclick="handleNavClick('#why')">How it works</button>
         </div>
 
         <div class="hero-footnote">
@@ -581,7 +686,7 @@
             <div class="hero-card-header">
                 <div class="hero-card-pill">
                     <div class="hero-card-pill-dot"></div>
-                    Live racing intelligence
+                    <span>Live racing intelligence</span>
                 </div>
                 <div class="hero-card-title">TrackIQ Snapshot</div>
             </div>
@@ -635,21 +740,21 @@
 </section>
 
 <!-- VALUE PILLARS -->
-<section class="section">
+<section class="section" aria-label="Core principles">
     <div class="section-header">
         <div class="section-kicker">Core principles</div>
         <h2 class="section-title">The intelligence layer behind every decision.</h2>
         <p class="section-sub">
             PuntingIQ is built as an internal engine first – structured data, engineered models, and
             a daily operating rhythm that treats racing like a portfolio, not a pastime. Stability comes
-            from the system; edge comes from how it’s used.
+            from the system; edge comes from how it's used.
         </p>
     </div>
 
     <div class="pillars">
         <div class="pillar">
             <div class="pillar-label">Structured intelligence</div>
-            <div class="pillar-title">Data pipelines, not guesswork.</div>
+            <h3 class="pillar-title">Data pipelines, not guesswork.</h3>
             <div class="pillar-body">
                 Every meet runs through a unified data layer – classifications, filters, and system logic
                 designed to be explainable, testable, and repeatable. No vibes, no narratives – just
@@ -659,7 +764,7 @@
 
         <div class="pillar">
             <div class="pillar-label">Repeatable edge</div>
-            <div class="pillar-title">Systems that scale across tracks.</div>
+            <h3 class="pillar-title">Systems that scale across tracks.</h3>
             <div class="pillar-body">
                 Best & Elite Bets have delivered a <strong>56.7% WIN strike rate</strong> (38 winners from 67),
                 including winners at <strong>$31, $19, $18, $14, $11, $9, $8, $7.50, $6, $5.50 and $5.00</strong>.
@@ -669,7 +774,7 @@
 
         <div class="pillar">
             <div class="pillar-label">Founder‑led architecture</div>
-            <div class="pillar-title">Engineered by a technical founder.</div>
+            <h3 class="pillar-title">Engineered by a technical founder.</h3>
             <div class="pillar-body">
                 No outsourced models. No white‑label feeds. A single architect stewarding the logic,
                 infrastructure, and daily operational decisions – the same person who runs the systems
@@ -680,22 +785,16 @@
 </section>
 
 <!-- TRACKIQ SECTION -->
-<section class="section" id="trackiq">
+<section class="section" id="trackiq" aria-label="TrackIQ daily racing intelligence">
     <div class="section-header">
 
         <div class="section-kicker">TrackIQ</div>
 
-        <h2 class="section-title" 
-            style="display:flex;align-items:center;gap:12px;">
-
-            <img src="assets/TrackIQ logo 2.png"
-                 width="60"
-                 alt="TrackIQ logo"
-                 style="display:block;"/>
-
+        <h2 class="section-title" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <img src="assets/TrackIQ logo 2.png" width="60" alt="TrackIQ logo" style="display:block;"/>
             <span style="display:flex;flex-direction:column;line-height:1.2;">
                 <strong>TrackIQ</strong>
-                <span>Your daily racing intelligence brief.</span>
+                <span style="color:var(--text-muted);font-size:13px;font-weight:400;">Your daily racing intelligence brief.</span>
             </span>
         </h2>
 
@@ -711,61 +810,61 @@
         <div>
             <div class="trackiq-card">
                 <div class="trackiq-header">
-                    <div class="trackiq-title">Today’s intelligence</div>
+                    <h3 class="trackiq-title">Today's intelligence</h3>
                     <div class="trackiq-tag">Sample layout – not live data</div>
                 </div>
 
-                <div class="trackiq-table">
-                    <div class="trackiq-table-header">
-                        <div>Race / Track</div>
-                        <div>Classification</div>
-                        <div>Price band</div>
-                        <div>Signal</div>
+                <div class="trackiq-table" role="table" aria-label="Today's race intelligence">
+                    <div class="trackiq-table-header" role="row">
+                        <div role="columnheader">Race / Track</div>
+                        <div role="columnheader">Classification</div>
+                        <div role="columnheader">Price band</div>
+                        <div role="columnheader">Signal</div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>R3 – Flemington</div>
                         <div>System bet</div>
                         <div>$3.00 – $5.50</div>
                         <div>
-                            <span class="trackiq-chip">
-                                <span class="trackiq-chip-dot"></span>
+                            <span class="trackiq-chip" aria-label="Core edge">
+                                <span class="trackiq-chip-dot" aria-hidden="true"></span>
                                 Core edge
                             </span>
                         </div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>R5 – Randwick</div>
                         <div>Best bet</div>
                         <div>$2.20 – $3.20</div>
                         <div>
-                            <span class="trackiq-chip">
-                                <span class="trackiq-chip-dot"></span>
+                            <span class="trackiq-chip" aria-label="Founder pick">
+                                <span class="trackiq-chip-dot" aria-hidden="true"></span>
                                 Founder pick
                             </span>
                         </div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>R7 – Morphettville</div>
                         <div>System bet</div>
                         <div>$6.00 – $9.00</div>
                         <div>
-                            <span class="trackiq-chip">
-                                <span class="trackiq-chip-dot"></span>
+                            <span class="trackiq-chip" aria-label="High-volatility">
+                                <span class="trackiq-chip-dot" aria-hidden="true"></span>
                                 High‑volatility
                             </span>
                         </div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>R8 – Caulfield</div>
                         <div>Watchlist</div>
                         <div>$4.00 – $7.00</div>
                         <div>
-                            <span class="trackiq-chip">
-                                <span class="trackiq-chip-dot"></span>
+                            <span class="trackiq-chip" aria-label="Context only">
+                                <span class="trackiq-chip-dot" aria-hidden="true"></span>
                                 Context only
                             </span>
                         </div>
@@ -783,61 +882,61 @@
         <div>
             <div class="trackiq-card">
                 <div class="trackiq-header">
-                    <div class="trackiq-title">What TrackIQ gives you</div>
+                    <h3 class="trackiq-title">What TrackIQ gives you</h3>
                     <div class="trackiq-tag">Portfolio view</div>
                 </div>
 
-                <div class="trackiq-table">
-                    <div class="trackiq-table-header">
-                        <div>Stream</div>
-                        <div>Role</div>
-                        <div>Profile</div>
-                        <div>Signal</div>
+                <div class="trackiq-table" role="table" aria-label="TrackIQ product streams">
+                    <div class="trackiq-table-header" role="row">
+                        <div role="columnheader">Stream</div>
+                        <div role="columnheader">Role</div>
+                        <div role="columnheader">Profile</div>
+                        <div role="columnheader">Signal</div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>System Bets</div>
                         <div>Foundation</div>
                         <div>Stable, rules‑based</div>
                         <div>
-                            <span class="trackiq-chip">
-                                <span class="trackiq-chip-dot"></span>
+                            <span class="trackiq-chip" aria-label="Core engine">
+                                <span class="trackiq-chip-dot" aria-hidden="true"></span>
                                 Core engine
                             </span>
                         </div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>Best Bets</div>
                         <div>High‑confidence</div>
                         <div>Selective, curated</div>
                         <div>
-                            <span class="trackiq-chip">
-                                <span class="trackiq-chip-dot"></span>
+                            <span class="trackiq-chip" aria-label="Founder edge">
+                                <span class="trackiq-chip-dot" aria-hidden="true"></span>
                                 Founder edge
                             </span>
                         </div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>Elite Bets</div>
                         <div>Top tier</div>
                         <div>High value, low frequency</div>
                         <div>
-                            <span class="trackiq-chip">
-                                <span class="trackiq-chip-dot"></span>
+                            <span class="trackiq-chip" aria-label="Premium">
+                                <span class="trackiq-chip-dot" aria-hidden="true"></span>
                                 Premium
                             </span>
                         </div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>Context & bias</div>
                         <div>Risk control</div>
                         <div>Track, rail, tempo</div>
                         <div>
-                            <span class="trackiq-chip">
-                                <span class="trackiq-chip-dot"></span>
+                            <span class="trackiq-chip" aria-label="Conditions">
+                                <span class="trackiq-chip-dot" aria-hidden="true"></span>
                                 Conditions
                             </span>
                         </div>
@@ -854,7 +953,7 @@
 </section>
 
 <!-- RESULTS SECTION -->
-<section class="section" id="results">
+<section class="section" id="results" aria-label="Audited results and performance">
     <div class="section-header">
         <div class="section-kicker">Results</div>
         <h2 class="section-title">Audited performance. No screenshots.</h2>
@@ -863,10 +962,9 @@
             through the same data layer – so performance can be audited, not cherry‑picked.
         </p>
         
-        <a href="/results.html" class="results-link">
-        View full results & daily audit trail →
+        <a href="results.html" class="results-link">
+            View full results & daily audit trail →
         </a>
-
     </div>
 
     <div class="results-grid">
@@ -899,7 +997,7 @@
 </section>
 
 <!-- WHY PUNTINGIQ -->
-<section class="section" id="why">
+<section class="section" id="why" aria-label="Why PuntingIQ is different">
     <div class="section-header">
         <div class="section-kicker">Why PuntingIQ</div>
         <h2 class="section-title">Built for punters who think in portfolios.</h2>
@@ -911,22 +1009,22 @@
 
     <div class="why-grid">
         <div class="why-list">
-            <h4>What PuntingIQ is not.</h4>
+            <h3>What PuntingIQ is not.</h3>
             <div class="why-items">
                 <div class="why-item">
-                    <span></span>
-                    <div>Not a hype‑driven tipping service chasing yesterday’s winners.</div>
+                    <span aria-hidden="true"></span>
+                    <div>Not a hype‑driven tipping service chasing yesterday's winners.</div>
                 </div>
                 <div class="why-item">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>Not a white‑label feed reskinned with a logo and a story.</div>
                 </div>
                 <div class="why-item">
-                    <span></span>
-                    <div>Not a Discord room full of untracked “moral” bets.</div>
+                    <span aria-hidden="true"></span>
+                    <div>Not a Discord room full of untracked "moral" bets.</div>
                 </div>
                 <div class="why-item">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>Not a favourites service – recent winners include $31, $19, $18, $14, $11, $9,
                         $8, $7.50, $6, $5.50 and $5.00.</div>
                 </div>
@@ -939,28 +1037,28 @@
         </div>
 
         <div class="why-list">
-            <h4>What PuntingIQ actually is.</h4>
+            <h3>What PuntingIQ actually is.</h3>
             <div class="why-items">
                 <div class="why-item good">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>A structured intelligence layer that classifies, filters, and scores every runner.</div>
                 </div>
                 <div class="why-item good">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>A portfolio view of the day – System, Best, and Elite Bets with defined roles.</div>
                 </div>
                 <div class="why-item good">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>An engine that finds genuine value – not favourites – with winners up to $31.</div>
                 </div>
                 <div class="why-item good">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>A founder‑led architecture where the person building the model also runs it.</div>
                 </div>
             </div>
 
             <div class="why-note">
-                The goal isn’t to win every race. It’s to build a repeatable, explainable process that
+                The goal isn't to win every race. It's to build a repeatable, explainable process that
                 can be trusted over time – especially when conditions turn ugly.
             </div>
         </div>
@@ -968,54 +1066,54 @@
 </section>
 
 <!-- PRODUCTS -->
-<section class="section" id="products">
+<section class="section" id="products" aria-label="PuntingIQ products">
     <div class="section-header">
         <div class="section-kicker">Products</div>
         <h2 class="section-title">Streams built on the same engine.</h2>
         <p class="section-sub">
-            Every product sits on top of the same structured intelligence layer – no separate “tip feeds”,
+            Every product sits on top of the same structured intelligence layer – no separate "tip feeds",
             no disconnected logic. Just different ways to express the same edge.
         </p>
     </div>
 
     <div class="products-grid">
-        <div class="product-card">
+        <article class="product-card">
             <div class="product-tag">TrackIQ</div>
-            <div class="product-title">Daily racing intelligence brief.</div>
+            <h3 class="product-title">Daily racing intelligence brief.</h3>
             <div class="product-body">
                 A structured view of the day – system bets, best bets, and contextual signals in one place.
                 Built for punters who want to see the whole portfolio, not just isolated tips.
             </div>
             <div class="product-cta">Included with membership.</div>
-        </div>
+        </article>
 
-        <div class="product-card">
+        <article class="product-card">
             <div class="product-tag">System Bets</div>
-            <div class="product-title">Rules‑based foundation.</div>
+            <h3 class="product-title">Rules‑based foundation.</h3>
             <div class="product-body">
                 Stable, explainable logic applied across tracks and conditions. Designed to be audited,
                 stress‑tested, and run as a long‑term engine – not a short‑term tipping stream.
             </div>
             <div class="product-cta">Runs daily across active tracks.</div>
-        </div>
+        </article>
 
-        <div class="product-card">
+        <article class="product-card">
             <div class="product-tag">Best & Elite Bets</div>
-            <div class="product-title">High‑confidence, high‑edge.</div>
+            <h3 class="product-title">High‑confidence, high‑edge.</h3>
             <div class="product-body">
                 Founder‑curated selections drawn from the full system universe – the highest‑conviction
                 opportunities, including winners at $31, $19, $18, $14, $11, $9 and more.
             </div>
             <div class="product-cta">Limited volume. Defined role.</div>
-        </div>
+        </article>
     </div>
 </section>
 
 <!-- SUBSCRIBE -->
-<section class="section" id="subscribe">
+<section class="section" id="subscribe" aria-label="Membership">
     <div class="subscribe">
         <div class="subscribe-text">
-            <div class="subscribe-title">Become a PuntingIQ member.</div>
+            <h2 class="subscribe-title">Become a PuntingIQ member.</h2>
             <div class="subscribe-sub">
                 Access TrackIQ, System Bets, and founder‑curated Best & Elite Bets – all anchored to a single,
                 structured intelligence layer. No screenshots. No hype. Just a daily operating rhythm.
@@ -1023,7 +1121,7 @@
         </div>
 
         <div class="subscribe-cta">
-            <button class="btn-primary" onclick="location.href='mailto:info@puntingiq.com.au'">
+            <button type="button" class="btn-primary" onclick="handleEmailClick('info@puntingiq.com.au')">
                 Request membership details
             </button>
             <div class="subscribe-note">
@@ -1034,11 +1132,11 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
+<footer class="footer" role="contentinfo">
     <div>© PuntingIQ. Racing Intelligence Layer.</div>
     <div class="footer-links">
         <a href="#trackiq">TrackIQ</a>
-        <a href="#results">Results</a>
+        <a href="results.html">Results</a>
         <a href="#why">Why PuntingIQ</a>
         <a href="#products">Products</a>
     </div>
@@ -1046,5 +1144,19 @@
 
 </div>
 </div>
+
+<script>
+    function handleNavClick(selector) {
+        const element = document.querySelector(selector);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function handleEmailClick(email) {
+        window.location.href = `mailto:${email}`;
+    }
+</script>
+
 </body>
 </html>
