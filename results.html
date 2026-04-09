@@ -28,6 +28,8 @@
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
+        html { scroll-behavior: smooth; }
+
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
             background: radial-gradient(circle at top, #10182a 0, #05070b 52%, #020308 100%);
@@ -37,10 +39,21 @@
 
         a { color: inherit; text-decoration: none; }
 
+        button {
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        button:focus-visible {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+        }
+
         .page { min-height: 100vh; display: flex; flex-direction: column; }
 
         .shell { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 24px 20px 64px; }
 
+        /* HEADER */
         .header {
             display: flex; align-items: center; justify-content: space-between;
             gap: 16px; padding: 10px 18px; border-radius: var(--radius-pill);
@@ -53,22 +66,27 @@
 
         .brand { display: flex; align-items: center; gap: 10px; }
 
+        .brand img { display: block; }
+
         .brand-text-main { font-weight: 650; letter-spacing: 0.06em; font-size: 13px; text-transform: uppercase; }
         .brand-text-sub { font-size: 11px; color: var(--text-muted); }
 
         .nav { display: flex; align-items: center; gap: 18px; font-size: 13px; color: var(--text-muted); }
         .nav a { padding: 6px 10px; border-radius: 999px; transition: background 0.18s ease, color 0.18s ease; }
-        .nav a:hover { background: rgba(15,23,36,0.9); color: var(--text-main); }
+        .nav a:hover, .nav a:focus-visible { background: rgba(15,23,36,0.9); color: var(--text-main); outline: none; }
         .nav a.active { background: rgba(47,123,255,0.14); color: var(--text-main); }
 
         .nav-cta {
             padding: 7px 14px; border-radius: 999px;
             background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
-            color: #020308; font-weight: 600;
+            color: #020308; font-weight: 600; font-size: 13px;
             box-shadow: 0 0 0 1px rgba(2,3,8,0.9), var(--shadow-soft);
-            white-space: nowrap;
+            white-space: nowrap; border: none; cursor: pointer;
         }
 
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(2,3,8,0.9), 0 28px 70px rgba(0, 0, 0, 0.6); }
+
+        /* HERO */
         .hero {
             display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr);
             gap: 32px; margin-top: 40px; align-items: center;
@@ -115,12 +133,18 @@
             color: #020308; font-weight: 600; font-size: 13px; box-shadow: var(--shadow-soft);
         }
 
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 28px 70px rgba(0, 0, 0, 0.6); }
+        .btn-primary:active { transform: translateY(0); }
+
         .btn-ghost {
             padding: 9px 16px; border-radius: 999px;
             border: 1px solid rgba(88,104,138,0.9);
             background: rgba(5,7,11,0.9); color: var(--text-main);
             font-size: 13px; cursor: pointer;
         }
+
+        .btn-ghost:hover { background: rgba(15,23,36,0.95); border-color: rgba(47,123,255,0.6); }
+        .btn-ghost:active { transform: translateY(0); }
 
         .hero-footnote { font-size: 11px; color: var(--text-muted); }
         .hero-footnote span { color: var(--accent-green); }
@@ -168,6 +192,8 @@
         .metric-tag { font-size: 10px; color: var(--accent-green); }
         .metric-tag.danger { color: var(--danger); }
 
+        .metric-note { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
         .hero-card-footer {
             margin-top: 8px; display: flex; justify-content: space-between;
             font-size: 10px; color: var(--text-muted);
@@ -179,6 +205,7 @@
             font-size: 10px; color: #dbe4ff;
         }
 
+        /* SECTION WRAPPER */
         .section { margin-top: 52px; }
         .section-header { margin-bottom: 18px; }
 
@@ -191,30 +218,53 @@
         .section-title { font-size: 20px; letter-spacing: -0.02em; margin-bottom: 4px; }
         .section-sub { font-size: 13px; color: var(--text-muted); max-width: 520px; }
 
-        .pillars {
-            display: grid; grid-template-columns: repeat(3,minmax(0,1fr));
-            gap: 16px;
+        /* RESULTS GRID */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
         }
 
-        .pillar {
-            border-radius: var(--radius-md); background: rgba(5,7,11,0.9);
-            border: 1px solid var(--border-subtle); padding: 14px;
-            box-shadow: var(--shadow-subtle);
+        .result-card {
+            border-radius: var(--radius-md);
+            background: var(--bg-elevated-soft);
+            border: 1px solid var(--border-subtle);
+            padding: 12px 12px 10px;
+            font-size: 11px;
+            color: var(--text-muted);
+            transition: border-color 0.2s ease, background 0.2s ease;
         }
 
-        .pillar-label {
-            font-size: 11px; text-transform: uppercase;
-            letter-spacing: 0.14em; color: var(--accent-green);
-            margin-bottom: 6px;
+        .result-card:hover {
+            border-color: rgba(47,123,255,0.5);
+            background: var(--bg-elevated);
         }
 
-        .pillar-title { font-size: 14px; margin-bottom: 6px; }
-        .pillar-body { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+        .result-label {
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-size: 10px;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
 
+        .result-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #f5f7ff;
+            margin-bottom: 2px;
+        }
+
+        .result-note {
+            font-size: 10px;
+            line-height: 1.4;
+        }
+
+        /* TRACKIQ GRID */
         .trackiq-grid {
-            display: grid; 
+            display: grid;
             grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-            gap: 22px; 
+            gap: 22px;
             align-items: flex-start;
         }
 
@@ -228,8 +278,8 @@
         }
 
         .trackiq-header {
-            display: flex; 
-            justify-content: space-between; 
+            display: flex;
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
         }
@@ -250,6 +300,7 @@
             color: var(--text-muted);
         }
 
+        /* TABLES */
         .trackiq-table,
         .audit-table {
             margin-top: 6px;
@@ -257,7 +308,6 @@
             background: rgba(5, 7, 11, 0.9);
             border: 1px solid rgba(27, 36, 51, 0.9);
             overflow: hidden;
-            min-width: 100%;
         }
 
         .trackiq-table-header,
@@ -270,12 +320,14 @@
             font-size: 11px;
         }
 
-        .trackiq-table-header {
+        .trackiq-table-header,
+        .audit-table-header {
             background: rgba(10, 16, 26, 0.95);
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.12em;
             font-size: 10px;
+            font-weight: 600;
         }
 
         .trackiq-table-row:nth-child(odd),
@@ -300,47 +352,25 @@
             height: 6px;
             border-radius: 999px;
             background: var(--accent-green);
+            box-shadow: 0 0 0 3px var(--accent-green-soft);
         }
 
         .trackiq-footnote {
             margin-top: 10px;
             font-size: 11px;
             color: var(--text-muted);
+            line-height: 1.6;
         }
 
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 14px;
+        /* AUDIT SCROLL */
+        .audit-scroll {
+            overflow: auto;
+            margin-top: 8px;
+            max-height: 400px;
+            border-radius: 12px;
         }
 
-        .result-card {
-            border-radius: var(--radius-md);
-            background: var(--bg-elevated-soft);
-            border: 1px solid var(--border-subtle);
-            padding: 12px 12px 10px;
-            font-size: 11px;
-            color: var(--text-muted);
-        }
-
-        .result-label {
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            font-size: 10px;
-            margin-bottom: 4px;
-        }
-
-        .result-value {
-            font-size: 18px;
-            font-weight: 600;
-            color: #f5f7ff;
-            margin-bottom: 2px;
-        }
-
-        .result-note {
-            font-size: 10px;
-        }
-
+        /* WHY SECTION */
         .why-grid {
             display: grid;
             grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
@@ -360,6 +390,7 @@
         .why-list h4 {
             font-size: 13px;
             margin-bottom: 8px;
+            font-weight: 600;
         }
 
         .why-items {
@@ -375,66 +406,31 @@
             gap: 6px;
             font-size: 11px;
             color: var(--text-muted);
+            line-height: 1.5;
         }
 
         .why-item span {
-            margin-top: 2px;
+            margin-top: 5px;
             width: 6px;
             height: 6px;
             border-radius: 999px;
             background: var(--danger);
+            flex-shrink: 0;
         }
 
         .why-item.good span {
             background: var(--accent-green);
+            box-shadow: 0 0 0 4px var(--accent-green-soft);
         }
 
         .why-note {
             margin-top: 10px;
             font-size: 11px;
             color: var(--text-muted);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 16px;
-        }
-
-        .product-card {
-            border-radius: var(--radius-md);
-            background: rgba(5, 7, 11, 0.9);
-            border: 1px solid var(--border-subtle);
-            padding: 14px 14px 12px;
-            box-shadow: var(--shadow-subtle);
-            font-size: 12px;
-        }
-
-        .product-tag {
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.16em;
-            color: var(--accent-blue);
-            margin-bottom: 4px;
-        }
-
-        .product-title {
-            font-size: 14px;
-            margin-bottom: 4px;
-        }
-
-        .product-body {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-bottom: 10px;
             line-height: 1.6;
         }
 
-        .product-cta {
-            font-size: 11px;
-            color: var(--accent-green);
-        }
-
+        /* SUBSCRIBE SECTION */
         .subscribe {
             border-radius: var(--radius-lg);
             background: radial-gradient(circle at top left, #1a2640 0, #05070b 52%, #020308 100%);
@@ -451,9 +447,9 @@
 
         .subscribe-text { max-width: 520px; }
 
-        .subscribe-title { font-size: 18px; margin-bottom: 4px; }
+        .subscribe-title { font-size: 18px; margin-bottom: 4px; font-weight: 600; }
 
-        .subscribe-sub { font-size: 13px; color: var(--text-muted); }
+        .subscribe-sub { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
         .subscribe-cta {
             display: flex;
@@ -462,11 +458,17 @@
             min-width: 220px;
         }
 
+        .subscribe-cta button {
+            width: 100%;
+        }
+
         .subscribe-note {
             font-size: 11px;
             color: var(--text-muted);
+            text-align: center;
         }
 
+        /* FOOTER */
         .footer {
             margin-top: 40px;
             padding-top: 18px;
@@ -485,13 +487,17 @@
             flex-wrap: wrap;
         }
 
-        .footer-links a { color: var(--text-muted); }
-
-        .audit-scroll {
-            overflow: auto;
-            margin-top: 8px;
+        .footer-links a {
+            color: var(--text-muted);
+            transition: color 0.18s ease;
         }
 
+        .footer-links a:hover, .footer-links a:focus-visible {
+            color: var(--accent-green);
+            outline: none;
+        }
+
+        /* RESPONSIVE */
         @media (max-width: 900px) {
             .hero, .trackiq-grid, .why-grid {
                 grid-template-columns: minmax(0, 1fr);
@@ -500,14 +506,8 @@
                 min-height: 220px;
                 margin-top: 8px;
             }
-            .pillars {
-                grid-template-columns: minmax(0, 1fr);
-            }
             .results-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-            .products-grid {
-                grid-template-columns: minmax(0, 1fr);
             }
             .header {
                 position: static;
@@ -520,6 +520,17 @@
             .nav { display: none; }
             .results-grid { grid-template-columns: minmax(0, 1fr); }
             .hero { margin-top: 28px; }
+            .audit-scroll {
+                max-height: 300px;
+            }
+            .subscribe {
+                flex-direction: column;
+                text-align: center;
+            }
+            .subscribe-cta {
+                width: 100%;
+                min-width: auto;
+            }
         }
     </style>
 </head>
@@ -528,9 +539,10 @@
 <div class="page">
 <div class="shell">
 
+<!-- HEADER -->
 <header class="header">
     <div class="brand">
-        <img src="assets/PuntingIQheader.png" width="120"/>
+        <img src="assets/PuntingIQheader.png" width="120" alt="PuntingIQ logo"/>
         <div>
             <div class="brand-text-main">PuntingIQ</div>
             <div class="brand-text-sub">Racing Intelligence Layer</div>
@@ -538,19 +550,20 @@
     </div>
 
     <nav class="nav">
-        <a href="index.html#trackiq">TrackIQ</a>
-        <a href="results.html" class="active">Results</a>
-        <a href="index.html#why">Why PuntingIQ</a>
-        <a href="index.html#products">Products</a>
-        <a href="index.html#subscribe" class="nav-cta">Become a member</a>
+        <a href="index.html#trackiq" type="button">TrackIQ</a>
+        <a href="results.html" class="active" type="button">Results</a>
+        <a href="index.html#why" type="button">Why PuntingIQ</a>
+        <a href="index.html#products" type="button">Products</a>
+        <button type="button" class="nav-cta" onclick="location.href='index.html#subscribe'">Become a member</button>
     </nav>
 </header>
 
-<section class="hero">
+<!-- HERO SECTION -->
+<section class="hero" aria-label="Results hero section">
     <div>
         <div class="hero-kicker">
             <div class="hero-kicker-dot"></div>
-            Racing Intelligence Layer
+            <span>Racing Intelligence Layer</span>
         </div>
 
         <h1 class="hero-title">
@@ -564,8 +577,8 @@
         </p>
 
         <div class="hero-ctas">
-            <button class="btn-primary" onclick="location.href='index.html#trackiq'">View TrackIQ</button>
-            <button class="btn-ghost" onclick="location.href='index.html#why'">How it works</button>
+            <button type="button" class="btn-primary" onclick="location.href='index.html#trackiq'">View TrackIQ</button>
+            <button type="button" class="btn-ghost" onclick="location.href='index.html#why'">How it works</button>
         </div>
 
         <div class="hero-footnote">
@@ -578,7 +591,7 @@
             <div class="hero-card-header">
                 <div class="hero-card-pill">
                     <div class="hero-card-pill-dot"></div>
-                    Results snapshot
+                    <span>Results snapshot</span>
                 </div>
                 <div class="hero-card-title">Daily summary</div>
             </div>
@@ -629,7 +642,8 @@
     </div>
 </section>
 
-<section class="section">
+<!-- SUMMARY RESULTS SECTION -->
+<section class="section" aria-label="Overall performance metrics">
     <div class="section-header">
         <div class="section-kicker">Results</div>
         <h2 class="section-title">Audited performance. No shortcuts.</h2>
@@ -666,7 +680,8 @@
     </div>
 </section>
 
-<section class="section">
+<!-- DAILY AUDIT SECTION -->
+<section class="section" aria-label="Daily audit summary">
     <div class="section-header">
         <div class="section-kicker">Daily audit</div>
         <h2 class="section-title">Wednesday, 8 April 2026</h2>
@@ -679,63 +694,63 @@
         <div>
             <div class="trackiq-card">
                 <div class="trackiq-header">
-                    <div class="trackiq-title">Product status</div>
-                    <div class="trackiq-tag">Yesterday’s output</div>
+                    <h3 class="trackiq-title">Product status</h3>
+                    <div class="trackiq-tag">Yesterday's output</div>
                 </div>
 
-                <div class="trackiq-table">
-                    <div class="trackiq-table-header">
-                        <div>Product</div>
-                        <div>Status</div>
-                        <div>Detail</div>
-                        <div>Outcome</div>
+                <div class="trackiq-table" role="table" aria-label="Product status and outcomes">
+                    <div class="trackiq-table-header" role="row">
+                        <div role="columnheader">Product</div>
+                        <div role="columnheader">Status</div>
+                        <div role="columnheader">Detail</div>
+                        <div role="columnheader">Outcome</div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>Best Bets</div>
                         <div>No qualifiers</div>
                         <div>High-confidence elite selections</div>
                         <div>No Best Bets yesterday</div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>Elite Winners</div>
                         <div>No qualifiers</div>
                         <div>WIN product selections</div>
                         <div>No Elite Winners yesterday</div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>System Bets</div>
                         <div>No qualifiers</div>
                         <div>Form-based inclusion logic</div>
                         <div>No System Bets yesterday</div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>Place Bankers</div>
                         <div>1 runner</div>
                         <div>Astern Effort – Place reliability</div>
                         <div>3rd (NTD)</div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>Value Edge</div>
                         <div>2 runners</div>
                         <div>Addition / Royal Trooper – market overlays</div>
                         <div>5th / Won</div>
                     </div>
 
-                    <div class="trackiq-table-row">
-                        <div>Race-by-Race Top Picks</div>
+                    <div class="trackiq-table-row" role="row">
+                        <div>race-by-race Top Picks</div>
                         <div>12 runners</div>
-                        <div>Yesterday’s top model picks</div>
+                        <div>Yesterday's top model picks</div>
                         <div>10/12 Won</div>
                     </div>
                 </div>
 
                 <div class="trackiq-footnote">
-                    This is the same structured output logic as TrackIQ, with yesterday’s races, non-bets and scratches all visible.
+                    This is the same structured output logic as TrackIQ, with yesterday's races, non-bets and scratches all visible.
                 </div>
             </div>
         </div>
@@ -743,33 +758,33 @@
         <div>
             <div class="trackiq-card">
                 <div class="trackiq-header">
-                    <div class="trackiq-title">Published outcomes</div>
-                    <div class="trackiq-tag">Yesterday’s selections</div>
+                    <h3 class="trackiq-title">Published outcomes</h3>
+                    <div class="trackiq-tag">Yesterday's selections</div>
                 </div>
 
-                <div class="trackiq-table">
-                    <div class="trackiq-table-header">
-                        <div>Category</div>
-                        <div>Runner</div>
-                        <div>Detail</div>
-                        <div>Result</div>
+                <div class="trackiq-table" role="table" aria-label="Published bet outcomes">
+                    <div class="trackiq-table-header" role="row">
+                        <div role="columnheader">Category</div>
+                        <div role="columnheader">Runner</div>
+                        <div role="columnheader">Detail</div>
+                        <div role="columnheader">Result</div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>Place Banker</div>
                         <div>Astern Effort</div>
                         <div>Confidence 51.0 · Place ≥ 86.2% · Value 19.6%</div>
                         <div>3rd (NTD)</div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>Value Edge</div>
                         <div>Addition</div>
                         <div>Confidence 63.7 · Win% 64.5% · Value 27.4%</div>
                         <div>5th</div>
                     </div>
 
-                    <div class="trackiq-table-row">
+                    <div class="trackiq-table-row" role="row">
                         <div>Value Edge</div>
                         <div>Royal Trooper</div>
                         <div>Confidence 53.2 · Win% 43.6% · Value 6.6%</div>
@@ -785,199 +800,347 @@
     </div>
 </section>
 
-<section class="section">
+<!-- RACE-BY-RACE TOP PICKS SECTION -->
+<section class="section" aria-label="race-by-race top picks audit">
     <div class="section-header">
         <div class="section-kicker">Audit detail</div>
-        <h2 class="section-title">Race-by-race summary</h2>
+        <h2 class="section-title">race-by-race top picks</h2>
         <p class="section-sub">
-            Every race yesterday is logged with the model’s top rated runner, price detail and the result. Scroll for the full table.
+            The 12 highest-rated runners from yesterday's races. These are the model's top selections 
+            across all tracks, shown with price and outcome detail. Scroll to view the complete list.
         </p>
     </div>
 
     <div class="trackiq-card">
         <div class="trackiq-header">
-            <div class="trackiq-title">Full race-by-race summary</div>
+            <h3 class="trackiq-title">Top picks summary</h3>
             <div class="trackiq-tag">Complete audit</div>
         </div>
 
         <div class="audit-scroll">
-            <div class="audit-table">
-                <div class="audit-table-header">
-                    <div>Race</div>
-                    <div>Runner</div>
-                    <div>Odds</div>
-                    <div>Position</div>
+            <div class="audit-table" role="table" aria-label="race-by-race top picks">
+                <div class="audit-table-header" role="row">
+                    <div role="columnheader">Race</div>
+                    <div role="columnheader">Runner</div>
+                    <div role="columnheader">Odds</div>
+                    <div role="columnheader">Position</div>
                 </div>
 
-                <div class="audit-table-row">
+                <div class="audit-table-row" role="row">
                     <div>Eagle Farm R1</div>
                     <div>#7 Desanto</div>
                     <div>W1.85 / P1.20</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Eagle Farm R2</div>
                     <div>#4 Kadesky</div>
                     <div>W4.60 / P1.73</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
-                    <div>Eagle Farm R3</div>
-                    <div>#3 Heroic Rebel</div>
-                    <div>W3.50 / P1.40</div>
-                    <div>2nd</div>
-                </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Eagle Farm R4</div>
                     <div>#9 Don't Doubt Missy</div>
                     <div>W2.15 / P1.30</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
-                    <div>Eagle Farm R5</div>
-                    <div>#3 Rewrite</div>
-                    <div>W3.10 / P1.40</div>
-                    <div>4th</div>
-                </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Eagle Farm R6</div>
                     <div>#3 Moulin Miss</div>
                     <div>W2.20 / P1.33</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
-                    <div>Eagle Farm R7</div>
-                    <div>#7 Addition</div>
-                    <div>W2.80 / P1.33</div>
-                    <div>5th</div>
-                </div>
-                <div class="audit-table-row">
-                    <div>Eagle Farm R8</div>
-                    <div>#10 Fasvara</div>
-                    <div>W3.80 / P1.62</div>
-                    <div>6th</div>
-                </div>
-                <div class="audit-table-row">
-                    <div>Hawkesbury R1</div>
-                    <div>#10 Rocket Girl</div>
-                    <div>W2.60 / P1.20</div>
-                    <div>3rd</div>
-                </div>
-                <div class="audit-table-row">
-                    <div>Hawkesbury R2</div>
-                    <div>#2 Somerton Smart</div>
-                    <div>W3.90 / P1.53</div>
-                    <div>4th</div>
-                </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Hawkesbury R3</div>
                     <div>#2 Lontice</div>
                     <div>W1.85 / P1.17</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Hawkesbury R4</div>
                     <div>#2 Madrina</div>
                     <div>W4.60 / P1.73</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Hawkesbury R5</div>
                     <div>#6 Spione</div>
                     <div>W3.60 / P1.50</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Hawkesbury R6</div>
                     <div>#11 Night Agent</div>
                     <div>W1.75 / P1.13</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
-                    <div>Pinjarra Park R1</div>
-                    <div>#5 Hillside Avenue</div>
-                    <div>W1.85 / P1.25</div>
-                    <div>3rd - NTD</div>
-                </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Pinjarra Park R2</div>
                     <div>#2 Royal Trooper</div>
                     <div>W2.60 / P1.30</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
-                    <div>Pinjarra Park R3</div>
-                    <div>#7 Batcity</div>
-                    <div>W2.30 / P1.25</div>
-                    <div>Scratched</div>
-                </div>
-                <div class="audit-table-row">
-                    <div>Pinjarra Park R4</div>
-                    <div>#3 Quokka Rocka</div>
-                    <div>W2.90 / P1.40</div>
-                    <div>2nd</div>
-                </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Pinjarra Park R5</div>
                     <div>#4 Kanas Mtoto</div>
                     <div>W2.15 / P1.20</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Pinjarra Park R6</div>
                     <div>#2 King Brew</div>
                     <div>W1.85 / P1.10</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Pinjarra Park R7</div>
                     <div>#9 Fearless Talk</div>
                     <div>W11.00 / P3.10</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
+            </div>
+        </div>
+
+        <div class="trackiq-footnote">
+            12 top picks from the full model output – scroll to see all races. This is the high-conviction end of the spectrum.
+        </div>
+    </div>
+</section>
+
+<!-- RACE-BY-RACE SUMMARY SECTION -->
+<section class="section" aria-label="race-by-race complete summary">
+    <div class="section-header">
+        <div class="section-kicker">Audit detail</div>
+        <h2 class="section-title">race-by-race Summary</h2>
+        <p class="section-sub">
+            Extended audit covering all tracks and races. Includes all selections, scratches, and full outcome detail.
+            Scroll to view the complete race-by-race summary.
+        </p>
+    </div>
+
+    <div class="trackiq-card">
+        <div class="trackiq-header">
+            <h3 class="trackiq-title">Full race-by-race summary</h3>
+            <div class="trackiq-tag">Complete audit</div>
+        </div>
+
+        <div class="audit-scroll">
+            <div class="audit-table" role="table" aria-label="Full race-by-race summary">
+                <div class="audit-table-header" role="row">
+                    <div role="columnheader">Race</div>
+                    <div role="columnheader">Runner</div>
+                    <div role="columnheader">Odds</div>
+                    <div role="columnheader">Position</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Eagle Farm R1</div>
+                    <div>#7 Desanto</div>
+                    <div>W1.85 / P1.20</div>
+                    <div>Won</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Eagle Farm R2</div>
+                    <div>#4 Kadesky</div>
+                    <div>W4.60 / P1.73</div>
+                    <div>Won</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Eagle Farm R3</div>
+                    <div>#3 Heroic Rebel</div>
+                    <div>W3.50 / P1.40</div>
+                    <div>2nd</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Eagle Farm R4</div>
+                    <div>#9 Don't Doubt Missy</div>
+                    <div>W2.15 / P1.30</div>
+                    <div>Won</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Eagle Farm R5</div>
+                    <div>#3 Rewrite</div>
+                    <div>W3.10 / P1.40</div>
+                    <div>4th</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Eagle Farm R6</div>
+                    <div>#3 Moulin Miss</div>
+                    <div>W2.20 / P1.33</div>
+                    <div>Won</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Eagle Farm R7</div>
+                    <div>#7 Addition</div>
+                    <div>W2.80 / P1.33</div>
+                    <div>5th</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Eagle Farm R8</div>
+                    <div>#10 Fasvara</div>
+                    <div>W3.80 / P1.62</div>
+                    <div>6th</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Hawkesbury R1</div>
+                    <div>#10 Rocket Girl</div>
+                    <div>W2.60 / P1.20</div>
+                    <div>3rd</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Hawkesbury R2</div>
+                    <div>#2 Somerton Smart</div>
+                    <div>W3.90 / P1.53</div>
+                    <div>4th</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Hawkesbury R3</div>
+                    <div>#2 Lontice</div>
+                    <div>W1.85 / P1.17</div>
+                    <div>Won</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Hawkesbury R4</div>
+                    <div>#2 Madrina</div>
+                    <div>W4.60 / P1.73</div>
+                    <div>Won</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Hawkesbury R5</div>
+                    <div>#6 Spione</div>
+                    <div>W3.60 / P1.50</div>
+                    <div>Won</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Hawkesbury R6</div>
+                    <div>#11 Night Agent</div>
+                    <div>W1.75 / P1.13</div>
+                    <div>Won</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Pinjarra Park R1</div>
+                    <div>#5 Hillside Avenue</div>
+                    <div>W1.85 / P1.25</div>
+                    <div>3rd - NTD</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Pinjarra Park R2</div>
+                    <div>#2 Royal Trooper</div>
+                    <div>W2.60 / P1.30</div>
+                    <div>Won</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Pinjarra Park R3</div>
+                    <div>#7 Batcity</div>
+                    <div>W2.30 / P1.25</div>
+                    <div>Scratched</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Pinjarra Park R4</div>
+                    <div>#3 Quokka Rocka</div>
+                    <div>W2.90 / P1.40</div>
+                    <div>2nd</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Pinjarra Park R5</div>
+                    <div>#4 Kanas Mtoto</div>
+                    <div>W2.15 / P1.20</div>
+                    <div>Won</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Pinjarra Park R6</div>
+                    <div>#2 King Brew</div>
+                    <div>W1.85 / P1.10</div>
+                    <div>Won</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
+                    <div>Pinjarra Park R7</div>
+                    <div>#9 Fearless Talk</div>
+                    <div>W11.00 / P3.10</div>
+                    <div>Won</div>
+                </div>
+
+                <div class="audit-table-row" role="row">
                     <div>Sale R1</div>
                     <div>#8 Good Harmony</div>
                     <div>W2.35 / P1.25</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Sale R2</div>
                     <div>#4 Lauberhorn</div>
                     <div>W1.70 / P1.20</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Sale R3</div>
                     <div>#3 Fatty Finn</div>
                     <div>W1.80 / P1.13</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Sale R4</div>
                     <div>#9 Mad About Magnus</div>
                     <div>W2.30 / P1.40</div>
                     <div>3rd</div>
                 </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Sale R5</div>
                     <div>#4 Mainmankash</div>
                     <div>W2.80 / P1.20</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Sale R6</div>
                     <div>#2 Rosa Aotearoa</div>
                     <div>W1.65 / P1.20</div>
                     <div>Won</div>
                 </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Sale R7</div>
                     <div>#7 Axiom</div>
                     <div>W3.50 / P1.40</div>
                     <div>2nd</div>
                 </div>
-                <div class="audit-table-row">
+
+                <div class="audit-table-row" role="row">
                     <div>Sale R8</div>
                     <div>#1 Sabi Storm</div>
                     <div>W3.50 / P1.50</div>
@@ -987,12 +1150,13 @@
         </div>
 
         <div class="trackiq-footnote">
-            Scroll the row set to reveal the full audit. This is the complete model output for the day.
+            Scroll the table to reveal the full audit. This is the complete model output for the day.
         </div>
     </div>
 </section>
 
-<section class="section">
+<!-- WHY THIS MATTERS SECTION -->
+<section class="section" aria-label="Why this matters">
     <div class="section-header">
         <div class="section-kicker">Why this matters</div>
         <h2 class="section-title">Performance with a process, not just numbers.</h2>
@@ -1007,19 +1171,19 @@
             <h4>What this page shows.</h4>
             <div class="why-items">
                 <div class="why-item">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>Full category outcomes for the day, including non-bets and scratches.</div>
                 </div>
                 <div class="why-item">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>Daily strike and ROI summary in the same style as TrackIQ.</div>
                 </div>
                 <div class="why-item">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>Detailed race-level picks for audit and review.</div>
                 </div>
                 <div class="why-item">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>Performance presented in a professional, high-contrast layout.</div>
                 </div>
             </div>
@@ -1033,19 +1197,19 @@
             <h4>What it is not.</h4>
             <div class="why-items">
                 <div class="why-item good">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>Not a highlight reel of winners only.</div>
                 </div>
                 <div class="why-item good">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>Not a screenshot-based sales page.</div>
                 </div>
                 <div class="why-item good">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>Not an unverifiable tip sheet.</div>
                 </div>
                 <div class="why-item good">
-                    <span></span>
+                    <span aria-hidden="true"></span>
                     <div>Not a product divorced from the TrackIQ intelligence layer.</div>
                 </div>
             </div>
@@ -1056,10 +1220,11 @@
     </div>
 </section>
 
-<section class="section" id="subscribe">
+<!-- SUBSCRIBE SECTION -->
+<section class="section" id="subscribe" aria-label="Membership signup">
     <div class="subscribe">
         <div class="subscribe-text">
-            <div class="subscribe-title">Become a PuntingIQ member.</div>
+            <h2 class="subscribe-title">Become a PuntingIQ member.</h2>
             <div class="subscribe-sub">
                 Access the same structured intelligence layer that powers the home page,
                 TrackIQ, and these audited results. Full daily output, system logic, and membership support.
@@ -1067,7 +1232,7 @@
         </div>
 
         <div class="subscribe-cta">
-            <button class="btn-primary" onclick="location.href='mailto:info@puntingiq.com.au'">
+            <button type="button" class="btn-primary" onclick="location.href='mailto:info@puntingiq.com.au'">
                 Request membership details
             </button>
             <div class="subscribe-note">
@@ -1077,7 +1242,8 @@
     </div>
 </section>
 
-<footer class="footer">
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
     <div>© PuntingIQ. Racing Intelligence Layer.</div>
     <div class="footer-links">
         <a href="index.html#trackiq">TrackIQ</a>
