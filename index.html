@@ -1,114 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <title>PuntingIQ – Racing Intelligence for Serious Punters</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="Unlock structured racing intelligence. No hype, no screenshots – just engineered edge and full transparency. Join PuntingIQ today."/>
-    <link rel="stylesheet" href="css/main.css"/>
-    <style>
-        body { background: radial-gradient(circle at top, #10182a 0, #05070b 52%, #020308 100%); color: #f5f7fb; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-        .page { min-height: 100vh; display: flex; flex-direction: column; }
-        .shell { width: 100%; max-width: 700px; margin: 0 auto; padding: 48px 20px 64px; }
-        .header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 18px; border-radius: 18px; background: rgba(5,7,11,0.92); box-shadow: 0 14px 40px rgba(0,0,0,0.45); }
-        .brand { display: flex; align-items: center; gap: 10px; }
-        .brand img { display: block; }
-        .brand-text-main { font-weight: 650; letter-spacing: 0.06em; font-size: 13px; text-transform: uppercase; }
-        .brand-text-sub { font-size: 11px; color: #a5b0c5; }
-        .nav { display: flex; align-items: center; gap: 18px; font-size: 13px; color: #a5b0c5; }
-        .nav a { padding: 6px 10px; border-radius: 999px; transition: background 0.18s, color 0.18s; }
-        .nav a:hover, .nav a:focus-visible { background: rgba(15,23,36,0.9); color: #f5f7fb; outline: none; }
-        .nav-cta { padding: 7px 14px; border-radius: 999px; background: linear-gradient(135deg, #2f7bff, #3ee58f); color: #020308; font-weight: 600; font-size: 13px; border: none; cursor: pointer; }
-        .hero { margin-top: 60px; text-align: center; }
-        .hero-title { font-size: clamp(36px,6vw,48px); line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 18px; }
-        .hero-title span { background: linear-gradient(135deg, #ffffff, #c5d4ff); background-clip: text; -webkit-background-clip: text; color: transparent; }
-        .hero-sub { font-size: 18px; line-height: 1.7; color: #a5b0c5; max-width: 520px; margin: 0 auto 28px; }
-        .hero-ctas { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-bottom: 18px; }
-        .btn-primary { padding: 14px 28px; border-radius: 999px; border: none; cursor: pointer; background: linear-gradient(135deg, #2f7bff, #3ee58f); color: #020308; font-weight: 700; font-size: 16px; box-shadow: 0 24px 60px rgba(0,0,0,0.55); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 28px 70px rgba(0,0,0,0.6); }
-        .btn-secondary { padding: 13px 24px; border-radius: 999px; border: 1px solid #2f7bff; background: rgba(5,7,11,0.9); color: #f5f7fb; font-size: 15px; cursor: pointer; }
-        .btn-secondary:hover { background: rgba(15,23,36,0.95); border-color: #3ee58f; }
-        .quick-metrics { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; margin: 38px 0 0; }
-        .metric-card { background: rgba(5,7,11,0.9); border: 1px solid #1b2433; border-radius: 14px; padding: 18px 22px; min-width: 140px; text-align: left; }
-        .metric-label { font-size: 12px; color: #a5b0c5; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.12em; }
-        .metric-value { font-size: 22px; font-weight: 700; color: #f5f7ff; }
-        .metric-note { font-size: 12px; color: #a5b0c5; margin-top: 2px; }
-        .footer { margin-top: 60px; padding-top: 18px; border-top: 1px solid #1b2433; font-size: 11px; color: #a5b0c5; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
-        .footer-links { display: flex; gap: 14px; flex-wrap: wrap; }
-        .footer-links a { color: #a5b0c5; transition: color 0.18s; }
-        .footer-links a:hover, .footer-links a:focus-visible { color: #3ee58f; outline: none; }
-        @media (max-width: 700px) { .shell { padding: 24px 8px 48px; } .hero-title { font-size: 32px; } }
-    </style>
+  <meta charset="UTF-8">
+  <title>PuntingIQ – Racing Intelligence for Serious Punters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Racing intelligence, not opinions. Structured models, audited outputs, full transparency. No hype. No screenshots.">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #10182a 0%, #05070b 52%, #020308 100%);
+      color: #f5f7fb;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 760px;
+      padding: 48px 20px 64px;
+    }
+
+    /* Header (updated to match results.html header system) */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: linear-gradient(120deg, rgba(47, 123, 255, 0.12), rgba(62, 229, 143, 0.04)), rgba(5, 7, 11, 0.92);
+      border: 1px solid rgba(47, 123, 255, 0.35);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+      position: sticky;
+      top: 16px;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand img {
+      display: block;
+    }
+
+    .brand-text-main {
+      font-size: 13px;
+      font-weight: 650;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-text-sub {
+      font-size: 11px;
+      color: #a5b0c5;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 13px;
+      color: #a5b0c5;
+    }
+
+    .nav a {
+      color: #a5b0c5;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 999px;
+      transition: background 0.18s ease, color 0.18s ease;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      background: rgba(15, 23, 36, 0.9);
+      color: #ffffff;
+      outline: none;
+    }
+
+    /* Match results.html CTA button style, with black text */
+    .nav-cta {
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #2f7bff, #3ee58f);
+      color: #020308 !important; /* force black text for readability */
+      font-weight: 600;
+      font-size: 13px;
+      box-shadow: 0 0 0 1px rgba(2, 3, 8, 0.9), 0 14px 40px rgba(0, 0, 0, 0.45);
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 0 1px rgba(2, 3, 8, 0.9), 0 28px 70px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Hero */
+    .hero {
+      margin-top: 72px;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: clamp(36px, 6vw, 52px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #ffffff, #c5d4ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #a5b0c5;
+      max-width: 560px;
+      margin: 0 auto 30px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-block;
+      padding: 14px 30px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2f7bff, #3ee58f);
+      color: #020308;
+    }
+
+    .btn-secondary {
+      border: 1px solid #2f7bff;
+      color: #f5f7fb;
+      background: rgba(5, 7, 11, 0.9);
+    }
+
+    /* Metrics */
+    .quick-metrics {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .metric-card {
+      background: rgba(5, 7, 11, 0.9);
+      border: 1px solid #1b2433;
+      border-radius: 14px;
+      padding: 18px 22px;
+      min-width: 160px;
+      text-align: left;
+    }
+
+    .metric-label {
+      font-size: 11px;
+      color: #a5b0c5;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+
+    .metric-value {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .metric-note {
+      font-size: 12px;
+      color: #a5b0c5;
+    }
+
+    /* CTA */
+    #cta {
+      margin-top: 72px;
+      text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 64px;
+      padding-top: 18px;
+      border-top: 1px solid #1b2433;
+      font-size: 11px;
+      color: #a5b0c5;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: inherit;
+      text-decoration: none;
+      margin-left: 12px;
+    }
+
+    .footer-links a:hover {
+      color: #3ee58f;
+    }
+  </style>
 </head>
 <body>
 <div class="page">
-<div class="shell">
+  <div class="shell">
 
-<!-- HEADER -->
-<header class="header">
-    <div class="brand">
-        <img src="assets/PuntingIQheader.png" width="120" alt="PuntingIQ logo"/>
+    <header class="header">
+      <a href="index.html" class="brand">
+        <img src="assets/PuntingIQheader.png" width="120" alt="PuntingIQ logo">
         <div>
-            <div class="brand-text-main">PuntingIQ</div>
-            <div class="brand-text-sub">Racing Intelligence Layer</div>
+          <div class="brand-text-main">PuntingIQ</div>
+          <div class="brand-text-sub">Racing Intelligence Layer</div>
         </div>
-    </div>
-    <nav class="nav">
-        <a href="Aboutus.html">About Us</a>
-        <a href="results.html">Results</a>
+      </a>
+      <nav class="nav">
+        <a href="index.html#trackiq" type="button">TrackIQ</a>
+        <a href="results.html" type="button">Results</a>
+        <a href="index.html#why" type="button">Why PuntingIQ</a>
+        <a href="index.html#products" type="button">Products</a>
         <button type="button" class="nav-cta" onclick="location.href='index.html#cta'">Become a member</button>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<!-- HERO -->
-<section class="hero" aria-label="Hero section">
-    <h1 class="hero-title">
-        <span>Unlock Racing Intelligence.</span><br/>
-        No hype. No screenshots. Just edge.
-    </h1>
-    <div class="hero-sub">
-        PuntingIQ is for punters who want structure, not stories. Engineered models, daily intelligence, and full transparency. <strong>Serious edge for serious punters.</strong>
-    </div>
-    <div class="hero-ctas">
-        <button type="button" class="btn-primary" onclick="location.href='about-us.html'">How it works</button>
-        <button type="button" class="btn-secondary" onclick="location.href='results.html'">See Results</button>
-    </div>
-    <div class="quick-metrics">
-        <div class="metric-card">
-            <div class="metric-label">Best & Elite Bets ROI</div>
-            <div class="metric-value">+267%</div>
-            <div class="metric-note">High-confidence, high-edge selections.</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-label">Strike Rate</div>
-            <div class="metric-value">56.7%</div>
-            <div class="metric-note">38 winners from 67 selections.</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-label">System Bets ROI</div>
-            <div class="metric-value">+1.67%</div>
-            <div class="metric-note">Stable, rules-based foundation.</div>
-        </div>
-    </div>
-</section>
+    <section class="hero">
+      <h1 class="hero-title">
+        <span>Racing intelligence, not opinions.</span><br>
+        Built to expose edge — not sell stories.
+      </h1>
 
-<!-- CTA SECTION -->
-<section id="cta" style="margin-top:48px;text-align:center;">
-    <h2 style="font-size:24px;margin-bottom:10px;">Ready to join?</h2>
-    <div style="font-size:15px;color:#a5b0c5;margin-bottom:18px;">Membership is limited and reviewed. Built for punters who want structure, not noise.</div>
-    <button type="button" class="btn-primary" onclick="window.location.href='mailto:info@puntingiq.com.au'">Request Membership Details</button>
-</section>
+      <div class="hero-sub">
+        PuntingIQ is an engineered racing intelligence layer.
+        Structured models, published outputs, and full audit trails —
+        built for punters who want process, not narratives.
+      </div>
 
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-    <div>© PuntingIQ. Racing Intelligence Layer.</div>
-    <div class="footer-links">
+      <div class="hero-ctas">
+        <a href="about-us.html" class="btn-primary">How it works</a>
+        <a href="results.html" class="btn-secondary">See Results</a>
+      </div>
+
+      <p style="color:#a5b0c5;">
+        Performance based on published selections and full audit history.
+      </p>
+
+      <div class="quick-metrics">
+        <div class="metric-card">
+          <div class="metric-label">Best &amp; Elite ROI</div>
+          <div class="metric-value">+222.72%</div>
+          <div class="metric-note">High‑confidence selections only</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-label">Strike Rate</div>
+          <div class="metric-value">57.40%</div>
+          <div class="metric-note">Across audited outputs</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-label">System ROI</div>
+          <div class="metric-value">+2.04%</div>
+          <div class="metric-note">Rules‑based foundation</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta">
+      <h2>Access the intelligence layer</h2>
+      <p style="color:#a5b0c5;">
+        Membership is limited and reviewed. Built for serious punters who
+        value structure, transparency, and long‑term edge.
+      </p>
+      <a href="mailto:info@puntingiq.com.au" class="btn-primary">
+        Request Membership Details
+      </a>
+    </section>
+
+    <footer class="footer">
+      <div>© PuntingIQ. Racing Intelligence Layer.</div>
+      <div class="footer-links">
         <a href="about-us.html">About Us</a>
         <a href="results.html">Results</a>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-</div>
+  </div>
 </div>
 </body>
 </html>
