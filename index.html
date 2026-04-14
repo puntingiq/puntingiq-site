@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>PuntingIQ – Racing Intelligence for Serious Punters</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="Racing intelligence, not opinions. Structured models, audited outputs, full transparency. No hype. No screenshots.">
-  <link rel="stylesheet" href="css/main.css">
+        content="Racing intelligence, not opinions. Structured models, audited outputs, full transparency. No hype. No screenshots." />
+
   <style>
+    :root {
+      --bg-dark: #05070b;
+      --bg-elevated: #0b1018;
+      --bg-elevated-soft: #0f1724;
+      --border-subtle: #1b2433;
+      --text-main: #f5f7fb;
+      --text-muted: #a5b0c5;
+      --accent-blue: #2f7bff;
+      --accent-green: #3ee58f;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.55);
+      --shadow-subtle: 0 14px 40px rgba(0, 0, 0, 0.45);
+      --max-width: 1120px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       background: radial-gradient(circle at top, #10182a 0%, #05070b 52%, #020308 100%);
-      color: #f5f7fb;
+      color: var(--text-main);
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .page {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-    }
+    a { color: inherit; text-decoration: none; }
+    .page { min-height: 100vh; display: flex; justify-content: center; }
+    .shell { width: 100%; max-width: var(--max-width); padding: 24px 20px 64px; }
 
-    .shell {
-      width: 100%;
-      max-width: 760px;
-      padding: 48px 20px 64px;
-    }
-
-    /* Header (updated to match results.html header system) */
+    /* HEADER */
     .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
       padding: 10px 18px;
-      border-radius: 999px;
-      background: linear-gradient(120deg, rgba(47, 123, 255, 0.12), rgba(62, 229, 143, 0.04)), rgba(5, 7, 11, 0.92);
-      border: 1px solid rgba(47, 123, 255, 0.35);
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+      border-radius: var(--radius-pill);
+      background: linear-gradient(120deg,
+        rgba(47,123,255,0.12),
+        rgba(62,229,143,0.04)), rgba(5,7,11,0.92);
+      border: 1px solid rgba(47,123,255,0.35);
+      box-shadow: var(--shadow-subtle);
       position: sticky;
       top: 16px;
       z-index: 20;
@@ -48,12 +62,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .brand img {
-      display: block;
     }
 
     .brand-text-main {
@@ -65,259 +73,293 @@
 
     .brand-text-sub {
       font-size: 11px;
-      color: #a5b0c5;
+      color: var(--text-muted);
     }
 
     .nav {
       display: flex;
-      align-items: center;
       gap: 18px;
       font-size: 13px;
-      color: #a5b0c5;
+      color: var(--text-muted);
     }
 
     .nav a {
-      color: #a5b0c5;
-      text-decoration: none;
       padding: 6px 10px;
       border-radius: 999px;
-      transition: background 0.18s ease, color 0.18s ease;
     }
 
-    .nav a:hover,
-    .nav a:focus-visible {
-      background: rgba(15, 23, 36, 0.9);
-      color: #ffffff;
-      outline: none;
+    .nav a:hover {
+      background: rgba(15,23,36,0.9);
+      color: #fff;
     }
 
-    /* Match results.html CTA button style, with black text */
     .nav-cta {
       padding: 7px 14px;
       border-radius: 999px;
-      background: linear-gradient(135deg, #2f7bff, #3ee58f);
-      color: #020308 !important; /* force black text for readability */
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+      color: #020308;
       font-weight: 600;
       font-size: 13px;
-      box-shadow: 0 0 0 1px rgba(2, 3, 8, 0.9), 0 14px 40px rgba(0, 0, 0, 0.45);
-      white-space: nowrap;
       border: none;
       cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      box-shadow: var(--shadow-soft);
     }
 
-    .nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 0 1px rgba(2, 3, 8, 0.9), 0 28px 70px rgba(0, 0, 0, 0.6);
-    }
-
-    /* Hero */
+    /* HERO */
     .hero {
-      margin-top: 72px;
-      text-align: center;
+      display: grid;
+      grid-template-columns: minmax(0,1.1fr) minmax(0,1fr);
+      gap: 32px;
+      margin-top: 40px;
     }
 
     .hero-title {
-      font-size: clamp(36px, 6vw, 52px);
-      line-height: 1.05;
-      margin-bottom: 20px;
+      font-size: clamp(32px, 4vw, 44px);
+      line-height: 1.08;
+      margin-bottom: 14px;
     }
 
     .hero-title span {
       background: linear-gradient(135deg, #ffffff, #c5d4ff);
       -webkit-background-clip: text;
-      background-clip: text;
       color: transparent;
     }
 
     .hero-sub {
-      font-size: 18px;
+      font-size: 14px;
+      color: var(--text-muted);
       line-height: 1.7;
-      color: #a5b0c5;
-      max-width: 560px;
-      margin: 0 auto 30px;
+      margin-bottom: 22px;
+      max-width: 520px;
     }
 
     .hero-ctas {
       display: flex;
-      justify-content: center;
-      gap: 18px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-      display: inline-block;
-      padding: 14px 30px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
+      gap: 12px;
+      margin-bottom: 18px;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #2f7bff, #3ee58f);
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
       color: #020308;
-    }
-
-    .btn-secondary {
-      border: 1px solid #2f7bff;
-      color: #f5f7fb;
-      background: rgba(5, 7, 11, 0.9);
-    }
-
-    /* Metrics */
-    .quick-metrics {
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .metric-card {
-      background: rgba(5, 7, 11, 0.9);
-      border: 1px solid #1b2433;
-      border-radius: 14px;
-      padding: 18px 22px;
-      min-width: 160px;
-      text-align: left;
-    }
-
-    .metric-label {
-      font-size: 11px;
-      color: #a5b0c5;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 6px;
-    }
-
-    .metric-value {
-      font-size: 22px;
       font-weight: 700;
     }
 
-    .metric-note {
-      font-size: 12px;
-      color: #a5b0c5;
+    .btn-ghost {
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(88,104,138,0.9);
+      background: rgba(5,7,11,0.9);
+    }
+
+    /* SYSTEMS OVERVIEW */
+    .systems {
+      margin-top: 80px;
+    }
+
+    .systems h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .systems-intro {
+      color: var(--text-muted);
+      max-width: 680px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+      font-size: 14px;
+    }
+
+    .systems-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .system-card {
+      border-radius: var(--radius-md);
+      background: rgba(5,7,11,0.9);
+      border: 1px solid var(--border-subtle);
+      padding: 18px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .system-role {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent-green);
+      margin-bottom: 8px;
+    }
+
+    .system-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .system-body {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
     }
 
     /* CTA */
     #cta {
-      margin-top: 72px;
+      margin-top: 80px;
       text-align: center;
     }
 
-    /* Footer */
+    #cta h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    #cta p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    /* FOOTER */
     .footer {
       margin-top: 64px;
       padding-top: 18px;
-      border-top: 1px solid #1b2433;
+      border-top: 1px solid rgba(27,36,51,0.9);
       font-size: 11px;
-      color: #a5b0c5;
+      color: var(--text-muted);
       display: flex;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
     }
 
-    .footer-links a {
-      color: inherit;
-      text-decoration: none;
-      margin-left: 12px;
-    }
-
-    .footer-links a:hover {
-      color: #3ee58f;
+    @media (max-width: 900px) {
+      .hero,
+      .systems-grid { grid-template-columns: 1fr; }
+      .nav { display: none; }
     }
   </style>
 </head>
+
 <body>
 <div class="page">
-  <div class="shell">
+<div class="shell">
 
-    <header class="header">
-      <a href="index.html" class="brand">
-        <img src="assets/PuntingIQheader.png" width="120" alt="PuntingIQ logo">
-        <div>
-          <div class="brand-text-main">PuntingIQ</div>
-          <div class="brand-text-sub">Racing Intelligence Layer</div>
-        </div>
-      </a>
-      <nav class="nav">
-        <a href="index.html#trackiq" type="button">TrackIQ</a>
-        <a href="results.html" type="button">Results</a>
-        <a href="index.html#why" type="button">Why PuntingIQ</a>
-        <a href="index.html#products" type="button">Products</a>
-        <button type="button" class="nav-cta" onclick="location.href='index.html#cta'">Become a member</button>
-      </nav>
-    </header>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="brand">
+      <img src="assets/PuntingIQheader.png" width="120" alt="PuntingIQ logo" />
+      <div>
+        <div class="brand-text-main">PuntingIQ</div>
+        <div class="brand-text-sub">Racing Intelligence Layer</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="results.html">Results</a>
+      <a href="Aboutus.html">About Us</a>
+      <button class="nav-cta" onclick="location.href='#cta'">Become a member</button>
+    </nav>
+  </header>
 
-    <section class="hero">
+  <!-- HERO -->
+  <section class="hero">
+    <div>
       <h1 class="hero-title">
-        <span>Racing intelligence, not opinions.</span><br>
-        Built to expose edge — not sell stories.
+        <span>Racing intelligence.</span><br />Not opinions.
       </h1>
-
-      <div class="hero-sub">
-        PuntingIQ is an engineered racing intelligence layer.
-        Structured models, published outputs, and full audit trails —
-        built for punters who want process, not narratives.
-      </div>
-
+      <p class="hero-sub">
+        PuntingIQ is a structured racing intelligence framework built on rules,
+        data, and machine‑learning models — designed to expose edge,
+        not sell stories.
+      </p>
       <div class="hero-ctas">
-        <a href="about-us.html" class="btn-primary">How it works</a>
-        <a href="results.html" class="btn-secondary">See Results</a>
+        <a href="Aboutus.html" class="btn-primary">How it works</a>
+        <a href="results.html" class="btn-ghost">See Results</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYSTEMS -->
+  <section class="systems">
+    <h2>How the intelligence layer is structured</h2>
+    <p class="systems-intro">
+      Every selection comes from a defined system with a specific role.
+      Rules‑based logic provides discipline and repeatability.
+      Machine‑learning profiles provide probability, value, and perspective.
+    </p>
+
+    <div class="systems-grid">
+
+      <div class="system-card">
+        <div class="system-role">Rules‑based</div>
+        <div class="system-title">Best Bets</div>
+        <div class="system-body">
+          Highest‑conviction selections under strict conditions.
+          Every rule must pass.
+          Designed for clarity, not volume.
+        </div>
       </div>
 
-      <p style="color:#a5b0c5;">
-        Performance based on published selections and full audit history.
-      </p>
-
-      <div class="quick-metrics">
-        <div class="metric-card">
-          <div class="metric-label">Best &amp; Elite ROI</div>
-          <div class="metric-value">+222.72%</div>
-          <div class="metric-note">High‑confidence selections only</div>
-        </div>
-
-        <div class="metric-card">
-          <div class="metric-label">Strike Rate</div>
-          <div class="metric-value">57.40%</div>
-          <div class="metric-note">Across audited outputs</div>
-        </div>
-
-        <div class="metric-card">
-          <div class="metric-label">System ROI</div>
-          <div class="metric-value">+2.04%</div>
-          <div class="metric-note">Rules‑based foundation</div>
+      <div class="system-card">
+        <div class="system-role">Rules‑based</div>
+        <div class="system-title">System Bets</div>
+        <div class="system-body">
+          The disciplined core of the framework.
+          Structured rules with controlled flexibility
+          to identify repeatable value.
         </div>
       </div>
-    </section>
 
-    <section id="cta">
-      <h2>Access the intelligence layer</h2>
-      <p style="color:#a5b0c5;">
-        Membership is limited and reviewed. Built for serious punters who
-        value structure, transparency, and long‑term edge.
-      </p>
-      <a href="mailto:info@puntingiq.com.au" class="btn-primary">
-        Request Membership Details
-      </a>
-    </section>
-
-    <footer class="footer">
-      <div>© PuntingIQ. Racing Intelligence Layer.</div>
-      <div class="footer-links">
-        <a href="about-us.html">About Us</a>
-        <a href="results.html">Results</a>
+      <div class="system-card">
+        <div class="system-role">Machine learning</div>
+        <div class="system-title">Win Edge</div>
+        <div class="system-body">
+          ML‑driven win opportunities where probability
+          and market value align under defined confidence controls.
+        </div>
       </div>
-    </footer>
 
-  </div>
+      <div class="system-card">
+        <div class="system-role">Machine learning</div>
+        <div class="system-title">Place Edge</div>
+        <div class="system-body">
+          Probability‑focused selections designed for stability
+          and lower‑volatility exposure.
+        </div>
+      </div>
+
+      <div class="system-card">
+        <div class="system-role">Machine learning</div>
+        <div class="system-title">Top Pick</div>
+        <div class="system-body">
+          The model’s highest‑confidence runner in each race.
+          A directional reference for structure and context.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <h2>Access the intelligence layer</h2>
+    <p>Membership is limited and reviewed.</p>
+    <a href="mailto:info@puntingiq.com.au" class="btn-primary">
+      Request Membership Details
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>© PuntingIQ. Racing Intelligence Layer.</div>
+    <div>
+      <a href="Aboutus.html">About Us</a> ·
+      <a href="results.html">Results</a>
+    </div>
+  </footer>
+
+</div>
 </div>
 </body>
 </html>
+``

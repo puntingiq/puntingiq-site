@@ -53,40 +53,79 @@
 
         .shell { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 24px 20px 64px; }
 
-        /* HEADER */
-        .header {
-            display: flex; align-items: center; justify-content: space-between;
-            gap: 16px; padding: 10px 18px; border-radius: var(--radius-pill);
-            background: linear-gradient(120deg, rgba(47,123,255,0.12), rgba(62,229,143,0.04)), rgba(5,7,11,0.92);
-            border: 1px solid rgba(47,123,255,0.35);
-            box-shadow: var(--shadow-subtle);
-            position: sticky; top: 16px; z-index: 20;
-            backdrop-filter: blur(18px);
-        }
+        
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(120deg, rgba(47,123,255,0.12), rgba(62,229,143,0.04)), rgba(5,7,11,0.92);
+  border: 1px solid rgba(47,123,255,0.35);
+  box-shadow: var(--shadow-subtle);
+  position: sticky;
+  top: 16px;
+  z-index: 20;
+  backdrop-filter: blur(18px);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand img { display: block; }
+.brand-text-main {
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.brand-text-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.nav a {
+  padding: 6px 10px;
+  border-radius: 999px;
+  transition: background 0.18s ease, color 0.18s ease;
+  color: var(--text-muted);
+}
+.nav a:hover, .nav a:focus-visible {
+  background: rgba(15,23,36,0.9);
+  color: var(--text-main);
+  outline: none;
+}
+.nav a.active {
+  background: rgba(15,23,36,0.9);
+  color: var(--text-main);
+}
+.nav-cta {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+  color: #020308;
+  font-weight: 600;
+  font-size: 13px;
+  box-shadow: 0 0 0 1px rgba(2,3,8,0.9), var(--shadow-soft);
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px rgba(2,3,8,0.9), 0 28px 70px rgba(0, 0, 0, 0.6);
+}
 
-        .brand { display: flex; align-items: center; gap: 10px; }
-
-        .brand img { display: block; }
-
-        .brand-text-main { font-weight: 650; letter-spacing: 0.06em; font-size: 13px; text-transform: uppercase; }
-        .brand-text-sub { font-size: 11px; color: var(--text-muted); }
-
-        .nav { display: flex; align-items: center; gap: 18px; font-size: 13px; color: var(--text-muted); }
-        .nav a { padding: 6px 10px; border-radius: 999px; transition: background 0.18s ease, color 0.18s ease; }
-        .nav a:hover, .nav a:focus-visible { background: rgba(15,23,36,0.9); color: var(--text-main); outline: none; }
-        .nav a.active { background: rgba(47,123,255,0.14); color: var(--text-main); }
-
-        .nav-cta {
-            padding: 7px 14px; border-radius: 999px;
-            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
-            color: #020308; font-weight: 600; font-size: 13px;
-            box-shadow: 0 0 0 1px rgba(2,3,8,0.9), var(--shadow-soft);
-            white-space: nowrap; border: none; cursor: pointer;
-        }
-
-        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(2,3,8,0.9), 0 28px 70px rgba(0, 0, 0, 0.6); }
-
-        /* HERO */
+/* HERO */
         .hero {
             display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr);
             gap: 32px; margin-top: 40px; align-items: center;
@@ -913,8 +952,6 @@
     </div>
   </div>
 </section>
-``
-
 <!-- WHY THIS MATTERS SECTION -->
 <section class="section" aria-label="Why this matters">
     <div class="section-header">
