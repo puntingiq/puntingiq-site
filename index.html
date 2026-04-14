@@ -122,6 +122,8 @@
     .hero-title span {
       background: linear-gradient(135deg, #ffffff, #c5d4ff);
       -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       color: transparent;
     }
 
@@ -247,19 +249,22 @@
 
   <!-- HEADER -->
   <header class="header">
-    <div class="brand">
-      <img src="assets/PuntingIQheader.png" width="120" alt="PuntingIQ logo" />
-      <div>
-        <div class="brand-text-main">PuntingIQ</div>
-        <div class="brand-text-sub">Racing Intelligence Layer</div>
-      </div>
+  <a href="index.html" class="brand">
+    <img src="assets/PuntingIQheader.png" width="120" alt="PuntingIQ logo" />
+    <div>
+      <div class="brand-text-main">PuntingIQ</div>
+      <div class="brand-text-sub">Racing Intelligence Layer</div>
     </div>
-    <nav class="nav">
-      <a href="results.html">Results</a>
-      <a href="Aboutus.html">About Us</a>
-      <button class="nav-cta" onclick="location.href='#cta'">Become a member</button>
-    </nav>
-  </header>
+  </a>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="trackiq.html">TrackIQ</a>
+    <a href="results.html">Results</a>
+    <a href="Aboutus.html">About Us</a>
+    <a href="products.html">Products</a>
+    <button class="nav-cta" onclick="location.href='#cta'">Become a member</button>
+  </nav>
+</header>
 
   <!-- HERO -->
   <section class="hero">
