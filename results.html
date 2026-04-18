@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <title>PuntingIQ – Results</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="PuntingIQ results page – audited performance, daily category outcomes, and the same high‑contrast design system used across the site."/>
+    <meta charset="UTF-8" />
+    <title>PuntingIQ Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="PuntingIQ Results — full transparency, no hype." />
     <style>
         :root {
             --bg-dark: #05070b;
@@ -14,1012 +15,319 @@
             --text-main: #f5f7fb;
             --text-muted: #a5b0c5;
             --accent-blue: #2f7bff;
-            --accent-blue-soft: rgba(47, 123, 255, 0.18);
             --accent-green: #3ee58f;
-            --accent-green-soft: rgba(62, 229, 143, 0.16);
-            --danger: #ff4b6a;
             --radius-lg: 18px;
             --radius-md: 12px;
             --radius-pill: 999px;
-            --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.55);
-            --shadow-subtle: 0 14px 40px rgba(0, 0, 0, 0.45);
+            --shadow-soft: 0 24px 60px rgba(0,0,0,0.55);
+            --shadow-subtle: 0 14px 40px rgba(0,0,0,0.45);
             --max-width: 1120px;
         }
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
-
         html { scroll-behavior: smooth; }
-
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top, #10182a 0, #05070b 52%, #020308 100%);
+            background: radial-gradient(circle at top, #10182a 0%, #05070b 52%, #020308 100%);
             color: var(--text-main);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             -webkit-font-smoothing: antialiased;
         }
-
         a { color: inherit; text-decoration: none; }
-
-        button {
-            font-family: inherit;
-            transition: all 0.2s ease;
+        .page { min-height: 100vh; display: flex; justify-content: center; }
+        .shell { width: 100%; max-width: var(--max-width); padding: 24px 20px 64px; }
+        .header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 10px 18px; border-radius: var(--radius-pill);
+            background: linear-gradient(120deg, rgba(47,123,255,0.12), rgba(62,229,143,0.04)), rgba(5,7,11,0.92);
+            border: 1px solid rgba(47,123,255,0.35); box-shadow: var(--shadow-subtle);
+            position: sticky; top: 16px; z-index: 20; backdrop-filter: blur(18px);
         }
-
-        button:focus-visible {
-            outline: 2px solid var(--accent-blue);
-            outline-offset: 2px;
-        }
-
-        .page { min-height: 100vh; display: flex; flex-direction: column; }
-
-        .shell { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 24px 20px 64px; }
-
-        
-/* HEADER */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 10px 18px;
-  border-radius: var(--radius-pill);
-  background: linear-gradient(120deg, rgba(47,123,255,0.12), rgba(62,229,143,0.04)), rgba(5,7,11,0.92);
-  border: 1px solid rgba(47,123,255,0.35);
-  box-shadow: var(--shadow-subtle);
-  position: sticky;
-  top: 16px;
-  z-index: 20;
-  backdrop-filter: blur(18px);
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.brand img { display: block; }
-.brand-text-main {
-  font-weight: 650;
-  letter-spacing: 0.06em;
-  font-size: 13px;
-  text-transform: uppercase;
-}
-.brand-text-sub {
-  font-size: 11px;
-  color: var(--text-muted);
-}
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  font-size: 13px;
-  color: var(--text-muted);
-}
-.nav a {
-  padding: 6px 10px;
-  border-radius: 999px;
-  transition: background 0.18s ease, color 0.18s ease;
-  color: var(--text-muted);
-}
-.nav a:hover, .nav a:focus-visible {
-  background: rgba(15,23,36,0.9);
-  color: var(--text-main);
-  outline: none;
-}
-.nav a.active {
-  background: rgba(15,23,36,0.9);
-  color: var(--text-main);
-}
-.nav-cta {
-  padding: 7px 14px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
-  color: #020308;
-  font-weight: 600;
-  font-size: 13px;
-  box-shadow: 0 0 0 1px rgba(2,3,8,0.9), var(--shadow-soft);
-  white-space: nowrap;
-  border: none;
-  cursor: pointer;
-}
-.nav-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 0 1px rgba(2,3,8,0.9), 0 28px 70px rgba(0, 0, 0, 0.6);
-}
-
-/* HERO */
-        .hero {
-            display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr);
-            gap: 32px; margin-top: 40px; align-items: center;
-        }
-
-        .hero-kicker {
-            display: inline-flex; align-items: center; gap: 8px;
-            padding: 4px 10px 4px 4px; border-radius: 999px;
-            background: rgba(15,23,36,0.9); border: 1px solid rgba(47,123,255,0.4);
-            color: var(--text-muted); font-size: 11px; text-transform: uppercase;
-            letter-spacing: 0.12em; margin-bottom: 16px;
-        }
-
-        .hero-kicker-dot {
-            width: 18px; height: 18px; border-radius: 999px;
-            background: radial-gradient(circle at 30% 0, #3ee58f 0, #2f7bff 60%, #05070b 100%);
-            box-shadow: 0 0 0 1px rgba(2,3,8,0.9);
-        }
-
-        .hero-title {
-            font-size: clamp(32px,4vw,40px); line-height: 1.08;
-            letter-spacing: -0.03em; margin-bottom: 14px;
-        }
-
-        .hero-title span {
-            background: linear-gradient(135deg, #ffffff, #c5d4ff);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-
-        .hero-sub {
-            font-size: 14px; line-height: 1.7; color: var(--text-muted);
-            max-width: 520px; margin-bottom: 22px;
-        }
-
-        .hero-sub strong { color: #dbe4ff; font-weight: 500; }
-
-        .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
-
-        .btn-primary {
-            padding: 10px 18px; border-radius: 999px; border: none;
-            cursor: pointer; background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
-            color: #020308; font-weight: 600; font-size: 13px; box-shadow: var(--shadow-soft);
-        }
-
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 28px 70px rgba(0, 0, 0, 0.6); }
-        .btn-primary:active { transform: translateY(0); }
-
-        .btn-ghost {
-            padding: 9px 16px; border-radius: 999px;
-            border: 1px solid rgba(88,104,138,0.9);
-            background: rgba(5,7,11,0.9); color: var(--text-main);
-            font-size: 13px; cursor: pointer;
-        }
-
-        .btn-ghost:hover { background: rgba(15,23,36,0.95); border-color: rgba(47,123,255,0.6); }
-        .btn-ghost:active { transform: translateY(0); }
-
-        .hero-footnote { font-size: 11px; color: var(--text-muted); }
-        .hero-footnote span { color: var(--accent-green); }
-
-        .hero-right { position: relative; min-height: 260px; }
-
-        .hero-card {
-            position: absolute; inset: 0; border-radius: var(--radius-lg);
-            background: radial-gradient(circle at top left, #1a2640 0, #05070b 52%, #020308 100%);
-            border: 1px solid rgba(47,123,255,0.4); box-shadow: var(--shadow-soft);
-            padding: 18px; display: flex; flex-direction: column; gap: 12px;
-        }
-
-        .hero-card-header { display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--text-muted); }
-
-        .hero-card-pill {
-            padding: 4px 9px; border-radius: 999px;
-            background: rgba(5,7,11,0.9); border: 1px solid rgba(47,123,255,0.5);
-            display: inline-flex; align-items: center; gap: 6px;
-        }
-
-        .hero-card-pill-dot {
-            width: 7px; height: 7px; border-radius: 999px;
-            background: var(--accent-green); box-shadow: 0 0 0 4px var(--accent-green-soft);
-        }
-
-        .hero-card-title { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #e4ecff; }
-
-        .hero-card-grid {
-            display: grid; grid-template-columns: repeat(2,minmax(0,1fr));
-            gap: 10px; margin-top: 6px;
-        }
-
-        .metric-card {
-            border-radius: var(--radius-md); background: rgba(5,7,11,0.9);
-            border: 1px solid rgba(27,36,51,0.9); padding: 10px;
-            font-size: 11px; color: var(--text-muted);
-        }
-
-        .metric-label { display: flex; justify-content: space-between; margin-bottom: 4px; }
-        .metric-label span { font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; }
-
-        .metric-value { font-size: 16px; font-weight: 600; color: #f5f7ff; }
-
-        .metric-tag { font-size: 10px; color: var(--accent-green); }
-        .metric-tag.danger { color: var(--danger); }
-
-        .metric-note { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
-
-        .hero-card-footer {
-            margin-top: 8px; display: flex; justify-content: space-between;
-            font-size: 10px; color: var(--text-muted);
-        }
-
-        .hero-card-footer-pill {
-            padding: 4px 8px; border-radius: 999px;
-            background: rgba(15,23,36,0.9); border: 1px solid rgba(47,123,255,0.4);
-            font-size: 10px; color: #dbe4ff;
-        }
-
-        /* SECTION WRAPPER */
-        .section { margin-top: 52px; }
-        .section-header { margin-bottom: 18px; }
-
-        .section-kicker {
-            font-size: 11px; text-transform: uppercase;
-            letter-spacing: 0.16em; color: var(--accent-blue);
-            margin-bottom: 6px;
-        }
-
-        .section-title { font-size: 20px; letter-spacing: -0.02em; margin-bottom: 4px; }
-        .section-sub { font-size: 13px; color: var(--text-muted); max-width: 520px; }
-
-        /* RESULTS GRID */
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 14px;
-        }
-
-        .result-card {
-            border-radius: var(--radius-md);
-            background: var(--bg-elevated-soft);
-            border: 1px solid var(--border-subtle);
-            padding: 12px 12px 10px;
-            font-size: 11px;
-            color: var(--text-muted);
-            transition: border-color 0.2s ease, background 0.2s ease;
-        }
-
-        .result-card:hover {
-            border-color: rgba(47,123,255,0.5);
-            background: var(--bg-elevated);
-        }
-
-        .result-label {
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            font-size: 10px;
-            margin-bottom: 4px;
-            font-weight: 600;
-        }
-
-        .result-value {
-            font-size: 18px;
-            font-weight: 600;
-            color: #f5f7ff;
-            margin-bottom: 2px;
-        }
-
-        .result-note {
-            font-size: 10px;
-            line-height: 1.4;
-        }
-
-        /* TRACKIQ GRID */
-        .trackiq-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-            gap: 22px;
-            align-items: flex-start;
-        }
-
-        .trackiq-card {
-            border-radius: var(--radius-lg);
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-subtle);
-            padding: 16px 16px 14px;
-            box-shadow: var(--shadow-soft);
-            font-size: 12px;
-        }
-
-        .trackiq-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .trackiq-title {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.16em;
-            color: #dbe4ff;
-        }
-
-        .trackiq-tag {
-            padding: 4px 9px;
-            border-radius: 999px;
-            background: rgba(15, 23, 36, 0.9);
-            border: 1px solid rgba(47, 123, 255, 0.5);
-            font-size: 10px;
-            color: var(--text-muted);
-        }
-
-        /* TABLES */
-        .trackiq-table,
-        .audit-table {
-            margin-top: 6px;
-            border-radius: 12px;
-            background: rgba(5, 7, 11, 0.9);
-            border: 1px solid rgba(27, 36, 51, 0.9);
-            overflow: hidden;
-        }
-
-        .trackiq-table-header,
-        .trackiq-table-row,
-        .audit-table-header,
-        .audit-table-row {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr 1.1fr 0.6fr;
-            padding: 8px 10px;
-            font-size: 11px;
-        }
-
-        .trackiq-table-header,
-        .audit-table-header {
-            background: rgba(10, 16, 26, 0.95);
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            font-size: 10px;
-            font-weight: 600;
-        }
-
-        .trackiq-table-row:nth-child(odd),
-        .audit-table-row:nth-child(odd) { background: rgba(5, 7, 11, 0.9); }
-        .trackiq-table-row:nth-child(even),
-        .audit-table-row:nth-child(even) { background: rgba(7, 10, 16, 0.9); }
-
-        .trackiq-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 3px 8px;
-            border-radius: 999px;
-            font-size: 10px;
-            background: rgba(15, 23, 36, 0.9);
-            border: 1px solid rgba(47, 123, 255, 0.5);
-            color: #dbe4ff;
-        }
-
-        .trackiq-chip-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--accent-green);
-            box-shadow: 0 0 0 3px var(--accent-green-soft);
-        }
-
-        .trackiq-footnote {
-            margin-top: 10px;
-            font-size: 11px;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        /* AUDIT SCROLL */
-        .audit-scroll {
-            overflow: auto;
-            margin-top: 8px;
-            max-height: 400px;
-            border-radius: 12px;
-        }
-
-        /* WHY SECTION */
-        .why-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-            gap: 22px;
-            align-items: flex-start;
-        }
-
-        .why-list {
-            border-radius: var(--radius-lg);
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-subtle);
-            padding: 16px 16px 14px;
-            box-shadow: var(--shadow-subtle);
-            font-size: 12px;
-        }
-
-        .why-list h4 {
-            font-size: 13px;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .why-items {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 8px;
-            margin-top: 6px;
-        }
-
-        .why-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 6px;
-            font-size: 11px;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
-
-        .why-item span {
-            margin-top: 5px;
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--danger);
-            flex-shrink: 0;
-        }
-
-        .why-item.good span {
-            background: var(--accent-green);
-            box-shadow: 0 0 0 4px var(--accent-green-soft);
-        }
-
-        .why-note {
-            margin-top: 10px;
-            font-size: 11px;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        /* SUBSCRIBE SECTION */
-        .subscribe {
-            border-radius: var(--radius-lg);
-            background: radial-gradient(circle at top left, #1a2640 0, #05070b 52%, #020308 100%);
-            border: 1px solid rgba(47, 123, 255, 0.5);
-            padding: 18px 16px 16px;
-            margin-top: 40px;
-            box-shadow: var(--shadow-soft);
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 14px;
-        }
-
-        .subscribe-text { max-width: 520px; }
-
-        .subscribe-title { font-size: 18px; margin-bottom: 4px; font-weight: 600; }
-
-        .subscribe-sub { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
-
-        .subscribe-cta {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            min-width: 220px;
-        }
-
-        .subscribe-cta button {
-            width: 100%;
-        }
-
-        .subscribe-note {
-            font-size: 11px;
-            color: var(--text-muted);
-            text-align: center;
-        }
-
-        /* FOOTER */
-        .footer {
-            margin-top: 40px;
-            padding-top: 18px;
-            border-top: 1px solid rgba(27, 36, 51, 0.9);
-            font-size: 11px;
-            color: var(--text-muted);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 10px;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: var(--text-muted);
-            transition: color 0.18s ease;
-        }
-
-        .footer-links a:hover, .footer-links a:focus-visible {
-            color: var(--accent-green);
-            outline: none;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .hero, .trackiq-grid, .why-grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .hero-right {
-                min-height: 220px;
-                margin-top: 8px;
-            }
-            .results-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-            .header {
-                position: static;
-                border-radius: 14px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .shell { padding-inline: 16px; }
-            .nav { display: none; }
-            .results-grid { grid-template-columns: minmax(0, 1fr); }
-            .hero { margin-top: 28px; }
-            .audit-scroll {
-                max-height: 300px;
-            }
-            .subscribe {
-                flex-direction: column;
-                text-align: center;
-            }
-            .subscribe-cta {
-                width: 100%;
-                min-width: auto;
-            }
-        }
+        .brand { display: flex; align-items: center; gap: 10px; }
+        .brand-text-main { font-size: 13px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }
+        .brand-text-sub { font-size: 11px; color: var(--text-muted); }
+        .nav { display: flex; gap: 18px; font-size: 13px; color: var(--text-muted); }
+        .nav a { padding: 6px 10px; border-radius: 999px; }
+        .nav a:hover, .nav a.active { background: rgba(15,23,36,0.9); color: #fff; }
+        .nav-cta { padding: 7px 14px; border-radius: 999px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-green)); color: #020308; font-weight: 600; font-size: 13px; border: none; cursor: pointer; box-shadow: var(--shadow-soft); }
+        h1 { font-size: 2.1em; margin-bottom: 0.5em; }
+        h2 { font-size: 1.3em; margin: 1.5em 0 0.7em; }
+        .results-meta { color: var(--text-muted); font-size: 13px; margin-bottom: 18px; }
+        table { border-collapse: collapse; margin-bottom: 30px; width: 100%; background: var(--bg-elevated); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-subtle); }
+        th, td { border: 1px solid var(--border-subtle); padding: 8px 14px; }
+        th { background: var(--bg-elevated-soft); color: var(--text-main); font-weight: 600; }
+        tr:nth-child(even) td { background: #0b1018; }
+        tr:nth-child(odd) td { background: #10182a; }
     </style>
 </head>
-
 <body>
 <div class="page">
 <div class="shell">
-
-<!-- HEADER -->
-<header class="header">
- <a href="index.html" class="brand">
-  <img src="assets/PuntingIQheader.png" width="120" alt="PuntingIQ logo" />
-  <div>
-   <div class="brand-text-main">PuntingIQ</div>
-   <div class="brand-text-sub">Racing Intelligence Layer</div>
-  </div>
- </a>
- <nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="trackiq.html">TrackIQ</a>
-  <a href="results.html" class="active">Results</a>
-  <a href="Aboutus.html">About Us</a>
-  <a href="products.html">Products</a>
-  <button class="nav-cta" onclick="location.href='index.html#subscribe'">Become a member</button>
- </nav>
-</header>
-
-<!-- HERO SECTION -->
-<section class="hero" aria-label="Results hero section">
-    <div>
-        <div class="hero-kicker">
-            <div class="hero-kicker-dot"></div>
-            <span>Racing Intelligence Layer</span>
+    <header class="header">
+        <a href="index.html" class="brand">
+            <img src="assets/PuntingIQheader.png" width="120" alt="PuntingIQ logo" />
+            <div>
+                <div class="brand-text-main">PuntingIQ</div>
+                <div class="brand-text-sub">Racing Intelligence Layer</div>
+            </div>
+        </a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="trackiq.html">TrackIQ</a>
+            <a href="results.html" class="active">Results</a>
+            <a href="Aboutus.html">About Us</a>
+            <a href="products.html">Products</a>
+            <button class="nav-cta" onclick="location.href='index.html#cta'">Become a member</button>
+        </nav>
+    </header>
+    <!-- HERO SECTION: Racing Intelligence Layer (font and style match) -->
+    <div style="margin-top: 40px; margin-bottom: 38px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;">
+        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 10px 4px 4px; border-radius: 999px; background: rgba(15,23,36,0.9); border: 1px solid rgba(47,123,255,0.4); color: #a5b0c5; font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px;">
+            <span style="width: 18px; height: 18px; border-radius: 999px; background: radial-gradient(circle at 30% 0, #3ee58f 0, #2f7bff 60%, #05070b 100%); box-shadow: 0 0 0 1px rgba(2,3,8,0.9);"></span>
+            Racing Intelligence Layer
         </div>
-
-        <h1 class="hero-title">
-            <span>Results.</span><br/>Audited, structured, visible.
-        </h1>
-
-        <p class="hero-sub">
-            This page shows the same engineered output behind TrackIQ – audited selections,
-            no screenshots, full transparency. Every bet, scratch and non-bet is logged
-            through the same intelligence layer that powers the home page.
-        </p>
-
-        <div class="hero-ctas">
-            <button type="button" class="btn-primary" onclick="location.href='index.html#trackiq'">View TrackIQ</button>
-            <button type="button" class="btn-ghost" onclick="location.href='index.html#why'">How it works</button>
+        <div style="font-size: clamp(32px,4vw,40px); line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 14px; font-weight: 900; color: #fff;">
+            Results.<br>Audited, structured, visible.
         </div>
-
-        <div class="hero-footnote">
-            Performance is shown with context and downside. <span>That is the only way it can be audited.</span>
+        <div style="font-size: 14px; line-height: 1.7; color: #a5b0c5; max-width: 520px; margin-bottom: 22px;">
+            This page shows the same engineered output behind TrackIQ – audited selections, no screenshots, full transparency. Every bet, scratch and non-bet is logged through the same intelligence layer that powers the home page.
         </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px;">
+            <a href="trackiq.html" style="padding: 10px 18px; border-radius: 999px; border: none; cursor: pointer; background: linear-gradient(135deg, #2f7bff, #3ee58f); color: #020308; font-weight: 600; font-size: 13px; box-shadow: 0 24px 60px rgba(0,0,0,0.55); text-decoration: none;">View TrackIQ</a>
+            <a href="#" style="padding: 9px 16px; border-radius: 999px; border: 1px solid rgba(88,104,138,0.9); background: #181f2a; color: #a5b0c5; font-weight: 600; font-size: 13px; text-decoration: none;">How it works</a>
+        </div>
+        <div style="color: #a5b0c5; font-size: 13px; margin-top: 8px; margin-bottom: 0;">Performance is shown with context and downside. <span style="color: #19e68c; font-weight: 600;">That is the only way it can be audited.</span></div>
     </div>
-
-    <div class="hero-right">
-        <div class="hero-card">
-            <div class="hero-card-header">
-                <div class="hero-card-pill">
-                    <div class="hero-card-pill-dot"></div>
-                    <span>Results snapshot</span>
-                </div>
-                <div class="hero-card-title">Daily summary</div>
+    <h1>PuntingIQ Results</h1>
+    <div class="results-meta">Generated: 2026-04-18 13:15:53</div>
+        <div style="margin-bottom: 32px;">
+            <div style="color: #2f7bff; text-transform: uppercase; font-size: 13px; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 2px;">Daily Audit</div>
+            <div style="font-size: 1.6em; font-weight: 700; color: #fff; margin-bottom: 2px;">
+                Friday 17 April 2026
             </div>
+            <div style="color: #a5b0c5; font-size: 15px; max-width: 600px;">Full category outcomes for yesterday, shown in structured cards so the audit is easy to read and hard to spin.</div>
+        </div>
 
-            <div class="hero-card-grid">
-                <div class="metric-card">
-                    <div class="metric-label">
-                        <span>Best & Elite ROI</span>
-                        <span class="metric-tag">Lifetime</span>
-                    </div>
-                    <div class="metric-value">+222.72%</div>
-                    <div class="metric-note">High-confidence, high-edge selections.</div>
-                </div>
+        <h2 style="margin-bottom: 12px;">Product Status</h2>
+        <div class="product-status-cards">
 
-                <div class="metric-card">
-                    <div class="metric-label">
-                        <span>Best & Elite strike</span>
-                        <span class="metric-tag">Audit</span>
-                    </div>
-                    <div class="metric-value">57.40%</div>
-                    <div class="metric-note">39 winners from 68 selections.</div>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-label">
-                        <span>System & Place ROI</span>
-                        <span class="metric-tag">Engine</span>
-                    </div>
-                    <div class="metric-value">+2.04%</div>
-                    <div class="metric-note">Stable, rules-based coverage.</div>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-label">
-                        <span>System strike</span>
-                        <span class="metric-tag">Audit</span>
-                    </div>
-                    <div class="metric-value">55.70%</div>
-                    <div class="metric-note">All published categories included.</div>
-                </div>
-            </div>
-
-            <div class="hero-card-footer">
-                <span><span class="hero-card-footer-pill">No screenshots. No hype.</span></span>
-                <span>Full daily audit, same engine.</span>
+        <div class="product-card">
+            <div class="product-card-title">Best Bets</div>
+            <div class="product-card-status">No qualifiers</div>
+            <div class="product-card-outcome">No Best Bets yesterday</div>
+            <div class="product-card-detail">High-confidence elite selections</div>
+            <div class="product-card-metrics">
+                <span class="product-card-metric"><span class="metric-label">Win %</span> N/A</span>
+                <span class="product-card-metric"><span class="metric-label">Place %</span> N/A</span>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- SUMMARY RESULTS SECTION -->
-<section class="section" aria-label="Overall performance metrics">
-    <div class="section-header">
-        <div class="section-kicker">Results</div>
-        <h2 class="section-title">Audited performance. No shortcuts.</h2>
-        <p class="section-sub">
-            PuntingIQ tracks the entire operating day, not just the winners. Best & Elite Bets,
-            System Bets, Place Bankers and Value Edge are all published with outcomes and context.
-        </p>
-    </div>
-
-    <div class="results-grid">
-        <div class="result-card">
-            <div class="result-label">Best & Elite Bets</div>
-            <div class="result-value">+222.72% ROI</div>
-            <div class="result-note">Curated, high-conviction selections.</div>
-        </div>
-
-        <div class="result-card">
-            <div class="result-label">Strike rate – Best & Elite</div>
-            <div class="result-value">57.40%</div>
-            <div class="result-note">39 winners from 68 selections.</div>
-        </div>
-
-        <div class="result-card">
-            <div class="result-label">System & Place Bets</div>
-            <div class="result-value">+2.04% ROI</div>
-            <div class="result-note">Stable rules-based foundation.</div>
-        </div>
-
-        <div class="result-card">
-            <div class="result-label">Strike rate – System & Place</div>
-            <div class="result-value">55.70%</div>
-            <div class="result-note">Audited across all published categories.</div>
-        </div>
-    </div>
-</section>
-
-<!-- DAILY AUDIT SECTION -->
-<section class="section" aria-label="Daily audit summary">
-    <div class="section-header">
-        <div class="section-kicker">Daily audit</div>
-        <h2 class="section-title">Monday 13 April 2026</h2>
-        <p class="section-sub">
-            Full category outcomes for yesterday, shown in structured cards so the audit is easy to read and hard to spin.
-        </p>
-    </div>
-
-    <div class="trackiq-grid">
-        <div>
-            <div class="trackiq-card">
-                <div class="trackiq-header">
-                    <h3 class="trackiq-title">Product status</h3>
-                    <div class="trackiq-tag">Yesterday's output</div>
-                </div>
-
-                <div class="trackiq-table" role="table" aria-label="Product status and outcomes">
-                    <div class="trackiq-table-header" role="row">
-                        <div role="columnheader">Product</div>
-                        <div role="columnheader">Status</div>
-                        <div role="columnheader">Detail</div>
-                        <div role="columnheader">Outcome</div>
-                    </div>
-
-                    <div class="trackiq-table-row" role="row">
-                        <div>Best Bets</div>
-                        <div>No qualifiers</div>
-                        <div>High-confidence elite selections</div>
-                        <div>No Best Bets yesterday</div>
-                    </div>
-
-                    <div class="trackiq-table-row" role="row">
-                        <div>Elite Winners</div>
-                        <div>1 Runner</div>
-                        <div>Casino Shaw</div>
-                        <div>WON</div>
-                    </div>
-
-                    <div class="trackiq-table-row" role="row">
-                        <div>System Bets</div>
-                        <div>No qualifiers</div>
-                        <div>Form-based inclusion logic</div>
-                        <div>No System Bets yesterday</div>
-                    </div>
-
-                    <div class="trackiq-table-row" role="row">
-                        <div>Place Bankers</div>
-                        <div>1 Runner</div>
-                        <div>Stormy Reign – Place reliability</div>
-                        <div>2nd</div>
-                    </div>
-
-                    <div class="trackiq-table-row" role="row">
-                        <div>Value Edge</div>
-                        <div>4 Runners</div>
-                        <div>Christmas Star / Casino Shaw / Lord Remlap / Highground – Market Overlays</div>
-                        <div>2nd / WON / WON / 4th</div>
-                    </div>
-
-                    <div class="trackiq-table-row" role="row">
-                        <div>Race-by-Race Top Picks</div>
-                        <div>3 runners</div>
-                        <div>Artful Lady / Casino Shaw / LordRemlap – Yesterday's top model picks</div>
-                        <div>3/3 Won</div>
-                    </div>
-                </div>
-
-                <div class="trackiq-footnote">
-                    This is the same structured output logic as TrackIQ, with yesterday's races, non-bets and scratches all visible.
-                </div>
+        
+        <div class="product-card">
+            <div class="product-card-title">Elite Winners</div>
+            <div class="product-card-status">1 runner</div>
+            <div class="product-card-outcome">1/1 WON</div>
+            <div class="product-card-detail">High-Confidence based WIN selections</div>
+            <div class="product-card-metrics">
+                <span class="product-card-metric"><span class="metric-label">Win %</span> 100.0%</span>
+                <span class="product-card-metric"><span class="metric-label">Place %</span> N/A</span>
             </div>
         </div>
-
-        <div class="trackiq-card">
-  <div class="trackiq-header">
-    <h3 class="trackiq-title">Top Picks Summary</h3>
-    <div class="trackiq-tag">Yesterday · audit</div>
-  </div>
-
-    <div class="audit-table" role="table" aria-label="race-by-race top picks"><div class="audit-table" role="table" aria-label="race-by-race top picks">
-    <div class="audit-table-header" role="row">
-      <div role="columnheader">Race</div>
-      <div role="columnheader">Runner</div>
-      <div role="columnheader">Odds</div>
-      <div role="columnheader">Result</div>
-    </div>
-    <div class='audit-table-row' role='row'><div>Launceston R9</div><div>#1 Agnete 🏆</div><div>W4.60 / P2.20</div><div><strong>WON</strong></div></div>
-<div class='audit-table-row' role='row'><div>Southside Cranbourne R7</div><div>#1 Jewel Bay</div><div>W4.20 / P1.50</div><div><strong>WON</strong></div></div>
-<div class='audit-table-row' role='row'><div>Mackay R2</div><div>#1 Exodas</div><div>W3.70 / P1.45</div><div><strong>WON</strong></div></div>
-</div><div class="trackiq-footnote">3 highest win dividend winners are shown below. This table shows only the top 3 winning picks by win dividend for yesterday.
-  </div>
-</div>
-
-    </div>
-</section>
-
-<!-- RACE-BY-RACE TOP PICKS SECTION -->
-<section class="section" aria-label="Race-by-Race Top Picks">
-
-        <div class="trackiq-card">
-            <div class="trackiq-header">
-                <h3 class="trackiq-title">Top Picks Summary</h3>
-                <div class="trackiq-tag">High‑confidence only</div>
-            </div>
-            <div class="audit-table" role="table" aria-label="Race-by-Race Top Picks">
-                <div class="audit-table" role="table" aria-label="Race-by-Race Top Picks">
-                    <div class="audit-table-header" role="row">
-                        <div role="columnheader">Race</div>
-                        <div role="columnheader">Runner</div>
-                        <div role="columnheader">Odds</div>
-                        <div role="columnheader">Result</div>
-                    </div>
-                    <div class='audit-table-row' role='row'><div>Albany R5</div><div>#3 Renovation Show 🏆</div><div>W2.4 / P1.3</div><div><span class='lost'>LOST</span></div></div>
-                    <div class='audit-table-row' role='row'><div>Armidale R3</div><div>#8 Extremely Perfect 🏆</div><div>W1.95 / P1.17</div><div><span class='lost'>LOST</span></div></div>
-                    <div class='audit-table-row' role='row'><div>Ipswich R2</div><div>#1 Benzino 🏆</div><div>W1.9 / P1.08</div><div><span class='lost'>LOST</span></div></div>
-                    <div class='audit-table-row' role='row'><div>Ipswich R5</div><div>#1 San Jose Boy 🏆</div><div>W5.0 / P1.33</div><div><span class='lost'>LOST</span></div></div>
-                    <div class='audit-table-row' role='row'><div>Ipswich R7</div><div>#6 Ivantheinvincible 🏆</div><div>W2.7 / P1.2</div><div><span class='lost'>LOST</span></div></div>
-                    <div class='audit-table-row' role='row'><div>Southside Pakenham R1</div><div>#5 Parvenu 🏆</div><div>W2.25 / P1.45</div><div><span class='lost'>LOST</span></div></div>
-                    <div class='audit-table-row' role='row'><div>Southside Pakenham R4</div><div>#3 Royal Honour 🏆</div><div>W1.75 / P1.14</div><div><span class='lost'>LOST</span></div></div>
-                    <div class='audit-table-row' role='row'><div>Southside Pakenham R5</div><div>#8 Upstage 🏆🏆🏆</div><div>W1.65 / P1.05</div><div><strong>WON</strong></div></div>
-                    <div class='audit-table-row' role='row'><div>Wyong R3</div><div>#1 Bruce I Am 🏆</div><div>W2.3 / P1.45</div><div><strong>WON</strong></div></div>
-                    <div class='audit-table-row' role='row'><div>Wyong R4</div><div>#1 Champere 🏆🏆</div><div>W1.3 / P1.12</div><div><strong>WON</strong></div></div>
-                    <div class='audit-table-row' role='row'><div>bet365 Echuca R1</div><div>#12 Snobbery 🏆</div><div>W2.7 / P1.3</div><div><span class='lost'>LOST</span></div></div>
-                </div> <!-- close inner audit-table -->
-                <div class="trackiq-footnote">
-                    Trophy icons represent model confidence tiers (🏆 Bronze · 🏆🏆 Silver · 🏆🏆🏆 Gold). Only high‑confidence top picks are shown in this section.
-                </div>
-            </div> <!-- close outer audit-table -->
-        </div> <!-- close trackiq-card -->
-</section>
-
-<!-- RACE-BY-RACE SUMMARY SECTION -->
-<section class="section" aria-label="Race-by-Race Summary">
-  <div class="section-header">
-    <div class="section-kicker">Audit detail</div>
-    <h2 class="section-title">Race‑by‑Race Summary</h2>
-    <p class="section-sub">
-      Our analysis of every race today, highlighting the strongest model‑rated runner
-      in each event. All outcomes are shown.
-    </p>
-  </div>
-
-  <div class="trackiq-card">
-    <div class="trackiq-header">
-      <h3 class="trackiq-title">Full Race‑by‑Race Summary</h3>
-      <div class="trackiq-tag">Complete audit</div>
-    </div>
-
-    <div class="audit-scroll">
-      <div class="audit-table" role="table" aria-label="Full race-by-race summary">
-        <div class="audit-table-header" role="row">
-          <div role="columnheader">Race</div>
-          <div role="columnheader">Runner</div>
-          <div role="columnheader">Odds</div>
-          <div role="columnheader">Result</div>
-        </div>
-
-        <!-- Sapphire Coast -->
-        <div class="audit-table-row"><div>Sapphire Coast R2</div><div>#8 Christmas Star</div><div>W3.20 / P1.40</div><div>2nd</div></div>
-        <div class="audit-table-row"><div>Sapphire Coast R3</div><div>#7 Artful Lady 🏆</div><div>W2.05 / P1.30</div><div><strong>WON</strong></div></div>
-        <div class="audit-table-row"><div>Sapphire Coast R4</div><div>#2 Fire And Gemstone</div><div>W5.00 / P1.75</div><div>4th</div></div>
-        <div class="audit-table-row"><div>Sapphire Coast R5</div><div>#8 Casino Shaw 🏆🏆</div><div>W2.30 / P1.20</div><div><strong>WON</strong></div></div>
-        <div class="audit-table-row"><div>Sapphire Coast R6</div><div>#1 Hold My Drink</div><div>W2.20 / P1.20</div><div>5th</div></div>
-        <div class="audit-table-row"><div>Sapphire Coast R7</div><div>#12 Ciao Bella Mia</div><div>W3.90 / P2.00</div><div>2nd</div></div>
-
-        <!-- Scone -->
-        <div class="audit-table-row"><div>Scone R3</div><div>#7 Hammoon Sensation</div><div>W3.00 / P1.40</div><div><strong>WON</strong></div></div>
-        <div class="audit-table-row"><div>Scone R4</div><div>#3 Yacht Girl</div><div>W3.10 / P1.40</div><div>3rd</div></div>
-        <div class="audit-table-row"><div>Scone R5</div><div>#5 Lord Remlap 🏆🏆</div><div>W1.85 / P1.17</div><div><strong>WON</strong></div></div>
-        <div class="audit-table-row"><div>Scone R6</div><div>#11 Bullion Hunter</div><div>W2.60 / P1.33</div><div>2nd</div></div>
-
-        <!-- Sportsbet Longreach -->
-        <div class="audit-table-row"><div>Longreach R1</div><div>#1 Highground</div><div>W4.60 / P2.25</div><div>4th</div></div>
-        <div class="audit-table-row"><div>Longreach R2</div><div>#6 All Too Lucky</div><div>W3.10 / P1.40</div><div>2nd</div></div>
-        <div class="audit-table-row"><div>Longreach R3</div><div>#8 Little Cointreau</div><div>W3.40 / P1.40</div><div>4th</div></div>
-        <div class="audit-table-row"><div>Longreach R4</div><div>#4 Zoustrong</div><div>W2.35 / P1.25</div><div><strong>WON</strong></div></div>
-        <div class="audit-table-row"><div>Longreach R5</div><div>#2 Calyx Rose</div><div>W4.00 / P1.70</div><div><strong>WON</strong></div></div>
-        <div class="audit-table-row"><div>Longreach R6</div><div>#9 Scarlet Haze</div><div>W4.00 / P1.67</div><div>3rd</div></div>
-        <div class="audit-table-row"><div>Longreach R7</div><div>#8 Ya Love Her</div><div>W4.40 / P1.73</div><div>2nd</div></div>
-
-        <!-- bet365 Seymour -->
-        <div class="audit-table-row"><div>Seymour R1</div><div>#13 Profile</div><div>W2.35 / P1.30</div><div>7th</div></div>
-        <div class="audit-table-row"><div>Seymour R2</div><div>#7 Back Up Barbie</div><div>W3.10 / P1.40</div><div>3rd</div></div>
-        <div class="audit-table-row"><div>Seymour R3</div><div>#10 Amedei</div><div>W2.10 / P1.20</div><div><strong>WON</strong></div></div>
-        <div class="audit-table-row"><div>Seymour R4</div><div>#14 Panda's Spectrum</div><div>W1.90 / P1.20</div><div><strong>WON</strong></div></div>
-        <div class="audit-table-row"><div>Seymour R5</div><div>#4 Ryanman</div><div>W3.10 / P1.40</div><div>5th</div></div>
-        <div class="audit-table-row"><div>Seymour R6</div><div>#8 Snappy Pierro</div><div>W3.40 / P1.40</div><div>7th</div></div>
-        <div class="audit-table-row"><div>Seymour R7</div><div>#5 Diamond Indaruf</div><div>W4.60 / P1.88</div><div>2nd</div></div>
-        <div class="audit-table-row"><div>Seymour R8</div><div>#8 Ichiberu</div><div>W4.20 / P1.70</div><div><strong>WON</strong></div></div>
-        <div class="audit-table-row"><div>Seymour R9</div><div>#8 Moaksun</div><div>W4.40 / P1.80</div><div>4th</div></div>
-
-      </div>
-    </div>
-
-    <div class="trackiq-footnote">
-      One runner per race — the highest‑rated model selection. All outcomes included,
-      with no filtering or post‑hoc adjustment.
-    </div>
-  </div>
-</section>
-<!-- WHY THIS MATTERS SECTION -->
-<section class="section" aria-label="Why this matters">
-    <div class="section-header">
-        <div class="section-kicker">Why this matters</div>
-        <h2 class="section-title">Performance with a process, not just numbers.</h2>
-        <p class="section-sub">
-            The results page is designed to reflect the same premium system logic as the home page:
-            no hype, no selective reporting, just structured intelligence and audited outcomes.
-        </p>
-    </div>
-
-    <div class="why-grid">
-        <div class="why-list">
-            <h4>What this page shows.</h4>
-            <div class="why-items">
-                <div class="why-item">
-                    <span aria-hidden="true"></span>
-                    <div>Full category outcomes for the day, including non-bets and scratches.</div>
-                </div>
-                <div class="why-item">
-                    <span aria-hidden="true"></span>
-                    <div>Daily strike and ROI summary in the same style as TrackIQ.</div>
-                </div>
-                <div class="why-item">
-                    <span aria-hidden="true"></span>
-                    <div>Detailed race-level picks for audit and review.</div>
-                </div>
-                <div class="why-item">
-                    <span aria-hidden="true"></span>
-                    <div>Performance presented in a professional, high-contrast layout.</div>
-                </div>
-            </div>
-            <div class="why-note">
-                This is the evidence page. If the system is real, it should look and feel like a proper product,
-                not an afterthought.
+        
+        <div class="product-card">
+            <div class="product-card-title">Value Edge</div>
+            <div class="product-card-status">1 runner</div>
+            <div class="product-card-outcome">1/1 WON / 1/1 Placed</div>
+            <div class="product-card-detail">Value Edge highlights potential market inefficiencies</div>
+            <div class="product-card-metrics">
+                <span class="product-card-metric"><span class="metric-label">Win %</span> 100.0%</span>
+                <span class="product-card-metric"><span class="metric-label">Place %</span> 100.0%</span>
             </div>
         </div>
-
-        <div class="why-list">
-            <h4>What it is not.</h4>
-            <div class="why-items">
-                <div class="why-item good">
-                    <span aria-hidden="true"></span>
-                    <div>Not a highlight reel of winners only.</div>
-                </div>
-                <div class="why-item good">
-                    <span aria-hidden="true"></span>
-                    <div>Not a screenshot-based sales page.</div>
-                </div>
-                <div class="why-item good">
-                    <span aria-hidden="true"></span>
-                    <div>Not an unverifiable tip sheet.</div>
-                </div>
-                <div class="why-item good">
-                    <span aria-hidden="true"></span>
-                    <div>Not a product divorced from the TrackIQ intelligence layer.</div>
-                </div>
+        
+        <div class="product-card">
+            <div class="product-card-title">System Bets</div>
+            <div class="product-card-status">15 runners</div>
+            <div class="product-card-outcome">15 Placed</div>
+            <div class="product-card-detail">Form-based inclusion logic</div>
+            <div class="product-card-metrics">
+                <span class="product-card-metric"><span class="metric-label">Win %</span> N/A</span>
+                <span class="product-card-metric"><span class="metric-label">Place %</span> 53.3%</span>
             </div>
-            <div class="why-note">
-                The page is built to demonstrate a repeatable process, not provide betting guarantees.
+        </div>
+        
+        <div class="product-card">
+            <div class="product-card-title">Place Bankers</div>
+            <div class="product-card-status">5 runners</div>
+            <div class="product-card-outcome">4/5 Placed</div>
+            <div class="product-card-detail">High-reliability PLACE selections</div>
+            <div class="product-card-metrics">
+                <span class="product-card-metric"><span class="metric-label">Win %</span> N/A</span>
+                <span class="product-card-metric"><span class="metric-label">Place %</span> 80.0%</span>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-card-title">Race-by-Race Top Picks</div>
+            <div class="product-card-status">11 runners</div>
+            <div class="product-card-outcome">6/11 WON / 8/11 Placed</div>
+            <div class="product-card-detail">High-confidence top picks</div>
+            <div class="product-card-metrics">
+                <span class="product-card-metric"><span class="metric-label">Win %</span> 54.5%</span>
+                <span class="product-card-metric"><span class="metric-label">Place %</span> 72.7%</span>
+            </div>
+        </div>
+        </div>
+
+    <style>
+    .product-status-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-bottom: 28px;
+        justify-content: flex-start;
+        background: none;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+        border: none;
+        position: relative;
+    }
+    .product-card {
+        background: #181f2a;
+        border: 1px solid #2a3140;
+        border-radius: 13px;
+        color: #fff;
+        padding: 12px 28px 8px 28px;
+        min-width: 320px;
+        max-width: 420px;
+        flex: 1 1 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-family: 'Segoe UI', 'Arial', sans-serif;
+        position: relative;
+        transition: border 0.15s, background 0.15s;
+        cursor: default;
+        z-index: 1;
+        box-shadow: none;
+    }
+    .product-card-title {
+        font-size: 0.82em;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        color: #4e6fae;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        opacity: 0.85;
+    }
+    .product-card-status {
+        font-size: 1.5em;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 0;
+        letter-spacing: 0.01em;
+        line-height: 1.05;
+    }
+    .product-card-outcome {
+        font-size: 0.98em;
+        color: #a5b0c5;
+        margin-bottom: 0;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+    }
+    .product-card-detail {
+        font-size: 0.93em;
+        color: #6ee7b7;
+        margin-bottom: 2px;
+        font-weight: 500;
+        opacity: 0.85;
+    }
+    .product-card-metrics {
+        display: flex;
+        gap: 8px;
+        margin-top: 0;
+    }
+    .product-card-metric {
+        font-size: 1.1em;
+        color: #fff;
+        background: #232b3a;
+        border-radius: 6px;
+        padding: 4px 12px 4px 12px;
+        font-weight: 700;
+        border: 1px solid #2a3140;
+        letter-spacing: 0.01em;
+        transition: background 0.15s, color 0.15s;
+        text-shadow: none;
+        filter: none;
+        opacity: 0.95;
+    }
+    .metric-label {
+        color: #4e6fae;
+        background: none;
+        border-radius: 0;
+        font-size: 0.93em;
+        margin-right: 4px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 0;
+        box-shadow: none;
+        letter-spacing: 0.03em;
+        text-shadow: none;
+        opacity: 0.85;
+    }
+    </style>
+    <h2>Top Picks Summary (Tiered Only)</h2><table border="1" cellpadding="5" cellspacing="0"><tr><th>Race</th><th>Runner</th><th>Odds</th><th>Result</th></tr><tr><td>Launceston R4</td><td>#1 Georgaroni <span style="font-size:1.2em;">🏆</span></td><td>W2.15 / P1.40</td><td>WON</td></tr><tr><td>Launceston R5</td><td>#1 Aristopolos <span style="font-size:1.2em;">🏆</span><span style="font-size:1.2em;">🏆</span><span style="font-size:1.2em;">🏆</span></td><td>W1.05 / P1.02</td><td>WON</td></tr><tr><td>Launceston R7</td><td>#2 Magnaprime <span style="font-size:1.2em;">🏆</span></td><td>W1.85 / P1.35</td><td>WON</td></tr><tr><td>Launceston R8</td><td>#3 Cherokee Dancer <span style="font-size:1.2em;">🏆</span><span style="font-size:1.2em;">🏆</span></td><td>W3.50 / P1.85</td><td>WON</td></tr><tr><td>Launceston R9</td><td>#1 Agnete <span style="font-size:1.2em;">🏆</span></td><td>W4.60 / P2.20</td><td>WON</td></tr><tr><td>Mackay R3</td><td>#3 Diante <span style="font-size:1.2em;">🏆</span><span style="font-size:1.2em;">🏆</span></td><td>W1.28 / P1.06</td><td>2</td></tr><tr><td>Mackay R4</td><td>#2 Proviseur <span style="font-size:1.2em;">🏆</span></td><td>W2.00 / P1.22</td><td>8</td></tr><tr><td>Mackay R7</td><td>#1 Answering <span style="font-size:1.2em;">🏆</span></td><td>W3.60 / P1.70</td><td>3</td></tr><tr><td>Mackay R8</td><td>#5 Diasonic <span style="font-size:1.2em;">🏆</span><span style="font-size:1.2em;">🏆</span></td><td>W16.00 / P3.30</td><td>9</td></tr><tr><td>Orange R2</td><td>#6 Favour The Bold <span style="font-size:1.2em;">🏆</span></td><td>W2.20 / P1.30</td><td>WON</td></tr><tr><td>Orange R3</td><td>#7 Cape Ex <span style="font-size:1.2em;">🏆</span></td><td>W2.20 / P1.09</td><td>6</td></tr></table>
+<h2>Race-by-Race Results</h2>
+<div style="max-height: 350px; overflow-y: auto; border-radius: var(--radius-md); box-shadow: var(--shadow-subtle);">
+    <table style="margin-bottom:0; width:100%;">
+        <tr><th>Race</th><th>Runner</th><th>Odds</th><th>Result</th></tr><tr><td>Canberra R2</td><td>#3 Shoreman</td><td>W0.00 / P0.00</td><td>3</td></tr><tr><td>Canberra R3</td><td>#1 Over The Limit</td><td>W0.00 / P0.00</td><td>2</td></tr><tr><td>Canberra R4</td><td>#3 Heligan</td><td>W0.00 / P0.00</td><td>3</td></tr><tr><td>Canberra R5</td><td>#5 Walk The Pier</td><td>W0.00 / P0.00</td><td>Scratched</td></tr><tr><td>Canberra R6</td><td>#3 It Is To Be</td><td>W0.00 / P0.00</td><td>3</td></tr><tr><td>Canberra R7</td><td>#8 Hell Of A Fox</td><td>W0.00 / P0.00</td><td>WON</td></tr><tr><td>Canberra R8</td><td>#10 Very Sirius</td><td>W0.00 / P0.00</td><td>3</td></tr><tr><td>Launceston R1</td><td>#3 Mcveigh</td><td>W3.40 / P1.33</td><td>WON</td></tr><tr><td>Launceston R2</td><td>#2 Novalargo</td><td>W4.20 / P1.67</td><td>6</td></tr><tr><td>Launceston R3</td><td>#2 Just Bobby</td><td>W3.00 / P1.40</td><td>WON</td></tr><tr><td>Launceston R4</td><td>#1 Georgaroni</td><td>W2.15 / P1.40</td><td>WON</td></tr><tr><td>Launceston R5</td><td>#1 Aristopolos</td><td>W1.05 / P1.02</td><td>WON</td></tr><tr><td>Launceston R6</td><td>#2 Vortistar</td><td>W3.50 / P1.45</td><td>9</td></tr><tr><td>Launceston R7</td><td>#2 Magnaprime</td><td>W1.85 / P1.35</td><td>WON</td></tr><tr><td>Launceston R8</td><td>#3 Cherokee Dancer</td><td>W3.50 / P1.85</td><td>WON</td></tr><tr><td>Launceston R9</td><td>#1 Agnete</td><td>W4.60 / P2.20</td><td>WON</td></tr><tr><td>Mackay R2</td><td>#1 Exodas</td><td>W3.70 / P1.45</td><td>WON</td></tr><tr><td>Mackay R3</td><td>#3 Diante</td><td>W1.28 / P1.06</td><td>2</td></tr><tr><td>Mackay R4</td><td>#2 Proviseur</td><td>W2.00 / P1.22</td><td>8</td></tr><tr><td>Mackay R5</td><td>#7 Dealing's Done</td><td>W4.80 / P1.67</td><td>6</td></tr><tr><td>Mackay R6</td><td>#3 Zaya</td><td>W3.00 / P1.30</td><td>WON</td></tr><tr><td>Mackay R7</td><td>#1 Answering</td><td>W3.60 / P1.70</td><td>3</td></tr><tr><td>Mackay R8</td><td>#5 Diasonic</td><td>W16.00 / P3.30</td><td>9</td></tr><tr><td>Orange R1</td><td>#1 Omnic</td><td>W2.50 / P1.67</td><td>3</td></tr><tr><td>Orange R2</td><td>#6 Favour The Bold</td><td>W2.20 / P1.30</td><td>WON</td></tr><tr><td>Orange R3</td><td>#7 Cape Ex</td><td>W2.20 / P1.09</td><td>6</td></tr><tr><td>Orange R4</td><td>#1 Flying Party</td><td>W2.10 / P1.24</td><td>2</td></tr><tr><td>Orange R5</td><td>#3 Iowna Benz</td><td>W3.00 / P1.35</td><td>6</td></tr><tr><td>Orange R6</td><td>#7 Take The Chance</td><td>W4.20 / P1.57</td><td>4</td></tr><tr><td>Orange R7</td><td>#2 Sarrismo</td><td>W2.50 / P1.30</td><td>WON</td></tr><tr><td>Orange R8</td><td>#3 Written By Lucy</td><td>W3.50 / P1.35</td><td>8</td></tr><tr><td>Southside Cranbourne R1</td><td>#5 Price Tag</td><td>W1.65 / P1.10</td><td>WON</td></tr><tr><td>Southside Cranbourne R2</td><td>#3 Logam</td><td>W3.00 / P1.45</td><td>WON</td></tr><tr><td>Southside Cranbourne R3</td><td>#10 Iftihar</td><td>W3.70 / P1.30</td><td>6</td></tr><tr><td>Southside Cranbourne R4</td><td>#3 Easy Red</td><td>W2.80 / P1.30</td><td>3</td></tr><tr><td>Southside Cranbourne R5</td><td>#5 Firerated</td><td>W3.10 / P1.40</td><td>4</td></tr><tr><td>Southside Cranbourne R6</td><td>#1 Choir Point</td><td>W1.55 / P1.30</td><td>WON</td></tr><tr><td>Southside Cranbourne R7</td><td>#1 Jewel Bay</td><td>W4.20 / P1.50</td><td>WON</td></tr><tr><td>Southside Cranbourne R8</td><td>#2 Lady Sadler</td><td>W2.90 / P1.50</td><td>2</td></tr><tr><td>bet365 Stawell R1</td><td>#1 Eighteen Months</td><td>W0.00 / P0.00</td><td>9</td></tr><tr><td>bet365 Stawell R2</td><td>#1 Lucky Crimson</td><td>W0.00 / P0.00</td><td>8</td></tr><tr><td>bet365 Stawell R3</td><td>#2 Sitar</td><td>W0.00 / P0.00</td><td>7</td></tr><tr><td>bet365 Stawell R4</td><td>#6 Finance Merchant</td><td>W0.00 / P0.00</td><td>2</td></tr><tr><td>bet365 Stawell R5</td><td>#14 Zeusmas</td><td>W0.00 / P0.00</td><td>Scratched</td></tr><tr><td>bet365 Stawell R6</td><td>#3 Bancoora</td><td>W0.00 / P0.00</td><td>6</td></tr><tr><td>bet365 Stawell R7</td><td>#10 Xtramagic</td><td>W0.00 / P0.00</td><td>9</td></tr><tr><td>bet365 Stawell R8</td><td>#14 Whitson</td><td>W0.00 / P0.00</td><td>Scratched</td></tr></table></div>
+    <style>
+        body, html {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+        }
+    </style>
+
+
+    <!-- WHY THIS MATTERS SECTION -->
+    <div style="margin-top: 52px; margin-bottom: 32px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;">
+        <div style="color: #2f7bff; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; margin-bottom: 6px;">Why this matters</div>
+        <div style="font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 4px; letter-spacing: -0.02em;">Performance with a process, not just numbers.</div>
+        <div style="color: #a5b0c5; font-size: 13px; margin-bottom: 28px; max-width: 900px;">The results page is designed to reflect the same premium system logic as the home page: no hype, no selective reporting, just structured intelligence and audited outcomes.</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 32px; margin-bottom: 18px;">
+            <div style="flex: 1 1 380px; min-width: 320px; background: #10182a; border: 1px solid #232b3a; border-radius: 18px; padding: 28px 32px 18px 32px; margin-bottom: 0; box-shadow: 0 8px 32px #0002; font-size: 13px; color: #f5f7fb;">
+                <div style="font-weight: 700; color: #fff; font-size: 13px; margin-bottom: 12px;">What this page shows.</div>
+                <ul style="list-style: none; padding: 0; margin: 0 0 18px 0; font-size: 13px; color: #f5f7fb;">
+                    <li style='margin-bottom: 7px;'><span style="color:#ff4b6a;font-size:1.2em;vertical-align:middle;">&#11044;</span> Full category outcomes for the day, including non-bets and scratches.</li>
+                    <li style='margin-bottom: 7px;'><span style="color:#ff4b6a;font-size:1.2em;vertical-align:middle;">&#11044;</span> Detailed race-level picks for audit and review.</li>
+                    <li style='margin-bottom: 7px;'><span style="color:#ff4b6a;font-size:1.2em;vertical-align:middle;">&#11044;</span> Daily strike and ROI summary in the same style as TrackIQ.</li>
+                    <li style='margin-bottom: 7px;'><span style="color:#ff4b6a;font-size:1.2em;vertical-align:middle;">&#11044;</span> Performance presented in a professional, high-contrast layout.</li>
+                </ul>
+                <div style="color: #a5b0c5; font-size: 13px;">This is the evidence page. If the system is real, it should look and feel like a proper product, not an afterthought.</div>
+            </div>
+            <div style="flex: 1 1 380px; min-width: 320px; background: #10182a; border: 1px solid #232b3a; border-radius: 18px; padding: 28px 32px 18px 32px; margin-bottom: 0; box-shadow: 0 8px 32px #0002; font-size: 13px; color: #f5f7fb;">
+                <div style="font-weight: 700; color: #fff; font-size: 13px; margin-bottom: 12px;">What it is not.</div>
+                <ul style="list-style: none; padding: 0; margin: 0 0 18px 0; font-size: 13px; color: #f5f7fb;">
+                    <li style='margin-bottom: 7px;'><span style="color:#19e68c;font-size:1.2em;vertical-align:middle;">&#11044;</span> Not a highlight reel of winners only.</li>
+                    <li style='margin-bottom: 7px;'><span style="color:#19e68c;font-size:1.2em;vertical-align:middle;">&#11044;</span> Not an unverifiable tip sheet.</li>
+                    <li style='margin-bottom: 7px;'><span style="color:#19e68c;font-size:1.2em;vertical-align:middle;">&#11044;</span> Not a screenshot-based sales page.</li>
+                    <li style='margin-bottom: 7px;'><span style="color:#19e68c;font-size:1.2em;vertical-align:middle;">&#11044;</span> Not a product divorced from the TrackIQ intelligence layer.</li>
+                </ul>
+                <div style="color: #a5b0c5; font-size: 13px;">The page is built to demonstrate a repeatable process, not provide betting guarantees.</div>
             </div>
         </div>
     </div>
-</section>
 
-<!-- SUBSCRIBE SECTION -->
-<section class="section" id="subscribe" aria-label="Membership signup">
-    <div class="subscribe">
-        <div class="subscribe-text">
-            <h2 class="subscribe-title">Become a PuntingIQ member.</h2>
-            <div class="subscribe-sub">
-                Access the same structured intelligence layer that powers the home page,
-                TrackIQ, and these audited results. Full daily output, system logic, and membership support.
+    <!-- MEMBERSHIP SECTION -->
+    <div style="margin-top: 48px; margin-bottom: 32px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;">
+        <div style="background: #10182a; border: 1.5px solid #2f7bff33; border-radius: 18px; padding: 32px 32px 22px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px; box-shadow: 0 8px 32px #0002;">
+            <div style="flex: 1 1 340px; min-width: 260px;">
+                <div style="font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 8px; letter-spacing: -0.02em;">Become a PuntingIQ member.</div>
+                <div style="color: #a5b0c5; font-size: 13px; margin-bottom: 0;">Access the same structured intelligence layer that powers the home page, TrackIQ, and these audited results. Full daily output, system logic, and membership support.</div>
             </div>
-        </div>
-
-        <div class="subscribe-cta">
-            <button type="button" class="btn-primary" onclick="location.href='mailto:info@puntingiq.com.au'">
-                Request membership details
-            </button>
-            <div class="subscribe-note">
-                Membership is limited and reviewed – built for punters who want structure, not noise.
+            <div style="flex: 1 1 340px; min-width: 260px; display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">
+                <a href="#" style="display: inline-block; background: linear-gradient(90deg, #2f7bff 60%, #3ee58f 100%); color: #020308; font-weight: 600; font-size: 13px; border-radius: 999px; padding: 14px 48px; text-decoration: none; box-shadow: 0 8px 32px #2f7bff22; margin-bottom: 6px; text-align: center;">Request membership details</a>
+                <div style="color: #a5b0c5; font-size: 11px; text-align: right;">Membership is limited and reviewed – built for punters who want structure, not noise.</div>
             </div>
         </div>
     </div>
-</section>
 
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-    <div>© PuntingIQ. Racing Intelligence Layer.</div>
-    <div class="footer-links">
-        <a href="index.html#trackiq">TrackIQ</a>
-        <a href="results.html">Results</a>
-        <a href="index.html#why">Why PuntingIQ</a>
-        <a href="index.html#products">Products</a>
-    </div>
-</footer>
-
-</div>
-</div>
 </body>
 </html>
