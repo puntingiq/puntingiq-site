@@ -4,85 +4,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PuntingIQ – Daily Intelligence Brief (2026-04-20)</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-    :root {
-      --bg: #0b0f19;
-      --card: rgba(255,255,255,0.06);
-      --card2: rgba(255,255,255,0.10);
-      --text: rgba(255,255,255,0.92);
-      --muted: rgba(255,255,255,0.70);
-      --line: rgba(255,255,255,0.14);
-      --accent: #6ee7ff;
-      --accent2: #a78bfa;
-      --good: #34d399;
-      --warn: #fbbf24;
-      --bad: #fb7185;
-    }
-
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: radial-gradient(1200px 600px at 20% 0%, rgba(110,231,255,0.16), transparent 55%), radial-gradient(1000px 500px at 80% 20%, rgba(167,139,250,0.14), transparent 55%), var(--bg); color: var(--text); }
-    a { color: var(--accent); text-decoration: none; }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 22px 16px 40px; }
-    .hero { display:flex; gap:16px; flex-direction: column; align-items: center; text-align:center; }
-    .banner { width:100%; max-width: 980px; border-radius: 18px; overflow:hidden; box-shadow: 0 14px 40px rgba(0,0,0,0.40); border: 1px solid var(--line); }
-    .banner img { width:100%; display:block; }
-    .title { margin: 14px 0 0; font-size: 30px; letter-spacing: 0.5px; }
-    .subtitle { margin: 6px 0 0; font-size: 16px; color: var(--muted); }
-    .meta { margin-top: 10px; font-size: 13px; color: var(--muted); }
-
-    .grid { display:grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 18px; width: 100%; }
-    .pill { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 10px 10px; min-height: 56px; display:flex; flex-direction:column; justify-content:center; }
-    .pill .k { font-size: 11px; color: var(--muted); letter-spacing: 0.4px; text-transform: uppercase; }
-    .pill .v { font-size: 18px; font-weight: 700; margin-top: 2px; }
-
-    @media (max-width: 920px) { .grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 520px) { .grid { grid-template-columns: repeat(2, 1fr); } .title { font-size: 24px; } }
-
-    .section { margin-top: 22px; background: var(--card); border: 1px solid var(--line); border-radius: 22px; overflow:hidden; box-shadow: 0 10px 35px rgba(0,0,0,0.25); }
-    .section-h { padding: 16px 16px 10px; border-bottom: 1px solid var(--line); display:flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-    .section-h h2 { margin:0; font-size: 16px; letter-spacing: 0.3px; }
-    .section-h p { margin: 4px 0 0; color: var(--muted); font-size: 13px; max-width: 820px; }
-    .tag { font-size: 12px; padding: 6px 10px; border-radius: 999px; background: rgba(110,231,255,0.12); border: 1px solid rgba(110,231,255,0.35); color: var(--text); }
-
-    .content { padding: 14px 16px 18px; }
-
-    .table-wrap { overflow-x:auto; border-radius: 16px; border: 1px solid var(--line); }
-    table { width: 100%; border-collapse: collapse; min-width: 860px; background: rgba(0,0,0,0.18); }
-    th, td { padding: 10px 10px; text-align:left; vertical-align: top; border-bottom: 1px solid var(--line); font-size: 13px; }
-    th { position: sticky; top: 0; background: rgba(10,14,24,0.95); backdrop-filter: blur(6px); font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; color: var(--muted); }
-    tr:hover td { background: rgba(255,255,255,0.05); }
-
-    .muted { color: var(--muted); }
-    .trophies { margin-left: 6px; }
-
-    .logo-row { display:flex; align-items:center; gap:10px; justify-content:center; margin-top: 10px; }
-    .logo-row img { width: 160px; max-width: 60vw; }
-
-    details { border: 1px solid var(--line); background: rgba(0,0,0,0.18); border-radius: 16px; padding: 10px 12px; }
-    summary { cursor:pointer; font-weight: 700; }
-
-    footer { margin-top: 22px; color: var(--muted); font-size: 12px; text-align:center; }
-  </style>
+      /* Page-specific overrides for .banner, .hero, .wrap, .logo-row, .title, .subtitle, .meta, .grid, .pill, .section, .section-h, .tag, .content, .table-wrap, .muted, .trophies, details, summary, footer */
+      .wrap { max-width: 1100px; margin: 0 auto; padding: 22px 16px 40px; }
+      .hero { display:flex; gap:16px; flex-direction: column; align-items: center; text-align:center; }
+      .banner { width:100%; max-width: 980px; border-radius: 18px; overflow:hidden; box-shadow: 0 14px 40px rgba(0,0,0,0.40); border: 1px solid var(--line,rgba(255,255,255,0.14)); }
+      .banner img { width:100%; display:block; }
+      .title { margin: 14px 0 0; font-size: 30px; letter-spacing: 0.5px; }
+      .subtitle { margin: 6px 0 0; font-size: 16px; color: var(--muted,rgba(255,255,255,0.70)); }
+      .meta { margin-top: 10px; font-size: 13px; color: var(--muted,rgba(255,255,255,0.70)); }
+      .logo-row { display:flex; align-items:center; gap:10px; justify-content:center; margin-top: 10px; }
+      .logo-row img { width: 160px; max-width: 60vw; }
+      /* ...existing page-specific styles... */
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="hero">
-      <div class="banner"><img src="/assets/PuntingIQemailbanner.png" alt="PuntingIQ"></div>
-      <div class="logo-row">
-        <img src="/assets/TrackIQ%20logo%202.png" alt="TrackIQ">
-      </div>
-      <h1 class="title">PUNTINGIQ – DAILY INTELLIGENCE BRIEF</h1>
-      <div class="subtitle">TrackIQ – Today's race intelligence • Powered by TrackIQ</div>
-      <div class="meta">Date: <strong>2026-04-20</strong> • High-confidence selections based on ladder-aware and model-driven analysis.</div>
 
-        <div class="grid">
+  <div class="page">
+    <div class="shell">
+      <header class="header">
+        <a href="index.html" class="brand">
+          <img src="assets/PuntingIQheader.png" width="120" alt="PuntingIQ logo" />
+          <div>
+            <div class="brand-text-main">PuntingIQ</div>
+            <div class="brand-text-sub">Racing Intelligence Layer</div>
+          </div>
+        </a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="trackiq.html">TrackIQ</a>
+          <a href="results.html">Results</a>
+          <a href="Aboutus.html">About Us</a>
+          <a href="products.html">Products</a>
+          <button class="nav-cta" onclick="location.href='index.html#cta'">Become a member</button>
+        </nav>
+      </header>
+      <div class="wrap">
+        <div class="hero">
+          <div class="banner"><img src="/assets/PuntingIQemailbanner.png" alt="PuntingIQ"></div>
+          <div class="logo-row">
+            <img src="/assets/TrackIQ%20logo%202.png" alt="TrackIQ">
+          </div>
+          <h1 class="title">PUNTINGIQ – DAILY INTELLIGENCE BRIEF</h1>
+          <div class="subtitle">TrackIQ – Today's race intelligence • Powered by TrackIQ</div>
+          <div class="meta">Date: <strong>2026-04-20</strong> • High-confidence selections based on ladder-aware and model-driven analysis.</div>
+          <div class="grid">
             <a href="#best-bets" class="pill"><div class="k">Best Bets</div><div class="v">0</div></a>
             <a href="#elite-winners" class="pill"><div class="k">Elite Winners</div><div class="v">0</div></a>
             <a href="#system-bets" class="pill"><div class="k">System Bets</div><div class="v">1</div></a>
             <a href="#place-bankers" class="pill"><div class="k">Place Bankers</div><div class="v">2</div></a>
             <a href="#top-picks" class="pill"><div class="k">Top Picks</div><div class="v">10</div></a>
+          </div>
         </div>
-    </div>
 
         <section class="section" id="best-bets">
             <div class="section-h">
