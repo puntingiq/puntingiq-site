@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PuntingIQ – Racing Intelligence. Not Opinions.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="PuntingIQ is the racing intelligence layer – structured data, engineered models, and TrackIQ daily racing intelligence."
+    />
+    <style>
+      :root {
+        --bg-dark: #05070b;
+        --bg-elevated: #0b1018;
+        --bg-elevated-soft: #0f1724;
+        --border-subtle: #1b2433;
+        --text-main: #f5f7fb;
+        --text-muted: #a5b0c5;
+        --accent-blue: #2f7bff;
+        --accent-blue-soft: rgba(47, 123, 255, 0.18);
+        --accent-green: #3ee58f;
+        --accent-green-soft: rgba(62, 229, 143, 0.16);
+        --danger: #ff4b6a;
+        --radius-lg: 18px;
+        --radius-md: 12px;
+        --radius-pill: 999px;
+        --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.55);
+        --shadow-subtle: 0 14px 40px rgba(0, 0, 0, 0.45);
+        --max-width: 1120px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+          "Segoe UI", sans-serif;
+        background: radial-gradient(
+          circle at top,
+          #10182a 0,
+          #05070b 52%,
+          #020308 100%
+        );
+        color: var(--text-main);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .shell {
+        width: 100%;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 24px 20px 64px;
+      }
+
+      /* HEADER */
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 10px 18px;
+        border-radius: var(--radius-pill);
+        background: linear-gradient(
+            120deg,
+            rgba(47, 123, 255, 0.12),
+            rgba(62, 229, 143, 0.04)
+          ),
+          rgba(5, 7, 11, 0.92);
+        border: 1px solid rgba(47, 123, 255, 0.35);
+        box-shadow: var(--shadow-subtle);
+        position: sticky;
+        top: 16px;
+        z-index: 20;
+        backdrop-filter: blur(18px);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .brand-mark {
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        background: radial-gradient(
+          circle at 20% 0,
+          #3ee58f 0,
+          #2f7bff 40%,
+          #05070b 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .brand-mark::before {
+        content: "";
+        position: absolute;
+        inset: 18%;
+        border-radius: 8px;
+        border: 1px solid rgba(5, 7, 11, 0.9);
+        box-shadow: inset 0 0 0 1px rgba(5, 7, 11, 0.6);
+      }
+
+      .brand-text-main {
+        font-weight: 650;
+        letter-spacing: 0.06em;
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+      .brand-text-sub {
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+
+      .nav a {
+        padding: 6px 10px;
+        border-radius: 999px;
+        transition: background 0.18s ease, color 0.18s ease;
+      }
+
+      .nav a:hover {
+        background: rgba(15, 23, 36, 0.9);
+        color: var(--text-main);
+      }
+
+      .nav-cta {
+        padding: 7px 14px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+        color: #020308;
+        font-weight: 600;
+        box-shadow: 0 0 0 1px rgba(2, 3, 8, 0.9), var(--shadow-soft);
+        white-space: nowrap;
+      }
+
+      /* HERO */
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+        gap: 32px;
+        margin-top: 40px;
+        align-items: center;
+      }
+
+      .hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 10px 4px 4px;
+        border-radius: 999px;
+        background: rgba(15, 23, 36, 0.9);
+        border: 1px solid rgba(47, 123, 255, 0.4);
+        color: var(--text-muted);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 16px;
+      }
+
+      .hero-kicker-dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 999px;
+        background: radial-gradient(
+          circle at 30% 0,
+          #3ee58f 0,
+          #2f7bff 60%,
+          #05070b 100%
+        );
+        box-shadow: 0 0 0 1px rgba(2, 3, 8, 0.9);
+      }
+
+      .hero-title {
+        font-size: clamp(32px, 4vw, 40px);
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+        margin-bottom: 14px;
+      }
+
+      .hero-title span {
+        background: linear-gradient(135deg, #ffffff, #c5d4ff);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .hero-sub {
+        font-size: 14px;
+        line-height: 1.7;
+        color: var(--text-muted);
+        max-width: 480px;
+        margin-bottom: 22px;
+      }
+
+      .hero-sub strong {
+        color: #dbe4ff;
+        font-weight: 500;
+      }
+
+      .hero-ctas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .btn-primary {
+        padding: 10px 18px;
+        border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+        color: #020308;
+        font-weight: 600;
+        font-size: 13px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .btn-ghost {
+        padding: 9px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(88, 104, 138, 0.9);
+        background: rgba(5, 7, 11, 0.9);
+        color: var(--text-main);
+        font-size: 13px;
+        cursor: pointer;
+      }
+
+      .hero-footnote {
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      .hero-footnote span {
+        color: var(--accent-green);
+      }
+
+      .hero-right {
+        position: relative;
+        min-height: 260px;
+      }
+
+      .hero-card {
+        position: absolute;
+        inset: 0;
+        border-radius: var(--radius-lg);
+        background: radial-gradient(
+          circle at top left,
+          #1a2640 0,
+          #05070b 52%,
+          #020308 100%
+        );
+        border: 1px solid rgba(47, 123, 255, 0.4);
+        box-shadow: var(--shadow-soft);
+        padding: 18px 18px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        overflow: hidden;
+      }
+
+      .hero-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      .hero-card-pill {
+        padding: 4px 9px;
+        border-radius: 999px;
+        background: rgba(5, 7, 11, 0.9);
+        border: 1px solid rgba(47, 123, 255, 0.5);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .hero-card-pill-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: var(--accent-green);
+        box-shadow: 0 0 0 4px var(--accent-green-soft);
+      }
+
+      .hero-card-title {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #e4ecff;
+      }
+
+      .hero-card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 6px;
+      }
+
+      .metric-card {
+        border-radius: var(--radius-md);
+        background: rgba(5, 7, 11, 0.9);
+        border: 1px solid rgba(27, 36, 51, 0.9);
+        padding: 10px 10px 9px;
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      .metric-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4px;
+      }
+
+      .metric-label span {
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .metric-value {
+        font-size: 16px;
+        font-weight: 600;
+        color: #f5f7ff;
+      }
+
+      .metric-tag {
+        font-size: 10px;
+        color: var(--accent-green);
+      }
+
+      .metric-tag.danger {
+        color: var(--danger);
+      }
+
+      .hero-card-footer {
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 10px;
+        color: var(--text-muted);
+      }
+
+      .hero-card-footer span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .hero-card-footer-pill {
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: rgba(15, 23, 36, 0.9);
+        border: 1px solid rgba(47, 123, 255, 0.4);
+        font-size: 10px;
+        color: #dbe4ff;
+      }
+
+      /* SECTION WRAPPER */
+      .section {
+        margin-top: 52px;
+      }
+
+      .section-header {
+        margin-bottom: 18px;
+      }
+
+      .section-kicker {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--accent-blue);
+        margin-bottom: 6px;
+      }
+
+      .section-title {
+        font-size: 20px;
+        letter-spacing: -0.02em;
+        margin-bottom: 4px;
+      }
+
+      .section-sub {
+        font-size: 13px;
+        color: var(--text-muted);
+        max-width: 520px;
+      }
+
+      /* VALUE PILLARS */
+      .pillars {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .pillar {
+        border-radius: var(--radius-md);
+        background: rgba(5, 7, 11, 0.9);
+        border: 1px solid var(--border-subtle);
+        padding: 14px 14px 12px;
+        box-shadow: var(--shadow-subtle);
+      }
+
+      .pillar-label {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--accent-green);
+        margin-bottom: 6px;
+      }
+
+      .pillar-title {
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+
+      .pillar-body {
+        font-size: 12px;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+
+      /* TRACKIQ SECTION */
+      .trackiq-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+        gap: 22px;
+        align-items: flex-start;
+      }
+
+      .trackiq-card {
+        border-radius: var(--radius-lg);
+        background: var(--bg-elevated);
+        border: 1px solid var(--border-subtle);
+        padding: 16px 16px 14px;
+        box-shadow: var(--shadow-soft);
+        font-size: 12px;
+      }
+
+      .trackiq-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .trackiq-title {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: #dbe4ff;
+      }
+
+      .trackiq-tag {
+        padding: 4px 9px;
+        border-radius: 999px;
+        background: rgba(15, 23, 36, 0.9);
+        border: 1px solid rgba(47, 123, 255, 0.5);
+        font-size: 10px;
+        color: var(--text-muted);
+      }
+
+      .trackiq-table {
+        margin-top: 6px;
+        border-radius: 12px;
+        background: rgba(5, 7, 11, 0.9);
+        border: 1px solid rgba(27, 36, 51, 0.9);
+        overflow: hidden;
+      }
+
+      .trackiq-table-header,
+      .trackiq-table-row {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr;
+        padding: 8px 10px;
+        font-size: 11px;
+      }
+
+      .trackiq-table-header {
+        background: rgba(10, 16, 26, 0.95);
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 10px;
+      }
+
+      .trackiq-table-row:nth-child(odd) {
+        background: rgba(5, 7, 11, 0.9);
+      }
+
+      .trackiq-table-row:nth-child(even) {
+        background: rgba(7, 10, 16, 0.9);
+      }
+
+      .trackiq-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 3px 8px;
+        border-radius: 999px;
+        font-size: 10px;
+        background: rgba(15, 23, 36, 0.9);
+        border: 1px solid rgba(47, 123, 255, 0.5);
+        color: #dbe4ff;
+      }
+
+      .trackiq-chip-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--accent-green);
+      }
+
+      .trackiq-footnote {
+        margin-top: 10px;
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      /* RESULTS SECTION */
+      .results-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .result-card {
+        border-radius: var(--radius-md);
+        background: var(--bg-elevated-soft);
+        border: 1px solid var(--border-subtle);
+        padding: 12px 12px 10px;
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      .result-label {
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 10px;
+        margin-bottom: 4px;
+      }
+
+      .result-value {
+        font-size: 18px;
+        font-weight: 600;
+        color: #f5f7ff;
+        margin-bottom: 2px;
+      }
+
+      .result-note {
+        font-size: 10px;
+      }
+
+      /* WHY SECTION */
+      .why-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+        gap: 22px;
+        align-items: flex-start;
+      }
+
+      .why-list {
+        border-radius: var(--radius-lg);
+        background: var(--bg-elevated);
+        border: 1px solid var(--border-subtle);
+        padding: 16px 16px 14px;
+        box-shadow: var(--shadow-subtle);
+        font-size: 12px;
+      }
+
+      .why-list h4 {
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+
+      .why-items {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 6px;
+      }
+
+      .why-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      .why-item span {
+        margin-top: 2px;
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--danger);
+      }
+
+      .why-item.good span {
+        background: var(--accent-green);
+      }
+
+      .why-note {
+        margin-top: 10px;
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      /* PRODUCT CARDS */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .product-card {
+        border-radius: var(--radius-md);
+        background: rgba(5, 7, 11, 0.9);
+        border: 1px solid var(--border-subtle);
+        padding: 14px 14px 12px;
+        box-shadow: var(--shadow-subtle);
+        font-size: 12px;
+      }
+
+      .product-tag {
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--accent-blue);
+        margin-bottom: 4px;
+      }
+
+      .product-title {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .product-body {
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      .product-cta {
+        font-size: 11px;
+        color: var(--accent-green);
+      }
+
+      /* SUBSCRIPTION SECTION */
+      .subscribe {
+        border-radius: var(--radius-lg);
+        background: radial-gradient(
+          circle at top left,
+          #1a2640 0,
+          #05070b 52%,
+          #020308 100%
+        );
+        border: 1px solid rgba(47, 123, 255, 0.5);
+        padding: 18px 16px 16px;
+        margin-top: 40px;
+        box-shadow: var(--shadow-soft);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+      }
+
+      .subscribe-text {
+        max-width: 520px;
+      }
+
+      .subscribe-title {
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+
+      .subscribe-sub {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+
+      .subscribe-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 220px;
+      }
+
+      .subscribe-note {
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      /* FOOTER */
+      .footer {
+        margin-top: 40px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(27, 36, 51, 0.9);
+        font-size: 11px;
+        color: var(--text-muted);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        color: var(--text-muted);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 900px) {
+        .hero,
+        .trackiq-grid,
+        .why-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .hero-right {
+          min-height: 220px;
+          margin-top: 8px;
+        }
+
+        .pillars {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .results-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .products-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .header {
+          position: static;
+          border-radius: 14px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .shell {
+          padding-inline: 16px;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .results-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .hero {
+          margin-top: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="shell">
+        <!-- HEADER -->
+        <header class="header">
+          <div class="brand">
+            <img src="assets/PuntingIQheader.png" width="120" />
+            <div>
+              <div class="brand-text-main">PuntingIQ</div>
+              <div class="brand-text-sub">Racing Intelligence Layer</div>
+            </div>
+          </div>
+          <nav class="nav">
+            <a href="#trackiq">TrackIQ</a>
+            <a href="#results">Results</a>
+            <a href="#why">Why PuntingIQ</a>
+            <a href="#products">Products</a>
+            <a href="#subscribe" class="nav-cta">Become a member</a>
+          </nav>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero">
+          <div>
+            <div class="hero-kicker">
+              <div class="hero-kicker-dot"></div>
+              Racing Intelligence Layer
+            </div>
+            <h1 class="hero-title">
+              <span>Racing Intelligence.</span><br />
+              Not opinions.
+            </h1>
+            <p class="hero-sub">
+              PuntingIQ is a structured intelligence layer for racing – engineered data pipelines,
+              system‑driven classifications, and <strong>TrackIQ</strong>, your daily racing intelligence brief
+              designed to outperform hype‑driven tipping services.
+            </p>
+            <div class="hero-ctas">
+              <button class="btn-primary" onclick="location.href='#trackiq'">
+                Explore TrackIQ
+              </button>
+              <button class="btn-ghost" onclick="location.href='#why'">
+                How it works
+              </button>
+            </div>
+            <div class="hero-footnote">
+              Built, tested, and deployed by a technical founder – not a marketing team.
+              <span>Structured edge, daily.</span>
+            </div>
+          </div>
+          <div class="hero-right">
+            <div class="hero-card">
+              <div class="hero-card-header">
+                <div class="hero-card-pill">
+                  <div class="hero-card-pill-dot"></div>
+                  Live racing intelligence
+                </div>
+                <div class="hero-card-title">TrackIQ Snapshot</div>
+              </div>
+              <div class="hero-card-grid">
+                <div class="metric-card">
+                  <div class="metric-label">
+                    <span>System bets</span>
+                    <span class="metric-tag">Today</span>
+                  </div>
+                  <div class="metric-value">12</div>
+                  <div class="metric-note">
+                    Filtered by track, class, and price bands.
+                  </div>
+                </div>
+                <div class="metric-card">
+                  <div class="metric-label">
+                    <span>Best bets</span>
+                    <span class="metric-tag">Founder</span>
+                  </div>
+                  <div class="metric-value">3</div>
+                  <div class="metric-note">
+                    Curated from the full system universe.
+                  </div>
+                </div>
+                <div class="metric-card">
+                  <div class="metric-label">
+                    <span>30‑day ROI</span>
+                    <span class="metric-tag">System</span>
+                  </div>
+                  <div class="metric-value">+18.4%</div>
+                  <div class="metric-note">
+                    Structured, audited, repeatable logic.
+                  </div>
+                </div>
+                <div class="metric-card">
+                  <div class="metric-label">
+                    <span>Strike rate</span>
+                    <span class="metric-tag danger">Volatility</span>
+                  </div>
+                  <div class="metric-value">31.2%</div>
+                  <div class="metric-note">
+                    Managed as a portfolio, not a hunch.
+                  </div>
+                </div>
+              </div>
+              <div class="hero-card-footer">
+                <span>
+                  <span class="hero-card-footer-pill">No screenshots. No hype.</span>
+                </span>
+                <span>Daily brief across all active tracks.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VALUE PILLARS -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-kicker">Core principles</div>
+            <h2 class="section-title">The intelligence layer behind every decision.</h2>
+            <p class="section-sub">
+              PuntingIQ is built as an internal engine first – structured data, engineered models, and
+              a daily operating rhythm that treats racing like a portfolio, not a pastime.
+            </p>
+          </div>
+          <div class="pillars">
+            <div class="pillar">
+              <div class="pillar-label">Structured intelligence</div>
+              <div class="pillar-title">Data pipelines, not guesswork.</div>
+              <div class="pillar-body">
+                Every meet runs through a unified data layer – classifications, filters, and system logic
+                designed to be explainable, testable, and repeatable.
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-label">Repeatable edge</div>
+              <div class="pillar-title">Systems that scale across tracks.</div>
+              <div class="pillar-body">
+                Track‑specific intelligence, price bands, and volatility controls – built to operate as a
+                portfolio of systems rather than isolated “tips”.
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-label">Founder‑led architecture</div>
+              <div class="pillar-title">Engineered by a technical founder.</div>
+              <div class="pillar-body">
+                No outsourced models. No white‑label feeds. A single architect stewarding the logic,
+                infrastructure, and daily operational decisions.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TRACKIQ SECTION -->
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 24px;
+            margin-bottom: 8px;
+          "
+        >
+          <img src="assets/TrackIQ%20logo%202.png" width="60" alt="TrackIQ logo" />
+          <div style="display: flex; flex-direction: column;">
+            <div style="font-size: 16px; font-weight: 600; color: #f5f7fb;">
+              TrackIQ
+            </div>
+            <div style="font-size: 13px; color: #a5b0c5;">
+              Your daily racing intelligence brief.
+            </div>
+          </div>
+        </div>
+
+        <section class="section" id="trackiq">
+          <div class="section-header">
+            <div class="section-kicker">TrackIQ</div>
+            <h2 class="section-title">Your daily racing intelligence brief.</h2>
+            <p class="section-sub">
+              TrackIQ surfaces system bets, founder‑curated best bets, and track‑specific intelligence in a
+              single, structured view – built for punters who treat racing like a serious portfolio.
+            </p>
+          </div>
+          <div class="trackiq-grid">
+            <div>
+              <div class="trackiq-card">
+                <div class="trackiq-header">
+                  <div class="trackiq-title">Today’s intelligence</div>
+                  <div class="trackiq-tag">Sample layout – not live data</div>
+                </div>
+                <div class="trackiq-table">
+                  <div class="trackiq-table-header">
+                    <div>Race / Track</div>
+                    <div>Classification</div>
+                    <div>Price band</div>
+                    <div>Signal</div>
+                  </div>
+                  <div class="trackiq-table-row">
+                    <div>R3 – Flemington</div>
+                    <div>System bet</div>
+                    <div>$3.00 – $5.50</div>
+                    <div>
+                      <span class="trackiq-chip">
+                        <span class="trackiq-chip-dot"></span>
+                        Core edge
+                      </span>
+                    </div>
+                  </div>
+                  <div class="trackiq-table-row">
+                    <div>R5 – Randwick</div>
+                    <div>Best bet</div>
+                    <div>$2.20 – $3.20</div>
+                    <div>
+                      <span class="trackiq-chip">
+                        <span class="trackiq-chip-dot"></span>
+                        Founder pick
+                      </span>
+                    </div>
+                  </div>
+                  <div class="trackiq-table-row">
+                    <div>R7 – Morphettville</div>
+                    <div>System bet</div>
+                    <div>$6.00 – $9.00</div>
+                    <div>
+                      <span class="trackiq-chip">
+                        <span class="trackiq-chip-dot"></span>
+                        High‑volatility
+                      </span>
+                    </div>
+                  </div>
+                  <div class="trackiq-table-row">
+                    <div>R8 – Caulfield</div>
+                    <div>Watchlist</div>
+                    <div>$4.00 – $7.00</div>
+                    <div>
+                      <span class="trackiq-chip">
+                        <span class="trackiq-chip-dot"></span>
+                        Context only
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="trackiq-footnote">
+                  TrackIQ is designed as a daily operating brief – system bets, founder‑curated best bets,
+                  and contextual signals, all anchored to a single intelligence layer.
+                </div>
+              </div>
+            </div>
+            <div>
+              <p
+                style="
+                  font-size: 13px;
+                  color: var(--text-muted);
+                  margin-bottom: 10px;
+                "
+              >
+                TrackIQ is not a tipping sheet – it’s the front‑end expression of the PuntingIQ engine.
+                Every selection is traceable back to structured logic, not a mood or a marketing angle.
+              </p>
+              <ul
+                style="
+                  list-style: none;
+                  font-size: 12px;
+                  color: var(--text-muted);
+                  display: grid;
+                  gap: 6px;
+                  margin-bottom: 14px;
+                "
+              >
+                <li>• System bets surfaced from a unified logic layer.</li>
+                <li>• Founder‑curated best bets drawn from the same universe.</li>
+                <li>• Track‑specific intelligence and volatility framing.</li>
+                <li>• No screenshots, no cherry‑picking, no after‑the‑fact stories.</li>
+              </ul>
+              <button class="btn-primary" onclick="location.href='#subscribe'">
+                View membership options
+              </button>
+              <div
+                style="
+                  font-size: 11px;
+                  color: var(--text-muted);
+                  margin-top: 8px;
+                "
+              >
+                Members receive TrackIQ as part of the broader PuntingIQ ecosystem – not as a standalone,
+                disconnected product.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RESULTS SECTION -->
+        <section class="section" id="results">
+          <div class="section-header">
+            <div class="section-kicker">Results</div>
+            <h2 class="section-title">Measured like a portfolio, not a highlight reel.</h2>
+            <p class="section-sub">
+              PuntingIQ is built to be audited – strike rate, ROI, and volatility are treated as operating
+              metrics, not marketing slogans. No screenshots. No selective memory.
+            </p>
+          </div>
+          <div class="results-grid">
+            <div class="result-card">
+              <div class="result-label">30‑day roi (system)</div>
+              <div class="result-value">+18.4%</div>
+              <div class="result-note">
+                Example framing – your actual numbers live here.
+              </div>
+            </div>
+            <div class="result-card">
+              <div class="result-label">Strike rate</div>
+              <div class="result-value">31.2%</div>
+              <div class="result-note">
+                Managed as part of a broader portfolio of systems.
+              </div>
+            </div>
+            <div class="result-card">
+              <div class="result-label">Best bets roi</div>
+              <div class="result-value">+12.7%</div>
+              <div class="result-note">
+                Founder‑curated from the same structured universe.
+              </div>
+            </div>
+            <div class="result-card">
+              <div class="result-label">Drawdown discipline</div>
+              <div class="result-value">Controlled</div>
+              <div class="result-note">
+                Volatility is acknowledged, framed, and managed – not ignored.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- WHY SECTION -->
+        <section class="section" id="why">
+          <div class="section-header">
+            <div class="section-kicker">Why puntingiq</div>
+            <h2 class="section-title">
+              Why an intelligence layer beats traditional tipping.
+            </h2>
+            <p class="section-sub">
+              Most services sell opinions, screenshots, and stories. PuntingIQ is built as an internal
+              engine first – a daily operating system for racing decisions.
+            </p>
+          </div>
+          <div class="why-grid">
+            <div class="why-list">
+              <h4>What PuntingIQ is not.</h4>
+              <div class="why-items">
+                <div class="why-item">
+                  <span></span>
+                  <div>Not a hype‑driven tipping service chasing social proof.</div>
+                </div>
+                <div class="why-item">
+                  <span></span>
+                  <div>Not a screenshot factory built on selective memory.</div>
+                </div>
+                <div class="why-item">
+                  <span></span>
+                  <div>Not a rebadged white‑label model feed.</div>
+                </div>
+                <div class="why-item">
+                  <span></span>
+                  <div>Not a personality‑driven brand with no engine behind it.</div>
+                </div>
+              </div>
+              <div class="why-note">
+                PuntingIQ is deliberately quiet on hype – the focus is on the engine, not the noise.
+              </div>
+            </div>
+            <div class="why-list">
+              <h4>What PuntingIQ actually is.</h4>
+              <div class="why-items">
+                <div class="why-item good">
+                  <span></span>
+                  <div>A structured intelligence layer for racing decisions.</div>
+                </div>
+                <div class="why-item good">
+                  <span></span>
+                  <div>A unified system architecture stewarded by a single founder.</div>
+                </div>
+                <div class="why-item good">
+                  <span></span>
+                  <div>A daily operating rhythm – not a once‑off model build.</div>
+                </div>
+                <div class="why-item good">
+                  <span></span>
+                  <div>
+                    A portfolio‑based approach to risk, edge, and volatility.
+                  </div>
+                </div>
+              </div>
+              <div class="why-note">
+                The goal is simple: build and maintain a repeatable edge that respects risk, variance,
+                and the reality of racing markets.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRODUCTS SECTION -->
+        <section class="section" id="products">
+          <div class="section-header">
+            <div class="section-kicker">Ecosystem</div>
+            <h2 class="section-title">One engine. Multiple expressions.</h2>
+            <p class="section-sub">
+              PuntingIQ is the core intelligence layer. TrackIQ and SportSignalIQ are how that engine
+              surfaces daily, actionable signals across racing and sport.
+            </p>
+          </div>
+          <div class="products-grid">
+            <div class="product-card">
+              <div class="product-tag">Core engine</div>
+              <div class="product-title">PuntingIQ</div>
+              <div class="product-body">
+                The structured intelligence layer – data pipelines, classifications, and system logic
+                that underpin every decision across the ecosystem.
+              </div>
+              <div class="product-cta">
+                Internal engine – not sold as a standalone product.
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-tag">Racing</div>
+              <div class="product-title">TrackIQ</div>
+              <div class="product-body">
+                The daily racing intelligence brief – system bets, founder‑curated best bets, and
+                track‑specific context surfaced in a single, clean interface.
+              </div>
+              <div class="product-cta">
+                Included with membership – built for serious punters.
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-tag">Multi‑sport</div>
+              <div class="product-title">SportSignalIQ</div>
+              <div class="product-body">
+                The same structured approach extended to sport – signals, classifications, and
+                portfolio‑style framing across codes.
+              </div>
+              <div class="product-cta">
+                Rolling out progressively – aligned with the same core engine.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SUBSCRIBE SECTION -->
+        <section class="subscribe" id="subscribe">
+          <div class="subscribe-text">
+            <div class="subscribe-title">
+              Become a member of the intelligence layer.
+            </div>
+            <div class="subscribe-sub">
+              Membership is for punters who want a structured, data‑driven approach to racing – TrackIQ,
+              daily intelligence briefs, and access to a system‑first way of thinking about the game.
+            </div>
+          </div>
+          <div class="subscribe-cta">
+            <button class="btn-primary">
+              View membership options
+            </button>
+            <div class="subscribe-note">
+              Membership details, pricing, and access are managed directly by the founder. No affiliate
+              links. No third‑party resellers.
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+          <div>© <span id="year"></span> PuntingIQ. All rights reserved.</div>
+          <div class="footer-links">
+            <a href="#why">Approach</a>
+            <a href="#results">Results framing</a>
+            <a href="#products">Ecosystem</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

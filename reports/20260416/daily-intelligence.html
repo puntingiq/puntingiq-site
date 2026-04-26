@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PuntingIQ – Daily Intelligence Brief (2026-04-16)</title>
+    <style>
+    :root {
+      --bg: #0b0f19;
+      --card: rgba(255,255,255,0.06);
+      --card2: rgba(255,255,255,0.10);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --line: rgba(255,255,255,0.14);
+      --accent: #6ee7ff;
+      --accent2: #a78bfa;
+      --good: #34d399;
+      --warn: #fbbf24;
+      --bad: #fb7185;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: radial-gradient(1200px 600px at 20% 0%, rgba(110,231,255,0.16), transparent 55%), radial-gradient(1000px 500px at 80% 20%, rgba(167,139,250,0.14), transparent 55%), var(--bg); color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 22px 16px 40px; }
+    .hero { display:flex; gap:16px; flex-direction: column; align-items: center; text-align:center; }
+    .banner { width:100%; max-width: 980px; border-radius: 18px; overflow:hidden; box-shadow: 0 14px 40px rgba(0,0,0,0.40); border: 1px solid var(--line); }
+    .banner img { width:100%; display:block; }
+    .title { margin: 14px 0 0; font-size: 30px; letter-spacing: 0.5px; }
+    .subtitle { margin: 6px 0 0; font-size: 16px; color: var(--muted); }
+    .meta { margin-top: 10px; font-size: 13px; color: var(--muted); }
+
+    .grid { display:grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 18px; width: 100%; }
+    .pill { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 10px 10px; min-height: 56px; display:flex; flex-direction:column; justify-content:center; }
+    .pill .k { font-size: 11px; color: var(--muted); letter-spacing: 0.4px; text-transform: uppercase; }
+    .pill .v { font-size: 18px; font-weight: 700; margin-top: 2px; }
+
+    @media (max-width: 920px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 520px) { .grid { grid-template-columns: repeat(2, 1fr); } .title { font-size: 24px; } }
+
+    .section { margin-top: 22px; background: var(--card); border: 1px solid var(--line); border-radius: 22px; overflow:hidden; box-shadow: 0 10px 35px rgba(0,0,0,0.25); }
+    .section-h { padding: 16px 16px 10px; border-bottom: 1px solid var(--line); display:flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .section-h h2 { margin:0; font-size: 16px; letter-spacing: 0.3px; }
+    .section-h p { margin: 4px 0 0; color: var(--muted); font-size: 13px; max-width: 820px; }
+    .tag { font-size: 12px; padding: 6px 10px; border-radius: 999px; background: rgba(110,231,255,0.12); border: 1px solid rgba(110,231,255,0.35); color: var(--text); }
+
+    .content { padding: 14px 16px 18px; }
+
+    .table-wrap { overflow-x:auto; border-radius: 16px; border: 1px solid var(--line); }
+    table { width: 100%; border-collapse: collapse; min-width: 860px; background: rgba(0,0,0,0.18); }
+    th, td { padding: 10px 10px; text-align:left; vertical-align: top; border-bottom: 1px solid var(--line); font-size: 13px; }
+    th { position: sticky; top: 0; background: rgba(10,14,24,0.95); backdrop-filter: blur(6px); font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; color: var(--muted); }
+    tr:hover td { background: rgba(255,255,255,0.05); }
+
+    .muted { color: var(--muted); }
+    .trophies { margin-left: 6px; }
+
+    .logo-row { display:flex; align-items:center; gap:10px; justify-content:center; margin-top: 10px; }
+    .logo-row img { width: 160px; max-width: 60vw; }
+
+    details { border: 1px solid var(--line); background: rgba(0,0,0,0.18); border-radius: 16px; padding: 10px 12px; }
+    summary { cursor:pointer; font-weight: 700; }
+
+    footer { margin-top: 22px; color: var(--muted); font-size: 12px; text-align:center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div class="banner"><img src="/assets/PuntingIQemailbanner.png" alt="PuntingIQ"></div>
+      <div class="logo-row">
+        <img src="/assets/TrackIQ%20logo%202.png" alt="TrackIQ">
+      </div>
+      <h1 class="title">PUNTINGIQ – DAILY INTELLIGENCE BRIEF</h1>
+      <div class="subtitle">TrackIQ – Today's race intelligence • Powered by TrackIQ</div>
+      <div class="meta">Date: <strong>2026-04-16</strong> • High-confidence selections based on ladder-aware and model-driven analysis.</div>
+
+        <div class="grid">
+            <a href="#best-bets" class="pill"><div class="k">Best Bets</div><div class="v">0</div></a>
+            <a href="#elite-winners" class="pill"><div class="k">Elite Winners</div><div class="v">0</div></a>
+            <a href="#system-bets" class="pill"><div class="k">System Bets</div><div class="v">10</div></a>
+            <a href="#place-bankers" class="pill"><div class="k">Place Bankers</div><div class="v">0</div></a>
+            <a href="#value-edge" class="pill"><div class="k">Value Edge</div><div class="v">6</div></a>
+            <a href="#top-picks" class="pill"><div class="k">Top Picks</div><div class="v">13</div></a>
+        </div>
+    </div>
+
+        <section class="section" id="best-bets">
+            <div class="section-h">
+                <div>
+                    <h2>BEST BETS (Elite Selection Bets)</h2>
+                    <p>High-confidence selections based on full ladder-aware analysis. Best Bets must pass all filters.</p>
+                </div>
+                <div class="tag">0 runners</div>
+            </div>
+            <div class="content">
+                <p class='muted'>No Best Bets Today</p>
+            </div>
+        </section>
+
+        <section class="section" id="elite-winners">
+            <div class="section-h">
+                <div>
+                    <h2>ELITE WINNERS (WIN Product)</h2>
+                    <p>High-confidence WIN selections.</p>
+                </div>
+                <div class="tag">0 runners</div>
+            </div>
+            <div class="content">
+                <p class='muted'>No selections available.</p>
+            </div>
+        </section>
+
+        <section class="section" id="system-bets">
+            <div class="section-h">
+                <div>
+                    <h2>SYSTEM BETS</h2>
+                    <p>Selections close to Best Bet territory and worthy of form-based inclusion logic.</p>
+                </div>
+                <div class="tag">10 runners</div>
+            </div>
+            <div class="content">
+                <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Race</th>
+              <th>Runner</th>
+              <th>Runner Snapshot</th>
+              <th>Tempo</th>
+              <th>Odds</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Armidale R4</td>
+              <td><strong>#8 Zougo Boss</strong> <span class='muted'>(Barrier 2)</span><br>
+                  <span class='muted'>Jockey:</span> A.Roper <span class='muted'>| Trainer:</span> D.J.Hatch</td>
+              <td><div>Form: 131-3</div><div>Track: 3:0-0-2</div><div>Distance: 4:0-0-2</div><div class='muted'>Comment: </div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W13.00 / P3.00</td>
+            </tr>
+            
+            <tr>
+              <td>Armidale R4</td>
+              <td><strong>#8 Zougo Boss</strong> <span class='muted'>(Barrier 2)</span><br>
+                  <span class='muted'>Jockey:</span> A.Roper <span class='muted'>| Trainer:</span> D.J.Hatch</td>
+              <td><div>Form: 131-3</div><div>Track: 3:0-0-2</div><div>Distance: 4:0-0-2</div><div class='muted'>Comment: </div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W13.00 / P3.00</td>
+            </tr>
+            
+            <tr>
+              <td>Armidale R6</td>
+              <td><strong>#11 Alarthill</strong> <span class='muted'>(Barrier 1)</span><br>
+                  <span class='muted'>Jockey:</span> L.Small <span class='muted'>| Trainer:</span> J.L.Bowen</td>
+              <td><div>Form: 01630</div><div>Track: 0:0-0-0</div><div>Distance: 1:0-0-0</div><div class='muted'>Comment: </div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W21.00 / P4.75</td>
+            </tr>
+            
+            <tr>
+              <td>Armidale R6</td>
+              <td><strong>#11 Alarthill</strong> <span class='muted'>(Barrier 1)</span><br>
+                  <span class='muted'>Jockey:</span> L.Small <span class='muted'>| Trainer:</span> J.L.Bowen</td>
+              <td><div>Form: 01630</div><div>Track: 0:0-0-0</div><div>Distance: 1:0-0-0</div><div class='muted'>Comment: </div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W21.00 / P4.75</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R6</td>
+              <td><strong>#9 Boom Boom Betty</strong> <span class='muted'>(Barrier 4)</span><br>
+                  <span class='muted'>Jockey:</span> S.Clarke <span class='muted'>| Trainer:</span> J.Cerchi (Jnr)</td>
+              <td><div>Form: 99426</div><div>Track: 1:0-1-0</div><div>Distance: 1:0-0-0</div><div class='muted'>Comment: Placed here two starts back then only battled at Cranbourne last start. Place claims best.</div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W34.00 / P7.25</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R6</td>
+              <td><strong>#9 Boom Boom Betty</strong> <span class='muted'>(Barrier 4)</span><br>
+                  <span class='muted'>Jockey:</span> S.Clarke <span class='muted'>| Trainer:</span> J.Cerchi (Jnr)</td>
+              <td><div>Form: 99426</div><div>Track: 1:0-1-0</div><div>Distance: 1:0-0-0</div><div class='muted'>Comment: Placed here two starts back then only battled at Cranbourne last start. Place claims best.</div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W34.00 / P7.25</td>
+            </tr>
+            
+            <tr>
+              <td>Southside Pakenham R7</td>
+              <td><strong>#6 Luckett</strong> <span class='muted'>(Barrier 7)</span><br>
+                  <span class='muted'>Jockey:</span> R.McLeod <span class='muted'>| Trainer:</span> D.E.A.Sutton</td>
+              <td><div>Form: 17372</div><div>Track: 2:0-0-1</div><div>Distance: 2:0-0-1</div><div class='muted'>Comment: Had his chance but not far away over a longer trip at Bairnsdale. Drops in trip but he's an each-way chance.</div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W16.00 / P4.00</td>
+            </tr>
+            
+            <tr>
+              <td>Southside Pakenham R7</td>
+              <td><strong>#6 Luckett</strong> <span class='muted'>(Barrier 7)</span><br>
+                  <span class='muted'>Jockey:</span> R.McLeod <span class='muted'>| Trainer:</span> D.E.A.Sutton</td>
+              <td><div>Form: 17372</div><div>Track: 2:0-0-1</div><div>Distance: 2:0-0-1</div><div class='muted'>Comment: Had his chance but not far away over a longer trip at Bairnsdale. Drops in trip but he's an each-way chance.</div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W16.00 / P4.00</td>
+            </tr>
+            
+            <tr>
+              <td>Wyong R7</td>
+              <td><strong>#5 Stratafy</strong> <span class='muted'>(Barrier 7)</span><br>
+                  <span class='muted'>Jockey:</span> W.Costin <span class='muted'>| Trainer:</span> N.Ward</td>
+              <td><div>Form: -3522</div><div>Track: 4:1-0-1</div><div>Distance: 4:0-1-2</div><div class='muted'>Comment: </div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W2.50 / P1.25</td>
+            </tr>
+            
+            <tr>
+              <td>Wyong R7</td>
+              <td><strong>#5 Stratafy</strong> <span class='muted'>(Barrier 7)</span><br>
+                  <span class='muted'>Jockey:</span> W.Costin <span class='muted'>| Trainer:</span> N.Ward</td>
+              <td><div>Form: -3522</div><div>Track: 4:1-0-1</div><div>Distance: 4:0-1-2</div><div class='muted'>Comment: </div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W2.50 / P1.25</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+            </div>
+        </section>
+
+        <section class="section" id="place-bankers">
+            <div class="section-h">
+                <div>
+                    <h2>PLACE BANKERS (PLACE Product)</h2>
+                    <p>High-reliability PLACE selections designed for consistency.</p>
+                </div>
+                <div class="tag">0 runners</div>
+            </div>
+            <div class="content">
+                <p class='muted'>No selections available.</p>
+            </div>
+        </section>
+
+        <section class="section" id="value-edge">
+            <div class="section-h">
+                <div>
+                    <h2>VALUE EDGE (ROI Product)</h2>
+                    <p>Positive overlays that don't qualify as Best or System Bets.</p>
+                </div>
+                <div class="tag">6 runners</div>
+            </div>
+            <div class="content">
+                
+      <details style="margin-bottom: 12px;">
+        <summary>How to use Value Edge (read before betting)</summary>
+        <div class="muted" style="margin-top:8px; line-height:1.45;">
+          Value Edge highlights potential market inefficiencies. It is NOT a tipping list.
+          These runners are pricing opportunities for analysis, not automatic bets.
+          Apply your own judgement, staking strategy, and risk tolerance.
+        </div>
+      </details>
+    <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Race</th>
+              <th>Runner</th>
+              <th>Model Profile</th>
+              <th>Odds</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Albany R5</td>
+              <td><strong>#3 Renovation Show</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=55.4, Units=1, ML Win%=42.7%, Win Value=5.7%</td>
+              <td>W2.70 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R2</td>
+              <td><strong>#1 Benzino</strong><span class='trophies'>🏆🏆🏆</span></td>
+              <td>Confidence=75.4, Units=3, ML Win%=73.6%, Win Value=14.8%</td>
+              <td>W1.70 / P1.06</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R5</td>
+              <td><strong>#1 San Jose Boy</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=51.4, Units=1, ML Win%=37.0%, Win Value=9.2%</td>
+              <td>W3.60 / P1.33</td>
+            </tr>
+            
+            <tr>
+              <td>Southside Pakenham R1</td>
+              <td><strong>#5 Parvenu</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=56.6, Units=1, ML Win%=47.4%, Win Value=5.8%</td>
+              <td>W2.40 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Wyong R3</td>
+              <td><strong>#1 Bruce I Am</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=53.4, Units=1, ML Win%=48.1%, Win Value=7.2%</td>
+              <td>W2.45 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R1</td>
+              <td><strong>#12 Snobbery</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=57.8, Units=1, ML Win%=48.6%, Win Value=11.6%</td>
+              <td>W2.70 / P1.30</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+            </div>
+        </section>
+
+        <section class="section" id="top-picks">
+            <div class="section-h">
+                <div>
+                    <h2>RACE-BY-RACE TOP PICK</h2>
+                    <p>The strongest model-rated runner in each event.</p>
+                </div>
+                <div class="tag">13 high-confidence</div>
+            </div>
+            <div class="content">
+                
+      <p class="muted">Trophy icons represent model confidence tiers (🏆=Bronze, 🏆🏆=Silver, 🏆🏆🏆=Gold). Only high-confidence top picks (Conf ≥ 50) are shown here.</p>
+    <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Race</th>
+              <th>Runner</th>
+              <th>Model Profile</th>
+              <th>Odds</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Albany R5</td>
+              <td><strong>#3 Renovation Show</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=55.4, ML Win%=42.7%, Win Value=5.7%</td>
+              <td>W2.70 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Armidale R3</td>
+              <td><strong>#8 Extremely Perfect</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=51.8, ML Win%=36.1%, Win Value=-21.0%</td>
+              <td>W1.75 / P1.17</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R2</td>
+              <td><strong>#1 Benzino</strong><span class='trophies'>🏆🏆🏆</span></td>
+              <td>Confidence=75.4, ML Win%=73.6%, Win Value=14.8%</td>
+              <td>W1.70 / P1.06</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R5</td>
+              <td><strong>#1 San Jose Boy</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=51.4, ML Win%=37.0%, Win Value=9.2%</td>
+              <td>W3.60 / P1.33</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R7</td>
+              <td><strong>#6 Ivantheinvincible</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=59.2, ML Win%=44.3%, Win Value=0.8%</td>
+              <td>W2.35 / P1.20</td>
+            </tr>
+            
+            <tr>
+              <td>Southside Pakenham R1</td>
+              <td><strong>#5 Parvenu</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=56.6, ML Win%=47.4%, Win Value=5.8%</td>
+              <td>W2.40 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Southside Pakenham R5</td>
+              <td><strong>#8 Upstage</strong><span class='trophies'>🏆🏆🏆</span></td>
+              <td>Confidence=81.0, ML Win%=70.6%, Win Value=-6.3%</td>
+              <td>W1.35 / P1.05</td>
+            </tr>
+            
+            <tr>
+              <td>Wyong R3</td>
+              <td><strong>#1 Bruce I Am</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=53.4, ML Win%=48.1%, Win Value=7.2%</td>
+              <td>W2.45 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Wyong R4</td>
+              <td><strong>#1 Champere</strong><span class='trophies'>🏆🏆</span></td>
+              <td>Confidence=65.2, ML Win%=54.2%, Win Value=-10.3%</td>
+              <td>W1.55 / P1.17</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R1</td>
+              <td><strong>#12 Snobbery</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=57.8, ML Win%=48.6%, Win Value=11.6%</td>
+              <td>W2.70 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R3</td>
+              <td><strong>#5 Silky Seth</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=50.3, ML Win%=38.6%, Win Value=-11.4%</td>
+              <td>W2.00 / P1.20</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R4</td>
+              <td><strong>#9 Chloe First</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=51.7, ML Win%=36.2%, Win Value=-16.4%</td>
+              <td>W1.90 / P1.10</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R7</td>
+              <td><strong>#3 Simply Outrageous</strong><span class='trophies'>🏆🏆</span></td>
+              <td>Confidence=60.0, ML Win%=47.7%, Win Value=-11.1%</td>
+              <td>W1.70 / P1.10</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+            </div>
+        </section>
+
+        <section class="section" id="full-summary">
+            <div class="section-h">
+                <div>
+                    <h2>FULL RACE-BY-RACE SUMMARY</h2>
+                    <p>Our analysis of every race today, highlighting the strongest model‑rated runner in each event (including lower-confidence runners) for completeness.</p>
+                </div>
+                <div class="tag">42 runners</div>
+            </div>
+            <div class="content">
+                
+      <p class="muted">Full race-by-race summary of every top pick flagged today.</p>
+    <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Race</th>
+              <th>Runner</th>
+              <th>Model Profile</th>
+              <th>Odds</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Albany R3</td>
+              <td><strong>#6 Desert Ora</strong><span class='trophies'></span></td>
+              <td>Confidence=46.6, ML Win%=36.1%, Win Value=-24.5%</td>
+              <td>W1.65 / P1.10</td>
+            </tr>
+            
+            <tr>
+              <td>Albany R4</td>
+              <td><strong>#4 Henry The Aviator</strong><span class='trophies'></span></td>
+              <td>Confidence=49.3, ML Win%=23.8%, Win Value=-0.0%</td>
+              <td>W4.00 / P2.00</td>
+            </tr>
+            
+            <tr>
+              <td>Albany R5</td>
+              <td><strong>#3 Renovation Show</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=55.4, ML Win%=42.7%, Win Value=5.7%</td>
+              <td>W2.70 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Albany R6</td>
+              <td><strong>#9 Niccy's Affair</strong><span class='trophies'></span></td>
+              <td>Confidence=43.3, ML Win%=20.7%, Win Value=-13.8%</td>
+              <td>W2.90 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Albany R7</td>
+              <td><strong>#7 Win To Retire</strong><span class='trophies'></span></td>
+              <td>Confidence=32.0, ML Win%=23.5%, Win Value=-1.5%</td>
+              <td>W4.20 / P1.67</td>
+            </tr>
+            
+            <tr>
+              <td>Armidale R2</td>
+              <td><strong>#4 Dirty Dani</strong><span class='trophies'></span></td>
+              <td>Confidence=34.6, ML Win%=22.1%, Win Value=-11.2%</td>
+              <td>W2.90 / P1.33</td>
+            </tr>
+            
+            <tr>
+              <td>Armidale R3</td>
+              <td><strong>#8 Extremely Perfect</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=51.8, ML Win%=36.1%, Win Value=-21.0%</td>
+              <td>W1.75 / P1.17</td>
+            </tr>
+            
+            <tr>
+              <td>Armidale R4</td>
+              <td><strong>#1 Concoction</strong><span class='trophies'></span></td>
+              <td>Confidence=43.8, ML Win%=28.4%, Win Value=-25.7%</td>
+              <td>W1.85 / P1.17</td>
+            </tr>
+            
+            <tr>
+              <td>Armidale R5</td>
+              <td><strong>#1 Disco Prince</strong><span class='trophies'></span></td>
+              <td>Confidence=38.2, ML Win%=26.5%, Win Value=-2.9%</td>
+              <td>W3.40 / P1.50</td>
+            </tr>
+            
+            <tr>
+              <td>Armidale R6</td>
+              <td><strong>#4 Meddlesome</strong><span class='trophies'></span></td>
+              <td>Confidence=43.6, ML Win%=22.8%, Win Value=-22.7%</td>
+              <td>W2.20 / P1.20</td>
+            </tr>
+            
+            <tr>
+              <td>Armidale R7</td>
+              <td><strong>#1 Soobooco</strong><span class='trophies'></span></td>
+              <td>Confidence=34.8, ML Win%=18.1%, Win Value=-3.6%</td>
+              <td>W4.60 / P1.80</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R1</td>
+              <td><strong>#7 Aeropower</strong><span class='trophies'></span></td>
+              <td>Confidence=47.3, ML Win%=34.5%, Win Value=-14.2%</td>
+              <td>W2.05 / P1.13</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R2</td>
+              <td><strong>#1 Benzino</strong><span class='trophies'>🏆🏆🏆</span></td>
+              <td>Confidence=75.4, ML Win%=73.6%, Win Value=14.8%</td>
+              <td>W1.70 / P1.06</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R3</td>
+              <td><strong>#3 Concession</strong><span class='trophies'></span></td>
+              <td>Confidence=34.5, ML Win%=16.3%, Win Value=-7.5%</td>
+              <td>W4.20 / P1.62</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R4</td>
+              <td><strong>#7 Down Under Stunnah</strong><span class='trophies'></span></td>
+              <td>Confidence=38.1, ML Win%=28.3%, Win Value=-4.0%</td>
+              <td>W3.10 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R5</td>
+              <td><strong>#1 San Jose Boy</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=51.4, ML Win%=37.0%, Win Value=9.2%</td>
+              <td>W3.60 / P1.33</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R6</td>
+              <td><strong>#4 Sir Maurice</strong><span class='trophies'></span></td>
+              <td>Confidence=36.6, ML Win%=23.8%, Win Value=0.0%</td>
+              <td>W4.20 / P1.62</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R7</td>
+              <td><strong>#6 Ivantheinvincible</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=59.2, ML Win%=44.3%, Win Value=0.8%</td>
+              <td>W2.35 / P1.20</td>
+            </tr>
+            
+            <tr>
+              <td>Southside Pakenham R1</td>
+              <td><strong>#5 Parvenu</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=56.6, ML Win%=47.4%, Win Value=5.8%</td>
+              <td>W2.40 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Southside Pakenham R2</td>
+              <td><strong>#1 Yes Yoshi</strong><span class='trophies'></span></td>
+              <td>Confidence=48.9, ML Win%=33.5%, Win Value=-19.2%</td>
+              <td>W1.90 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Southside Pakenham R3</td>
+              <td><strong>#5 Holding Captive</strong><span class='trophies'></span></td>
+              <td>Confidence=47.7, ML Win%=27.9%, Win Value=-26.1%</td>
+              <td>W1.85 / P1.25</td>
+            </tr>
+            
+            <tr>
+              <td>Southside Pakenham R4</td>
+              <td><strong>#3 Royal Honour</strong><span class='trophies'></span></td>
+              <td>Confidence=49.0, ML Win%=30.9%, Win Value=-23.2%</td>
+              <td>W1.85 / P1.17</td>
+            </tr>
+            
+            <tr>
+              <td>Southside Pakenham R5</td>
+              <td><strong>#8 Upstage</strong><span class='trophies'>🏆🏆🏆</span></td>
+              <td>Confidence=81.0, ML Win%=70.6%, Win Value=-6.3%</td>
+              <td>W1.35 / P1.05</td>
+            </tr>
+            
+            <tr>
+              <td>Southside Pakenham R6</td>
+              <td><strong>#10 Alleviate</strong><span class='trophies'></span></td>
+              <td>Confidence=41.2, ML Win%=27.2%, Win Value=-2.3%</td>
+              <td>W3.40 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Southside Pakenham R7</td>
+              <td><strong>#2 Diamond Gust</strong><span class='trophies'></span></td>
+              <td>Confidence=24.4, ML Win%=16.6%, Win Value=-7.3%</td>
+              <td>W4.20 / P1.70</td>
+            </tr>
+            
+            <tr>
+              <td>Southside Pakenham R8</td>
+              <td><strong>#5 Quello Dorato</strong><span class='trophies'></span></td>
+              <td>Confidence=27.3, ML Win%=18.9%, Win Value=-1.1%</td>
+              <td>W5.50 / P1.91</td>
+            </tr>
+            
+            <tr>
+              <td>Wyong R1</td>
+              <td><strong>#6 Cool Summer Nights</strong><span class='trophies'></span></td>
+              <td>Confidence=39.5, ML Win%=28.2%, Win Value=-11.8%</td>
+              <td>W2.50 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Wyong R2</td>
+              <td><strong>#6 Mrs Maree</strong><span class='trophies'></span></td>
+              <td>Confidence=40.7, ML Win%=26.1%, Win Value=-22.7%</td>
+              <td>W2.05 / P1.13</td>
+            </tr>
+            
+            <tr>
+              <td>Wyong R3</td>
+              <td><strong>#1 Bruce I Am</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=53.4, ML Win%=48.1%, Win Value=7.2%</td>
+              <td>W2.45 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Wyong R4</td>
+              <td><strong>#1 Champere</strong><span class='trophies'>🏆🏆</span></td>
+              <td>Confidence=65.2, ML Win%=54.2%, Win Value=-10.3%</td>
+              <td>W1.55 / P1.17</td>
+            </tr>
+            
+            <tr>
+              <td>Wyong R5</td>
+              <td><strong>#2 Johnny</strong><span class='trophies'></span></td>
+              <td>Confidence=40.4, ML Win%=25.8%, Win Value=-2.8%</td>
+              <td>W3.50 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Wyong R6</td>
+              <td><strong>#3 Kiss Goodnight</strong><span class='trophies'></span></td>
+              <td>Confidence=42.7, ML Win%=32.2%, Win Value=-1.1%</td>
+              <td>W3.10 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Wyong R7</td>
+              <td><strong>#5 Stratafy</strong><span class='trophies'></span></td>
+              <td>Confidence=40.3, ML Win%=18.6%, Win Value=-21.4%</td>
+              <td>W2.50 / P1.25</td>
+            </tr>
+            
+            <tr>
+              <td>Wyong R8</td>
+              <td><strong>#7 California Grass</strong><span class='trophies'></span></td>
+              <td>Confidence=45.7, ML Win%=29.3%, Win Value=3.6%</td>
+              <td>W3.90 / P1.57</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R1</td>
+              <td><strong>#12 Snobbery</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=57.8, ML Win%=48.6%, Win Value=11.6%</td>
+              <td>W2.70 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R2</td>
+              <td><strong>#1 Bordeaux</strong><span class='trophies'></span></td>
+              <td>Confidence=32.5, ML Win%=21.0%, Win Value=-4.7%</td>
+              <td>W3.90 / P1.57</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R3</td>
+              <td><strong>#5 Silky Seth</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=50.3, ML Win%=38.6%, Win Value=-11.4%</td>
+              <td>W2.00 / P1.20</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R4</td>
+              <td><strong>#9 Chloe First</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=51.7, ML Win%=36.2%, Win Value=-16.4%</td>
+              <td>W1.90 / P1.10</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R5</td>
+              <td><strong>#10 Boulder Jack</strong><span class='trophies'></span></td>
+              <td>Confidence=37.9, ML Win%=23.3%, Win Value=-0.5%</td>
+              <td>W4.40 / P1.70</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R6</td>
+              <td><strong>#4 Sunlit Serenade</strong><span class='trophies'></span></td>
+              <td>Confidence=47.8, ML Win%=35.2%, Win Value=-5.6%</td>
+              <td>W2.45 / P1.20</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R7</td>
+              <td><strong>#3 Simply Outrageous</strong><span class='trophies'>🏆🏆</span></td>
+              <td>Confidence=60.0, ML Win%=47.7%, Win Value=-11.1%</td>
+              <td>W1.70 / P1.10</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R8</td>
+              <td><strong>#2 Toronado Boom</strong><span class='trophies'></span></td>
+              <td>Confidence=34.5, ML Win%=20.9%, Win Value=-6.9%</td>
+              <td>W3.60 / P1.57</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+            </div>
+        </section>
+
+    <footer>
+      <p>☒ PuntingIQ Edge — Australia’s most disciplined, data-driven racing intelligence.</p>
+      <p class="muted">Notes: Odds are indicative only and subject to change. We prioritise quality over quantity — no forced tips.</p>
+    </footer>
+  </div>
+</body>
+</html>
