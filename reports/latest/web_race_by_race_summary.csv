@@ -1,27 +1,37 @@
 race,runner,odds,result
-Ballina R2,#4 Classic Shiraz,W3.50 / P1.40,
-Ballina R3,#2 Amazigh Torque,W1.55 / P1.06,
-Ballina R4,#6 Too Hot To Torque,W2.35 / P1.30,
-Ballina R5,#7 Dance Gavin Dance,W3.60 / P1.67,
-Ballina R6,#10 Moet At Midnight,W3.80 / P1.70,
-Mornington R1,#7 Wonderdownunder,W1.85 / P1.33,WON
-Mornington R2,#4 Deepseek,W4.60 / P1.60,WON
-Mornington R3,#9 Shindy,W2.15 / P1.14,4
-Mornington R4,#6 Tassorting,W2.90 / P1.40,2
-Mornington R5,#6 Superliv,W1.85 / P1.20,4
-Mornington R6,#6 Zamparini Spirit,W6.50 / P1.50,4
-Mornington R7,#9 Magnardo,W2.90 / P1.50,WON
-Mornington R8,#2 Diamond Gust,W2.80 / P1.50,7
-Picklebet Park Warwick R1,#2 Past Midnight,W1.35 / P1.09,WON
-Picklebet Park Warwick R2,#5 Hell To The Line,W2.15 / P1.10,4
-Picklebet Park Warwick R3,#4 I'lltellyoutonight,W2.25 / P1.25,3
-Picklebet Park Warwick R4,#3 Flop Shot,W3.70 / P1.62,5
-Picklebet Park Warwick R5,#1 Downey,W4.40 / P1.75,2
-Picklebet Park Warwick R6,#5 Meadowbrook,W4.20 / P1.45,7
-Picklebet Park Warwick R7,#1 Breezin',W1.30 / P1.10,WON
-Quirindi R2,#6 Rock Emperor,W2.25 / P1.30,WON
-Quirindi R3,#1 Vierville,W2.50 / P1.30,WON
-Quirindi R4,#4 Zorko,W3.60 / P1.50,8
-Quirindi R5,#7 Sir Herridah,W4.20 / P1.45,2
-Quirindi R6,#8 Think Back,W2.35 / P1.25,9
-Quirindi R7,#2 Currumbin Alley,W2.50 / P1.40,2
+Ascot R1,#2 Universal Impact,W3.40 / P1.80,6
+Ascot R2,#2 Don't Declare,W1.95 / P1.25,3
+Ascot R3,#1 Barron Bill,W1.90 / P1.24,2
+Ascot R4,#2 Bassett Hound,W2.80 / P1.33,WON
+Ascot R5,#8 Free To Fly,W3.40 / P1.30,WON
+Ascot R6,#3 Prince Epaulette,W3.20 / P1.50,6
+Ascot R7,#1 Lord Shiva,W2.10 / P1.26,WON
+Caulfield Heath R1,#6 Dame Florence,W2.25 / P1.60,4
+Caulfield Heath R2,#7 Flowerdale,W4.40 / P1.75,3
+Caulfield Heath R3,#8 Morning Whisper,W2.90 / P1.45,4
+Caulfield Heath R4,#8 Pula,W3.90 / P1.50,WON
+Caulfield Heath R5,#9 There Were Roses,W4.40 / P1.70,8
+Caulfield Heath R6,#9 Tres Magnifique,W1.45 / P1.09,WON
+Caulfield Heath R7,#4 Along The River,W9.00 / P2.63,WON
+Caulfield Heath R8,#14 Milos Filos,W4.80 / P2.40,2
+Ipswich R1,#3 Hell Or Heaven,W2.40 / P1.25,2
+Ipswich R2,#2 Disparate,W2.40 / P1.35,4
+Ipswich R3,#12 Urban Lad,W2.30 / P1.20,WON
+Ipswich R4,#5 Concession,W2.80 / P1.33,4
+Ipswich R5,#4 Boom Shot,W3.00 / P1.57,4
+Ipswich R6,#6 Divine Source,W2.70 / P1.57,7
+Ipswich R7,#4 Rhuvaal,W3.70 / P2.05,4
+Kembla Grange R1,#1 Call Me Zeus,W1.45 / P1.10,WON
+Kembla Grange R2,#2 Bello Cavallo,W2.00 / P1.13,WON
+Kembla Grange R3,#13 Katoto,W1.65 / P1.40,WON
+Kembla Grange R4,#1 Funshow,W3.00 / P1.45,109
+Kembla Grange R5,#9 Beauty Swift,W3.10 / P1.33,WON
+Kembla Grange R6,#3 Mrs Maree,W2.35 / P1.50,2
+Kembla Grange R7,#5 Rosa Incanta,W3.90 / P1.60,12
+Strathalbyn R1,#7 Minimise,W2.35 / P1.35,3
+Strathalbyn R2,#9 Winning All Round,W2.80 / P1.30,3
+Strathalbyn R3,#12 Forever A Diamond,W2.40 / P1.40,2
+Strathalbyn R4,#8 Harsh,W3.80 / P1.60,3
+Strathalbyn R5,#5 Like A Drifter,W2.90 / P1.30,WON
+Strathalbyn R6,#6 Loca Bella,W3.50 / P1.40,2
+Strathalbyn R7,#3 Silver Lifestyle,W3.40 / P1.90,4
