@@ -6,6 +6,7 @@
     <title>PuntingIQ Results</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="PuntingIQ Results — full transparency, no hype." />
+    <link rel="stylesheet" href="css/style.css">
     <style>
         :root {
             --bg-dark: #05070b;
@@ -28,26 +29,97 @@
         body {
             background: radial-gradient(circle at top, #10182a 0%, #05070b 52%, #020308 100%);
             color: var(--text-main);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
             -webkit-font-smoothing: antialiased;
         }
         a { color: inherit; text-decoration: none; }
-        .page { min-height: 100vh; display: flex; justify-content: center; }
-        .shell { width: 100%; max-width: var(--max-width); padding: 24px 20px 64px; }
+        .page { min-height: 100vh; display: flex; flex-direction: column; }
+        .shell { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 24px 20px 64px; }
         .header {
-            display: flex; align-items: center; justify-content: space-between;
+            display: flex; align-items: center; justify-content: space-between; gap: 16px;
             padding: 10px 18px; border-radius: var(--radius-pill);
             background: linear-gradient(120deg, rgba(47,123,255,0.12), rgba(62,229,143,0.04)), rgba(5,7,11,0.92);
             border: 1px solid rgba(47,123,255,0.35); box-shadow: var(--shadow-subtle);
             position: sticky; top: 16px; z-index: 20; backdrop-filter: blur(18px);
         }
         .brand { display: flex; align-items: center; gap: 10px; }
-        .brand-text-main { font-size: 13px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }
+        .brand-text-main { font-size: 13px; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; }
         .brand-text-sub { font-size: 11px; color: var(--text-muted); }
-        .nav { display: flex; gap: 18px; font-size: 13px; color: var(--text-muted); }
-        .nav a { padding: 6px 10px; border-radius: 999px; }
-        .nav a:hover, .nav a.active { background: rgba(15,23,36,0.9); color: #fff; }
-        .nav-cta { padding: 7px 14px; border-radius: 999px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-green)); color: #020308; font-weight: 600; font-size: 13px; border: none; cursor: pointer; box-shadow: var(--shadow-soft); }
+        .nav { display: flex; align-items: center; gap: 18px; font-size: 13px; color: var(--text-muted); }
+        .nav a { padding: 6px 10px; border-radius: 999px; transition: background 0.18s ease, color 0.18s ease; }
+        .nav a:hover { background: rgba(15,23,36,0.9); color: var(--text-main); }
+        .nav a.active { background: rgba(47,123,255,0.14); color: var(--text-main); }
+        .nav-cta { padding: 7px 14px; border-radius: 999px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-green)); color: #020308; font-weight: 600; font-size: 13px; border: none; cursor: pointer; box-shadow: 0 0 0 1px rgba(2,3,8,0.9), var(--shadow-soft); white-space: nowrap; }
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            gap: 32px;
+            margin-top: 40px;
+            align-items: center;
+        }
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 10px 4px 4px;
+            border-radius: 999px;
+            background: rgba(15,23,36,0.9);
+            border: 1px solid rgba(47,123,255,0.4);
+            color: var(--text-muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 16px;
+        }
+        .hero-kicker-dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 999px;
+            background: radial-gradient(circle at 30% 0, #3ee58f 0, #2f7bff 60%, #05070b 100%);
+        }
+        .hero-title {
+            font-size: clamp(32px, 4vw, 40px);
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 14px;
+        }
+        .hero-title span {
+            background: linear-gradient(135deg, #ffffff, #c5d4ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .hero-sub {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin-bottom: 22px;
+        }
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        .btn-primary {
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+            color: #020308;
+            font-weight: 600;
+            font-size: 13px;
+            box-shadow: var(--shadow-soft);
+        }
+        .btn-ghost {
+            padding: 9px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(88,104,138,0.9);
+            background: rgba(5,7,11,0.9);
+            color: var(--text-main);
+            font-size: 13px;
+        }
+        .hero-note { color: var(--text-muted); font-size: 13px; margin-top: 8px; margin-bottom: 0; }
         h1 { font-size: 2.1em; margin-bottom: 0.5em; }
         h2 { font-size: 1.3em; margin: 1.5em 0 0.7em; }
         .results-meta { color: var(--text-muted); font-size: 13px; margin-bottom: 18px; }
@@ -56,6 +128,10 @@
         th { background: var(--bg-elevated-soft); color: var(--text-main); font-weight: 600; }
         tr:nth-child(even) td { background: #0b1018; }
         tr:nth-child(odd) td { background: #10182a; }
+
+        @media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -74,28 +150,30 @@
             <a href="trackiq.html">TrackIQ</a>
             <a href="results.html" class="active">Results</a>
             <a href="Aboutus.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
             <a href="products.html">Products</a>
             <button class="nav-cta" onclick="location.href='index.html#cta'">Become a member</button>
         </nav>
     </header>
-    <!-- HERO SECTION: Racing Intelligence Layer (font and style match) -->
-    <div style="margin-top: 40px; margin-bottom: 38px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;">
-        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 10px 4px 4px; border-radius: 999px; background: rgba(15,23,36,0.9); border: 1px solid rgba(47,123,255,0.4); color: #a5b0c5; font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 16px;">
-            <span style="width: 18px; height: 18px; border-radius: 999px; background: radial-gradient(circle at 30% 0, #3ee58f 0, #2f7bff 60%, #05070b 100%); box-shadow: 0 0 0 1px rgba(2,3,8,0.9);"></span>
-            Racing Intelligence Layer
+    <section class="hero" aria-label="Results hero section">
+        <div>
+            <div class="hero-kicker">
+                <span class="hero-kicker-dot"></span>
+                Racing Intelligence Layer
+            </div>
+            <h1 class="hero-title">
+                <span>Results.</span><br>Audited, structured, visible.
+            </h1>
+            <p class="hero-sub">
+                This page shows the same engineered output behind TrackIQ - audited selections, no screenshots, full transparency. Every bet, scratch and non-bet is logged through the same intelligence layer that powers the home page.
+            </p>
+            <div class="hero-ctas">
+                <a href="trackiq.html" class="btn-primary">View TrackIQ</a>
+                <a href="contact.html" class="btn-ghost">Contact Us</a>
+            </div>
+            <div class="hero-note">Performance is shown with context and downside. <span style="color: #19e68c; font-weight: 600;">That is the only way it can be audited.</span></div>
         </div>
-        <div style="font-size: clamp(32px,4vw,40px); line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 14px; font-weight: 900; color: #fff;">
-            Results.<br>Audited, structured, visible.
-        </div>
-        <div style="font-size: 14px; line-height: 1.7; color: #a5b0c5; max-width: 520px; margin-bottom: 22px;">
-            This page shows the same engineered output behind TrackIQ – audited selections, no screenshots, full transparency. Every bet, scratch and non-bet is logged through the same intelligence layer that powers the home page.
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px;">
-            <a href="trackiq.html" style="padding: 10px 18px; border-radius: 999px; border: none; cursor: pointer; background: linear-gradient(135deg, #2f7bff, #3ee58f); color: #020308; font-weight: 600; font-size: 13px; box-shadow: 0 24px 60px rgba(0,0,0,0.55); text-decoration: none;">View TrackIQ</a>
-            <a href="#" style="padding: 9px 16px; border-radius: 999px; border: 1px solid rgba(88,104,138,0.9); background: #181f2a; color: #a5b0c5; font-weight: 600; font-size: 13px; text-decoration: none;">How it works</a>
-        </div>
-        <div style="color: #a5b0c5; font-size: 13px; margin-top: 8px; margin-bottom: 0;">Performance is shown with context and downside. <span style="color: #19e68c; font-weight: 600;">That is the only way it can be audited.</span></div>
-    </div>
+    </section>
     <h1>PuntingIQ Results</h1>
     <div class="results-meta">Generated: 2026-05-01 01:05:23</div>
         <div style="margin-bottom: 32px;">
