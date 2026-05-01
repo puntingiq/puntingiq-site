@@ -1,37 +1,67 @@
 race,runner,odds,result
-Ascot R1,#2 Universal Impact,W3.40 / P1.80,6
-Ascot R2,#2 Don't Declare,W1.95 / P1.25,3
-Ascot R3,#1 Barron Bill,W1.90 / P1.24,2
-Ascot R4,#2 Bassett Hound,W2.80 / P1.33,WON
-Ascot R5,#8 Free To Fly,W3.40 / P1.30,WON
-Ascot R6,#3 Prince Epaulette,W3.20 / P1.50,6
-Ascot R7,#1 Lord Shiva,W2.10 / P1.26,WON
-Caulfield Heath R1,#6 Dame Florence,W2.25 / P1.60,4
-Caulfield Heath R2,#7 Flowerdale,W4.40 / P1.75,3
-Caulfield Heath R3,#8 Morning Whisper,W2.90 / P1.45,4
-Caulfield Heath R4,#8 Pula,W3.90 / P1.50,WON
-Caulfield Heath R5,#9 There Were Roses,W4.40 / P1.70,8
-Caulfield Heath R6,#9 Tres Magnifique,W1.45 / P1.09,WON
-Caulfield Heath R7,#4 Along The River,W9.00 / P2.63,WON
-Caulfield Heath R8,#14 Milos Filos,W4.80 / P2.40,2
-Ipswich R1,#3 Hell Or Heaven,W2.40 / P1.25,2
-Ipswich R2,#2 Disparate,W2.40 / P1.35,4
-Ipswich R3,#12 Urban Lad,W2.30 / P1.20,WON
-Ipswich R4,#5 Concession,W2.80 / P1.33,4
-Ipswich R5,#4 Boom Shot,W3.00 / P1.57,4
-Ipswich R6,#6 Divine Source,W2.70 / P1.57,7
-Ipswich R7,#4 Rhuvaal,W3.70 / P2.05,4
-Kembla Grange R1,#1 Call Me Zeus,W1.45 / P1.10,WON
-Kembla Grange R2,#2 Bello Cavallo,W2.00 / P1.13,WON
-Kembla Grange R3,#13 Katoto,W1.65 / P1.40,WON
-Kembla Grange R4,#1 Funshow,W3.00 / P1.45,109
-Kembla Grange R5,#9 Beauty Swift,W3.10 / P1.33,WON
-Kembla Grange R6,#3 Mrs Maree,W2.35 / P1.50,2
-Kembla Grange R7,#5 Rosa Incanta,W3.90 / P1.60,12
-Strathalbyn R1,#7 Minimise,W2.35 / P1.35,3
-Strathalbyn R2,#9 Winning All Round,W2.80 / P1.30,3
-Strathalbyn R3,#12 Forever A Diamond,W2.40 / P1.40,2
-Strathalbyn R4,#8 Harsh,W3.80 / P1.60,3
-Strathalbyn R5,#5 Like A Drifter,W2.90 / P1.30,WON
-Strathalbyn R6,#6 Loca Bella,W3.50 / P1.40,2
-Strathalbyn R7,#3 Silver Lifestyle,W3.40 / P1.90,4
+Bordertown R2,#8 Friend In Me,W0.00 / P0.00,6
+Bordertown R3,#2 Rocktagon,W0.00 / P0.00,3
+Bordertown R4,#11 Emmooki Magic,W0.00 / P0.00,11
+Bordertown R5,#4 Immediate Response,W0.00 / P0.00,8
+Bordertown R6,#2 Holder Maid,W0.00 / P0.00,8
+Bordertown R7,#1 Crown And Anchor,W0.00 / P0.00,3
+Bordertown R8,#5 Friday Folly,W0.00 / P0.00,10
+Ladbrokes Geelong R1,#8 Fenestella,W0.00 / P0.00,WON
+Ladbrokes Geelong R2,#4 No No No No No,W0.00 / P0.00,3
+Ladbrokes Geelong R3,#9 Prestige Maddy,W0.00 / P0.00,9
+Ladbrokes Geelong R4,#8 Trouble'n Paradise,W0.00 / P0.00,6
+Ladbrokes Geelong R5,#2 Cool Savanna,W0.00 / P0.00,6
+Ladbrokes Geelong R6,#4 Celtics,W0.00 / P0.00,WON
+Ladbrokes Geelong R7,#8 Trebilco,W0.00 / P0.00,8
+Ladbrokes Geelong R8,#1 The Daily Planet,W0.00 / P0.00,8
+Mackay R2,#1 Cryoseisms,W1.65 / P1.40,WON
+Mackay R3,#2 Exodas,W1.85 / P1.18,WON
+Mackay R4,#6 Flying Animo,W2.30 / P1.40,4
+Mackay R5,#3 Replace The Ace,W3.20 / P1.50,6
+Mackay R6,#1 He's The One,W3.20 / P1.40,WON
+Mackay R7,#3 Early Fusion,W3.40 / P1.75,7
+Mackay R8,#3 Smart Mission,W1.65 / P1.07,5
+Mount Garnet R1,#2 Heez De Man,W0.00 / P0.00,6
+Mount Garnet R2,#3 Floral Legend,W0.00 / P0.00,WON
+Mount Garnet R3,#3 Xingxing,W0.00 / P0.00,2
+Mount Garnet R4,#1 Upstart Legend,W0.00 / P0.00,3
+Mount Garnet R5,#5 Bombinate,W0.00 / P0.00,4
+Muswellbrook R1,#3 Priory Park,W3.20 / P1.10,WON
+Muswellbrook R2,#2 Excelluna,W3.80 / P1.20,2
+Muswellbrook R3,#5 Nearest,W2.50 / P1.50,4
+Muswellbrook R4,#4 Won'thearmecoming,W1.85 / P1.10,WON
+Muswellbrook R5,#2 Arapawa,W1.28 / P1.20,3
+Muswellbrook R6,#7 Ocean Chill,W2.70 / P1.60,WON
+Muswellbrook R7,#4 Course Of Action,W3.50 / P1.50,5
+Muswellbrook R8,#1 Not Written Off,W3.30 / P1.50,2
+Southside Pakenham R1,#9 Jessica Rabbit,W2.50 / P1.20,5
+Southside Pakenham R2,#14 Royal Honour,W2.10 / P1.25,109
+Southside Pakenham R3,#2 Emperor Tzu,W1.80 / P1.25,WON
+Southside Pakenham R4,#1 Diamanda,W3.00 / P1.24,5
+Southside Pakenham R5,#5 Oyster Lane,W2.30 / P1.18,2
+Southside Pakenham R6,#6 Galant Knight,W3.70 / P1.53,8
+Southside Pakenham R7,#4 My Roca Fella,W4.20 / P1.50,WON
+Southside Pakenham R8,#4 Lauberhorn,W3.70 / P1.67,5
+Southside Pakenham R9,#4 Banknote Hustler,W2.70 / P1.40,WON
+Sunshine Coast R1,#1 Murkado,W3.60 / P1.55,
+Sunshine Coast R2,#3 Out Of Turn,W2.45 / P1.40,
+Sunshine Coast R3,#3 Smart Shazza,W5.00 / P1.90,
+Sunshine Coast R4,#1 Everybody Rise,W2.15 / P1.20,
+Sunshine Coast R5,#15 He Is The Kiss,W8.00 / P2.90,
+Sunshine Coast R6,#5 Cressbrook,W5.00 / P1.95,
+Sunshine Coast R7,#5 Certify,W3.50 / P1.50,
+Sunshine Coast R8,#1 Noire Emperor,W4.00 / P1.70,
+Sunshine Coast Poly Track R1,#5 Trail Boss,W0.00 / P0.00,8
+Sunshine Coast Poly Track R2,#4 Vredefort,W0.00 / P0.00,6
+Sunshine Coast Poly Track R3,#2 Watermelon,W0.00 / P0.00,2
+Sunshine Coast Poly Track R4,#3 Jungle Fever,W0.00 / P0.00,2
+Sunshine Coast Poly Track R5,#2 What Did You Say,W0.00 / P0.00,2
+Sunshine Coast Poly Track R6,#8 Trip Hazard,W0.00 / P0.00,4
+Wagga R1,#1 Eton,W2.35 / P1.30,WON
+Wagga R2,#14 Wear The Crown,W2.40 / P1.30,WON
+Wagga R3,#5 Blue Monday,W3.00 / P1.62,8
+Wagga R4,#9 Portland Miss,W2.90 / P1.22,3
+Wagga R5,#5 Bonnie Murringo,W3.30 / P1.67,11
+Wagga R6,#6 Fourthtimelucky,W2.80 / P2.00,WON
+Wagga R7,#2 Travolta,W3.40 / P1.40,4
+Wagga R8,#16 Moor Mumm,W2.45 / P1.26,12

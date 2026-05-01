@@ -3,7 +3,7 @@
    ROBOCOPY     ::     Robust File Copy for Windows                              
 -------------------------------------------------------------------------------
 
-  Started : Wednesday, 29 April 2026 11:00:02 PM
+  Started : Friday, 1 May 2026 11:00:05 PM
    Source : C:\PuntingIQ-site\
      Dest : C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\
 
@@ -13,22 +13,23 @@
 
 ------------------------------------------------------------------------------
 
-	                  28	C:\PuntingIQ-site\
+	                  29	C:\PuntingIQ-site\
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\
-	  *EXTRA File 		     819	2days_backup_log.txt
+	  *EXTRA File 		     813	2days_backup_log.txt
 	  *EXTRA File 		   15302	About Us.docx
 	  *EXTRA File 		   26622	Aboutus Banner.pdf
-	  *EXTRA File 		   35962	Aboutus.html
-	  *EXTRA File 		   47165	Backup results.html
-	  *EXTRA File 		   48024	backup_log.txt
+	  *EXTRA File 		   36546	Aboutus.html
+	  *EXTRA File 		   47226	Backup results.html
+	  *EXTRA File 		   58121	backup_log.txt
+	  *EXTRA File 		    8479	contact.html
 	  *EXTRA File 		  122821	Daily Audit tables.jpg
 	  *EXTRA File 		  122909	Daily Audit wrong.jpg
-	  *EXTRA File 		   23423	daily-intelligence.html
-	  *EXTRA File 		   15791	email.html
+	  *EXTRA File 		   33739	daily-intelligence.html
+	  *EXTRA File 		   19698	email.html
 	  *EXTRA File 		  115940	emailhtml.pdf
 	  *EXTRA File 		  129822	Good start.jpg
 	  *EXTRA File 		   25153	Index Banner.pdf
-	  *EXTRA File 		    8176	index.html
+	  *EXTRA File 		    8711	index.html
 	  *EXTRA File 		   39305	Index.txt
 	  *EXTRA File 		   39442	Index2.txt
 	  *EXTRA File 		  292724	Layout.pdf
@@ -37,20 +38,24 @@
 	  *EXTRA File 		   1.3 m	PuntingIQemailbanner.png
 	  *EXTRA File 		      16	README.md
 	  *EXTRA File 		   84733	Results Banner.pdf
-	  *EXTRA File 		   23192	results.html
+	  *EXTRA File 		   24143	results.html
 	  *EXTRA File 		   42515	results.txt
-	  *EXTRA File 		   12778	results_report.html
+	  *EXTRA File 		   13294	results_report.html
 	  *EXTRA File 		   1.5 m	TrackIQ logo 2.png
-	  *EXTRA File 		    3814	trackiq.html
+	  *EXTRA File 		    4541	trackiq.html
 	  *EXTRA File 		      48	upload_log.txt
 	  *EXTRA File 		   16822	webintelligence.html
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\
+	  *EXTRA File 		      41	AUTO_MERGE
 	  *EXTRA File 		      12	COMMIT_EDITMSG
 	  *EXTRA File 		     339	config
 	  *EXTRA File 		      73	description
 	  *EXTRA File 		     244	FETCH_HEAD
 	  *EXTRA File 		      21	HEAD
-	  *EXTRA File 		    8990	index
+	  *EXTRA File 		    9484	index
+	  *EXTRA File 		      41	MERGE_HEAD
+	  *EXTRA File 		       0	MERGE_MODE
+	  *EXTRA File 		      96	MERGE_MSG
 	  *EXTRA File 		      41	ORIG_HEAD
 	  *EXTRA File 		     203	packed-refs
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\hooks\
@@ -71,18 +76,23 @@
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\info\
 	  *EXTRA File 		     240	exclude
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\logs\
-	  *EXTRA File 		    1270	HEAD
+	  *EXTRA File 		    2664	HEAD
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\logs\refs\
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\logs\refs\heads\
-	  *EXTRA File 		     906	main
+	  *EXTRA File 		    2300	main
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\logs\refs\remotes\
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\logs\refs\remotes\origin\
 	  *EXTRA File 		     195	HEAD
-	  *EXTRA File 		     468	main
+	  *EXTRA File 		    1673	main
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\00\
+	  *EXTRA File 		     160	b13d4707eb90b71b592a40a6745217a17faa33
+	  *EXTRA File 		    9417	ba1629a9b23b12edb25ea6ef6595905f41eef5
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\01\
+	  *EXTRA File 		    5394	157151ac88152283c12cb81b00a48908c51123
 	  *EXTRA File 		    4936	801b722b29095fa506e5f2461d47de257ed5b3
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\04\
+	  *EXTRA File 		     230	2a21025a4d2407de7ca600c75b3dfe63f964c9
 	  *EXTRA File 		    9807	425707d3ce09fd836f0ba8bba36ae9cf5fe822
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\05\
 	  *EXTRA File 		    1323	2cb6045eb1c8326bcfa84409750e5ceeece30f
@@ -93,22 +103,39 @@
 	  *EXTRA File 		    1087	748aa1fcf7084ace2c4d2535e69c5e619dec4d
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\0b\
 	  *EXTRA File 		     214	edc42015017d49dc8433caecb03b4ec45a5d3a
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\0c\
+	  *EXTRA File 		    1590	32168af753b19a5ce96b210d3f5ebbfe08c160
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\0d\
 	  *EXTRA File 		    2926	30c2553b41a6baecdac1bf35c5af78042f458f
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\0e\
 	  *EXTRA File 		     825	3c4e7d1b9af2d5062926e779dc7159e290a60d
 	  *EXTRA File 		     257	42cce1199a5d6884a6dae8fda1e596dd83ee1e
+	  *EXTRA File 		    3407	63d6907407cf27680577ce3a39f5f0f55e7cfe
+	  *EXTRA File 		    1120	fad2b61efef45ff964528a6428f332f5d59d90
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\0f\
 	  *EXTRA File 		    9393	f3f7f99e74f5550a08e679c61e44232611b3fb
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\11\
+	  *EXTRA File 		    1957	f9ec7013bec8ea45918fbb6348397ce5e78925
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\12\
+	  *EXTRA File 		    3411	4c71922b9213f8d1dd196025e2bbd6200e2078
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\15\
 	  *EXTRA File 		    7004	58250a9778b2f690d7b6a55ef90f762b87692d
+	  *EXTRA File 		    2926	b2a7feaa6586556aee89ed4ddc72993494834b
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\17\
 	  *EXTRA File 		    8552	1f0dbac6a470465721f472b97824df0fb8167c
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\19\
+	  *EXTRA File 		      67	54faebd7f25cd070f6d5b070394b68f9666a97
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\1a\
+	  *EXTRA File 		     826	5d3e4561d1298b112133fe06bf165d5d5d66dd
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\1b\
 	  *EXTRA File 		     384	ea21e8e6de4dbc5e74525afe3c2e18add19f35
+	  *EXTRA File 		    2501	fa76c62143d333256d1bbcf9db09669616cd2a
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\26\
 	  *EXTRA File 		     211	a00e0c5825d3f3ca2c94fa90b50dccec30dce7
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\27\
+	  *EXTRA File 		    2515	e56df03783edd0088dfe99a2e9b052df746e5b
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\28\
+	  *EXTRA File 		     162	1e57ba924a06daf9e520bebb24ba6730b2798e
 	  *EXTRA File 		     360	8844b9d9ef3bbed68ee3153eddf7a7981259ab
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\2a\
 	  *EXTRA File 		    3707	5966a31b1b092e9ead7e4372fe3b6306879d73
@@ -120,27 +147,42 @@
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\2f\
 	  *EXTRA File 		     825	5d4947244eaf0525aad16b1cfd203ad0f23df1
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\31\
+	  *EXTRA File 		    1119	13da4ab830265e8c2a59738f753b90a209597d
 	  *EXTRA File 		    1296	4f64f7cd7ac8cb32956709adb586d326a117f9
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\32\
 	  *EXTRA File 		      68	5cf8b794be1571cad6620d50fee1ce77005af4
 	  *EXTRA File 		     262	85bc768a8888098f1907a1eddb6463ccbb813d
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\35\
+	  *EXTRA File 		     799	469a4899024ac87281731a6ba670fdb945612d
 	  *EXTRA File 		    1086	4a58e056dd44b16f798d2baeca89088097015b
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\36\
 	  *EXTRA File 		    3379	01c7e78a8ea1dc5198d0fbd66bff2f55d16ea1
+	  *EXTRA File 		    3407	ccb7812b8874bdb0be8c55f45c040bead7062d
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\3a\
 	  *EXTRA File 		    9807	4c1e15baa6ed9ed935c3e011f1f812e63124c5
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\3b\
+	  *EXTRA File 		    6190	53dd4a6169b8aeaa0ee8e88ebaaf86b11e7c78
+	  *EXTRA File 		    6152	c4e23fd813ba4b30a0046df28299d979e23cf2
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\3d\
+	  *EXTRA File 		    2734	87653e01b3e7391b7f559467bce2efaa001e65
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\43\
 	  *EXTRA File 		      68	3fff69ef9238a6470036310b5f429184913d7c
+	  *EXTRA File 		     814	71b097691924850ac4fb4a5126123e728d1ea1
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\45\
+	  *EXTRA File 		    1119	33007397039ba75063ee8bf3acc1ab82950c0c
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\48\
 	  *EXTRA File 		    5382	a7cd68bf7515f58738baa203bca4c47fcef988
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\49\
+	  *EXTRA File 		     259	fae94551441fb555096dadd38482fcb6e56f2f
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\4a\
 	  *EXTRA File 		   12215	0a6f1841b831ddcbd2b56cc464c8a2ae2d9576
 	  *EXTRA File 		    2971	1849285758eaf6573e6b6cf4b165aedf63fb44
+	  *EXTRA File 		     159	ca99e50bdfd64b3a02573c98f9fe0aa1c02534
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\4b\
 	  *EXTRA File 		    6216	93d341a1bd73200ed92ce83f26d0c2b83ad610
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\4c\
 	  *EXTRA File 		      68	93f17f5657d6e0b95f7c61f984de5b8e6ffffa
+	  *EXTRA File 		    5447	cffc7d4ad733a83f5a50d9e6c4a038772da381
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\4d\
 	  *EXTRA File 		     230	f4a48dd575df8498dfc9aca7002c36d7c69546
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\4e\
@@ -151,13 +193,19 @@
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\53\
 	  *EXTRA File 		      68	4ddcc189e210573f6c7dd76df8e96845ed0108
 	  *EXTRA File 		  101994	b4394d42ad950ac8e16ca462969dd248ad49ef
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\54\
+	  *EXTRA File 		    9808	7d91b2f34fdc0f2c5f0c71d9db381e393b18f7
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\55\
 	  *EXTRA File 		      68	a525c3cf0226d08dd9122ceab2f726b18fb2bc
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\56\
 	  *EXTRA File 		     965	ca670b0ed22b090c299d489522dc05284b87da
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\57\
+	  *EXTRA File 		     630	0520c039eb16ba794f1529778fae9bde133e82
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\58\
 	  *EXTRA File 		    6228	99d043a989a60d698590c992c1bdb49e466c79
 	  *EXTRA File 		     106	e114a4b8d626271f7c4af92857e6794e752e73
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\5b\
+	  *EXTRA File 		    1086	8fce24836ba02a862911adf9469c198d31bf34
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\60\
 	  *EXTRA File 		    6297	e16a579a81f318f14c7da65e647f6ad28921f0
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\62\
@@ -177,19 +225,35 @@
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\6f\
 	  *EXTRA File 		    2951	1091ab19ae5e0ddc0730636257d091b9270578
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\70\
+	  *EXTRA File 		    1955	0c5a002ee17317b2aaf39f6e9797865275b3c2
 	  *EXTRA File 		     181	98908a1cb3b0babf1216ef9e5bba2cc6214205
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\72\
 	  *EXTRA File 		     161	61e36947c8c04b5b8df9f4e9681118fa7a0aca
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\73\
 	  *EXTRA File 		    7682	b384c33f9bc741d8149f2e516351a09333215e
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\74\
+	  *EXTRA File 		     230	6ddff5312ff2fd8646552e8142e69ed52c9c17
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\76\
 	  *EXTRA File 		     431	41030b98f77e0de5ac1f8ee0cea2cc26a275c7
+	  *EXTRA File 		    6360	ef5384617c4f3334bb4de541644e7fb4b4a70a
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\78\
+	  *EXTRA File 		    3161	19a1b73152d76db8804eab693936e229e678c6
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\79\
 	  *EXTRA File 		     817	decf677791edb3c8a56ab85ae2ce73593e7e21
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\7a\
 	  *EXTRA File 		    8239	12e40a32eb5224a214655cf3f19fe90afe0b8b
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\7b\
+	  *EXTRA File 		    3962	f3c2838025bc13aa19a04e9ff6067ff95d26f1
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\7e\
 	  *EXTRA File 		     214	2cf836dee16c29b54e302c58e05556e2b8d621
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\82\
+	  *EXTRA File 		     436	1bfbdf575ed4f138a24e5c947a3a7e5dd70b15
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\87\
+	  *EXTRA File 		    1117	0cb38efab7786909bcba645a903ccf98fddfea
+	  *EXTRA File 		    2941	1bbe253453622c8fa157ac3cdf6f0d0616ea72
+	  *EXTRA File 		    1117	db856716a7e488cba38fb27f4255a94f06f108
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\8a\
+	  *EXTRA File 		      68	ee43077e1e2773bd7d0cd2bb9e0e20290a0ea1
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\8d\
 	  *EXTRA File 		     824	522c352aa01089f82419031ed92747651cfd0f
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\92\
@@ -198,57 +262,110 @@
 	  *EXTRA File 		     574	766cd2069da77f3f179e1620fe8610518fcdd8
 	  *EXTRA File 		   74761	d5683f4a14c2eedafa6a1496915558b7373f2a
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\94\
+	  *EXTRA File 		     825	281ad4560ad8d3e0b10f591667d71caf40377d
+	  *EXTRA File 		    7649	408a68aa6450e9b632a9500ff6714fdb8aa31f
 	  *EXTRA File 		     230	52fcdc84a277552d7de0b491c0e2f83305ce40
+	  *EXTRA File 		     821	cfb125065f160f49a3de09d2b36a302efb49b7
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\95\
+	  *EXTRA File 		    1119	0debe6e16c031c944b2a57d7ea1e700916b455
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\96\
+	  *EXTRA File 		     435	e31006279c43d6fc55013416e72767248a7193
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\9b\
+	  *EXTRA File 		     161	64a91ff9cda2d62f30ffea9f04cd22ce3b5bb6
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\9c\
 	  *EXTRA File 		      68	5d87bc58d19c798b6b8ff07fc46d321b19bd51
+	  *EXTRA File 		    6617	84626ced62d2abf7b172ac4d0c280549066dfb
 	  *EXTRA File 		   22531	9c710eca44e83e2877282aacd865d56d57d00d
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\9f\
+	  *EXTRA File 		    2938	64760238e64e334e90373ac99f9d665dde5f80
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\a1\
 	  *EXTRA File 		    8104	6231bf5eed388d77e222f3541703fde8c6c70b
 	  *EXTRA File 		     980	b106827e17998abe9d54fd93bb890e1856995f
+	  *EXTRA File 		     161	db9cc3f7a9df48386068ed5876a182f43d12b8
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\a2\
 	  *EXTRA File 		    9816	bf980c90f9ef52abc274e5879771ff5ece350a
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\a3\
+	  *EXTRA File 		    1616	0ca87433bc776fef9a46e1b37279c52fdb19af
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\a6\
 	  *EXTRA File 		  101490	74eb85eb0bbcedd4ea2aa51735a6f2dc9c8a05
+	  *EXTRA File 		    4028	941bd9251143ab04aa3a08659b294d2735e045
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\a7\
 	  *EXTRA File 		    1684	ea933d8eb6f4323010d2186daa9dea353ac925
 	  *EXTRA File 		    5673	f51d86d4fa75760f5430b043ae839979f58bb7
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\ac\
+	  *EXTRA File 		   10054	5841535cd1d368d5b22e8b0bb74d8c7a728d23
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\ae\
 	  *EXTRA File 		     215	40d7dbeb6c76ed02e9eaef465208cc2e4f8d81
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\af\
 	  *EXTRA File 		    1088	5aa617b9485b70eac862b131816ef04c2431c3
+	  *EXTRA File 		     160	9c8f06c0a6b9c03e7d0d3a320d3e60e687526c
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\b2\
 	  *EXTRA File 		    4432	2dc31aa3681e0f9019126b82096db9fe7dc3e0
 	  *EXTRA File 		    9707	bed7068dec8448a4c7ed6332818e427f1bfd12
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\b3\
+	  *EXTRA File 		    6623	296669e5e18f1fe52d4b6130bc5ad34707747f
 	  *EXTRA File 		    1087	c4629a8054e22030c043d590ff006232f8ee11
+	  *EXTRA File 		     826	fa7e79fe8673e6a7dc8e1d366a3b3e2ed9127c
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\b6\
+	  *EXTRA File 		    1586	a41d4b698cd6b230a8e5312a2b2921cca08749
+	  *EXTRA File 		    9823	aded4aa7f913ea5553b3a02674ea085f4dcf63
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\b7\
+	  *EXTRA File 		      54	83ee6a43ace04b619918089305a31f9c6d2214
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\b8\
+	  *EXTRA File 		    1847	3d78a3bdd02ec476549b92919bfacb3ad71d70
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\b9\
+	  *EXTRA File 		    1086	5a33614a994c3de388d6de43c4100f3cdfba27
 	  *EXTRA File 		      68	6198c0cb4cd3a1a74a7566365bedaac87c7280
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\bc\
 	  *EXTRA File 		    3178	6bb57d358daccce6f47c9830c9aab0b2c0a620
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\be\
+	  *EXTRA File 		   10077	6aa7cccfd655beb988b261f3897e2de8aef711
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\c4\
 	  *EXTRA File 		      68	932f79e56ebf952c737445e2a93d31dcc1f959
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\c5\
+	  *EXTRA File 		    6210	8071c16bd1d3490d10f8cce7705281c8f02558
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\c6\
 	  *EXTRA File 		     949	02e8db1c115f325205f1784bdef0e48681c45c
 	  *EXTRA File 		    3048	c78b64b3b8f136d723c27c7bda1bf31c0205b1
+	  *EXTRA File 		    6007	f348b2a16d6e906100f508592213558b0f39f9
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\c7\
+	  *EXTRA File 		    1930	b2922629eb69ddc7cf0c2c6c4dca04b36810e7
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\c8\
+	  *EXTRA File 		     230	81d74f197f65d0760d3919d188c603b95fe0b5
+	  *EXTRA File 		     259	ad8e4a09c2579af6e5cb15b7cbbd53481d131d
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\cb\
 	  *EXTRA File 		     215	8b8cfb6a6dc886cf6a1e79d2db096e91691327
 	  *EXTRA File 		     826	dfef54034d17dfdfd49ed64c4c20c7d830fafe
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\cc\
 	  *EXTRA File 		      67	6bb38ffdd5070b0c6bee8a0b115a2e37bb00a4
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\cd\
+	  *EXTRA File 		    2936	92519f9ef934f198a9da91f64f680d4b820089
+	  *EXTRA File 		    1119	af2bd9f76341c202edc85f24aa14ff3ce5ee7b
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\ce\
 	  *EXTRA File 		    5040	e5590cf304f646d284e0975a4cea0c3c7fd439
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\d4\
 	  *EXTRA File 		      68	09cc3ae21886fb08eb0c37ca155790684654b1
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\d7\
+	  *EXTRA File 		    1119	7674717cf0761a1fdc719754817398421b94e7
+	  *EXTRA File 		    8251	8ad2287ca9f25d532daf28fa361e10274178a7
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\d8\
 	  *EXTRA File 		    1086	0c4ebfa810d4e50750b6f77f3c552a5d6aa390
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\d9\
+	  *EXTRA File 		     410	36c1706cfe8bf7232cd203d14405a1fdd4f5ac
 	  *EXTRA File 		    6204	8d595ad988d185b0d13154bed53b1a52978d59
+	  *EXTRA File 		    1119	a5d609fb5eedc409bb8e3ed4d01ae27a171182
 	  *EXTRA File 		    3694	dc8cbadb80b45f1a6ce047b04d7431d27f4211
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\db\
 	  *EXTRA File 		      68	1c90c50a1343b9bee561fc5887fdccbfe46bda
+	  *EXTRA File 		    6399	d80f18235ec56af93c27edb5c136de17ecb9ea
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\dd\
+	  *EXTRA File 		     603	40fd37a717fa75d90a5a9d3675c6ce387c9229
 	  *EXTRA File 		    2952	5c190efd02322ce81940d65fc032b2c8b83f2c
 	  *EXTRA File 		    5098	c64c5fcfbd4d7a4ab555b093799b90550803df
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\de\
+	  *EXTRA File 		    1118	7f966cffc1b5379dba17556b9b8ab2339ed40d
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\df\
+	  *EXTRA File 		    1118	e7919340328ede0f8991e9d312ad9ac42b215f
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\e0\
 	  *EXTRA File 		     107	c208823bae430b660bb70cdf5d75e1b4e67a7a
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\e2\
@@ -260,18 +377,32 @@
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\ee\
 	  *EXTRA File 		  120355	27d0e6829b138fcf1a12065448d92df9d8aa42
 	  *EXTRA File 		     182	2ed0ad1dbe814f9456988060fe69df4b40afd4
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\ef\
+	  *EXTRA File 		    6223	dbdacecba443013a461270510355d24d1cdbfb
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\f0\
 	  *EXTRA File 		   12294	67e0467483f303100e25d4aab2928d78f41dd7
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\f1\
+	  *EXTRA File 		     161	1a5cea42572177ac0c3c54ceaf8c1f3f79c2a8
+	  *EXTRA File 		    1119	aac82b442feb820a2c3c95612613cb4e382cb3
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\f2\
+	  *EXTRA File 		    2739	1ae68f8891e53431574f9a06ca9b44253b79d9
+	  *EXTRA File 		    1119	6a18b5bd8c4a2bd66652ce4da6108c358caca3
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\f3\
+	  *EXTRA File 		    2756	d1463385fbd878d9a73293315a22d5a770424a
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\f6\
 	  *EXTRA File 		    8482	619b2130e4657ed2ed45e260900dea22b0bc28
 	  *EXTRA File 		    8608	8dc51782d13eb7f24bf3276cc89eb62732f32b
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\f8\
+	  *EXTRA File 		     825	2b4e62c3ef9f47cab275c935e07e3750c5b76a
 	  *EXTRA File 		    5172	4bfdf1a8fda165f86ae03cc0cc829391ef687e
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\f9\
 	  *EXTRA File 		     881	1d98750291cc02f7fba3ba73b5ca1abc1bfdf3
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\fc\
+	  *EXTRA File 		     190	0ee6cf862ac8f516be42b961795f937a537b0a
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\fe\
 	  *EXTRA File 		    5756	05482ad04f75b85f9099cc9c86968445cf224d
 	  *EXTRA File 		   10971	c873dff33aa77061350a6bc5b1f2c11d4f1634
+	  *EXTRA File 		    3670	dfccd26a04ff337eb286ffde5599b9724455a8
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\info\
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\objects\pack\
 	  *EXTRA File 		    6868	pack-b777671b30acac00ad9a3184d1c968ed68be3cb4.idx
@@ -286,20 +417,21 @@
 	  *EXTRA File 		      41	main
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\.git\refs\tags\
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\
-	  *EXTRA File 		     819	2days_backup_log.txt
+	  *EXTRA File 		     813	2days_backup_log.txt
 	  *EXTRA File 		   15302	About Us.docx
 	  *EXTRA File 		   26622	Aboutus Banner.pdf
-	  *EXTRA File 		   35962	Aboutus.html
-	  *EXTRA File 		   47165	Backup results.html
-	  *EXTRA File 		   48024	backup_log.txt
+	  *EXTRA File 		   36546	Aboutus.html
+	  *EXTRA File 		   47226	Backup results.html
+	  *EXTRA File 		   58121	backup_log.txt
+	  *EXTRA File 		    8479	contact.html
 	  *EXTRA File 		  122821	Daily Audit tables.jpg
 	  *EXTRA File 		  122909	Daily Audit wrong.jpg
-	  *EXTRA File 		   23423	daily-intelligence.html
-	  *EXTRA File 		   15791	email.html
+	  *EXTRA File 		   33739	daily-intelligence.html
+	  *EXTRA File 		   19698	email.html
 	  *EXTRA File 		  115940	emailhtml.pdf
 	  *EXTRA File 		  129822	Good start.jpg
 	  *EXTRA File 		   25153	Index Banner.pdf
-	  *EXTRA File 		    8176	index.html
+	  *EXTRA File 		    8711	index.html
 	  *EXTRA File 		   39305	Index.txt
 	  *EXTRA File 		   39442	Index2.txt
 	  *EXTRA File 		  292724	Layout.pdf
@@ -308,20 +440,24 @@
 	  *EXTRA File 		   1.3 m	PuntingIQemailbanner.png
 	  *EXTRA File 		      16	README.md
 	  *EXTRA File 		   84733	Results Banner.pdf
-	  *EXTRA File 		   23192	results.html
+	  *EXTRA File 		   24143	results.html
 	  *EXTRA File 		   42515	results.txt
-	  *EXTRA File 		   12778	results_report.html
+	  *EXTRA File 		   13294	results_report.html
 	  *EXTRA File 		   1.5 m	TrackIQ logo 2.png
-	  *EXTRA File 		    3814	trackiq.html
+	  *EXTRA File 		    4541	trackiq.html
 	  *EXTRA File 		      48	upload_log.txt
 	  *EXTRA File 		   16822	webintelligence.html
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\
+	  *EXTRA File 		      41	AUTO_MERGE
 	  *EXTRA File 		      12	COMMIT_EDITMSG
 	  *EXTRA File 		     339	config
 	  *EXTRA File 		      73	description
 	  *EXTRA File 		     244	FETCH_HEAD
 	  *EXTRA File 		      21	HEAD
-	  *EXTRA File 		    8990	index
+	  *EXTRA File 		    9484	index
+	  *EXTRA File 		      41	MERGE_HEAD
+	  *EXTRA File 		       0	MERGE_MODE
+	  *EXTRA File 		      96	MERGE_MSG
 	  *EXTRA File 		      41	ORIG_HEAD
 	  *EXTRA File 		     203	packed-refs
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\hooks\
@@ -342,18 +478,23 @@
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\info\
 	  *EXTRA File 		     240	exclude
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\logs\
-	  *EXTRA File 		    1270	HEAD
+	  *EXTRA File 		    2664	HEAD
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\logs\refs\
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\logs\refs\heads\
-	  *EXTRA File 		     906	main
+	  *EXTRA File 		    2300	main
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\logs\refs\remotes\
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\logs\refs\remotes\origin\
 	  *EXTRA File 		     195	HEAD
-	  *EXTRA File 		     468	main
+	  *EXTRA File 		    1673	main
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\00\
+	  *EXTRA File 		     160	b13d4707eb90b71b592a40a6745217a17faa33
+	  *EXTRA File 		    9417	ba1629a9b23b12edb25ea6ef6595905f41eef5
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\01\
+	  *EXTRA File 		    5394	157151ac88152283c12cb81b00a48908c51123
 	  *EXTRA File 		    4936	801b722b29095fa506e5f2461d47de257ed5b3
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\04\
+	  *EXTRA File 		     230	2a21025a4d2407de7ca600c75b3dfe63f964c9
 	  *EXTRA File 		    9807	425707d3ce09fd836f0ba8bba36ae9cf5fe822
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\05\
 	  *EXTRA File 		    1323	2cb6045eb1c8326bcfa84409750e5ceeece30f
@@ -364,22 +505,39 @@
 	  *EXTRA File 		    1087	748aa1fcf7084ace2c4d2535e69c5e619dec4d
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\0b\
 	  *EXTRA File 		     214	edc42015017d49dc8433caecb03b4ec45a5d3a
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\0c\
+	  *EXTRA File 		    1590	32168af753b19a5ce96b210d3f5ebbfe08c160
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\0d\
 	  *EXTRA File 		    2926	30c2553b41a6baecdac1bf35c5af78042f458f
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\0e\
 	  *EXTRA File 		     825	3c4e7d1b9af2d5062926e779dc7159e290a60d
 	  *EXTRA File 		     257	42cce1199a5d6884a6dae8fda1e596dd83ee1e
+	  *EXTRA File 		    3407	63d6907407cf27680577ce3a39f5f0f55e7cfe
+	  *EXTRA File 		    1120	fad2b61efef45ff964528a6428f332f5d59d90
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\0f\
 	  *EXTRA File 		    9393	f3f7f99e74f5550a08e679c61e44232611b3fb
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\11\
+	  *EXTRA File 		    1957	f9ec7013bec8ea45918fbb6348397ce5e78925
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\12\
+	  *EXTRA File 		    3411	4c71922b9213f8d1dd196025e2bbd6200e2078
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\15\
 	  *EXTRA File 		    7004	58250a9778b2f690d7b6a55ef90f762b87692d
+	  *EXTRA File 		    2926	b2a7feaa6586556aee89ed4ddc72993494834b
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\17\
 	  *EXTRA File 		    8552	1f0dbac6a470465721f472b97824df0fb8167c
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\19\
+	  *EXTRA File 		      67	54faebd7f25cd070f6d5b070394b68f9666a97
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\1a\
+	  *EXTRA File 		     826	5d3e4561d1298b112133fe06bf165d5d5d66dd
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\1b\
 	  *EXTRA File 		     384	ea21e8e6de4dbc5e74525afe3c2e18add19f35
+	  *EXTRA File 		    2501	fa76c62143d333256d1bbcf9db09669616cd2a
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\26\
 	  *EXTRA File 		     211	a00e0c5825d3f3ca2c94fa90b50dccec30dce7
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\27\
+	  *EXTRA File 		    2515	e56df03783edd0088dfe99a2e9b052df746e5b
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\28\
+	  *EXTRA File 		     162	1e57ba924a06daf9e520bebb24ba6730b2798e
 	  *EXTRA File 		     360	8844b9d9ef3bbed68ee3153eddf7a7981259ab
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\2a\
 	  *EXTRA File 		    3707	5966a31b1b092e9ead7e4372fe3b6306879d73
@@ -391,27 +549,42 @@
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\2f\
 	  *EXTRA File 		     825	5d4947244eaf0525aad16b1cfd203ad0f23df1
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\31\
+	  *EXTRA File 		    1119	13da4ab830265e8c2a59738f753b90a209597d
 	  *EXTRA File 		    1296	4f64f7cd7ac8cb32956709adb586d326a117f9
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\32\
 	  *EXTRA File 		      68	5cf8b794be1571cad6620d50fee1ce77005af4
 	  *EXTRA File 		     262	85bc768a8888098f1907a1eddb6463ccbb813d
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\35\
+	  *EXTRA File 		     799	469a4899024ac87281731a6ba670fdb945612d
 	  *EXTRA File 		    1086	4a58e056dd44b16f798d2baeca89088097015b
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\36\
 	  *EXTRA File 		    3379	01c7e78a8ea1dc5198d0fbd66bff2f55d16ea1
+	  *EXTRA File 		    3407	ccb7812b8874bdb0be8c55f45c040bead7062d
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\3a\
 	  *EXTRA File 		    9807	4c1e15baa6ed9ed935c3e011f1f812e63124c5
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\3b\
+	  *EXTRA File 		    6190	53dd4a6169b8aeaa0ee8e88ebaaf86b11e7c78
+	  *EXTRA File 		    6152	c4e23fd813ba4b30a0046df28299d979e23cf2
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\3d\
+	  *EXTRA File 		    2734	87653e01b3e7391b7f559467bce2efaa001e65
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\43\
 	  *EXTRA File 		      68	3fff69ef9238a6470036310b5f429184913d7c
+	  *EXTRA File 		     814	71b097691924850ac4fb4a5126123e728d1ea1
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\45\
+	  *EXTRA File 		    1119	33007397039ba75063ee8bf3acc1ab82950c0c
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\48\
 	  *EXTRA File 		    5382	a7cd68bf7515f58738baa203bca4c47fcef988
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\49\
+	  *EXTRA File 		     259	fae94551441fb555096dadd38482fcb6e56f2f
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\4a\
 	  *EXTRA File 		   12215	0a6f1841b831ddcbd2b56cc464c8a2ae2d9576
 	  *EXTRA File 		    2971	1849285758eaf6573e6b6cf4b165aedf63fb44
+	  *EXTRA File 		     159	ca99e50bdfd64b3a02573c98f9fe0aa1c02534
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\4b\
 	  *EXTRA File 		    6216	93d341a1bd73200ed92ce83f26d0c2b83ad610
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\4c\
 	  *EXTRA File 		      68	93f17f5657d6e0b95f7c61f984de5b8e6ffffa
+	  *EXTRA File 		    5447	cffc7d4ad733a83f5a50d9e6c4a038772da381
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\4d\
 	  *EXTRA File 		     230	f4a48dd575df8498dfc9aca7002c36d7c69546
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\4e\
@@ -422,13 +595,19 @@
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\53\
 	  *EXTRA File 		      68	4ddcc189e210573f6c7dd76df8e96845ed0108
 	  *EXTRA File 		  101994	b4394d42ad950ac8e16ca462969dd248ad49ef
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\54\
+	  *EXTRA File 		    9808	7d91b2f34fdc0f2c5f0c71d9db381e393b18f7
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\55\
 	  *EXTRA File 		      68	a525c3cf0226d08dd9122ceab2f726b18fb2bc
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\56\
 	  *EXTRA File 		     965	ca670b0ed22b090c299d489522dc05284b87da
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\57\
+	  *EXTRA File 		     630	0520c039eb16ba794f1529778fae9bde133e82
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\58\
 	  *EXTRA File 		    6228	99d043a989a60d698590c992c1bdb49e466c79
 	  *EXTRA File 		     106	e114a4b8d626271f7c4af92857e6794e752e73
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\5b\
+	  *EXTRA File 		    1086	8fce24836ba02a862911adf9469c198d31bf34
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\60\
 	  *EXTRA File 		    6297	e16a579a81f318f14c7da65e647f6ad28921f0
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\62\
@@ -448,19 +627,35 @@
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\6f\
 	  *EXTRA File 		    2951	1091ab19ae5e0ddc0730636257d091b9270578
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\70\
+	  *EXTRA File 		    1955	0c5a002ee17317b2aaf39f6e9797865275b3c2
 	  *EXTRA File 		     181	98908a1cb3b0babf1216ef9e5bba2cc6214205
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\72\
 	  *EXTRA File 		     161	61e36947c8c04b5b8df9f4e9681118fa7a0aca
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\73\
 	  *EXTRA File 		    7682	b384c33f9bc741d8149f2e516351a09333215e
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\74\
+	  *EXTRA File 		     230	6ddff5312ff2fd8646552e8142e69ed52c9c17
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\76\
 	  *EXTRA File 		     431	41030b98f77e0de5ac1f8ee0cea2cc26a275c7
+	  *EXTRA File 		    6360	ef5384617c4f3334bb4de541644e7fb4b4a70a
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\78\
+	  *EXTRA File 		    3161	19a1b73152d76db8804eab693936e229e678c6
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\79\
 	  *EXTRA File 		     817	decf677791edb3c8a56ab85ae2ce73593e7e21
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\7a\
 	  *EXTRA File 		    8239	12e40a32eb5224a214655cf3f19fe90afe0b8b
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\7b\
+	  *EXTRA File 		    3962	f3c2838025bc13aa19a04e9ff6067ff95d26f1
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\7e\
 	  *EXTRA File 		     214	2cf836dee16c29b54e302c58e05556e2b8d621
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\82\
+	  *EXTRA File 		     436	1bfbdf575ed4f138a24e5c947a3a7e5dd70b15
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\87\
+	  *EXTRA File 		    1117	0cb38efab7786909bcba645a903ccf98fddfea
+	  *EXTRA File 		    2941	1bbe253453622c8fa157ac3cdf6f0d0616ea72
+	  *EXTRA File 		    1117	db856716a7e488cba38fb27f4255a94f06f108
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\8a\
+	  *EXTRA File 		      68	ee43077e1e2773bd7d0cd2bb9e0e20290a0ea1
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\8d\
 	  *EXTRA File 		     824	522c352aa01089f82419031ed92747651cfd0f
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\92\
@@ -469,57 +664,110 @@
 	  *EXTRA File 		     574	766cd2069da77f3f179e1620fe8610518fcdd8
 	  *EXTRA File 		   74761	d5683f4a14c2eedafa6a1496915558b7373f2a
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\94\
+	  *EXTRA File 		     825	281ad4560ad8d3e0b10f591667d71caf40377d
+	  *EXTRA File 		    7649	408a68aa6450e9b632a9500ff6714fdb8aa31f
 	  *EXTRA File 		     230	52fcdc84a277552d7de0b491c0e2f83305ce40
+	  *EXTRA File 		     821	cfb125065f160f49a3de09d2b36a302efb49b7
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\95\
+	  *EXTRA File 		    1119	0debe6e16c031c944b2a57d7ea1e700916b455
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\96\
+	  *EXTRA File 		     435	e31006279c43d6fc55013416e72767248a7193
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\9b\
+	  *EXTRA File 		     161	64a91ff9cda2d62f30ffea9f04cd22ce3b5bb6
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\9c\
 	  *EXTRA File 		      68	5d87bc58d19c798b6b8ff07fc46d321b19bd51
+	  *EXTRA File 		    6617	84626ced62d2abf7b172ac4d0c280549066dfb
 	  *EXTRA File 		   22531	9c710eca44e83e2877282aacd865d56d57d00d
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\9f\
+	  *EXTRA File 		    2938	64760238e64e334e90373ac99f9d665dde5f80
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\a1\
 	  *EXTRA File 		    8104	6231bf5eed388d77e222f3541703fde8c6c70b
 	  *EXTRA File 		     980	b106827e17998abe9d54fd93bb890e1856995f
+	  *EXTRA File 		     161	db9cc3f7a9df48386068ed5876a182f43d12b8
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\a2\
 	  *EXTRA File 		    9816	bf980c90f9ef52abc274e5879771ff5ece350a
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\a3\
+	  *EXTRA File 		    1616	0ca87433bc776fef9a46e1b37279c52fdb19af
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\a6\
 	  *EXTRA File 		  101490	74eb85eb0bbcedd4ea2aa51735a6f2dc9c8a05
+	  *EXTRA File 		    4028	941bd9251143ab04aa3a08659b294d2735e045
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\a7\
 	  *EXTRA File 		    1684	ea933d8eb6f4323010d2186daa9dea353ac925
 	  *EXTRA File 		    5673	f51d86d4fa75760f5430b043ae839979f58bb7
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\ac\
+	  *EXTRA File 		   10054	5841535cd1d368d5b22e8b0bb74d8c7a728d23
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\ae\
 	  *EXTRA File 		     215	40d7dbeb6c76ed02e9eaef465208cc2e4f8d81
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\af\
 	  *EXTRA File 		    1088	5aa617b9485b70eac862b131816ef04c2431c3
+	  *EXTRA File 		     160	9c8f06c0a6b9c03e7d0d3a320d3e60e687526c
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\b2\
 	  *EXTRA File 		    4432	2dc31aa3681e0f9019126b82096db9fe7dc3e0
 	  *EXTRA File 		    9707	bed7068dec8448a4c7ed6332818e427f1bfd12
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\b3\
+	  *EXTRA File 		    6623	296669e5e18f1fe52d4b6130bc5ad34707747f
 	  *EXTRA File 		    1087	c4629a8054e22030c043d590ff006232f8ee11
+	  *EXTRA File 		     826	fa7e79fe8673e6a7dc8e1d366a3b3e2ed9127c
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\b6\
+	  *EXTRA File 		    1586	a41d4b698cd6b230a8e5312a2b2921cca08749
+	  *EXTRA File 		    9823	aded4aa7f913ea5553b3a02674ea085f4dcf63
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\b7\
+	  *EXTRA File 		      54	83ee6a43ace04b619918089305a31f9c6d2214
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\b8\
+	  *EXTRA File 		    1847	3d78a3bdd02ec476549b92919bfacb3ad71d70
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\b9\
+	  *EXTRA File 		    1086	5a33614a994c3de388d6de43c4100f3cdfba27
 	  *EXTRA File 		      68	6198c0cb4cd3a1a74a7566365bedaac87c7280
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\bc\
 	  *EXTRA File 		    3178	6bb57d358daccce6f47c9830c9aab0b2c0a620
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\be\
+	  *EXTRA File 		   10077	6aa7cccfd655beb988b261f3897e2de8aef711
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\c4\
 	  *EXTRA File 		      68	932f79e56ebf952c737445e2a93d31dcc1f959
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\c5\
+	  *EXTRA File 		    6210	8071c16bd1d3490d10f8cce7705281c8f02558
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\c6\
 	  *EXTRA File 		     949	02e8db1c115f325205f1784bdef0e48681c45c
 	  *EXTRA File 		    3048	c78b64b3b8f136d723c27c7bda1bf31c0205b1
+	  *EXTRA File 		    6007	f348b2a16d6e906100f508592213558b0f39f9
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\c7\
+	  *EXTRA File 		    1930	b2922629eb69ddc7cf0c2c6c4dca04b36810e7
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\c8\
+	  *EXTRA File 		     230	81d74f197f65d0760d3919d188c603b95fe0b5
+	  *EXTRA File 		     259	ad8e4a09c2579af6e5cb15b7cbbd53481d131d
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\cb\
 	  *EXTRA File 		     215	8b8cfb6a6dc886cf6a1e79d2db096e91691327
 	  *EXTRA File 		     826	dfef54034d17dfdfd49ed64c4c20c7d830fafe
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\cc\
 	  *EXTRA File 		      67	6bb38ffdd5070b0c6bee8a0b115a2e37bb00a4
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\cd\
+	  *EXTRA File 		    2936	92519f9ef934f198a9da91f64f680d4b820089
+	  *EXTRA File 		    1119	af2bd9f76341c202edc85f24aa14ff3ce5ee7b
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\ce\
 	  *EXTRA File 		    5040	e5590cf304f646d284e0975a4cea0c3c7fd439
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\d4\
 	  *EXTRA File 		      68	09cc3ae21886fb08eb0c37ca155790684654b1
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\d7\
+	  *EXTRA File 		    1119	7674717cf0761a1fdc719754817398421b94e7
+	  *EXTRA File 		    8251	8ad2287ca9f25d532daf28fa361e10274178a7
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\d8\
 	  *EXTRA File 		    1086	0c4ebfa810d4e50750b6f77f3c552a5d6aa390
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\d9\
+	  *EXTRA File 		     410	36c1706cfe8bf7232cd203d14405a1fdd4f5ac
 	  *EXTRA File 		    6204	8d595ad988d185b0d13154bed53b1a52978d59
+	  *EXTRA File 		    1119	a5d609fb5eedc409bb8e3ed4d01ae27a171182
 	  *EXTRA File 		    3694	dc8cbadb80b45f1a6ce047b04d7431d27f4211
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\db\
 	  *EXTRA File 		      68	1c90c50a1343b9bee561fc5887fdccbfe46bda
+	  *EXTRA File 		    6399	d80f18235ec56af93c27edb5c136de17ecb9ea
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\dd\
+	  *EXTRA File 		     603	40fd37a717fa75d90a5a9d3675c6ce387c9229
 	  *EXTRA File 		    2952	5c190efd02322ce81940d65fc032b2c8b83f2c
 	  *EXTRA File 		    5098	c64c5fcfbd4d7a4ab555b093799b90550803df
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\de\
+	  *EXTRA File 		    1118	7f966cffc1b5379dba17556b9b8ab2339ed40d
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\df\
+	  *EXTRA File 		    1118	e7919340328ede0f8991e9d312ad9ac42b215f
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\e0\
 	  *EXTRA File 		     107	c208823bae430b660bb70cdf5d75e1b4e67a7a
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\e2\
@@ -531,18 +779,32 @@
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\ee\
 	  *EXTRA File 		  120355	27d0e6829b138fcf1a12065448d92df9d8aa42
 	  *EXTRA File 		     182	2ed0ad1dbe814f9456988060fe69df4b40afd4
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\ef\
+	  *EXTRA File 		    6223	dbdacecba443013a461270510355d24d1cdbfb
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\f0\
 	  *EXTRA File 		   12294	67e0467483f303100e25d4aab2928d78f41dd7
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\f1\
+	  *EXTRA File 		     161	1a5cea42572177ac0c3c54ceaf8c1f3f79c2a8
+	  *EXTRA File 		    1119	aac82b442feb820a2c3c95612613cb4e382cb3
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\f2\
+	  *EXTRA File 		    2739	1ae68f8891e53431574f9a06ca9b44253b79d9
+	  *EXTRA File 		    1119	6a18b5bd8c4a2bd66652ce4da6108c358caca3
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\f3\
+	  *EXTRA File 		    2756	d1463385fbd878d9a73293315a22d5a770424a
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\f6\
 	  *EXTRA File 		    8482	619b2130e4657ed2ed45e260900dea22b0bc28
 	  *EXTRA File 		    8608	8dc51782d13eb7f24bf3276cc89eb62732f32b
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\f8\
+	  *EXTRA File 		     825	2b4e62c3ef9f47cab275c935e07e3750c5b76a
 	  *EXTRA File 		    5172	4bfdf1a8fda165f86ae03cc0cc829391ef687e
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\f9\
 	  *EXTRA File 		     881	1d98750291cc02f7fba3ba73b5ca1abc1bfdf3
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\fc\
+	  *EXTRA File 		     190	0ee6cf862ac8f516be42b961795f937a537b0a
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\fe\
 	  *EXTRA File 		    5756	05482ad04f75b85f9099cc9c86968445cf224d
 	  *EXTRA File 		   10971	c873dff33aa77061350a6bc5b1f2c11d4f1634
+	  *EXTRA File 		    3670	dfccd26a04ff337eb286ffde5599b9724455a8
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\info\
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\2 Days Backup\.git\objects\pack\
 	  *EXTRA File 		    6868	pack-b777671b30acac00ad9a3184d1c968ed68be3cb4.idx
@@ -565,7 +827,7 @@
 	  *EXTRA File 		   1.5 m	TrackIQ logo 2.png
 	  *EXTRA File 		   40609	TrackIQ logo 2.w400-h400-c1.jpg
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\css\
-	  *EXTRA File 		   14459	style.css
+	  *EXTRA File 		   14551	style.css
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\reports\
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\reports\20260415\
 	  *EXTRA File 		   26665	daily-intelligence.html
@@ -595,12 +857,16 @@
 	  *EXTRA File 		   49806	daily-intelligence.html
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\reports\20260427\
 	  *EXTRA File 		   28017	daily-intelligence.html
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\reports\20260429\
+	  *EXTRA File 		   24696	daily-intelligence.html
+	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\reports\20260430\
+	  *EXTRA File 		   33383	daily-intelligence.html
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\reports\latest\
-	  *EXTRA File 		   28017	daily-intelligence.html
-	  *EXTRA File 		   15699	results_report.html
-	  *EXTRA File 		     391	web_product_status.csv
-	  *EXTRA File 		    2942	web_race_by_race_summary.csv
-	  *EXTRA File 		    3210	web_top_picks_summary.csv
+	  *EXTRA File 		   33739	daily-intelligence.html
+	  *EXTRA File 		   16167	results_report.html
+	  *EXTRA File 		     452	web_product_status.csv
+	  *EXTRA File 		    1746	web_race_by_race_summary.csv
+	  *EXTRA File 		    1892	web_top_picks_summary.csv
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\_pgbackup\
 	  *EXTRA File 		    2303	index_1775440674.html
 	  *EXTRA File 		   35157	index_1775451219.html
@@ -634,133 +900,217 @@
 	  *EXTRA File 		    2607	trackiq_1775441530.html
 	*EXTRA Dir        -1	C:\Users\cheen\OneDrive - PuntingIQ\OneDrive - PintingIQ\PuntingIQ-site Backup\2 Days Backup\_pginfo\
 	  *EXTRA File 		   32828	fonts.json
-	  *EXTRA File 		   51724	2days_backup_log.txt
-	    Newer     		   35962	Aboutus.html
+	  *EXTRA File 		   74106	2days_backup_log.txt
+	    Newer     		   36549	Aboutus.html
 	    Newer     		       0	backup_log.txt
-	    Newer     		   24696	daily-intelligence.html
-	    Newer     		   13552	email.html
-	    Newer     		    8191	index.html
-	    Newer     		   22753	results.html
-	                   8	C:\PuntingIQ-site\.git\
+	    Newer     		   37266	daily-intelligence.html
+	    Newer     		   19698	email.html
+	    Newer     		    8716	index.html
+	    Newer     		   26906	results.html
+	    Newer     		   13294	results_report.html
+	    Newer     		    4683	trackiq.html
+	                   9	C:\PuntingIQ-site\.git\
+	  *EXTRA File 		      41	AUTO_MERGE
+	  *EXTRA File 		      41	MERGE_HEAD
+	  *EXTRA File 		       0	MERGE_MODE
+	  *EXTRA File 		      96	MERGE_MSG
+	    New File  		   12288	.COMMIT_EDITMSG.swp
 	    Newer     		      12	COMMIT_EDITMSG
-	    Newer     		    9127	index
+	    Newer     		     393	config
+	    Newer     		     103	FETCH_HEAD
+	    Newer     		      21	HEAD
+	    Newer     		    9446	index
+	    Newer     		      41	ORIG_HEAD
 	                  14	C:\PuntingIQ-site\.git\hooks\
 	                   1	C:\PuntingIQ-site\.git\info\
 	                   1	C:\PuntingIQ-site\.git\logs\
-	    Newer     		    1423	HEAD
+	    Newer     		    3539	HEAD
 	                   0	C:\PuntingIQ-site\.git\logs\refs\
 	                   1	C:\PuntingIQ-site\.git\logs\refs\heads\
-	    Newer     		    1059	main
+	    Newer     		    2826	main
 	                   0	C:\PuntingIQ-site\.git\logs\refs\remotes\
 	                   2	C:\PuntingIQ-site\.git\logs\refs\remotes\origin\
-	    Newer     		     616	main
+	    Newer     		    2142	main
 	                   0	C:\PuntingIQ-site\.git\objects\
-	                   2	C:\PuntingIQ-site\.git\objects\01\
-	    New File  		    5394	157151ac88152283c12cb81b00a48908c51123
-	                   1	C:\PuntingIQ-site\.git\objects\04\
-	    Newer     		    9807	425707d3ce09fd836f0ba8bba36ae9cf5fe822
+	                   2	C:\PuntingIQ-site\.git\objects\00\
+	                   3	C:\PuntingIQ-site\.git\objects\01\
+	    New File  		     869	b4160babe86879cb08ab3afbab107af163d846
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\03\
+	    New File  		    1120	5c8feff9704a1aa4583904977372b56fbb31b5
+	                   2	C:\PuntingIQ-site\.git\objects\04\
 	                   2	C:\PuntingIQ-site\.git\objects\05\
 	                   1	C:\PuntingIQ-site\.git\objects\08\
 	                   1	C:\PuntingIQ-site\.git\objects\09\
 	                   1	C:\PuntingIQ-site\.git\objects\0b\
+	                   1	C:\PuntingIQ-site\.git\objects\0c\
 	                   1	C:\PuntingIQ-site\.git\objects\0d\
-	                   3	C:\PuntingIQ-site\.git\objects\0e\
-	    New File  		    3407	63d6907407cf27680577ce3a39f5f0f55e7cfe
+	                   5	C:\PuntingIQ-site\.git\objects\0e\
+	    New File  		    1991	c9d856a353d16f1cd71963792ed309e4b0abd0
 	                   1	C:\PuntingIQ-site\.git\objects\0f\
-	                   1	C:\PuntingIQ-site\.git\objects\15\
+	                   1	C:\PuntingIQ-site\.git\objects\11\
+	                   1	C:\PuntingIQ-site\.git\objects\12\
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\14\
+	    New File  		    1119	9252d05c1a02ffb3bcdb7eb03c3b55bb75eb64
+	                   2	C:\PuntingIQ-site\.git\objects\15\
 	                   1	C:\PuntingIQ-site\.git\objects\17\
-	  New Dir          1	C:\PuntingIQ-site\.git\objects\19\
-	    New File  		      67	54faebd7f25cd070f6d5b070394b68f9666a97
-	                   1	C:\PuntingIQ-site\.git\objects\1b\
+	                   1	C:\PuntingIQ-site\.git\objects\19\
+	                   1	C:\PuntingIQ-site\.git\objects\1a\
+	                   2	C:\PuntingIQ-site\.git\objects\1b\
 	                   1	C:\PuntingIQ-site\.git\objects\26\
+	                   1	C:\PuntingIQ-site\.git\objects\27\
 	                   2	C:\PuntingIQ-site\.git\objects\28\
-	    New File  		     162	1e57ba924a06daf9e520bebb24ba6730b2798e
 	                   1	C:\PuntingIQ-site\.git\objects\2a\
-	                   1	C:\PuntingIQ-site\.git\objects\2b\
+	                   2	C:\PuntingIQ-site\.git\objects\2b\
+	    New File  		    2691	8b6defb2ebc0fa09e44db29dd8ecafa8186935
 	                   2	C:\PuntingIQ-site\.git\objects\2c\
 	                   1	C:\PuntingIQ-site\.git\objects\2f\
-	                   1	C:\PuntingIQ-site\.git\objects\31\
+	                   2	C:\PuntingIQ-site\.git\objects\31\
 	                   2	C:\PuntingIQ-site\.git\objects\32\
-	                   1	C:\PuntingIQ-site\.git\objects\35\
-	                   1	C:\PuntingIQ-site\.git\objects\36\
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\33\
+	    New File  		    6792	b398a9e09565251fff4639b6968a6d30150fd5
+	                   2	C:\PuntingIQ-site\.git\objects\35\
+	                   2	C:\PuntingIQ-site\.git\objects\36\
 	                   1	C:\PuntingIQ-site\.git\objects\3a\
-	                   1	C:\PuntingIQ-site\.git\objects\43\
+	                   2	C:\PuntingIQ-site\.git\objects\3b\
+	                   1	C:\PuntingIQ-site\.git\objects\3d\
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\40\
+	    New File  		    6390	34118f0a08e771cd1d5a40d9bcefa245f6d952
+	                   3	C:\PuntingIQ-site\.git\objects\43\
+	    New File  		     891	ac06a7ec85938eaeaadccf53082b4dafa658cd
+	                   1	C:\PuntingIQ-site\.git\objects\45\
 	                   1	C:\PuntingIQ-site\.git\objects\48\
-	  New Dir          1	C:\PuntingIQ-site\.git\objects\49\
-	    New File  		     259	fae94551441fb555096dadd38482fcb6e56f2f
-	                   2	C:\PuntingIQ-site\.git\objects\4a\
+	                   1	C:\PuntingIQ-site\.git\objects\49\
+	                   3	C:\PuntingIQ-site\.git\objects\4a\
 	                   1	C:\PuntingIQ-site\.git\objects\4b\
 	                   2	C:\PuntingIQ-site\.git\objects\4c\
-	    New File  		    5447	cffc7d4ad733a83f5a50d9e6c4a038772da381
 	                   1	C:\PuntingIQ-site\.git\objects\4d\
 	                   2	C:\PuntingIQ-site\.git\objects\4e\
 	                   1	C:\PuntingIQ-site\.git\objects\51\
-	                   2	C:\PuntingIQ-site\.git\objects\53\
+	                   3	C:\PuntingIQ-site\.git\objects\53\
+	    New File  		     463	20d778c821cdc0fb12b2fe7d172e3f3a69896d
+	                   1	C:\PuntingIQ-site\.git\objects\54\
 	                   1	C:\PuntingIQ-site\.git\objects\55\
 	                   1	C:\PuntingIQ-site\.git\objects\56\
-	  New Dir          1	C:\PuntingIQ-site\.git\objects\57\
-	    New File  		     630	0520c039eb16ba794f1529778fae9bde133e82
+	                   1	C:\PuntingIQ-site\.git\objects\57\
 	                   2	C:\PuntingIQ-site\.git\objects\58\
-	  New Dir          1	C:\PuntingIQ-site\.git\objects\5b\
-	    New File  		    1086	8fce24836ba02a862911adf9469c198d31bf34
+	                   1	C:\PuntingIQ-site\.git\objects\5b\
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\5e\
+	    New File  		    1119	1f922e512e951973428bb34b8106359cfe24b7
 	                   1	C:\PuntingIQ-site\.git\objects\60\
 	                   1	C:\PuntingIQ-site\.git\objects\62\
 	                   2	C:\PuntingIQ-site\.git\objects\63\
 	                   2	C:\PuntingIQ-site\.git\objects\65\
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\66\
+	    New File  		   11009	b5fd3f3e5e60e7d0ecbb405ec69b6b15a3f333
 	                   1	C:\PuntingIQ-site\.git\objects\68\
 	                   1	C:\PuntingIQ-site\.git\objects\6b\
 	                   1	C:\PuntingIQ-site\.git\objects\6e\
 	                   1	C:\PuntingIQ-site\.git\objects\6f\
-	                   1	C:\PuntingIQ-site\.git\objects\70\
+	                   2	C:\PuntingIQ-site\.git\objects\70\
 	                   1	C:\PuntingIQ-site\.git\objects\72\
 	                   1	C:\PuntingIQ-site\.git\objects\73\
-	                   1	C:\PuntingIQ-site\.git\objects\76\
+	                   1	C:\PuntingIQ-site\.git\objects\74\
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\75\
+	    New File  		     190	54086ea0294704843059b124f787f7d12714b6
+	                   3	C:\PuntingIQ-site\.git\objects\76\
+	    New File  		    1874	9623a076cee4d5b5461a0757b988fda1da5911
+	                   1	C:\PuntingIQ-site\.git\objects\78\
 	                   1	C:\PuntingIQ-site\.git\objects\79\
 	                   1	C:\PuntingIQ-site\.git\objects\7a\
+	                   1	C:\PuntingIQ-site\.git\objects\7b\
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\7c\
+	    New File  		    7168	3291a2e262d337b9cb3d49bffa9aa1df8b030e
 	                   1	C:\PuntingIQ-site\.git\objects\7e\
+	                   2	C:\PuntingIQ-site\.git\objects\82\
+	    New File  		    1119	4318339401eb9f0f8553057ba6284b0bb2bc4c
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\83\
+	    New File  		    1847	19e9c5cd6ae8717538e1adf085ed7c57beae68
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\86\
+	    New File  		    3160	7cbc3aeaf1e9454ee9de7b83ee2a6700b8da15
+	                   3	C:\PuntingIQ-site\.git\objects\87\
+	                   1	C:\PuntingIQ-site\.git\objects\8a\
 	                   1	C:\PuntingIQ-site\.git\objects\8d\
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\8f\
+	    New File  		    1120	f3a5cf8c8e5f1dc38059d29cae08b2a13a245f
 	                   1	C:\PuntingIQ-site\.git\objects\92\
 	                   2	C:\PuntingIQ-site\.git\objects\93\
-	                   2	C:\PuntingIQ-site\.git\objects\94\
-	    New File  		    7649	408a68aa6450e9b632a9500ff6714fdb8aa31f
-	                   2	C:\PuntingIQ-site\.git\objects\9c\
-	  New Dir          1	C:\PuntingIQ-site\.git\objects\9f\
-	    New File  		    2938	64760238e64e334e90373ac99f9d665dde5f80
-	                   2	C:\PuntingIQ-site\.git\objects\a1\
+	                   5	C:\PuntingIQ-site\.git\objects\94\
+	    New File  		     264	86c39c7c8d04186fd21a2b3e1158b615d8a51a
+	                   1	C:\PuntingIQ-site\.git\objects\95\
+	                   1	C:\PuntingIQ-site\.git\objects\96\
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\97\
+	    New File  		     826	07eb2f38255eaa498172cfd77f0bf0a95f0608
+	                   1	C:\PuntingIQ-site\.git\objects\9b\
+	                   3	C:\PuntingIQ-site\.git\objects\9c\
+	                   1	C:\PuntingIQ-site\.git\objects\9f\
+	                   3	C:\PuntingIQ-site\.git\objects\a1\
 	                   1	C:\PuntingIQ-site\.git\objects\a2\
-	                   1	C:\PuntingIQ-site\.git\objects\a6\
+	                   1	C:\PuntingIQ-site\.git\objects\a3\
+	                   2	C:\PuntingIQ-site\.git\objects\a6\
 	                   2	C:\PuntingIQ-site\.git\objects\a7\
-	                   1	C:\PuntingIQ-site\.git\objects\ae\
-	                   1	C:\PuntingIQ-site\.git\objects\af\
-	                   2	C:\PuntingIQ-site\.git\objects\b2\
-	                   1	C:\PuntingIQ-site\.git\objects\b3\
-	                   1	C:\PuntingIQ-site\.git\objects\b9\
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\a9\
+	    New File  		     231	3798dd4ce41c69c1c62da271b373961ffd19fe
+	                   1	C:\PuntingIQ-site\.git\objects\ac\
+	                   2	C:\PuntingIQ-site\.git\objects\ae\
+	    New File  		    6242	79a43b0cfc2175deab0b9038242634e7f816fc
+	                   2	C:\PuntingIQ-site\.git\objects\af\
+	                   3	C:\PuntingIQ-site\.git\objects\b2\
+	    New File  		   10087	b5001cc38e7a9abf1c3195e06b66c84bc7f599
+	                   3	C:\PuntingIQ-site\.git\objects\b3\
+	                   3	C:\PuntingIQ-site\.git\objects\b6\
+	    New File  		      68	13cea880e1880f79b00514695982da2fc4ce11
+	                   1	C:\PuntingIQ-site\.git\objects\b7\
+	                   1	C:\PuntingIQ-site\.git\objects\b8\
+	                   2	C:\PuntingIQ-site\.git\objects\b9\
 	                   1	C:\PuntingIQ-site\.git\objects\bc\
+	                   1	C:\PuntingIQ-site\.git\objects\be\
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\c1\
+	    New File  		    6301	24df25e486e3912cb460358cf2704a5caa347d
 	                   1	C:\PuntingIQ-site\.git\objects\c4\
+	                   1	C:\PuntingIQ-site\.git\objects\c5\
 	                   3	C:\PuntingIQ-site\.git\objects\c6\
-	    New File  		    6007	f348b2a16d6e906100f508592213558b0f39f9
-	  New Dir          1	C:\PuntingIQ-site\.git\objects\c8\
-	    New File  		     230	81d74f197f65d0760d3919d188c603b95fe0b5
+	                   1	C:\PuntingIQ-site\.git\objects\c7\
+	    Newer     		    1930	b2922629eb69ddc7cf0c2c6c4dca04b36810e7
+	                   2	C:\PuntingIQ-site\.git\objects\c8\
 	                   2	C:\PuntingIQ-site\.git\objects\cb\
 	                   1	C:\PuntingIQ-site\.git\objects\cc\
-	                   1	C:\PuntingIQ-site\.git\objects\ce\
+	                   2	C:\PuntingIQ-site\.git\objects\cd\
+	                   2	C:\PuntingIQ-site\.git\objects\ce\
+	    New File  		     169	6d021ab87ba9208cdd3e55c7dc58b8a6db5418
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\cf\
+	    New File  		    1120	6245077bb3fa96413456f61411303fb8aeabba
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\d1\
+	    New File  		     827	3dadcf94697f1cf9d32ad194271d8f76d1673d
 	                   1	C:\PuntingIQ-site\.git\objects\d4\
+	                   2	C:\PuntingIQ-site\.git\objects\d7\
 	                   1	C:\PuntingIQ-site\.git\objects\d8\
-	                   3	C:\PuntingIQ-site\.git\objects\d9\
-	    New File  		     410	36c1706cfe8bf7232cd203d14405a1fdd4f5ac
-	                   1	C:\PuntingIQ-site\.git\objects\db\
+	                   4	C:\PuntingIQ-site\.git\objects\d9\
+	                   2	C:\PuntingIQ-site\.git\objects\db\
 	                   3	C:\PuntingIQ-site\.git\objects\dd\
-	    New File  		     603	40fd37a717fa75d90a5a9d3675c6ce387c9229
+	                   1	C:\PuntingIQ-site\.git\objects\de\
+	                   2	C:\PuntingIQ-site\.git\objects\df\
+	    New File  		     161	ef86099e0d2645df80870b8d12a09a3dad3f2e
 	                   1	C:\PuntingIQ-site\.git\objects\e0\
 	                   1	C:\PuntingIQ-site\.git\objects\e2\
 	                   1	C:\PuntingIQ-site\.git\objects\ea\
 	                   1	C:\PuntingIQ-site\.git\objects\ed\
-	                   2	C:\PuntingIQ-site\.git\objects\ee\
-	                   1	C:\PuntingIQ-site\.git\objects\f0\
+	                   3	C:\PuntingIQ-site\.git\objects\ee\
+	    New File  		   10081	9bf75fbeff1df6c54d235ab28906f54c1a255a
+	                   1	C:\PuntingIQ-site\.git\objects\ef\
+	                   2	C:\PuntingIQ-site\.git\objects\f0\
+	    New File  		    1120	3dca330afeb568374edd5f62d3b1ff876b80d9
+	                   2	C:\PuntingIQ-site\.git\objects\f1\
+	                   2	C:\PuntingIQ-site\.git\objects\f2\
+	                   1	C:\PuntingIQ-site\.git\objects\f3\
 	                   2	C:\PuntingIQ-site\.git\objects\f6\
-	                   1	C:\PuntingIQ-site\.git\objects\f8\
+	                   2	C:\PuntingIQ-site\.git\objects\f8\
 	                   1	C:\PuntingIQ-site\.git\objects\f9\
-	                   2	C:\PuntingIQ-site\.git\objects\fe\
+	  New Dir          1	C:\PuntingIQ-site\.git\objects\fb\
+	    New File  		    4201	fbe258bdd19773db11a14a9dcb7f4124bc007e
+	                   3	C:\PuntingIQ-site\.git\objects\fc\
+	    New File  		    6509	06d93de8b1f32bd5d33973d2e442f6d4343d5b
+	    New File  		     825	5935309b00e6a4f0e86e1fffd32c0697e918cd
+	                   3	C:\PuntingIQ-site\.git\objects\fe\
 	                   0	C:\PuntingIQ-site\.git\objects\info\
 	                   3	C:\PuntingIQ-site\.git\objects\pack\
 	                   0	C:\PuntingIQ-site\.git\refs\
@@ -786,26 +1136,27 @@
 	                   1	C:\PuntingIQ-site\reports\20260425\
 	                   1	C:\PuntingIQ-site\reports\20260426\
 	                   1	C:\PuntingIQ-site\reports\20260427\
-	  New Dir          1	C:\PuntingIQ-site\reports\20260429\
-	    New File  		   24696	daily-intelligence.html
+	                   1	C:\PuntingIQ-site\reports\20260429\
+	                   1	C:\PuntingIQ-site\reports\20260430\
 	                   5	C:\PuntingIQ-site\reports\latest\
-	    Newer     		   24696	daily-intelligence.html
-	    Newer     		     451	web_product_status.csv
-	    Newer     		    1307	web_race_by_race_summary.csv
-	    Newer     		    1432	web_top_picks_summary.csv
+	    Newer     		   33739	daily-intelligence.html
+	    Newer     		   16167	results_report.html
+	    Newer     		     452	web_product_status.csv
+	    Newer     		    1746	web_race_by_race_summary.csv
+	    Newer     		    1892	web_top_picks_summary.csv
 	                  30	C:\PuntingIQ-site\_pgbackup\
 	                   1	C:\PuntingIQ-site\_pginfo\
 
 ------------------------------------------------------------------------------
 
                Total    Copied   Skipped  Mismatch    FAILED    Extras
-    Dirs :       128         7       121         0         0       223
-   Files :       242        33       209         0         0       398
-   Bytes :   13.14 m   209.1 k   12.93 m         0         0   22.36 m
+    Dirs :       182        17       165         0         0       309
+   Files :       349        60       289         0         0       582
+   Bytes :   13.50 m   326.0 k   13.19 m         0         0   22.94 m
    Times :   0:00:00   0:00:00                       0:00:00   0:00:00
 
 
-   Speed :           1,456,809 Bytes/sec.
-   Speed :              83.359 MegaBytes/min.
-   Ended : Wednesday, 29 April 2026 11:00:02 PM
+   Speed :           1,030,540 Bytes/sec.
+   Speed :              58.968 MegaBytes/min.
+   Ended : Friday, 1 May 2026 11:00:05 PM
 

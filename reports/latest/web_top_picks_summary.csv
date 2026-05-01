@@ -1,37 +1,67 @@
 race,runner,odds,result,tier
-Ascot R1,#2 Universal Impact,W3.40 / P1.80,LOST,
-Ascot R2,#2 Don't Declare,W1.95 / P1.25,LOST,Bronze
-Ascot R3,#1 Barron Bill,W1.90 / P1.24,LOST,
-Ascot R4,#2 Bassett Hound,W2.80 / P1.33,WON,
-Ascot R5,#8 Free To Fly,W3.40 / P1.30,WON,Bronze
-Ascot R6,#3 Prince Epaulette,W3.20 / P1.50,LOST,
-Ascot R7,#1 Lord Shiva,W2.10 / P1.26,WON,Bronze
-Caulfield Heath R1,#6 Dame Florence,W2.25 / P1.60,LOST,
-Caulfield Heath R2,#7 Flowerdale,W4.40 / P1.75,LOST,
-Caulfield Heath R3,#8 Morning Whisper,W2.90 / P1.45,LOST,
-Caulfield Heath R4,#8 Pula,W3.90 / P1.50,WON,
-Caulfield Heath R5,#9 There Were Roses,W4.40 / P1.70,LOST,
-Caulfield Heath R6,#9 Tres Magnifique,W1.45 / P1.09,WON,
-Caulfield Heath R7,#4 Along The River,W9.00 / P2.63,WON,
-Caulfield Heath R8,#14 Milos Filos,W4.80 / P2.40,LOST,
-Ipswich R1,#3 Hell Or Heaven,W2.40 / P1.25,LOST,
-Ipswich R2,#2 Disparate,W2.40 / P1.35,LOST,
-Ipswich R3,#12 Urban Lad,W2.30 / P1.20,WON,Bronze
-Ipswich R4,#5 Concession,W2.80 / P1.33,LOST,
-Ipswich R5,#4 Boom Shot,W3.00 / P1.57,LOST,
-Ipswich R6,#6 Divine Source,W2.70 / P1.57,LOST,
-Ipswich R7,#4 Rhuvaal,W3.70 / P2.05,LOST,
-Kembla Grange R1,#1 Call Me Zeus,W1.45 / P1.10,WON,Silver
-Kembla Grange R2,#2 Bello Cavallo,W2.00 / P1.13,WON,Bronze
-Kembla Grange R3,#13 Katoto,W1.65 / P1.40,WON,
-Kembla Grange R4,#1 Funshow,W3.00 / P1.45,LOST,
-Kembla Grange R5,#9 Beauty Swift,W3.10 / P1.33,WON,
-Kembla Grange R6,#3 Mrs Maree,W2.35 / P1.50,LOST,
-Kembla Grange R7,#5 Rosa Incanta,W3.90 / P1.60,LOST,
-Strathalbyn R1,#7 Minimise,W2.35 / P1.35,LOST,
-Strathalbyn R2,#9 Winning All Round,W2.80 / P1.30,LOST,
-Strathalbyn R3,#12 Forever A Diamond,W2.40 / P1.40,LOST,
-Strathalbyn R4,#8 Harsh,W3.80 / P1.60,LOST,
-Strathalbyn R5,#5 Like A Drifter,W2.90 / P1.30,WON,
-Strathalbyn R6,#6 Loca Bella,W3.50 / P1.40,LOST,
-Strathalbyn R7,#3 Silver Lifestyle,W3.40 / P1.90,LOST,
+Bordertown R2,#8 Friend In Me,W0.00 / P0.00,LOST,
+Bordertown R3,#2 Rocktagon,W0.00 / P0.00,LOST,
+Bordertown R4,#11 Emmooki Magic,W0.00 / P0.00,LOST,
+Bordertown R5,#4 Immediate Response,W0.00 / P0.00,LOST,
+Bordertown R6,#2 Holder Maid,W0.00 / P0.00,LOST,
+Bordertown R7,#1 Crown And Anchor,W0.00 / P0.00,LOST,
+Bordertown R8,#5 Friday Folly,W0.00 / P0.00,LOST,
+Ladbrokes Geelong R1,#8 Fenestella,W0.00 / P0.00,WON,
+Ladbrokes Geelong R2,#4 No No No No No,W0.00 / P0.00,LOST,
+Ladbrokes Geelong R3,#9 Prestige Maddy,W0.00 / P0.00,LOST,
+Ladbrokes Geelong R4,#8 Trouble'n Paradise,W0.00 / P0.00,LOST,
+Ladbrokes Geelong R5,#2 Cool Savanna,W0.00 / P0.00,LOST,
+Ladbrokes Geelong R6,#4 Celtics,W0.00 / P0.00,WON,
+Ladbrokes Geelong R7,#8 Trebilco,W0.00 / P0.00,LOST,
+Ladbrokes Geelong R8,#1 The Daily Planet,W0.00 / P0.00,LOST,
+Mackay R2,#1 Cryoseisms,W1.65 / P1.40,WON,Bronze
+Mackay R3,#2 Exodas,W1.85 / P1.18,WON,Gold
+Mackay R4,#6 Flying Animo,W2.30 / P1.40,LOST,
+Mackay R5,#3 Replace The Ace,W3.20 / P1.50,LOST,
+Mackay R6,#1 He's The One,W3.20 / P1.40,WON,Bronze
+Mackay R7,#3 Early Fusion,W3.40 / P1.75,LOST,Bronze
+Mackay R8,#3 Smart Mission,W1.65 / P1.07,LOST,Gold
+Mount Garnet R1,#2 Heez De Man,W0.00 / P0.00,LOST,
+Mount Garnet R2,#3 Floral Legend,W0.00 / P0.00,WON,
+Mount Garnet R3,#3 Xingxing,W0.00 / P0.00,LOST,
+Mount Garnet R4,#1 Upstart Legend,W0.00 / P0.00,LOST,
+Mount Garnet R5,#5 Bombinate,W0.00 / P0.00,LOST,
+Muswellbrook R1,#3 Priory Park,W3.20 / P1.10,WON,Bronze
+Muswellbrook R2,#2 Excelluna,W3.80 / P1.20,LOST,
+Muswellbrook R3,#5 Nearest,W2.50 / P1.50,LOST,
+Muswellbrook R4,#4 Won'thearmecoming,W1.85 / P1.10,WON,Bronze
+Muswellbrook R5,#2 Arapawa,W1.28 / P1.20,LOST,
+Muswellbrook R6,#7 Ocean Chill,W2.70 / P1.60,WON,
+Muswellbrook R7,#4 Course Of Action,W3.50 / P1.50,LOST,
+Muswellbrook R8,#1 Not Written Off,W3.30 / P1.50,LOST,
+Southside Pakenham R1,#9 Jessica Rabbit,W2.50 / P1.20,LOST,
+Southside Pakenham R2,#14 Royal Honour,W2.10 / P1.25,LOST,Silver
+Southside Pakenham R3,#2 Emperor Tzu,W1.80 / P1.25,WON,Bronze
+Southside Pakenham R4,#1 Diamanda,W3.00 / P1.24,LOST,
+Southside Pakenham R5,#5 Oyster Lane,W2.30 / P1.18,LOST,Bronze
+Southside Pakenham R6,#6 Galant Knight,W3.70 / P1.53,LOST,
+Southside Pakenham R7,#4 My Roca Fella,W4.20 / P1.50,WON,
+Southside Pakenham R8,#4 Lauberhorn,W3.70 / P1.67,LOST,
+Southside Pakenham R9,#4 Banknote Hustler,W2.70 / P1.40,WON,
+Sunshine Coast R1,#1 Murkado,W3.60 / P1.55,,
+Sunshine Coast R2,#3 Out Of Turn,W2.45 / P1.40,,Silver
+Sunshine Coast R3,#3 Smart Shazza,W5.00 / P1.90,,
+Sunshine Coast R4,#1 Everybody Rise,W2.15 / P1.20,,
+Sunshine Coast R5,#15 He Is The Kiss,W8.00 / P2.90,,
+Sunshine Coast R6,#5 Cressbrook,W5.00 / P1.95,,
+Sunshine Coast R7,#5 Certify,W3.50 / P1.50,,
+Sunshine Coast R8,#1 Noire Emperor,W4.00 / P1.70,,
+Sunshine Coast Poly Track R1,#5 Trail Boss,W0.00 / P0.00,LOST,
+Sunshine Coast Poly Track R2,#4 Vredefort,W0.00 / P0.00,LOST,
+Sunshine Coast Poly Track R3,#2 Watermelon,W0.00 / P0.00,LOST,
+Sunshine Coast Poly Track R4,#3 Jungle Fever,W0.00 / P0.00,LOST,
+Sunshine Coast Poly Track R5,#2 What Did You Say,W0.00 / P0.00,LOST,
+Sunshine Coast Poly Track R6,#8 Trip Hazard,W0.00 / P0.00,LOST,
+Wagga R1,#1 Eton,W2.35 / P1.30,WON,
+Wagga R2,#14 Wear The Crown,W2.40 / P1.30,WON,Bronze
+Wagga R3,#5 Blue Monday,W3.00 / P1.62,LOST,
+Wagga R4,#9 Portland Miss,W2.90 / P1.22,LOST,Bronze
+Wagga R5,#5 Bonnie Murringo,W3.30 / P1.67,LOST,
+Wagga R6,#6 Fourthtimelucky,W2.80 / P2.00,WON,
+Wagga R7,#2 Travolta,W3.40 / P1.40,LOST,
+Wagga R8,#16 Moor Mumm,W2.45 / P1.26,LOST,
