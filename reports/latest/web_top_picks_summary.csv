@@ -1,67 +1,54 @@
 race,runner,odds,result,tier
-Bordertown R2,#8 Friend In Me,W0.00 / P0.00,LOST,
-Bordertown R3,#2 Rocktagon,W0.00 / P0.00,LOST,
-Bordertown R4,#11 Emmooki Magic,W0.00 / P0.00,LOST,
-Bordertown R5,#4 Immediate Response,W0.00 / P0.00,LOST,
-Bordertown R6,#2 Holder Maid,W0.00 / P0.00,LOST,
-Bordertown R7,#1 Crown And Anchor,W0.00 / P0.00,LOST,
-Bordertown R8,#5 Friday Folly,W0.00 / P0.00,LOST,
-Ladbrokes Geelong R1,#8 Fenestella,W0.00 / P0.00,WON,
-Ladbrokes Geelong R2,#4 No No No No No,W0.00 / P0.00,LOST,
-Ladbrokes Geelong R3,#9 Prestige Maddy,W0.00 / P0.00,LOST,
-Ladbrokes Geelong R4,#8 Trouble'n Paradise,W0.00 / P0.00,LOST,
-Ladbrokes Geelong R5,#2 Cool Savanna,W0.00 / P0.00,LOST,
-Ladbrokes Geelong R6,#4 Celtics,W0.00 / P0.00,WON,
-Ladbrokes Geelong R7,#8 Trebilco,W0.00 / P0.00,LOST,
-Ladbrokes Geelong R8,#1 The Daily Planet,W0.00 / P0.00,LOST,
-Mackay R2,#1 Cryoseisms,W1.65 / P1.40,WON,Bronze
-Mackay R3,#2 Exodas,W1.85 / P1.18,WON,Gold
-Mackay R4,#6 Flying Animo,W2.30 / P1.40,LOST,
-Mackay R5,#3 Replace The Ace,W3.20 / P1.50,LOST,
-Mackay R6,#1 He's The One,W3.20 / P1.40,WON,Bronze
-Mackay R7,#3 Early Fusion,W3.40 / P1.75,LOST,Bronze
-Mackay R8,#3 Smart Mission,W1.65 / P1.07,LOST,Gold
-Mount Garnet R1,#2 Heez De Man,W0.00 / P0.00,LOST,
-Mount Garnet R2,#3 Floral Legend,W0.00 / P0.00,WON,
-Mount Garnet R3,#3 Xingxing,W0.00 / P0.00,LOST,
-Mount Garnet R4,#1 Upstart Legend,W0.00 / P0.00,LOST,
-Mount Garnet R5,#5 Bombinate,W0.00 / P0.00,LOST,
-Muswellbrook R1,#3 Priory Park,W3.20 / P1.10,WON,Bronze
-Muswellbrook R2,#2 Excelluna,W3.80 / P1.20,LOST,
-Muswellbrook R3,#5 Nearest,W2.50 / P1.50,LOST,
-Muswellbrook R4,#4 Won'thearmecoming,W1.85 / P1.10,WON,Bronze
-Muswellbrook R5,#2 Arapawa,W1.28 / P1.20,LOST,
-Muswellbrook R6,#7 Ocean Chill,W2.70 / P1.60,WON,
-Muswellbrook R7,#4 Course Of Action,W3.50 / P1.50,LOST,
-Muswellbrook R8,#1 Not Written Off,W3.30 / P1.50,LOST,
-Southside Pakenham R1,#9 Jessica Rabbit,W2.50 / P1.20,LOST,
-Southside Pakenham R2,#14 Royal Honour,W2.10 / P1.25,LOST,Silver
-Southside Pakenham R3,#2 Emperor Tzu,W1.80 / P1.25,WON,Bronze
-Southside Pakenham R4,#1 Diamanda,W3.00 / P1.24,LOST,
-Southside Pakenham R5,#5 Oyster Lane,W2.30 / P1.18,LOST,Bronze
-Southside Pakenham R6,#6 Galant Knight,W3.70 / P1.53,LOST,
-Southside Pakenham R7,#4 My Roca Fella,W4.20 / P1.50,WON,
-Southside Pakenham R8,#4 Lauberhorn,W3.70 / P1.67,LOST,
-Southside Pakenham R9,#4 Banknote Hustler,W2.70 / P1.40,WON,
-Sunshine Coast R1,#1 Murkado,W3.60 / P1.55,,
-Sunshine Coast R2,#3 Out Of Turn,W2.45 / P1.40,,Silver
-Sunshine Coast R3,#3 Smart Shazza,W5.00 / P1.90,,
-Sunshine Coast R4,#1 Everybody Rise,W2.15 / P1.20,,
-Sunshine Coast R5,#15 He Is The Kiss,W8.00 / P2.90,,
-Sunshine Coast R6,#5 Cressbrook,W5.00 / P1.95,,
-Sunshine Coast R7,#5 Certify,W3.50 / P1.50,,
-Sunshine Coast R8,#1 Noire Emperor,W4.00 / P1.70,,
-Sunshine Coast Poly Track R1,#5 Trail Boss,W0.00 / P0.00,LOST,
-Sunshine Coast Poly Track R2,#4 Vredefort,W0.00 / P0.00,LOST,
-Sunshine Coast Poly Track R3,#2 Watermelon,W0.00 / P0.00,LOST,
-Sunshine Coast Poly Track R4,#3 Jungle Fever,W0.00 / P0.00,LOST,
-Sunshine Coast Poly Track R5,#2 What Did You Say,W0.00 / P0.00,LOST,
-Sunshine Coast Poly Track R6,#8 Trip Hazard,W0.00 / P0.00,LOST,
-Wagga R1,#1 Eton,W2.35 / P1.30,WON,
-Wagga R2,#14 Wear The Crown,W2.40 / P1.30,WON,Bronze
-Wagga R3,#5 Blue Monday,W3.00 / P1.62,LOST,
-Wagga R4,#9 Portland Miss,W2.90 / P1.22,LOST,Bronze
-Wagga R5,#5 Bonnie Murringo,W3.30 / P1.67,LOST,
-Wagga R6,#6 Fourthtimelucky,W2.80 / P2.00,WON,
-Wagga R7,#2 Travolta,W3.40 / P1.40,LOST,
-Wagga R8,#16 Moor Mumm,W2.45 / P1.26,LOST,
+Devonport Tapeta Synthetic R1,#1 Don Turboas,W2.30 / P1.28,2,Bronze
+Devonport Tapeta Synthetic R2,#6 Party Day,W2.25 / P1.65,2,
+Devonport Tapeta Synthetic R3,#3 Khaleesi's Dream,W1.45 / P1.01,WON,Gold
+Devonport Tapeta Synthetic R4,#3 Ilovethistown,W5.50 / P1.50,6,
+Devonport Tapeta Synthetic R5,#5 Merlin Beach,W2.10 / P1.30,5,
+Devonport Tapeta Synthetic R6,#6 Respite,W5.00 / P1.70,7,
+Devonport Tapeta Synthetic R7,#7 Redair,W5.00 / P1.62,9,
+Devonport Tapeta Synthetic R8,#4 Lady Galadriel,W2.50 / P1.50,WON,Silver
+Dubbo R2,#4 Sutton Storm,W5.50 / P2.00,4,
+Dubbo R3,#2 Inyun,W3.60 / P1.65,WON,
+Dubbo R4,#11 Marinera,W1.35 / P1.20,2,Bronze
+Dubbo R5,#3 Kranich,W4.20 / P1.80,4,
+Dubbo R6,#8 Supreme Style,W3.40 / P1.88,WON,
+Dubbo R7,#6 Call Me Terry,W5.50 / P1.91,8,
+Northam R1,#7 Thor's Angel,W1.70 / P1.13,WON,Bronze
+Northam R2,#6 Shamister,W4.60 / P1.91,4,
+Northam R3,#7 Shimmery Star,W1.90 / P1.20,WON,Bronze
+Northam R4,#2 Now You See Me,W2.40 / P1.22,WON,
+Northam R5,#2 Jolson Al,W2.30 / P1.17,2,Bronze
+Northam R6,#2 Flaming Ronda,W2.40 / P1.25,3,
+Northam R7,#3 Rainline,W3.20 / P1.33,2,
+Northam R8,#7 Smooth Chino,W2.10 / P1.30,WON,Bronze
+Northam R9,#2 Herault,W3.10 / P1.35,WON,
+Rockhampton R1,#4 Ten Carat Lucy,W1.45 / P1.12,,
+Rockhampton R2,#1 Hello Punters,W2.50 / P1.40,,Bronze
+Rockhampton R3,#4 Turbo Torque,W2.70 / P1.30,,
+Rockhampton R4,#4 Sujeed,W2.70 / P1.35,,Bronze
+Rockhampton R5,#5 Sailor's Rum,W2.30 / P1.26,,
+Rockhampton R6,#12 Dream Smart,W3.30 / P1.60,,
+Rockhampton R7,#6 Yellow Brick,W3.80 / P1.70,,
+Rockhampton R8,#3 Divakara,W2.90 / P1.35,,
+Sale R1,#10 Thalestris,W1.90 / P1.28,WON,
+Sale R2,#11 Theatrical Queen,W4.20 / P1.40,4,
+Sale R3,#9 So You Excel,W3.00 / P1.40,WON,Bronze
+Sale R4,#2 Ballistic Romeo,W1.55 / P1.02,WON,Gold
+Sale R5,#2 Bit Of Shoosh,W3.90 / P1.40,WON,
+Sale R6,#2 Bear Champ,W2.30 / P1.25,109,
+Sale R7,#4 La Belle Grande,W7.00 / P2.80,2,
+Sale R8,#4 Cabriole,W1.45 / P1.20,WON,Silver
+Sapphire Coast R2,#4 Inchyra,W2.50 / P1.60,4,
+Sapphire Coast R3,#5 Christmas Star,W5.00 / P2.10,WON,
+Sapphire Coast R4,#5 Dawn On Me,W1.95 / P1.18,WON,Silver
+Sapphire Coast R5,#4 Timeless Grace,W2.80 / P1.30,2,
+Sapphire Coast R6,#1 Crudo,W3.10 / P1.55,5,
+Sapphire Coast R7,#6 Platinum Ridge,W3.40 / P1.30,6,
+Sportsbet-Wangaratta R1,#11 Inner Thoughts,W0.00 / P0.00,4,
+Sportsbet-Wangaratta R2,#1 Back Of The Boat,W0.00 / P0.00,7,
+Sportsbet-Wangaratta R3,#5 Saker Falcon,W0.00 / P0.00,109,
+Sportsbet-Wangaratta R4,#3 Salina Special,W0.00 / P0.00,3,
+Sportsbet-Wangaratta R5,#12 Parabellum,W0.00 / P0.00,2,
+Sportsbet-Wangaratta R6,#8 Queue Jumper,W0.00 / P0.00,7,
+Sportsbet-Wangaratta R7,#10 Loveofmylife,W0.00 / P0.00,8,
+Sportsbet-Wangaratta R8,#15 Brassi Road,W0.00 / P0.00,10,
