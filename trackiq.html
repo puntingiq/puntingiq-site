@@ -6,18 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="TrackIQ — daily racing intelligence powered by the PuntingIQ intelligence layer." />
 
-  <script>
-    var o_options = {
-      domain: "puntingiq.outseta.com",
-      load: "auth,nocode",
-      auth: {
-        authenticationCallbackUrl: window.location.origin + "/api/auth/callback",
-        registrationConfirmationUrl: window.location.origin + "/products.html"
-      }
-    };
-  </script>
-  <script src="https://cdn.outseta.com/outseta.min.js" data-options="o_options" defer></script>
-
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* HERO */
@@ -257,10 +245,7 @@
           <button
             type="button"
             class="btn-primary"
-            data-o-anonymous
-            data-o-auth="1"
-            data-mode="popup"
-            data-widget-mode="login"
+            id="trackiq-login-button"
           >
             Login
           </button>
@@ -319,5 +304,108 @@
 
 </div>
 </div>
+<script>
+  (function () {
+    var authScriptPromise;
+    var fallbackOrigin = "https://puntingiq.com.au";
+    var loginUrl = "https://puntingiq.outseta.com/auth?widgetMode=login#o-anonymous";
+
+    function getSiteOrigin() {
+      return window.location.protocol.indexOf("http") === 0 ? window.location.origin : fallbackOrigin;
+    }
+
+    function getOutsetaOptions() {
+      return {
+        domain: "puntingiq.outseta.com",
+        load: "auth,nocode",
+        auth: {
+          authenticationCallbackUrl: getSiteOrigin() + "/api/auth/callback",
+          registrationConfirmationUrl: getSiteOrigin() + "/products.html"
+        }
+      };
+    }
+
+    function loadOutsetaAuth(button) {
+      if (window.Outseta) {
+        return Promise.resolve();
+      }
+
+      if (!authScriptPromise) {
+        window.o_options = getOutsetaOptions();
+
+        button.setAttribute("data-o-anonymous", "");
+        button.setAttribute("data-o-auth", "1");
+        button.setAttribute("data-mode", "popup");
+        button.setAttribute("data-widget-mode", "login");
+
+        authScriptPromise = new Promise(function (resolve, reject) {
+          var settled = false;
+          var timeoutId = window.setTimeout(function () {
+            if (!settled) {
+              settled = true;
+              reject(new Error("Outseta load timed out"));
+            }
+          }, 4000);
+          var script = document.createElement("script");
+          script.src = "https://cdn.outseta.com/outseta.min.js";
+          script.defer = true;
+          script.dataset.options = "o_options";
+          script.onload = function () {
+            if (!settled) {
+              settled = true;
+              window.clearTimeout(timeoutId);
+              resolve();
+            }
+          };
+          script.onerror = function () {
+            if (!settled) {
+              settled = true;
+              window.clearTimeout(timeoutId);
+              reject(new Error("Outseta failed to load"));
+            }
+          };
+          document.head.appendChild(script);
+        });
+      }
+
+      return authScriptPromise;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var loginButton = document.getElementById("trackiq-login-button");
+      if (!loginButton) {
+        return;
+      }
+
+      var originalLabel = loginButton.textContent;
+
+      function handleLoginClick() {
+        if (window.Outseta) {
+          return;
+        }
+
+        loginButton.disabled = true;
+        loginButton.textContent = "Loading...";
+
+        loadOutsetaAuth(loginButton)
+          .then(function () {
+            loginButton.disabled = false;
+            loginButton.textContent = originalLabel;
+            loginButton.removeEventListener("click", handleLoginClick);
+            window.setTimeout(function () {
+              loginButton.click();
+            }, 250);
+          })
+          .catch(function () {
+            loginButton.disabled = false;
+            loginButton.textContent = originalLabel;
+            window.location.href = loginUrl;
+          });
+      }
+
+      loginButton.addEventListener("click", handleLoginClick);
+    });
+  })();
+</script>
 </body>
 </html>
