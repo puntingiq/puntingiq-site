@@ -1,10 +1,23 @@
 <html>
   <body style="font-family: Arial, sans-serif; font-size: 14px; color: #222;">
 
+        <style>
+            a {
+                text-decoration: none;
+                color: #464feb;
+            }
+            tr th, tr td {
+                border: 1px solid #e6e6e6;
+            }
+            tr th {
+                background-color: #f5f5f5;
+            }
+        </style>
+
     <div style="text-align:center;">
 
       <!-- PuntingIQ Banner -->
-      <img src="file:///C:/PuntingIQAssets/PuntingIQemailbanner.png"
+            <img src="https://puntingiq.com.au/assets/PuntingIQheader.png"
            style="width:100%; max-width:650px; margin-bottom:20px;">
 
       <h2 style="margin:0; font-size:24px; color:#000000; font-weight:700;">
@@ -16,7 +29,7 @@
       </h3>
 
       <!-- TrackIQ Logo -->
-      <img src="file:///C:/PuntingIQAssets/TrackIQ logo 2.png"
+    <img src="https://puntingiq.com.au/assets/TrackIQ%20logo%202.png"
            style="width:180px; margin-top:10px; margin-bottom:5px;">
 
       <div style="font-size:12px; color:#666; font-style:italic; margin-bottom:8px;">
@@ -24,12 +37,18 @@
       </div>
 
       <div style="font-size:12px;color:#666; margin-bottom:16px;">
-        2026-05-07
+        2026-07-28
       </div>
 
       <p style="margin-top:0; margin-bottom:16px;">
         High-confidence selections based on full ladder-aware and model-driven analysis.
       </p>
+
+            <div style="text-align:left; max-width:650px; margin:0 auto 16px auto;">
+                <p style="margin-top:0; margin-bottom:12px;">Hi {{CUSTOMER_NAME}},</p>
+                {{DAILY_SCRIPT_MESSAGE}}
+                {{PERSONAL_MESSAGE}}
+            </div>
 
       <hr style="border:0; border-top:1px solid #ddd; margin:20px 0;">
     </div>
@@ -41,343 +60,308 @@
     <h3 style="margin-top:24px;margin-bottom:8px;">SYSTEM BETS</h3>
 <p>Selections that were close to a Best Bet and rated a Genuine Place Chance based on form.</p><p>No System Bets Today</p>
     <h3 style="margin-top:24px;margin-bottom:8px;">PLACE BANKERS (PLACE Product)</h3>
-<p>High-reliability PLACE selections designed for consistency, not big wins.</p>
-    <table width="100%" cellpadding="6" cellspacing="0" border="1" style="border-collapse:collapse;font-size:13px;">
-      <tr style="background:#f2f2f2;">
-        <th align="left">Race</th>
-        <th align="left">Runner</th>
-        <th align="left">Model Profile</th>
-        <th align="left">Odds</th>
-      </tr>
-      
-      <tr>
-        <td>Albany R7</td>
-        <td>#2 Looks 🏆</td>
-        <td>Confidence=54.0, ML Place%=84.7%, Place Value=18.0%</td>
-        <td>W3.30 / P1.50</td>
-      </tr>
-
-    </table>
-
+<p>High-reliability PLACE selections designed for consistency, not big wins.</p><p>No Place Bankers Today</p>
     <h3 style="margin-top:24px;margin-bottom:8px;">VALUE EDGE (ROI Product)</h3>
-<p>Positive overlays that don't qualify as Best or System Bets. Value Edge highlights potential market inefficiencies. It is NOT a tipping list.</p><p>These runners highlight pricing opportunities for analysis, not automatic bets. Apply your own judgement, staking strategy, and risk tolerance.</p>
-    <table width="100%" cellpadding="6" cellspacing="0" border="1" style="border-collapse:collapse;font-size:13px;">
-      <tr style="background:#f2f2f2;">
-        <th align="left">Race</th>
-        <th align="left">Runner</th>
-        <th align="left">Model Edge</th>
-        <th align="left">Odds</th>
-      </tr>
-      
-      <tr>
-        <td>Wyong R5</td>
-        <td>#1 Skycatcher 🏆</td>
-        <td>Confidence=50.4, Units=1, ML Win%=39.8%, Win Value=8.6%</td>
-        <td>W3.20 / P1.40</td>
-      </tr>
-
-    </table>
-
-    <h3 style="margin-top:24px;margin-bottom:8px;">RACE-BY-RACE TOP PICK</h3>
+<p>Positive overlays that don't qualify as Best or System Bets. Value Edge highlights potential market inefficiencies. It is NOT a tipping list.</p><p>🏅 Founder's Pick is shown only when the runner also appears in the daily form-based shortlist.</p><p>These runners highlight pricing opportunities for analysis, not automatic bets. Apply your own judgement, staking strategy, and risk tolerance.</p><p>No Value Edge selections</p>
+    <h3 style="margin-top:24px;margin-bottom:8px;">VALUE HUNT (HIGH-ODDS VALUE)</h3>
+<p>Higher-odds value picks with strict filters (Win Odds 3.0–15.0, Win Value ≥ 8%, AI Win% ≥ 15%, Confidence ≥ 42).</p><p>Selection cap: maximum one Value Hunt pick per race.</p><p>No Value Hunt selections</p>
+    <h3 style="margin-top:24px;margin-bottom:8px;">RACE-BY-RACE TOP PICK (CONFIDENCE-BASED)</h3>
 
         <p>Trophy icons represent model confidence tiers 
         (🏆=Bronze, 🏆🏆=Silver, 🏆🏆🏆=Gold).<br>
-        Only high-confidence top picks are shown in this section.</p>
+        Recommended units follow trophy count (1/2/3 units).<br>
+        🏅 Founder's Pick is shown only when the runner also appears in the daily form-based shortlist.</p>
     
     <table width="100%" cellpadding="6" cellspacing="0" border="1" style="border-collapse:collapse;font-size:13px;">
       <tr style="background:#f2f2f2;">
         <th align="left">Race</th>
         <th align="left">Runner</th>
+                                <th align="center" style="width:92px;min-width:92px;white-space:nowrap;">AI Horse Confidence %</th>
+                <th align="center" style="width:64px;min-width:64px;white-space:nowrap;">AI Recommended Units</th>
         <th align="left">Model Profile</th>
         <th align="left">Odds</th>
       </tr>
       
       <tr>
-        <td>Albany R5</td>
-        <td>#6 Desert Ora 🏆🏆</td>
-        <td>Confidence=63.2, ML Win%=52.6%, Win Value=-8.1%</td>
-        <td>W1.75 / P1.17</td>
-      </tr>
-
-      <tr>
-        <td>Albany R7</td>
-        <td>#2 Looks 🏆</td>
-        <td>Confidence=54.0, ML Win%=33.6%, Win Value=2.4%</td>
-        <td>W3.30 / P1.50</td>
-      </tr>
-
-      <tr>
-        <td>Warrnambool R2</td>
-        <td>#3 Flying Capital 🏆</td>
-        <td>Confidence=51.5, ML Win%=35.8%, Win Value=-7.7%</td>
-        <td>W2.30 / P1.10</td>
-      </tr>
-
-      <tr>
-        <td>Warrnambool R7</td>
-        <td>#2 Duke Of Bedford 🏆</td>
-        <td>Confidence=51.3, ML Win%=36.0%, Win Value=-5.7%</td>
-        <td>W2.40 / P1.25</td>
-      </tr>
-
-      <tr>
-        <td>Wyong R1</td>
-        <td>#2 Aurora Effect 🏆🏆</td>
-        <td>Confidence=62.1, ML Win%=52.9%, Win Value=-5.9%</td>
-        <td>W1.70 / P1.13</td>
-      </tr>
-
-      <tr>
-        <td>Wyong R5</td>
-        <td>#1 Skycatcher 🏆</td>
-        <td>Confidence=50.4, ML Win%=39.8%, Win Value=8.6%</td>
-        <td>W3.20 / P1.40</td>
+        <td>Bathurst R3</td>
+        <td>#7 Denise's Gal 🏆</td>
+                                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>51.5%</span></td>
+                                                                <td align='center' style='width:64px;min-width:64px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>1</span></td>
+                                                                <td>AI Win%=43.6%, Win Value=-13.5%<br>AI Place%=75.0%, Place Value=-16.7%</td>
+                <td>W1.75 / P1.10</td>
       </tr>
 
     </table>
 
     <h3 style="margin-top:24px;margin-bottom:8px;">FULL RACE‑BY‑RACE SUMMARY</h3>
-
-        <p>Our analysis of every race today, highlighting the strongest 
-        model‑rated runner in each event.</p>
-    
+<p>Our analysis of every race today, highlighting the strongest model-rated runner in each event.</p>
     <table width="100%" cellpadding="6" cellspacing="0" border="1" style="border-collapse:collapse;font-size:13px;">
       <tr style="background:#f2f2f2;">
         <th align="left">Race</th>
         <th align="left">Runner</th>
+                                <th align="center" style="width:92px;min-width:92px;white-space:nowrap;">AI Horse Confidence %</th>
         <th align="left">Model Profile</th>
         <th align="left">Odds</th>
       </tr>
       
       <tr>
-        <td>Albany R5</td>
-        <td>#6 Desert Ora 🏆🏆</td>
-        <td>Confidence=63.2, ML Win%=52.6%, Win Value=-8.1%</td>
-        <td>W1.75 / P1.17</td>
+        <td>Bathurst R1</td>
+            <td>#1 Gold Earth </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>29.1%</span></td>
+                                <td>AI Win%=23.6%, Win Value=-0.2%<br>AI Place%=45.4%, Place Value=-21.2%</td>
+        <td>W4.20 / P1.50</td>
       </tr>
 
       <tr>
-        <td>Albany R6</td>
-        <td>#5 Gingerquest </td>
-        <td>Confidence=33.8, ML Win%=14.2%, Win Value=-8.0%</td>
-        <td>W4.50 / P1.70</td>
+        <td>Bathurst R2</td>
+            <td>#10 Red Rocquette </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>45.1%</span></td>
+                                <td>AI Win%=38.3%, Win Value=-20.5%<br>AI Place%=65.3%, Place Value=-25.6%</td>
+        <td>W1.70 / P1.10</td>
       </tr>
 
       <tr>
-        <td>Albany R7</td>
-        <td>#2 Looks 🏆</td>
-        <td>Confidence=54.0, ML Win%=33.6%, Win Value=2.4%</td>
-        <td>W3.30 / P1.50</td>
+        <td>Bathurst R3</td>
+            <td>#7 Denise's Gal 🏆</td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>51.5%</span></td>
+                                <td>AI Win%=43.6%, Win Value=-13.5%<br>AI Place%=75.0%, Place Value=-16.7%</td>
+        <td>W1.75 / P1.10</td>
       </tr>
 
       <tr>
-        <td>Goulburn R3</td>
-        <td>#7 Graynita </td>
-        <td>Confidence=37.4, ML Win%=25.4%, Win Value=-9.1%</td>
-        <td>W2.90 / P1.33</td>
+        <td>Bathurst R4</td>
+            <td>#2 Comic Culture </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>28.8%</span></td>
+                                <td>AI Win%=26.0%, Win Value=-1.8%<br>AI Place%=37.4%, Place Value=-28.0%</td>
+        <td>W3.60 / P1.53</td>
       </tr>
 
       <tr>
-        <td>Goulburn R4</td>
-        <td>#3 Shezain </td>
-        <td>Confidence=33.9, ML Win%=21.6%, Win Value=-10.6%</td>
-        <td>W3.10 / P1.33</td>
+        <td>Bathurst R5</td>
+            <td>#4 Yiasou </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>19.0%</span></td>
+                                <td>AI Win%=15.1%, Win Value=-1.5%<br>AI Place%=30.5%, Place Value=-12.9%</td>
+        <td>W6.00 / P2.38</td>
       </tr>
 
       <tr>
-        <td>Goulburn R5</td>
-        <td>#1 Rogue Nation </td>
-        <td>Confidence=26.2, ML Win%=12.0%, Win Value=-9.7%</td>
-        <td>W4.60 / P1.70</td>
+        <td>Bathurst R6</td>
+            <td>#2 Gail Jeanette </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>25.1%</span></td>
+                                <td>AI Win%=18.2%, Win Value=-3.5%<br>AI Place%=45.9%, Place Value=-2.9%</td>
+        <td>W4.60 / P2.05</td>
       </tr>
 
       <tr>
-        <td>Goulburn R6</td>
-        <td>#7 Dundeel Flyer </td>
-        <td>Confidence=42.5, ML Win%=29.3%, Win Value=-9.2%</td>
-        <td>W2.60 / P1.30</td>
+        <td>Bathurst R7</td>
+            <td>#1 De Joker </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>41.4%</span></td>
+                                <td>AI Win%=33.9%, Win Value=-8.7%<br>AI Place%=63.8%, Place Value=-13.1%</td>
+        <td>W2.50 / P1.50</td>
       </tr>
 
       <tr>
-        <td>Goulburn R7</td>
-        <td>#5 Olington Lane </td>
-        <td>Confidence=33.2, ML Win%=23.5%, Win Value=-8.8%</td>
-        <td>W2.90 / P1.33</td>
+        <td>bet365 Swan Hill R1</td>
+            <td>#5 Cicconi Rain </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>29.3%</span></td>
+                                <td>AI Win%=21.5%, Win Value=-7.9%<br>AI Place%=52.7%, Place Value=-24.3%</td>
+        <td>W3.40 / P1.30</td>
       </tr>
 
       <tr>
-        <td>Picklebet Park Warwick R1</td>
-        <td>#7 Prince Pier </td>
-        <td>Confidence=30.8, ML Win%=18.9%, Win Value=-6.7%</td>
-        <td>W4.00 / P1.73</td>
+        <td>bet365 Swan Hill R2</td>
+            <td>#8 Ride Like Michelle </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>29.1%</span></td>
+                                <td>AI Win%=26.6%, Win Value=-9.1%<br>AI Place%=36.7%, Place Value=-40.3%</td>
+        <td>W2.80 / P1.30</td>
       </tr>
 
       <tr>
-        <td>Picklebet Park Warwick R2</td>
-        <td>#6 Cool Music </td>
-        <td>Confidence=39.1, ML Win%=27.4%, Win Value=-3.9%</td>
-        <td>W3.20 / P1.50</td>
+        <td>bet365 Swan Hill R3</td>
+            <td>#7 Budjik Queen </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>35.3%</span></td>
+                                <td>AI Win%=29.7%, Win Value=-4.8%<br>AI Place%=52.2%, Place Value=-16.7%</td>
+        <td>W2.60 / P1.50</td>
       </tr>
 
       <tr>
-        <td>Picklebet Park Warwick R3</td>
-        <td>#4 Measure Up </td>
-        <td>Confidence=45.5, ML Win%=37.6%, Win Value=4.2%</td>
-        <td>W3.40 / P1.50</td>
+        <td>bet365 Swan Hill R4</td>
+            <td>#9 Wazza </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>47.7%</span></td>
+                                <td>AI Win%=41.8%, Win Value=-6.9%<br>AI Place%=65.2%, Place Value=-18.1%</td>
+        <td>W2.05 / P1.20</td>
       </tr>
 
       <tr>
-        <td>Picklebet Park Warwick R4</td>
-        <td>#1 I Am A Winner </td>
-        <td>Confidence=15.8, ML Win%=6.9%, Win Value=-5.6%</td>
-        <td>W8.00 / P2.75</td>
+        <td>bet365 Swan Hill R5</td>
+            <td>#2 Nottolook </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>27.3%</span></td>
+                                <td>AI Win%=23.7%, Win Value=5.5%<br>AI Place%=38.0%, Place Value=-13.3%</td>
+        <td>W5.50 / P1.95</td>
       </tr>
 
       <tr>
-        <td>Picklebet Park Warwick R5</td>
-        <td>#5 Embolden </td>
-        <td>Confidence=25.4, ML Win%=18.8%, Win Value=0.6%</td>
-        <td>W5.50 / P2.00</td>
+        <td>bet365 Swan Hill R6</td>
+            <td>#1 Surprisatic </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>30.4%</span></td>
+                                <td>AI Win%=26.4%, Win Value=3.7%<br>AI Place%=42.6%, Place Value=-15.2%</td>
+        <td>W4.40 / P1.73</td>
       </tr>
 
       <tr>
-        <td>Picklebet Park Warwick R6</td>
-        <td>#4 Royal Bombadier </td>
-        <td>Confidence=34.0, ML Win%=23.5%, Win Value=-3.6%</td>
-        <td>W4.00 / P1.80</td>
+        <td>bet365 Swan Hill R7</td>
+            <td>#3 National Code </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>22.2%</span></td>
+                                <td>AI Win%=23.3%, Win Value=-10.1%<br>AI Place%=19.2%, Place Value=-47.4%</td>
+        <td>W3.00 / P1.50</td>
       </tr>
 
       <tr>
-        <td>Picklebet Park Warwick R7</td>
-        <td>#15 Doitlikemaxwell </td>
-        <td>Confidence=24.2, ML Win%=12.3%, Win Value=-4.4%</td>
-        <td>W6.50 / P2.40</td>
-      </tr>
-
-      <tr>
-        <td>Warrnambool R1</td>
-        <td>#1 Golden Crusader </td>
-        <td>Confidence=42.5, ML Win%=23.3%, Win Value=-26.7%</td>
-        <td>W1.95 / P1.17</td>
-      </tr>
-
-      <tr>
-        <td>Warrnambool R2</td>
-        <td>#3 Flying Capital 🏆</td>
-        <td>Confidence=51.5, ML Win%=35.8%, Win Value=-7.7%</td>
-        <td>W2.30 / P1.10</td>
-      </tr>
-
-      <tr>
-        <td>Warrnambool R3</td>
-        <td>#2 Danzsin </td>
-        <td>Confidence=31.2, ML Win%=24.3%, Win Value=7.6%</td>
-        <td>W6.50 / P2.38</td>
-      </tr>
-
-      <tr>
-        <td>Warrnambool R4</td>
-        <td>#6 Beautifully </td>
-        <td>Confidence=24.8, ML Win%=13.7%, Win Value=-11.3%</td>
-        <td>W4.00 / P1.80</td>
-      </tr>
-
-      <tr>
-        <td>Warrnambool R5</td>
-        <td>#8 Eleanor Dumont </td>
-        <td>Confidence=26.7, ML Win%=23.9%, Win Value=-3.9%</td>
-        <td>W3.60 / P1.62</td>
-      </tr>
-
-      <tr>
-        <td>Warrnambool R6</td>
-        <td>#5 From A Distance </td>
-        <td>Confidence=41.7, ML Win%=29.5%, Win Value=-1.8%</td>
-        <td>W3.20 / P1.50</td>
-      </tr>
-
-      <tr>
-        <td>Warrnambool R7</td>
-        <td>#2 Duke Of Bedford 🏆</td>
-        <td>Confidence=51.3, ML Win%=36.0%, Win Value=-5.7%</td>
-        <td>W2.40 / P1.25</td>
-      </tr>
-
-      <tr>
-        <td>Warrnambool R8</td>
-        <td>#4 Sir Atlas </td>
-        <td>Confidence=33.1, ML Win%=25.6%, Win Value=1.8%</td>
-        <td>W4.20 / P1.70</td>
-      </tr>
-
-      <tr>
-        <td>Warrnambool R9</td>
-        <td>#6 Alder </td>
-        <td>Confidence=37.8, ML Win%=33.9%, Win Value=1.7%</td>
-        <td>W3.20 / P1.53</td>
-      </tr>
-
-      <tr>
-        <td>Warrnambool R10</td>
-        <td>#4 Icy Pole </td>
-        <td>Confidence=33.3, ML Win%=19.7%, Win Value=-5.3%</td>
-        <td>W4.00 / P1.80</td>
-      </tr>
-
-      <tr>
-        <td>Wyong R1</td>
-        <td>#2 Aurora Effect 🏆🏆</td>
-        <td>Confidence=62.1, ML Win%=52.9%, Win Value=-5.9%</td>
-        <td>W1.70 / P1.13</td>
-      </tr>
-
-      <tr>
-        <td>Wyong R2</td>
-        <td>#7 Nicolosi </td>
-        <td>Confidence=40.9, ML Win%=29.3%, Win Value=-17.2%</td>
-        <td>W2.15 / P1.20</td>
-      </tr>
-
-      <tr>
-        <td>Wyong R3</td>
-        <td>#1 Farset </td>
-        <td>Confidence=47.2, ML Win%=33.0%, Win Value=-12.5%</td>
-        <td>W2.20 / P1.20</td>
-      </tr>
-
-      <tr>
-        <td>Wyong R4</td>
-        <td>#3 Call Me Sassy </td>
-        <td>Confidence=44.6, ML Win%=31.5%, Win Value=-5.6%</td>
-        <td>W2.70 / P1.30</td>
-      </tr>
-
-      <tr>
-        <td>Wyong R5</td>
-        <td>#1 Skycatcher 🏆</td>
-        <td>Confidence=50.4, ML Win%=39.8%, Win Value=8.6%</td>
-        <td>W3.20 / P1.40</td>
-      </tr>
-
-      <tr>
-        <td>Wyong R6</td>
-        <td>#4 Welcome Gypsy </td>
-        <td>Confidence=33.7, ML Win%=23.8%, Win Value=5.6%</td>
-        <td>W5.50 / P2.05</td>
-      </tr>
-
-      <tr>
-        <td>Wyong R7</td>
-        <td>#6 Sarapo </td>
-        <td>Confidence=41.5, ML Win%=26.4%, Win Value=-4.8%</td>
-        <td>W3.30 / P1.40</td>
+        <td>bet365 Swan Hill R8</td>
+            <td>#2 Mr Butt's Boats </td>
+                <td align='center' style='width:92px;min-width:92px;white-space:nowrap;'><span style='font-size:15px;font-weight:700;line-height:1;'>19.2%</span></td>
+                                <td>AI Win%=12.7%, Win Value=-4.0%<br>AI Place%=38.5%, Place Value=-1.5%</td>
+        <td>W6.00 / P2.50</td>
       </tr>
 
     </table>
 
-    <p style="margin-top:24px;font-size:11px;color:#777;">
-      ☒ PuntingIQ Edge — Australia's most disciplined, data-driven racing intelligence.<br>
-      Notes: Odds are starting prices only and subject to change. We prioritise quality over quantity — no forced tips.
-    </p>
+    <h3 style="margin-top:24px;margin-bottom:8px;">RECOMMENDED QUADDIES (CORE)</h3>
+<p>Core recommended quaddies. These are the main actionable plays and are tagged 1.0u Core.</p>
+        <h4 style="margin-top:18px;margin-bottom:8px;">Bathurst Quaddie</h4>
+        <table width="100%" cellpadding="6" cellspacing="0" border="1" style="border-collapse:collapse;font-size:13px; margin-bottom:12px;">
+            <tr style="background:#f2f2f2;">
+                <th align="left">Track</th>
+                <th align="left">Races</th>
+                <th align="left">Strength</th>
+                <th align="left">Combos</th>
+                <th align="left">Type</th>
+                <th align="left">Stake</th>
+            </tr>
+            
+            <tr>
+                <td>Bathurst</td>
+                <td>R4 / R5 / R6 / R7</td>
+                <td>93.2</td>
+                <td>36</td>
+                <td>Bettable Quaddie</td>
+                <td>1.0u Core</td>
+            </tr>
+
+        </table>
+        <table width="100%" cellpadding="6" cellspacing="0" border="1" style="border-collapse:collapse;font-size:13px;">
+            <tr style="background:#f2f2f2;">
+                <th align="left">Leg</th>
+                <th align="left">Strategy</th>
+                <th align="left">Selections</th>
+            </tr>
+            
+            <tr>
+                <td>R4</td>
+                <td>TOP2 ML</td>
+                <td>#2 Comic Culture 26.0% @3.60, #1 Yes Siree 19.8% @6.00</td>
+            </tr>
+
+            <tr>
+                <td>R5</td>
+                <td>HYBRID ML FAV</td>
+                <td>#4 Yiasou 15.1% @6.00, #2 Like Lukey 10.2% @6.00, #10 Italus 9.9% @6.50</td>
+            </tr>
+
+            <tr>
+                <td>R6</td>
+                <td>HYBRID ML FAV</td>
+                <td>#2 Gail Jeanette 18.2% @4.60, #5 Rileycat 14.9% @7.50, #10 Golden Vader 13.1% @4.60</td>
+            </tr>
+
+            <tr>
+                <td>R7</td>
+                <td>TOP2 ML</td>
+                <td>#1 De Joker 33.9% @2.50, #18 Son Of Eureka 11.9% @9.00</td>
+            </tr>
+
+        </table>
+
+    <h3 style="margin-top:24px;margin-bottom:8px;">RECOMMENDED QUADDIES (SECONDARY RECOMMENDED)</h3>
+<p>No secondary recommended quaddies today.</p>
+    <h3 style="margin-top:24px;margin-bottom:8px;">QUADDIE WATCHLIST</h3>
+<p>Reference-only quaddies that did not clear recommended rules. Suggested stake is 0u.</p>
+        <h4 style="margin-top:18px;margin-bottom:8px;">bet365 Swan Hill Quaddie</h4>
+        <table width="100%" cellpadding="6" cellspacing="0" border="1" style="border-collapse:collapse;font-size:13px; margin-bottom:12px;">
+            <tr style="background:#f2f2f2;">
+                <th align="left">Track</th>
+                <th align="left">Races</th>
+                <th align="left">Strength</th>
+                <th align="left">Combos</th>
+                <th align="left">Type</th>
+                <th align="left">Stake</th>
+            </tr>
+            
+            <tr>
+                <td>bet365 Swan Hill</td>
+                <td>R5 / R6 / R7 / R8</td>
+                <td>86.0</td>
+                <td>54</td>
+                <td>Listed</td>
+                <td>0u Reference</td>
+            </tr>
+
+        </table>
+        <table width="100%" cellpadding="6" cellspacing="0" border="1" style="border-collapse:collapse;font-size:13px;">
+            <tr style="background:#f2f2f2;">
+                <th align="left">Leg</th>
+                <th align="left">Strategy</th>
+                <th align="left">Selections</th>
+            </tr>
+            
+            <tr>
+                <td>R5</td>
+                <td>HYBRID ML FAV</td>
+                <td>#2 Nottolook 23.7% @5.50, #1 Haaland 14.5% @4.80, #7 Verifier 8.5% @3.50</td>
+            </tr>
+
+            <tr>
+                <td>R6</td>
+                <td>TOP2 ML</td>
+                <td>#1 Surprisatic 26.4% @4.50, #4 Les Garcons 16.3% @4.50</td>
+            </tr>
+
+            <tr>
+                <td>R7</td>
+                <td>HYBRID ML FAV</td>
+                <td>#3 National Code 23.3% @3.00, #6 Bonfire Jimmy 11.8% @4.80, #4 Fierce Dreams 4.6% @6.50</td>
+            </tr>
+
+            <tr>
+                <td>R8</td>
+                <td>TOP3 FAVOURITES</td>
+                <td>#2 Mr Butt&#x27;s Boats 12.7% @6.00, #8 Sacramental 7.4% @6.50, #12 Break The Taboo 3.8% @6.50</td>
+            </tr>
+
+        </table>
+
+        <div style="text-align:center; margin-top:30px; color:#555;">
+            <p style="font-size:14px; margin:0; line-height:1.6;">
+                🛡️ <strong>PuntingIQ Edge</strong><br>
+                Australia's most disciplined, data-driven racing intelligence.
+            </p>
+
+            <p style="font-size:14px; margin:14px 0 6px 0; line-height:1.6;">
+                📌 <strong>Notes & Conditions</strong>
+            </p>
+
+            <div style="display:inline-block; text-align:left; font-size:14px; line-height:1.7;">
+                <ul style="margin:0; padding-left:20px;">
+                    <li>Odds are Starting Prices only and are subject to change</li>
+                    <li>We prioritise quality over quantity — no forced tips</li>
+                </ul>
+            </div>
+
+            <p style="font-size:14px; margin-top:14px;">
+                <a href="https://puntingiq.com.au/" style="color:#464feb; text-decoration:none;">
+                    https://puntingiq.com.au/
+                </a>
+            </p>
+        </div>
   </body>
 </html>

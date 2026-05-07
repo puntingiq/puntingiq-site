@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PuntingIQ – Daily Intelligence Brief (2026-07-24)</title>
+    <style>
+    :root {
+      --bg: #0b0f19;
+      --card: rgba(255,255,255,0.06);
+      --card2: rgba(255,255,255,0.10);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --line: rgba(255,255,255,0.14);
+      --accent: #6ee7ff;
+      --accent2: #a78bfa;
+      --good: #34d399;
+      --warn: #fbbf24;
+      --bad: #fb7185;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: radial-gradient(1200px 600px at 20% 0%, rgba(110,231,255,0.16), transparent 55%), radial-gradient(1000px 500px at 80% 20%, rgba(167,139,250,0.14), transparent 55%), var(--bg); color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 22px 16px 40px; }
+    .hero { display:flex; gap:16px; flex-direction: column; align-items: center; text-align:center; }
+    .banner { width:100%; max-width: 980px; border-radius: 18px; overflow:hidden; box-shadow: 0 14px 40px rgba(0,0,0,0.40); border: 1px solid var(--line); }
+    .banner img { width:100%; display:block; }
+    .title { margin: 14px 0 0; font-size: 30px; letter-spacing: 0.5px; }
+    .subtitle { margin: 6px 0 0; font-size: 16px; color: var(--muted); }
+    .meta { margin-top: 10px; font-size: 13px; color: var(--muted); }
+
+    .grid { display:grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 18px; width: 100%; }
+    .pill { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 10px 10px; min-height: 56px; display:flex; flex-direction:column; justify-content:center; }
+    .pill .k { font-size: 11px; color: var(--muted); letter-spacing: 0.4px; text-transform: uppercase; }
+    .pill .v { font-size: 18px; font-weight: 700; margin-top: 2px; }
+
+    @media (max-width: 920px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 520px) { .grid { grid-template-columns: repeat(2, 1fr); } .title { font-size: 24px; } }
+
+    .section { margin-top: 22px; background: var(--card); border: 1px solid var(--line); border-radius: 22px; overflow:hidden; box-shadow: 0 10px 35px rgba(0,0,0,0.25); }
+    .section-h { padding: 16px 16px 10px; border-bottom: 1px solid var(--line); display:flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .section-h h2 { margin:0; font-size: 16px; letter-spacing: 0.3px; }
+    .section-h p { margin: 4px 0 0; color: var(--muted); font-size: 13px; max-width: 820px; }
+    .tag { font-size: 12px; padding: 6px 10px; border-radius: 999px; background: rgba(110,231,255,0.12); border: 1px solid rgba(110,231,255,0.35); color: var(--text); }
+
+    .content { padding: 14px 16px 18px; }
+
+    .table-wrap { overflow-x:auto; border-radius: 16px; border: 1px solid var(--line); }
+    table { width: 100%; border-collapse: collapse; min-width: 860px; background: rgba(0,0,0,0.18); }
+    th, td { padding: 10px 10px; text-align:left; vertical-align: top; border-bottom: 1px solid var(--line); font-size: 13px; }
+    th { position: sticky; top: 0; background: rgba(10,14,24,0.95); backdrop-filter: blur(6px); font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; color: var(--muted); }
+    tr:hover td { background: rgba(255,255,255,0.05); }
+
+    .muted { color: var(--muted); }
+    .trophies { margin-left: 6px; }
+    .conviction { display:inline-block; margin-left:8px; padding:2px 8px; border-radius:999px; font-size:11px; font-weight:700; white-space:nowrap; }
+    .conviction-founders-pick { background:linear-gradient(135deg, #c79a00, #8a6a00); color:#fff4bf; box-shadow:0 6px 18px rgba(138,106,0,0.28); }
+    .ai-confidence-col { width: 92px; min-width: 92px; white-space: nowrap; }
+    .ai-confidence-cell { width: 92px; min-width: 92px; text-align:center; white-space:nowrap; }
+    .ai-confidence-value { font-size: 15px; font-weight: 700; line-height: 1; }
+    .units-col { width: 64px; min-width: 64px; white-space: nowrap; text-align: center; }
+    .units-cell { width: 64px; min-width: 64px; text-align:center; white-space:nowrap; }
+    .units-value { font-size: 15px; font-weight: 700; line-height: 1; }
+    .signal-col { width: 180px; min-width: 180px; white-space: nowrap; }
+    .signal-pill { display:inline-block; padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.3px; }
+    .signal-green { background: rgba(52,211,153,0.18); color: #8ef3cd; border: 1px solid rgba(52,211,153,0.45); }
+    .signal-amber { background: rgba(251,191,36,0.18); color: #ffd978; border: 1px solid rgba(251,191,36,0.45); }
+    .signal-red { background: rgba(251,113,133,0.18); color: #ffc1cb; border: 1px solid rgba(251,113,133,0.45); }
+
+    .logo-row { display:flex; align-items:center; gap:10px; justify-content:center; margin-top: 10px; }
+    .logo-row img { width: 160px; max-width: 60vw; }
+
+    details { border: 1px solid var(--line); background: rgba(0,0,0,0.18); border-radius: 16px; padding: 10px 12px; }
+    summary { cursor:pointer; font-weight: 700; }
+
+    footer { margin-top: 22px; color: var(--muted); font-size: 12px; text-align:center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div class="banner"><img src="/assets/PuntingIQemailbanner.png" alt="PuntingIQ"></div>
+      <div class="logo-row">
+        <img src="/assets/TrackIQ%20logo%202.png" alt="TrackIQ">
+      </div>
+      <h1 class="title">PUNTINGIQ – DAILY INTELLIGENCE BRIEF</h1>
+      <div class="subtitle">TrackIQ – Today's race intelligence • Powered by TrackIQ</div>
+      <div class="meta">Date: <strong>2026-07-24</strong> • High-confidence selections based on ladder-aware and model-driven analysis.</div>
+
+        <div class="grid">
+            <a href="#best-bets" class="pill"><div class="k">Best Bets</div><div class="v">0</div></a>
+            <a href="#elite-winners" class="pill"><div class="k">Elite Winners</div><div class="v">0</div></a>
+            <a href="#system-bets" class="pill"><div class="k">System Bets</div><div class="v">4</div></a>
+            <a href="#place-bankers" class="pill"><div class="k">Place Bankers</div><div class="v">0</div></a>
+            <a href="#value-edge" class="pill"><div class="k">Value Edge</div><div class="v">0</div></a>
+            <a href="#value-hunt" class="pill"><div class="k">Value Hunt</div><div class="v">0</div></a>
+            <a href="#top-picks" class="pill"><div class="k">Top Picks</div><div class="v">5</div></a>
+        </div>
+    </div>
+
+        <section class="section" id="best-bets">
+            <div class="section-h">
+                <div>
+                    <h2>BEST BETS (Elite Selection Bets)</h2>
+                    <p>High-confidence selections based on full ladder-aware analysis. Best Bets must pass all filters.</p>
+                </div>
+                <div class="tag">0 runners</div>
+            </div>
+            <div class="content">
+                <p class='muted'>No Best Bets Today</p>
+            </div>
+        </section>
+
+        <section class="section" id="elite-winners">
+            <div class="section-h">
+                <div>
+                    <h2>ELITE WINNERS (WIN Product)</h2>
+                    <p>High-confidence WIN selections.</p>
+                </div>
+                <div class="tag">0 runners</div>
+            </div>
+            <div class="content">
+                <p class='muted'>No selections available.</p>
+            </div>
+        </section>
+
+        <section class="section" id="system-bets">
+            <div class="section-h">
+                <div>
+                    <h2>SYSTEM BETS</h2>
+                    <p>Selections that were close to a Best Bet and rated a Genuine Place Chance based on form. These runners have strong form but may have been edged out by a stronger stablemate or had a minor query that dropped them just below Best Bet level. Still worthy of attention for value and place betting.</p>
+                </div>
+                <div class="tag">4 runners</div>
+            </div>
+            <div class="content">
+                <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Race</th>
+              <th>Runner</th>
+              <th>Runner Snapshot</th>
+              <th>Tempo</th>
+              <th>Odds</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Canberra Acton R1</td>
+              <td><strong>#3 Spice Alley</strong> <span class='muted'>(Barrier 6)</span><br>
+                  <span class='muted'>Jockey:</span> E.Ellison <span class='muted'>| Trainer:</span> R.J.Potter</td>
+              <td><div>Form: 42-31</div><div>Track: 2:1-0-1</div><div>Distance: 1:0-1-0</div><div class='muted'>Comment: </div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W5.00 / P1.91</td>
+            </tr>
+            
+            <tr>
+              <td>Canberra Acton R3</td>
+              <td><strong>#1 Skibidi</strong> <span class='muted'>(Barrier 10)</span><br>
+                  <span class='muted'>Jockey:</span> B.Loy <span class='muted'>| Trainer:</span> G.Vella</td>
+              <td><div>Form: 63-33</div><div>Track: 2:0-0-2</div><div>Distance: 3:0-0-3</div><div class='muted'>Comment: </div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W3.30 / P1.57</td>
+            </tr>
+            
+            <tr>
+              <td>Canberra Acton R3</td>
+              <td><strong>#4 Belleistic Bonny</strong> <span class='muted'>(Barrier 4)</span><br>
+                  <span class='muted'>Jockey:</span> J.Quince <span class='muted'>| Trainer:</span> Barbara Joseph, Paul & Matt Jones</td>
+              <td><div>Form: 639-2</div><div>Track: 1:0-1-0</div><div>Distance: 1:0-1-0</div><div class='muted'>Comment: </div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W5.50 / P2.00</td>
+            </tr>
+            
+            <tr>
+              <td>Canberra Acton R6</td>
+              <td><strong>#2 Craving Magic</strong> <span class='muted'>(Barrier 5)</span><br>
+                  <span class='muted'>Jockey:</span> J.Penza <span class='muted'>| Trainer:</span> R.J.Potter</td>
+              <td><div>Form: 6-337</div><div>Track: 8:3-1-2</div><div>Distance: 10:5-0-1</div><div class='muted'>Comment: </div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W5.00 / P1.95</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+            </div>
+        </section>
+
+        <section class="section" id="place-bankers">
+            <div class="section-h">
+                <div>
+                    <h2>PLACE BANKERS (PLACE Product)</h2>
+                    <p>High-reliability PLACE selections designed for consistency.</p>
+                </div>
+                <div class="tag">0 runners</div>
+            </div>
+            <div class="content">
+                <p class='muted'>No selections available.</p>
+            </div>
+        </section>
+
+        <section class="section" id="value-edge">
+            <div class="section-h">
+                <div>
+                    <h2>VALUE EDGE (ROI Product)</h2>
+                    <p>Positive overlays that don't qualify as Best or System Bets.</p>
+                </div>
+                <div class="tag">0 runners</div>
+            </div>
+            <div class="content">
+                
+      <details style="margin-bottom: 12px;">
+        <summary>How to use Value Edge (read before betting)</summary>
+        <div class="muted" style="margin-top:8px; line-height:1.45;">
+          Value Edge highlights potential market inefficiencies. It is NOT a tipping list.
+          These runners are pricing opportunities for analysis, not automatic bets.
+          Apply your own judgement, staking strategy, and risk tolerance.
+        </div>
+      </details>
+    <p class='muted'>🏅 Founder's Pick is shown only when the runner also appears in the daily form-based shortlist.</p><p class='muted'>No selections available.</p>
+            </div>
+        </section>
+
+        <section class="section" id="value-hunt">
+            <div class="section-h">
+                <div>
+                    <h2>VALUE HUNT (HIGH-ODDS VALUE)</h2>
+                    <p>Higher-odds value picks with strict filters and one selection maximum per race.</p>
+                </div>
+                <div class="tag">0 runners</div>
+            </div>
+            <div class="content">
+                <p class='muted'>Higher-odds value picks with strict filters (Win Odds 3.0-15.0, Win Value >= 8%, AI Win% >= 15%, Confidence >= 42).</p><p class='muted'>Selection cap: maximum one Value Hunt pick per race.</p><p class='muted'>No Value Hunt selections</p>
+            </div>
+        </section>
+
+        <section class="section" id="top-picks">
+            <div class="section-h">
+                <div>
+                    <h2>RACE-BY-RACE TOP PICK (CONFIDENCE-BASED)</h2>
+                    <p>The highest-confidence model pick in each event.</p>
+                </div>
+                <div class="tag">5 trophies</div>
+            </div>
+            <div class="content">
+                
+            <p class="muted">Trophy icons represent model confidence tiers (🏆=Bronze, 🏆🏆=Silver, 🏆🏆🏆=Gold). Recommended units follow trophy count (1/2/3 units). 🏅 Founder's Pick is shown only when the runner also appears in the daily form-based shortlist.</p>
+    <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Race</th>
+              <th>Runner</th>
+                            <th class="ai-confidence-col">AI Horse Confidence %</th>
+                            <th class="units-col">AI Recommended Units</th>
+                            <th>Model Profile</th>
+              <th>Odds</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Grafton R7</td>
+                            <td><strong>#4 Brutal Miss</strong><span class='trophies'>🏆🏆</span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>60.6%</div></td>
+                            <td class='units-cell'><div class='units-value'>2</div></td>
+              <td>AI Win%=51.9%, Win Value=-12.6%<br>AI Place%=86.6%, Place Value=-8.6%</td>
+              <td>W1.55 / P1.05</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R2</td>
+                            <td><strong>#9 Mashean</strong><span class='trophies'>🏆🏆</span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>74.9%</div></td>
+                            <td class='units-cell'><div class='units-value'>2</div></td>
+              <td>AI Win%=70.6%, Win Value=-0.9%<br>AI Place%=88.1%, Place Value=-7.2%</td>
+              <td>W1.40 / P1.05</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R5</td>
+                            <td><strong>#1 Our Huntress</strong><span class='trophies'>🏆🏆</span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>63.8%</div></td>
+                            <td class='units-cell'><div class='units-value'>2</div></td>
+              <td>AI Win%=59.7%, Win Value=-6.9%<br>AI Place%=76.0%, Place Value=-19.2%</td>
+              <td>W1.50 / P1.05</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R1</td>
+                            <td><strong>#6 Knights Emperor</strong><span class='trophies'>🏆</span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>52.7%</div></td>
+                            <td class='units-cell'><div class='units-value'>1</div></td>
+              <td>AI Win%=45.2%, Win Value=-3.6%<br>AI Place%=75.1%, Place Value=-1.9%</td>
+              <td>W2.10 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R2</td>
+                            <td><strong>#6 Myhro's Ruler</strong><span class='trophies'>🏆🏆</span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>63.3%</div></td>
+                            <td class='units-cell'><div class='units-value'>2</div></td>
+              <td>AI Win%=58.6%, Win Value=-2.0%<br>AI Place%=77.6%, Place Value=-17.6%</td>
+              <td>W1.65 / P1.05</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+            </div>
+        </section>
+
+        <section class="section" id="full-summary">
+            <div class="section-h">
+                <div>
+                    <h2>FUL RACE-BY-RACE SUMMARY</h2>
+                    <p>Our analysis of every race today, highlighting the strongest model‑rated runner in each event.</p>
+                </div>
+                <div class="tag">47 runners</div>
+            </div>
+            <div class="content">
+                <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Race</th>
+              <th>Runner</th>
+                            <th class="ai-confidence-col">AI Horse Confidence %</th>
+                            
+                            <th>Model Profile</th>
+              <th>Odds</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Broome R1</td>
+                            <td><strong>#3 Rulesque</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>36.0%</div></td>
+                            
+              <td>AI Win%=33.5%, Win Value=3.2%<br>AI Place%=43.6%, Place Value=-9.0%</td>
+              <td>W3.50 / P1.91</td>
+            </tr>
+            
+            <tr>
+              <td>Broome R2</td>
+                            <td><strong>#7 Bondi Queen</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>43.4%</div></td>
+                            
+              <td>AI Win%=35.1%, Win Value=-2.0%<br>AI Place%=68.3%, Place Value=-8.6%</td>
+              <td>W2.70 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Broome R3</td>
+                            <td><strong>#8 Schuhbeck</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>30.6%</div></td>
+                            
+              <td>AI Win%=21.2%, Win Value=4.5%<br>AI Place%=58.7%, Place Value=11.1%</td>
+              <td>W6.00 / P2.10</td>
+            </tr>
+            
+            <tr>
+              <td>Broome R4</td>
+                            <td><strong>#4 Why Me</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>19.6%</div></td>
+                            
+              <td>AI Win%=18.0%, Win Value=-12.3%<br>AI Place%=24.5%, Place Value=-29.6%</td>
+              <td>W3.30 / P1.75</td>
+            </tr>
+            
+            <tr>
+              <td>Broome R5</td>
+                            <td><strong>#3 What's The Point</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>27.8%</div></td>
+                            
+              <td>AI Win%=23.8%, Win Value=-17.0%<br>AI Place%=39.7%, Place Value=-39.6%</td>
+              <td>W2.45 / P1.25</td>
+            </tr>
+            
+            <tr>
+              <td>Broome R6</td>
+                            <td><strong>#5 Beyond The Wall</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>11.7%</div></td>
+                            
+              <td>AI Win%=11.8%, Win Value=-6.4%<br>AI Place%=11.6%, Place Value=-41.1%</td>
+              <td>W5.50 / P1.91</td>
+            </tr>
+            
+            <tr>
+              <td>Broome R7</td>
+                            <td><strong>#1 Cruise To Victory</strong><span class='trophies'></span><span class='conviction conviction-founders-pick'>🏅 Founder's Pick</span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>20.0%</div></td>
+                            
+              <td>AI Win%=17.2%, Win Value=-7.8%<br>AI Place%=28.2%, Place Value=-43.3%</td>
+              <td>W4.00 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Canberra Acton R1</td>
+                            <td><strong>#3 Spice Alley</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>19.1%</div></td>
+                            
+              <td>AI Win%=18.4%, Win Value=-1.6%<br>AI Place%=21.0%, Place Value=-31.3%</td>
+              <td>W5.00 / P1.91</td>
+            </tr>
+            
+            <tr>
+              <td>Canberra Acton R2</td>
+                            <td><strong>#6 Wild Romeo</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>29.3%</div></td>
+                            
+              <td>AI Win%=25.9%, Win Value=0.9%<br>AI Place%=39.4%, Place Value=-23.1%</td>
+              <td>W4.00 / P1.50</td>
+            </tr>
+            
+            <tr>
+              <td>Canberra Acton R3</td>
+                            <td><strong>#3 Jenni Moo Moo</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>11.9%</div></td>
+                            
+              <td>AI Win%=11.1%, Win Value=-15.2%<br>AI Place%=14.3%, Place Value=-45.6%</td>
+              <td>W3.80 / P1.67</td>
+            </tr>
+            
+            <tr>
+              <td>Canberra Acton R4</td>
+                            <td><strong>#6 Catchy Tunes</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>13.0%</div></td>
+                            
+              <td>AI Win%=7.4%, Win Value=-1.7%<br>AI Place%=29.7%, Place Value=3.0%</td>
+              <td>W11.00 / P3.75</td>
+            </tr>
+            
+            <tr>
+              <td>Canberra Acton R5</td>
+                            <td><strong>#1 Famoso</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>26.2%</div></td>
+                            
+              <td>AI Win%=20.4%, Win Value=-7.3%<br>AI Place%=43.3%, Place Value=-23.3%</td>
+              <td>W3.70 / P1.50</td>
+            </tr>
+            
+            <tr>
+              <td>Canberra Acton R6</td>
+                            <td><strong>#9 Oneforian</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>12.7%</div></td>
+                            
+              <td>AI Win%=9.1%, Win Value=-4.2%<br>AI Place%=23.6%, Place Value=-17.2%</td>
+              <td>W7.50 / P2.60</td>
+            </tr>
+            
+            <tr>
+              <td>Canberra Acton R7</td>
+                            <td><strong>#3 Remadosi</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>23.0%</div></td>
+                            
+              <td>AI Win%=18.9%, Win Value=0.7%<br>AI Place%=35.3%, Place Value=-6.7%</td>
+              <td>W5.50 / P2.38</td>
+            </tr>
+            
+            <tr>
+              <td>Grafton R1</td>
+                            <td><strong>#1 Coccinella</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>26.7%</div></td>
+                            
+              <td>AI Win%=21.5%, Win Value=-7.1%<br>AI Place%=42.4%, Place Value=-21.3%</td>
+              <td>W3.50 / P1.57</td>
+            </tr>
+            
+            <tr>
+              <td>Grafton R2</td>
+                            <td><strong>#1 Torque So Hot</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>35.9%</div></td>
+                            
+              <td>AI Win%=27.7%, Win Value=-27.8%<br>AI Place%=60.5%, Place Value=-30.4%</td>
+              <td>W1.80 / P1.10</td>
+            </tr>
+            
+            <tr>
+              <td>Grafton R3</td>
+                            <td><strong>#1 Enhance</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>27.5%</div></td>
+                            
+              <td>AI Win%=21.7%, Win Value=-3.3%<br>AI Place%=45.0%, Place Value=-13.8%</td>
+              <td>W3.90 / P1.57</td>
+            </tr>
+            
+            <tr>
+              <td>Grafton R4</td>
+                            <td><strong>#2 Meadowbrook</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>24.2%</div></td>
+                            
+              <td>AI Win%=22.3%, Win Value=1.5%<br>AI Place%=29.8%, Place Value=-25.7%</td>
+              <td>W5.00 / P1.73</td>
+            </tr>
+            
+            <tr>
+              <td>Grafton R5</td>
+                            <td><strong>#3 Sorrenti</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>42.6%</div></td>
+                            
+              <td>AI Win%=41.2%, Win Value=-3.2%<br>AI Place%=46.7%, Place Value=-33.3%</td>
+              <td>W2.25 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Grafton R6</td>
+                            <td><strong>#7 Sinfull</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>31.0%</div></td>
+                            
+              <td>AI Win%=32.3%, Win Value=-21.7%<br>AI Place%=27.0%, Place Value=-58.5%</td>
+              <td>W1.85 / P1.17</td>
+            </tr>
+            
+            <tr>
+              <td>Grafton R7</td>
+                            <td><strong>#4 Brutal Miss</strong><span class='trophies'>🏆🏆</span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>60.6%</div></td>
+                            
+              <td>AI Win%=51.9%, Win Value=-12.6%<br>AI Place%=86.6%, Place Value=-8.6%</td>
+              <td>W1.55 / P1.05</td>
+            </tr>
+            
+            <tr>
+              <td>Grafton R8</td>
+                            <td><strong>#2 Permission Granted</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>34.9%</div></td>
+                            
+              <td>AI Win%=31.9%, Win Value=-0.3%<br>AI Place%=43.8%, Place Value=-14.0%</td>
+              <td>W3.10 / P1.73</td>
+            </tr>
+            
+            <tr>
+              <td>Grafton R9</td>
+                            <td><strong>#5 Monte Carlo Miss</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>27.4%</div></td>
+                            
+              <td>AI Win%=21.6%, Win Value=-3.4%<br>AI Place%=44.9%, Place Value=-6.3%</td>
+              <td>W4.00 / P1.95</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R1</td>
+                            <td><strong>#1 Kojak</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>41.1%</div></td>
+                            
+              <td>AI Win%=39.3%, Win Value=-4.1%<br>AI Place%=46.5%, Place Value=-36.8%</td>
+              <td>W2.10 / P1.25</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R2</td>
+                            <td><strong>#9 Mashean</strong><span class='trophies'>🏆🏆</span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>74.9%</div></td>
+                            
+              <td>AI Win%=70.6%, Win Value=-0.9%<br>AI Place%=88.1%, Place Value=-7.2%</td>
+              <td>W1.40 / P1.05</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R3</td>
+                            <td><strong>#7 Tengun Tango</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>20.5%</div></td>
+                            
+              <td>AI Win%=15.9%, Win Value=-6.8%<br>AI Place%=34.3%, Place Value=-22.9%</td>
+              <td>W4.40 / P1.75</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R4</td>
+                            <td><strong>#10 Too Darn Quick</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>23.7%</div></td>
+                            
+              <td>AI Win%=18.3%, Win Value=-8.0%<br>AI Place%=39.8%, Place Value=-23.9%</td>
+              <td>W3.80 / P1.57</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R5</td>
+                            <td><strong>#1 Our Huntress</strong><span class='trophies'>🏆🏆</span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>63.8%</div></td>
+                            
+              <td>AI Win%=59.7%, Win Value=-6.9%<br>AI Place%=76.0%, Place Value=-19.2%</td>
+              <td>W1.50 / P1.05</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R6</td>
+                            <td><strong>#1 Silent Thinker</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>18.7%</div></td>
+                            
+              <td>AI Win%=13.7%, Win Value=-4.5%<br>AI Place%=33.9%, Place Value=-17.4%</td>
+              <td>W4.80 / P1.95</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R7</td>
+                            <td><strong>#4 Weekend Spirit</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>18.7%</div></td>
+                            
+              <td>AI Win%=16.6%, Win Value=-6.1%<br>AI Place%=24.9%, Place Value=-25.1%</td>
+              <td>W4.40 / P2.00</td>
+            </tr>
+            
+            <tr>
+              <td>Ipswich R8</td>
+                            <td><strong>#5 Starsarise</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>14.7%</div></td>
+                            
+              <td>AI Win%=9.7%, Win Value=-18.1%<br>AI Place%=29.6%, Place Value=-23.6%</td>
+              <td>W3.60 / P1.88</td>
+            </tr>
+            
+            <tr>
+              <td>Naracoorte R1</td>
+                            <td><strong>#4 Lots Of Torque</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>0.3%</div></td>
+                            
+              <td>AI Win%=0.2%, Win Value=0.0%<br>AI Place%=0.7%, Place Value=0.0%</td>
+              <td>N/A</td>
+            </tr>
+            
+            <tr>
+              <td>Naracoorte R2</td>
+                            <td><strong>#10 His Lady Bay</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>0.4%</div></td>
+                            
+              <td>AI Win%=0.3%, Win Value=0.0%<br>AI Place%=0.8%, Place Value=0.0%</td>
+              <td>N/A</td>
+            </tr>
+            
+            <tr>
+              <td>Naracoorte R3</td>
+                            <td><strong>#4 Nankeen</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>0.3%</div></td>
+                            
+              <td>AI Win%=0.3%, Win Value=0.0%<br>AI Place%=0.3%, Place Value=0.0%</td>
+              <td>N/A</td>
+            </tr>
+            
+            <tr>
+              <td>Naracoorte R4</td>
+                            <td><strong>#5 Loose Lip Lloyd</strong><span class='trophies'></span><span class='conviction conviction-founders-pick'>🏅 Founder's Pick</span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>0.9%</div></td>
+                            
+              <td>AI Win%=0.8%, Win Value=0.0%<br>AI Place%=1.1%, Place Value=0.0%</td>
+              <td>N/A</td>
+            </tr>
+            
+            <tr>
+              <td>Naracoorte R5</td>
+                            <td><strong>#5 Badonkidonk</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>1.0%</div></td>
+                            
+              <td>AI Win%=1.1%, Win Value=0.0%<br>AI Place%=0.6%, Place Value=0.0%</td>
+              <td>N/A</td>
+            </tr>
+            
+            <tr>
+              <td>Naracoorte R6</td>
+                            <td><strong>#6 Gusty Way</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>0.7%</div></td>
+                            
+              <td>AI Win%=0.9%, Win Value=0.0%<br>AI Place%=0.1%, Place Value=0.0%</td>
+              <td>N/A</td>
+            </tr>
+            
+            <tr>
+              <td>Naracoorte R7</td>
+                            <td><strong>#12 Last Dream</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>0.7%</div></td>
+                            
+              <td>AI Win%=0.8%, Win Value=0.0%<br>AI Place%=0.4%, Place Value=0.0%</td>
+              <td>N/A</td>
+            </tr>
+            
+            <tr>
+              <td>Naracoorte R8</td>
+                            <td><strong>#12 Our Ellie Rose</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>0.7%</div></td>
+                            
+              <td>AI Win%=0.7%, Win Value=0.0%<br>AI Place%=0.5%, Place Value=0.0%</td>
+              <td>N/A</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R1</td>
+                            <td><strong>#6 Knights Emperor</strong><span class='trophies'>🏆</span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>52.7%</div></td>
+                            
+              <td>AI Win%=45.2%, Win Value=-3.6%<br>AI Place%=75.1%, Place Value=-1.9%</td>
+              <td>W2.10 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R2</td>
+                            <td><strong>#6 Myhro's Ruler</strong><span class='trophies'>🏆🏆</span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>63.3%</div></td>
+                            
+              <td>AI Win%=58.6%, Win Value=-2.0%<br>AI Place%=77.6%, Place Value=-17.6%</td>
+              <td>W1.65 / P1.05</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R3</td>
+                            <td><strong>#4 Master Fox</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>34.5%</div></td>
+                            
+              <td>AI Win%=26.3%, Win Value=-4.0%<br>AI Place%=59.0%, Place Value=-18.0%</td>
+              <td>W3.30 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R4</td>
+                            <td><strong>#2 I'lberidin'shotgun</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>34.1%</div></td>
+                            
+              <td>AI Win%=30.0%, Win Value=6.2%<br>AI Place%=46.6%, Place Value=-17.9%</td>
+              <td>W4.20 / P1.67</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R5</td>
+                            <td><strong>#3 Aka Daka</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>33.5%</div></td>
+                            
+              <td>AI Win%=27.6%, Win Value=-3.7%<br>AI Place%=51.0%, Place Value=-23.0%</td>
+              <td>W3.10 / P1.50</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R6</td>
+                            <td><strong>#3 Mickio</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>24.0%</div></td>
+                            
+              <td>AI Win%=23.3%, Win Value=1.1%<br>AI Place%=26.1%, Place Value=-31.7%</td>
+              <td>W4.50 / P1.73</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R7</td>
+                            <td><strong>#7 Raging Monkey</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>17.4%</div></td>
+                            
+              <td>AI Win%=21.5%, Win Value=14.3%<br>AI Place%=5.1%, Place Value=-25.2%</td>
+              <td>W14.00 / P3.30</td>
+            </tr>
+            
+            <tr>
+              <td>bet365 Echuca R8</td>
+                            <td><strong>#1 Powerbound</strong><span class='trophies'></span></td>
+                            <td class='ai-confidence-cell'><div class='ai-confidence-value'>13.6%</div></td>
+                            
+              <td>AI Win%=7.1%, Win Value=-4.7%<br>AI Place%=33.0%, Place Value=0.8%</td>
+              <td>W8.50 / P3.10</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+            </div>
+        </section>
+
+    <footer>
+      <p>☒ PuntingIQ Edge — Australia’s most disciplined, data-driven racing intelligence.</p>
+      <p class="muted">Notes: Odds are SP and indicative only and subject to change. We prioritise quality over quantity — no forced tips.</p>
+    </footer>
+  </div>
+</body>
+</html>
