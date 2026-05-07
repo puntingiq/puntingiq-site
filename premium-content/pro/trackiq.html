@@ -6,6 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="TrackIQ — daily racing intelligence powered by the PuntingIQ intelligence layer." />
 
+  <script>
+    var o_options = {
+      domain: "puntingiq.outseta.com",
+      load: "auth,nocode",
+      auth: {
+        authenticationCallbackUrl: window.location.origin + "/api/auth/callback",
+        registrationConfirmationUrl: window.location.origin + "/products.html"
+      }
+    };
+  </script>
+  <script src="https://cdn.outseta.com/outseta.min.js" data-options="o_options" defer></script>
+
   <link rel="stylesheet" href="../../css/style.css">
   <style>
     /* HERO */
@@ -43,18 +55,17 @@
       max-width: 600px;
     }
 
-    /* VIEWER */
-    .viewer {
+    .access {
       margin-top: 56px;
     }
 
-    .viewer-title {
+    .access-title {
       font-size: 20px;
       letter-spacing: -0.02em;
       margin-bottom: 10px;
     }
 
-    .viewer-sub {
+    .access-sub {
       color: var(--text-muted);
       max-width: 760px;
       line-height: 1.6;
@@ -62,25 +73,124 @@
       font-size: 14px;
     }
 
-    .viewer-frame-wrap {
+    .access-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 18px;
+    }
+
+    .access-card,
+    .access-tier-card {
       border-radius: var(--radius-lg);
-      overflow: hidden;
       border: 1px solid var(--border-subtle);
       background: var(--bg-elevated);
       box-shadow: var(--shadow-soft);
     }
 
-    .viewer-frame {
-      width: 100%;
-      height: 1300px;
+    .access-card {
+      padding: 24px;
+      background: radial-gradient(circle at top left, rgba(47,123,255,0.18) 0, rgba(5,7,11,0.96) 56%, #020308 100%);
+    }
+
+    .access-kicker,
+    .tier-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-green);
+      margin-bottom: 10px;
+    }
+
+    .access-headline {
+      font-size: 28px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .access-body {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 560px;
+      margin-bottom: 18px;
+    }
+
+    .access-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .access-actions button {
       border: 0;
-      display: block;
-      background: #ffffff;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .access-meta {
+      display: grid;
+      gap: 10px;
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .access-meta strong {
+      color: var(--text-main);
+    }
+
+    .access-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .access-list li::before {
+      content: "+ ";
+      color: var(--accent-green);
+      font-weight: 700;
+    }
+
+    .access-tier-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .access-tier-card {
+      padding: 18px;
+      background: rgba(5,7,11,0.9);
+    }
+
+    .tier-title {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .tier-copy {
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .tier-path {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--text-main);
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: rgba(47,123,255,0.1);
+      border: 1px solid rgba(47,123,255,0.22);
     }
 
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; text-align: center; }
       .hero-logo { margin: 0 auto; }
+      .access-grid { grid-template-columns: 1fr; }
       /* .nav { display: none; }  -- removed to keep menu visible on mobile */
     }
   </style>
@@ -126,21 +236,72 @@
     </div>
   </section>
 
-  <!-- VIEWER -->
-  <section class="viewer" aria-label="Daily intelligence brief viewer">
-    <h2 class="viewer-title">Today’s TrackIQ Intelligence Brief</h2>
-    <p class="viewer-sub">
-      Live view of today’s generated pro brief. This content
-      is restricted to Pro members and above.
+  <section class="access" aria-label="TrackIQ member access">
+    <h2 class="access-title">TrackIQ Member Login</h2>
+    <p class="access-sub">
+      TrackIQ now routes members straight to the correct intelligence page for their subscription.
+      Sign in once, and PuntingIQ will send you to the right TrackIQ view automatically.
     </p>
 
-    <div class="viewer-frame-wrap">
-      <iframe
-        class="viewer-frame"
-        src="daily-intelligence.html"
-        title="PuntingIQ Daily Intelligence Brief"
-        loading="lazy">
-      </iframe>
+    <div class="access-grid">
+      <div class="access-card">
+        <div class="access-kicker">Member Access</div>
+        <h3 class="access-headline">Login to unlock your TrackIQ page.</h3>
+        <p class="access-body">
+          Your membership level controls which TrackIQ brief you receive. Starter members see the
+          Starter page, Value members see the Value page, and Pro members are taken directly to the
+          full Pro intelligence layer.
+        </p>
+
+        <div class="access-actions">
+          <button
+            type="button"
+            class="btn-primary"
+            data-o-anonymous
+            data-o-auth="1"
+            data-mode="popup"
+            data-widget-mode="login"
+          >
+            Login With Outseta
+          </button>
+          <a href="https://puntingiq.outseta.com/auth?widgetMode=login#o-anonymous" class="btn-primary" style="display:none;" aria-hidden="true">Login With Outseta</a>
+          <a href="../../products.html" class="btn-ghost">View Membership Options</a>
+        </div>
+
+        <div class="access-meta">
+          <div><strong>How it works:</strong> The Outseta login popup returns to the worker callback, which then redirects you to your correct TrackIQ subscription page.</div>
+          <div><strong>Current routing:</strong> Starter, Value, and Pro members each land on separate protected TrackIQ pages.</div>
+        </div>
+
+        <ul class="access-list">
+          <li>Starter members go to the Starter TrackIQ page</li>
+          <li>Value members go to the Value TrackIQ page</li>
+          <li>Pro members go to the full Pro TrackIQ page</li>
+        </ul>
+      </div>
+
+      <div class="access-tier-stack" aria-label="TrackIQ subscription routing overview">
+        <div class="access-tier-card">
+          <div class="tier-kicker">Starter</div>
+          <div class="tier-title">Starter TrackIQ Access</div>
+          <p class="tier-copy">System Bets and Place Bankers, routed to the Starter member TrackIQ page after sign-in.</p>
+          <div class="tier-path">/premium-content/starter/trackiq.html</div>
+        </div>
+
+        <div class="access-tier-card">
+          <div class="tier-kicker">Value</div>
+          <div class="tier-title">Value TrackIQ Access</div>
+          <p class="tier-copy">Starter content plus Value Edge selections, routed to the Value member TrackIQ page.</p>
+          <div class="tier-path">/premium-content/value/trackiq.html</div>
+        </div>
+
+        <div class="access-tier-card">
+          <div class="tier-kicker">Pro</div>
+          <div class="tier-title">Pro TrackIQ Access</div>
+          <p class="tier-copy">Full intelligence access including premium daily views, routed directly to the Pro TrackIQ page.</p>
+          <div class="tier-path">/premium-content/pro/trackiq.html</div>
+        </div>
+      </div>
     </div>
   </section>
 
