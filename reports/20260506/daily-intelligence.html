@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PuntingIQ – Daily Intelligence Brief (2026-05-06)</title>
+    <style>
+    :root {
+      --bg: #0b0f19;
+      --card: rgba(255,255,255,0.06);
+      --card2: rgba(255,255,255,0.10);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --line: rgba(255,255,255,0.14);
+      --accent: #6ee7ff;
+      --accent2: #a78bfa;
+      --good: #34d399;
+      --warn: #fbbf24;
+      --bad: #fb7185;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: radial-gradient(1200px 600px at 20% 0%, rgba(110,231,255,0.16), transparent 55%), radial-gradient(1000px 500px at 80% 20%, rgba(167,139,250,0.14), transparent 55%), var(--bg); color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 22px 16px 40px; }
+    .hero { display:flex; gap:16px; flex-direction: column; align-items: center; text-align:center; }
+    .banner { width:100%; max-width: 980px; border-radius: 18px; overflow:hidden; box-shadow: 0 14px 40px rgba(0,0,0,0.40); border: 1px solid var(--line); }
+    .banner img { width:100%; display:block; }
+    .title { margin: 14px 0 0; font-size: 30px; letter-spacing: 0.5px; }
+    .subtitle { margin: 6px 0 0; font-size: 16px; color: var(--muted); }
+    .meta { margin-top: 10px; font-size: 13px; color: var(--muted); }
+
+    .grid { display:grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 18px; width: 100%; }
+    .pill { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 10px 10px; min-height: 56px; display:flex; flex-direction:column; justify-content:center; }
+    .pill .k { font-size: 11px; color: var(--muted); letter-spacing: 0.4px; text-transform: uppercase; }
+    .pill .v { font-size: 18px; font-weight: 700; margin-top: 2px; }
+
+    @media (max-width: 920px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 520px) { .grid { grid-template-columns: repeat(2, 1fr); } .title { font-size: 24px; } }
+
+    .section { margin-top: 22px; background: var(--card); border: 1px solid var(--line); border-radius: 22px; overflow:hidden; box-shadow: 0 10px 35px rgba(0,0,0,0.25); }
+    .section-h { padding: 16px 16px 10px; border-bottom: 1px solid var(--line); display:flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .section-h h2 { margin:0; font-size: 16px; letter-spacing: 0.3px; }
+    .section-h p { margin: 4px 0 0; color: var(--muted); font-size: 13px; max-width: 820px; }
+    .tag { font-size: 12px; padding: 6px 10px; border-radius: 999px; background: rgba(110,231,255,0.12); border: 1px solid rgba(110,231,255,0.35); color: var(--text); }
+
+    .content { padding: 14px 16px 18px; }
+
+    .table-wrap { overflow-x:auto; border-radius: 16px; border: 1px solid var(--line); }
+    table { width: 100%; border-collapse: collapse; min-width: 860px; background: rgba(0,0,0,0.18); }
+    th, td { padding: 10px 10px; text-align:left; vertical-align: top; border-bottom: 1px solid var(--line); font-size: 13px; }
+    th { position: sticky; top: 0; background: rgba(10,14,24,0.95); backdrop-filter: blur(6px); font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; color: var(--muted); }
+    tr:hover td { background: rgba(255,255,255,0.05); }
+
+    .muted { color: var(--muted); }
+    .trophies { margin-left: 6px; }
+
+    .logo-row { display:flex; align-items:center; gap:10px; justify-content:center; margin-top: 10px; }
+    .logo-row img { width: 160px; max-width: 60vw; }
+
+    details { border: 1px solid var(--line); background: rgba(0,0,0,0.18); border-radius: 16px; padding: 10px 12px; }
+    summary { cursor:pointer; font-weight: 700; }
+
+    footer { margin-top: 22px; color: var(--muted); font-size: 12px; text-align:center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div class="banner"><img src="/assets/PuntingIQemailbanner.png" alt="PuntingIQ"></div>
+      <div class="logo-row">
+        <img src="/assets/TrackIQ%20logo%202.png" alt="TrackIQ">
+      </div>
+      <h1 class="title">PUNTINGIQ – DAILY INTELLIGENCE BRIEF</h1>
+      <div class="subtitle">TrackIQ – Today's race intelligence • Powered by TrackIQ</div>
+      <div class="meta">Date: <strong>2026-05-06</strong> • High-confidence selections based on ladder-aware and model-driven analysis.</div>
+
+        <div class="grid">
+            <a href="#best-bets" class="pill"><div class="k">Best Bets</div><div class="v">0</div></a>
+            <a href="#elite-winners" class="pill"><div class="k">Elite Winners</div><div class="v">1</div></a>
+            <a href="#system-bets" class="pill"><div class="k">System Bets</div><div class="v">2</div></a>
+            <a href="#place-bankers" class="pill"><div class="k">Place Bankers</div><div class="v">2</div></a>
+            <a href="#value-edge" class="pill"><div class="k">Value Edge</div><div class="v">4</div></a>
+            <a href="#top-picks" class="pill"><div class="k">Top Picks</div><div class="v">7</div></a>
+        </div>
+    </div>
+
+        <section class="section" id="best-bets">
+            <div class="section-h">
+                <div>
+                    <h2>BEST BETS (Elite Selection Bets)</h2>
+                    <p>High-confidence selections based on full ladder-aware analysis. Best Bets must pass all filters.</p>
+                </div>
+                <div class="tag">0 runners</div>
+            </div>
+            <div class="content">
+                <p class='muted'>No Best Bets Today</p>
+            </div>
+        </section>
+
+        <section class="section" id="elite-winners">
+            <div class="section-h">
+                <div>
+                    <h2>ELITE WINNERS (WIN Product)</h2>
+                    <p>High-confidence WIN selections.</p>
+                </div>
+                <div class="tag">1 runners</div>
+            </div>
+            <div class="content">
+                <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Race</th>
+              <th>Runner</th>
+              <th>Model Profile</th>
+              <th>Odds</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Warrnambool R4</td>
+              <td><strong>#1 Point Nepean</strong><span class='trophies'>🏆🏆</span></td>
+              <td>Confidence=72.6, Units=2, ML Win%=67.2%, ML Place%=80.6%</td>
+              <td>W2.25 / P1.40</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+            </div>
+        </section>
+
+        <section class="section" id="system-bets">
+            <div class="section-h">
+                <div>
+                    <h2>SYSTEM BETS</h2>
+                    <p>Selections that were close to a Best Bet and rated a Genuine Place Chance based on form. These runners have strong form but may have been edged out by a stronger stablemate or had a minor query that dropped them just below Best Bet level. Still worthy of attention for value and place betting.</p>
+                </div>
+                <div class="tag">2 runners</div>
+            </div>
+            <div class="content">
+                <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Race</th>
+              <th>Runner</th>
+              <th>Runner Snapshot</th>
+              <th>Tempo</th>
+              <th>Odds</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Ascot R7</td>
+              <td><strong>#7 Mysterious Fortune</strong> <span class='muted'>(Barrier 5)</span><br>
+                  <span class='muted'>Jockey:</span> M.K.Cheung <span class='muted'>| Trainer:</span> D.R.Harrison</td>
+              <td><div>Form: 2-4-1</div><div>Track: 0:0-0-0</div><div>Distance: 0:0-0-0</div><div class='muted'>Comment: </div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W4.80 / P1.75</td>
+            </tr>
+            
+            <tr>
+              <td>Warwick Farm R1</td>
+              <td><strong>#5 Clanwilliam</strong> <span class='muted'>(Barrier 9)</span><br>
+                  <span class='muted'>Jockey:</span> K.McEvoy <span class='muted'>| Trainer:</span> D.L.Payne</td>
+              <td><div>Form: 464-2</div><div>Track: 1:0-0-0</div><div>Distance: 0:0-0-0</div><div class='muted'>Comment: </div></td>
+              <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
+              <td>W14.00 / P2.80</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+            </div>
+        </section>
+
+        <section class="section" id="place-bankers">
+            <div class="section-h">
+                <div>
+                    <h2>PLACE BANKERS (PLACE Product)</h2>
+                    <p>High-reliability PLACE selections designed for consistency.</p>
+                </div>
+                <div class="tag">2 runners</div>
+            </div>
+            <div class="content">
+                <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Race</th>
+              <th>Runner</th>
+              <th>Model Profile</th>
+              <th>Odds</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Ascot R4</td>
+              <td><strong>#7 Last Stylebender</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=56.7, ML Place%=84.5%, Place Value=17.8%</td>
+              <td>W3.70 / P1.50</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R4</td>
+              <td><strong>#1 Point Nepean</strong><span class='trophies'>🏆🏆</span></td>
+              <td>Confidence=72.6, ML Place%=80.6%, Place Value=11.7%</td>
+              <td>W2.25 / P1.40</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+            </div>
+        </section>
+
+        <section class="section" id="value-edge">
+            <div class="section-h">
+                <div>
+                    <h2>VALUE EDGE (ROI Product)</h2>
+                    <p>Positive overlays that don't qualify as Best or System Bets.</p>
+                </div>
+                <div class="tag">4 runners</div>
+            </div>
+            <div class="content">
+                
+      <details style="margin-bottom: 12px;">
+        <summary>How to use Value Edge (read before betting)</summary>
+        <div class="muted" style="margin-top:8px; line-height:1.45;">
+          Value Edge highlights potential market inefficiencies. It is NOT a tipping list.
+          These runners are pricing opportunities for analysis, not automatic bets.
+          Apply your own judgement, staking strategy, and risk tolerance.
+        </div>
+      </details>
+    <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Race</th>
+              <th>Runner</th>
+              <th>Model Profile</th>
+              <th>Odds</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Ascot R4</td>
+              <td><strong>#7 Last Stylebender</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=56.7, Units=1, ML Win%=38.2%, Win Value=11.2%</td>
+              <td>W3.70 / P1.50</td>
+            </tr>
+            
+            <tr>
+              <td>Ascot R5</td>
+              <td><strong>#5 Free To Fly</strong><span class='trophies'></span></td>
+              <td>Confidence=46.1, Units=0, ML Win%=41.6%, Win Value=8.3%</td>
+              <td>W3.10 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Thomas Farms RC Murray Bridge R5</td>
+              <td><strong>#1 Imamanzor</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=59.0, Units=1, ML Win%=51.3%, Win Value=12.8%</td>
+              <td>W2.60 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R4</td>
+              <td><strong>#1 Point Nepean</strong><span class='trophies'>🏆🏆</span></td>
+              <td>Confidence=72.6, Units=2, ML Win%=67.2%, Win Value=23.8%</td>
+              <td>W2.25 / P1.40</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+            </div>
+        </section>
+
+        <section class="section" id="top-picks">
+            <div class="section-h">
+                <div>
+                    <h2>RACE-BY-RACE TOP PICK</h2>
+                    <p>The strongest model-rated runner in each event.</p>
+                </div>
+                <div class="tag">7 high-confidence</div>
+            </div>
+            <div class="content">
+                
+      <p class="muted">Trophy icons represent model confidence tiers (🏆=Bronze, 🏆🏆=Silver, 🏆🏆🏆=Gold). Only high-confidence top picks (Conf ≥ 50) are shown here.</p>
+    <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Race</th>
+              <th>Runner</th>
+              <th>Model Profile</th>
+              <th>Odds</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Ascot R2</td>
+              <td><strong>#1 Jimmy Angel</strong><span class='trophies'>🏆🏆</span></td>
+              <td>Confidence=64.0, ML Win%=47.5%, Win Value=-6.6%</td>
+              <td>W1.90 / P1.17</td>
+            </tr>
+            
+            <tr>
+              <td>Ascot R4</td>
+              <td><strong>#7 Last Stylebender</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=56.7, ML Win%=38.2%, Win Value=11.2%</td>
+              <td>W3.70 / P1.50</td>
+            </tr>
+            
+            <tr>
+              <td>Thomas Farms RC Murray Bridge R5</td>
+              <td><strong>#1 Imamanzor</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=59.0, ML Win%=51.3%, Win Value=12.8%</td>
+              <td>W2.60 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R2</td>
+              <td><strong>#11 Vieux Riche</strong><span class='trophies'>🏆🏆🏆</span></td>
+              <td>Confidence=81.6, ML Win%=73.2%, Win Value=1.8%</td>
+              <td>W1.40 / P1.04</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R4</td>
+              <td><strong>#1 Point Nepean</strong><span class='trophies'>🏆🏆</span></td>
+              <td>Confidence=72.6, ML Win%=67.2%, Win Value=23.8%</td>
+              <td>W2.25 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R5</td>
+              <td><strong>#6 Shoma</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=50.5, ML Win%=44.4%, Win Value=-8.3%</td>
+              <td>W1.90 / P1.10</td>
+            </tr>
+            
+            <tr>
+              <td>Warwick Farm R1</td>
+              <td><strong>#1 Graffiti Tycoon</strong><span class='trophies'>🏆🏆</span></td>
+              <td>Confidence=63.7, ML Win%=48.5%, Win Value=-14.0%</td>
+              <td>W1.60 / P1.06</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+            </div>
+        </section>
+
+        <section class="section" id="full-summary">
+            <div class="section-h">
+                <div>
+                    <h2>FULL RACE-BY-RACE SUMMARY</h2>
+                    <p>Our analysis of every race today, highlighting the strongest model‑rated runner in each event (including lower-confidence runners) for completeness.</p>
+                </div>
+                <div class="tag">41 runners</div>
+            </div>
+            <div class="content">
+                
+      <p class="muted">Full race-by-race summary of every top pick flagged today.</p>
+    <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Race</th>
+              <th>Runner</th>
+              <th>Model Profile</th>
+              <th>Odds</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>Ascot R1</td>
+              <td><strong>#5 Show On The Road</strong><span class='trophies'></span></td>
+              <td>Confidence=45.8, ML Win%=30.5%, Win Value=-13.0%</td>
+              <td>W2.30 / P1.25</td>
+            </tr>
+            
+            <tr>
+              <td>Ascot R2</td>
+              <td><strong>#1 Jimmy Angel</strong><span class='trophies'>🏆🏆</span></td>
+              <td>Confidence=64.0, ML Win%=47.5%, Win Value=-6.6%</td>
+              <td>W1.90 / P1.17</td>
+            </tr>
+            
+            <tr>
+              <td>Ascot R3</td>
+              <td><strong>#4 Door Buster</strong><span class='trophies'></span></td>
+              <td>Confidence=37.7, ML Win%=28.5%, Win Value=-1.8%</td>
+              <td>W3.30 / P1.50</td>
+            </tr>
+            
+            <tr>
+              <td>Ascot R4</td>
+              <td><strong>#7 Last Stylebender</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=56.7, ML Win%=38.2%, Win Value=11.2%</td>
+              <td>W3.70 / P1.50</td>
+            </tr>
+            
+            <tr>
+              <td>Ascot R5</td>
+              <td><strong>#5 Free To Fly</strong><span class='trophies'></span></td>
+              <td>Confidence=46.1, ML Win%=41.6%, Win Value=8.3%</td>
+              <td>W3.10 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Ascot R6</td>
+              <td><strong>#4 Hedawood</strong><span class='trophies'></span></td>
+              <td>Confidence=48.1, ML Win%=27.6%, Win Value=-8.1%</td>
+              <td>W2.80 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Ascot R7</td>
+              <td><strong>#11 Caporetto</strong><span class='trophies'></span></td>
+              <td>Confidence=35.4, ML Win%=9.2%, Win Value=-17.8%</td>
+              <td>W3.90 / P1.67</td>
+            </tr>
+            
+            <tr>
+              <td>Eagle Farm R1</td>
+              <td><strong>#10 Sword Of Legacy</strong><span class='trophies'></span></td>
+              <td>Confidence=42.1, ML Win%=19.3%, Win Value=-27.2%</td>
+              <td>W2.10 / P1.17</td>
+            </tr>
+            
+            <tr>
+              <td>Eagle Farm R2</td>
+              <td><strong>#9 Pyrolysis</strong><span class='trophies'></span></td>
+              <td>Confidence=43.4, ML Win%=28.5%, Win Value=-20.3%</td>
+              <td>W2.00 / P1.17</td>
+            </tr>
+            
+            <tr>
+              <td>Eagle Farm R3</td>
+              <td><strong>#11 Uncommon Daisy</strong><span class='trophies'></span></td>
+              <td>Confidence=42.6, ML Win%=28.6%, Win Value=-4.7%</td>
+              <td>W3.00 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Eagle Farm R4</td>
+              <td><strong>#4 The Thorncaster</strong><span class='trophies'></span></td>
+              <td>Confidence=42.1, ML Win%=24.8%, Win Value=-7.4%</td>
+              <td>W3.10 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Eagle Farm R5</td>
+              <td><strong>#3 Toby's Trusty</strong><span class='trophies'></span></td>
+              <td>Confidence=35.6, ML Win%=22.1%, Win Value=-5.7%</td>
+              <td>W4.00 / P1.57</td>
+            </tr>
+            
+            <tr>
+              <td>Eagle Farm R6</td>
+              <td><strong>#5 Valencia Roc</strong><span class='trophies'></span></td>
+              <td>Confidence=27.8, ML Win%=12.3%, Win Value=-5.9%</td>
+              <td>W5.50 / P2.10</td>
+            </tr>
+            
+            <tr>
+              <td>Eagle Farm R7</td>
+              <td><strong>#3 Vein Girl</strong><span class='trophies'></span></td>
+              <td>Confidence=28.1, ML Win%=19.4%, Win Value=-9.2%</td>
+              <td>W3.40 / P1.50</td>
+            </tr>
+            
+            <tr>
+              <td>Eagle Farm R8</td>
+              <td><strong>#8 Thinkhardandfast</strong><span class='trophies'></span></td>
+              <td>Confidence=32.9, ML Win%=20.0%, Win Value=-6.3%</td>
+              <td>W3.90 / P1.57</td>
+            </tr>
+            
+            <tr>
+              <td>Eagle Farm R9</td>
+              <td><strong>#13 Miss Adrift</strong><span class='trophies'></span></td>
+              <td>Confidence=30.9, ML Win%=19.0%, Win Value=-2.7%</td>
+              <td>W4.50 / P1.73</td>
+            </tr>
+            
+            <tr>
+              <td>Thomas Farms RC Murray Bridge R1</td>
+              <td><strong>#3 Norheim</strong><span class='trophies'></span></td>
+              <td>Confidence=35.1, ML Win%=25.5%, Win Value=-6.7%</td>
+              <td>W3.10 / P1.50</td>
+            </tr>
+            
+            <tr>
+              <td>Thomas Farms RC Murray Bridge R2</td>
+              <td><strong>#7 Forever A Diamond</strong><span class='trophies'></span></td>
+              <td>Confidence=37.0, ML Win%=16.0%, Win Value=-11.1%</td>
+              <td>W3.70 / P1.50</td>
+            </tr>
+            
+            <tr>
+              <td>Thomas Farms RC Murray Bridge R3</td>
+              <td><strong>#6 Green Summer</strong><span class='trophies'></span></td>
+              <td>Confidence=33.0, ML Win%=20.8%, Win Value=-6.2%</td>
+              <td>W3.60 / P1.67</td>
+            </tr>
+            
+            <tr>
+              <td>Thomas Farms RC Murray Bridge R4</td>
+              <td><strong>#9 Big Rita June</strong><span class='trophies'></span></td>
+              <td>Confidence=30.3, ML Win%=19.1%, Win Value=-5.9%</td>
+              <td>W4.00 / P1.57</td>
+            </tr>
+            
+            <tr>
+              <td>Thomas Farms RC Murray Bridge R5</td>
+              <td><strong>#1 Imamanzor</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=59.0, ML Win%=51.3%, Win Value=12.8%</td>
+              <td>W2.60 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Thomas Farms RC Murray Bridge R6</td>
+              <td><strong>#11 Liselle's Luck</strong><span class='trophies'></span></td>
+              <td>Confidence=20.7, ML Win%=12.9%, Win Value=-3.7%</td>
+              <td>W6.00 / P2.15</td>
+            </tr>
+            
+            <tr>
+              <td>Thomas Farms RC Murray Bridge R7</td>
+              <td><strong>#4 Head Of The Herd</strong><span class='trophies'></span></td>
+              <td>Confidence=33.6, ML Win%=24.1%, Win Value=4.1%</td>
+              <td>W5.00 / P1.91</td>
+            </tr>
+            
+            <tr>
+              <td>Thomas Farms RC Murray Bridge R8</td>
+              <td><strong>#6 Good Expectations</strong><span class='trophies'></span></td>
+              <td>Confidence=36.3, ML Win%=20.0%, Win Value=-11.2%</td>
+              <td>W3.20 / P1.50</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R1</td>
+              <td><strong>#4 Magiconi</strong><span class='trophies'></span></td>
+              <td>Confidence=30.5, ML Win%=26.1%, Win Value=0.4%</td>
+              <td>W3.90 / P1.67</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R2</td>
+              <td><strong>#11 Vieux Riche</strong><span class='trophies'>🏆🏆🏆</span></td>
+              <td>Confidence=81.6, ML Win%=73.2%, Win Value=1.8%</td>
+              <td>W1.40 / P1.04</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R3</td>
+              <td><strong>#4 Kings Reflection</strong><span class='trophies'></span></td>
+              <td>Confidence=47.9, ML Win%=30.5%, Win Value=-11.1%</td>
+              <td>W2.40 / P1.25</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R4</td>
+              <td><strong>#1 Point Nepean</strong><span class='trophies'>🏆🏆</span></td>
+              <td>Confidence=72.6, ML Win%=67.2%, Win Value=23.8%</td>
+              <td>W2.25 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R5</td>
+              <td><strong>#6 Shoma</strong><span class='trophies'>🏆</span></td>
+              <td>Confidence=50.5, ML Win%=44.4%, Win Value=-8.3%</td>
+              <td>W1.90 / P1.10</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R6</td>
+              <td><strong>#6 The Storyteller</strong><span class='trophies'></span></td>
+              <td>Confidence=44.1, ML Win%=27.1%, Win Value=-5.2%</td>
+              <td>W3.10 / P1.70</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R7</td>
+              <td><strong>#14 Dantooine</strong><span class='trophies'></span></td>
+              <td>Confidence=19.6, ML Win%=8.2%, Win Value=-4.3%</td>
+              <td>W8.00 / P2.70</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R8</td>
+              <td><strong>#14 Oliveanotherday</strong><span class='trophies'></span></td>
+              <td>Confidence=34.7, ML Win%=19.1%, Win Value=-26.3%</td>
+              <td>W2.20 / P1.30</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R9</td>
+              <td><strong>#12 Du Clisson</strong><span class='trophies'></span></td>
+              <td>Confidence=27.0, ML Win%=15.9%, Win Value=-4.1%</td>
+              <td>W5.00 / P2.00</td>
+            </tr>
+            
+            <tr>
+              <td>Warrnambool R10</td>
+              <td><strong>#10 Inherently</strong><span class='trophies'></span></td>
+              <td>Confidence=37.4, ML Win%=26.8%, Win Value=4.1%</td>
+              <td>W4.80 / P1.91</td>
+            </tr>
+            
+            <tr>
+              <td>Warwick Farm R1</td>
+              <td><strong>#1 Graffiti Tycoon</strong><span class='trophies'>🏆🏆</span></td>
+              <td>Confidence=63.7, ML Win%=48.5%, Win Value=-14.0%</td>
+              <td>W1.60 / P1.06</td>
+            </tr>
+            
+            <tr>
+              <td>Warwick Farm R2</td>
+              <td><strong>#3 Celtic Spy</strong><span class='trophies'></span></td>
+              <td>Confidence=41.5, ML Win%=29.0%, Win Value=-3.2%</td>
+              <td>W3.10 / P1.33</td>
+            </tr>
+            
+            <tr>
+              <td>Warwick Farm R3</td>
+              <td><strong>#7 Sumeria</strong><span class='trophies'></span></td>
+              <td>Confidence=37.9, ML Win%=26.9%, Win Value=-6.5%</td>
+              <td>W3.00 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Warwick Farm R4</td>
+              <td><strong>#1 Rimbaud</strong><span class='trophies'></span></td>
+              <td>Confidence=39.2, ML Win%=33.9%, Win Value=1.7%</td>
+              <td>W3.20 / P1.33</td>
+            </tr>
+            
+            <tr>
+              <td>Warwick Farm R5</td>
+              <td><strong>#13 Superfabulistic</strong><span class='trophies'></span></td>
+              <td>Confidence=40.9, ML Win%=21.8%, Win Value=-13.9%</td>
+              <td>W2.90 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Warwick Farm R6</td>
+              <td><strong>#5 Supermassive</strong><span class='trophies'></span></td>
+              <td>Confidence=31.6, ML Win%=16.6%, Win Value=-21.9%</td>
+              <td>W2.60 / P1.40</td>
+            </tr>
+            
+            <tr>
+              <td>Warwick Farm R7</td>
+              <td><strong>#13 Loera</strong><span class='trophies'></span></td>
+              <td>Confidence=32.7, ML Win%=20.4%, Win Value=-9.9%</td>
+              <td>W3.30 / P1.53</td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+            </div>
+        </section>
+
+    <footer>
+      <p>☒ PuntingIQ Edge — Australia’s most disciplined, data-driven racing intelligence.</p>
+      <p class="muted">Notes: Odds are SP and indicative only and subject to change. We prioritise quality over quantity — no forced tips.</p>
+    </footer>
+  </div>
+</body>
+</html>

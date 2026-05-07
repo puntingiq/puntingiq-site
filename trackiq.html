@@ -6,6 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="TrackIQ — daily racing intelligence powered by the PuntingIQ intelligence layer." />
 
+  <script>
+    var o_options = {
+      domain: "puntingiq.outseta.com",
+      load: "auth,nocode",
+      auth: {
+        authenticationCallbackUrl: window.location.origin + "/api/auth/callback",
+        registrationConfirmationUrl: window.location.origin + "/products.html"
+      }
+    };
+  </script>
+  <script src="https://cdn.outseta.com/outseta.min.js" data-options="o_options" defer></script>
+
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* HERO */
@@ -108,6 +120,12 @@
       flex-wrap: wrap;
       gap: 12px;
       margin-bottom: 18px;
+    }
+
+    .access-actions button {
+      border: 0;
+      cursor: pointer;
+      font: inherit;
     }
 
     .access-meta {
@@ -236,12 +254,22 @@
         </p>
 
         <div class="access-actions">
-          <a href="/api/auth/login" class="btn-primary">Login With Outseta</a>
+          <button
+            type="button"
+            class="btn-primary"
+            data-o-anonymous
+            data-o-auth="1"
+            data-mode="popup"
+            data-widget-mode="login"
+          >
+            Login With Outseta
+          </button>
+          <a href="https://puntingiq.outseta.com/auth?widgetMode=login#o-anonymous" class="btn-primary" style="display:none;" aria-hidden="true">Login With Outseta</a>
           <a href="products.html" class="btn-ghost">View Membership Options</a>
         </div>
 
         <div class="access-meta">
-          <div><strong>How it works:</strong> After login, TrackIQ automatically redirects you to your correct subscription page.</div>
+          <div><strong>How it works:</strong> The Outseta login popup returns to the worker callback, which then redirects you to your correct TrackIQ subscription page.</div>
           <div><strong>Current routing:</strong> Starter, Value, and Pro members each land on separate protected TrackIQ pages.</div>
         </div>
 

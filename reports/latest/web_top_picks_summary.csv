@@ -1,54 +1,42 @@
 race,runner,odds,result,tier
-Devonport Tapeta Synthetic R1,#1 Don Turboas,W2.30 / P1.28,2,Bronze
-Devonport Tapeta Synthetic R2,#6 Party Day,W2.25 / P1.65,2,
-Devonport Tapeta Synthetic R3,#3 Khaleesi's Dream,W1.45 / P1.01,WON,Gold
-Devonport Tapeta Synthetic R4,#3 Ilovethistown,W5.50 / P1.50,6,
-Devonport Tapeta Synthetic R5,#5 Merlin Beach,W2.10 / P1.30,5,
-Devonport Tapeta Synthetic R6,#6 Respite,W5.00 / P1.70,7,
-Devonport Tapeta Synthetic R7,#7 Redair,W5.00 / P1.62,9,
-Devonport Tapeta Synthetic R8,#4 Lady Galadriel,W2.50 / P1.50,WON,Silver
-Dubbo R2,#4 Sutton Storm,W5.50 / P2.00,4,
-Dubbo R3,#2 Inyun,W3.60 / P1.65,WON,
-Dubbo R4,#11 Marinera,W1.35 / P1.20,2,Bronze
-Dubbo R5,#3 Kranich,W4.20 / P1.80,4,
-Dubbo R6,#8 Supreme Style,W3.40 / P1.88,WON,
-Dubbo R7,#6 Call Me Terry,W5.50 / P1.91,8,
-Northam R1,#7 Thor's Angel,W1.70 / P1.13,WON,Bronze
-Northam R2,#6 Shamister,W4.60 / P1.91,4,
-Northam R3,#7 Shimmery Star,W1.90 / P1.20,WON,Bronze
-Northam R4,#2 Now You See Me,W2.40 / P1.22,WON,
-Northam R5,#2 Jolson Al,W2.30 / P1.17,2,Bronze
-Northam R6,#2 Flaming Ronda,W2.40 / P1.25,3,
-Northam R7,#3 Rainline,W3.20 / P1.33,2,
-Northam R8,#7 Smooth Chino,W2.10 / P1.30,WON,Bronze
-Northam R9,#2 Herault,W3.10 / P1.35,WON,
-Rockhampton R1,#4 Ten Carat Lucy,W1.45 / P1.12,,
-Rockhampton R2,#1 Hello Punters,W2.50 / P1.40,,Bronze
-Rockhampton R3,#4 Turbo Torque,W2.70 / P1.30,,
-Rockhampton R4,#4 Sujeed,W2.70 / P1.35,,Bronze
-Rockhampton R5,#5 Sailor's Rum,W2.30 / P1.26,,
-Rockhampton R6,#12 Dream Smart,W3.30 / P1.60,,
-Rockhampton R7,#6 Yellow Brick,W3.80 / P1.70,,
-Rockhampton R8,#3 Divakara,W2.90 / P1.35,,
-Sale R1,#10 Thalestris,W1.90 / P1.28,WON,
-Sale R2,#11 Theatrical Queen,W4.20 / P1.40,4,
-Sale R3,#9 So You Excel,W3.00 / P1.40,WON,Bronze
-Sale R4,#2 Ballistic Romeo,W1.55 / P1.02,WON,Gold
-Sale R5,#2 Bit Of Shoosh,W3.90 / P1.40,WON,
-Sale R6,#2 Bear Champ,W2.30 / P1.25,109,
-Sale R7,#4 La Belle Grande,W7.00 / P2.80,2,
-Sale R8,#4 Cabriole,W1.45 / P1.20,WON,Silver
-Sapphire Coast R2,#4 Inchyra,W2.50 / P1.60,4,
-Sapphire Coast R3,#5 Christmas Star,W5.00 / P2.10,WON,
-Sapphire Coast R4,#5 Dawn On Me,W1.95 / P1.18,WON,Silver
-Sapphire Coast R5,#4 Timeless Grace,W2.80 / P1.30,2,
-Sapphire Coast R6,#1 Crudo,W3.10 / P1.55,5,
-Sapphire Coast R7,#6 Platinum Ridge,W3.40 / P1.30,6,
-Sportsbet-Wangaratta R1,#11 Inner Thoughts,W0.00 / P0.00,4,
-Sportsbet-Wangaratta R2,#1 Back Of The Boat,W0.00 / P0.00,7,
-Sportsbet-Wangaratta R3,#5 Saker Falcon,W0.00 / P0.00,109,
-Sportsbet-Wangaratta R4,#3 Salina Special,W0.00 / P0.00,3,
-Sportsbet-Wangaratta R5,#12 Parabellum,W0.00 / P0.00,2,
-Sportsbet-Wangaratta R6,#8 Queue Jumper,W0.00 / P0.00,7,
-Sportsbet-Wangaratta R7,#10 Loveofmylife,W0.00 / P0.00,8,
-Sportsbet-Wangaratta R8,#15 Brassi Road,W0.00 / P0.00,10,
+Ascot R1,#5 Show On The Road,W2.30 / P1.25,WON,
+Ascot R2,#1 Jimmy Angel,W1.55 / P1.17,WON,Silver
+Ascot R3,#4 Door Buster,W3.10 / P1.55,4,
+Ascot R4,#7 Last Stylebender,W2.30 / P1.45,WON,Bronze
+Ascot R5,#5 Free To Fly,W3.30 / P1.40,3,
+Ascot R6,#4 Hedawood,W3.10 / P1.40,2,
+Ascot R7,#11 Caporetto,W4.40 / P1.67,7,
+Eagle Farm R1,#10 Sword Of Legacy,W2.00 / P1.17,WON,
+Eagle Farm R2,#9 Pyrolysis,W2.00 / P1.17,WON,
+Eagle Farm R3,#11 Uncommon Daisy,W2.05 / P1.40,5,
+Eagle Farm R4,#4 The Thorncaster,W2.50 / P1.50,6,
+Eagle Farm R5,#3 Toby's Trusty,W2.40 / P1.57,4,
+Eagle Farm R6,#5 Valencia Roc,W4.40 / P1.90,WON,
+Eagle Farm R7,#3 Vein Girl,W3.90 / P1.50,8,
+Eagle Farm R8,#8 Thinkhardandfast,W3.80 / P1.57,8,
+Eagle Farm R9,#13 Miss Adrift,W4.80 / P1.73,8,
+Thomas Farms RC Murray Bridge R1,#3 Norheim,W4.80 / P1.40,WON,
+Thomas Farms RC Murray Bridge R2,#7 Forever A Diamond,W4.20 / P1.65,10,
+Thomas Farms RC Murray Bridge R3,#6 Green Summer,W4.60 / P1.67,4,
+Thomas Farms RC Murray Bridge R4,#9 Big Rita June,W3.00 / P1.57,3,
+Thomas Farms RC Murray Bridge R5,#1 Imamanzor,W2.60 / P1.35,WON,Bronze
+Thomas Farms RC Murray Bridge R6,#11 Liselle's Luck,W5.50 / P2.10,2,
+Thomas Farms RC Murray Bridge R7,#4 Head Of The Herd,W4.80 / P2.15,WON,
+Thomas Farms RC Murray Bridge R8,#6 Good Expectations,W3.50 / P1.40,WON,
+Warrnambool R1,#4 Magiconi,W2.00 / P1.67,2,
+Warrnambool R2,#11 Vieux Riche,W2.00 / P1.05,WON,Gold
+Warrnambool R3,#4 Kings Reflection,W2.10 / P1.28,WON,
+Warrnambool R4,#1 Point Nepean,W2.30 / P1.40,5,Silver
+Warrnambool R5,#6 Shoma,W1.90 / P1.14,WON,Bronze
+Warrnambool R6,#6 The Storyteller,W3.10 / P1.50,WON,
+Warrnambool R7,#14 Dantooine,W12.00 / P2.40,WON,
+Warrnambool R8,#14 Oliveanotherday,W2.80 / P1.25,WON,
+Warrnambool R9,#12 Du Clisson,W6.00 / P2.00,5,
+Warrnambool R10,#10 Inherently,W6.50 / P1.91,WON,
+Warwick Farm R1,#1 Graffiti Tycoon,W1.60 / P1.09,2,Silver
+Warwick Farm R2,#3 Celtic Spy,W4.00 / P1.33,3,
+Warwick Farm R3,#7 Sumeria,W4.20 / P1.35,5,
+Warwick Farm R4,#1 Rimbaud,W3.40 / P1.33,6,
+Warwick Farm R5,#13 Superfabulistic,W2.70 / P1.40,WON,
+Warwick Farm R6,#5 Supermassive,W3.00 / P1.40,5,
+Warwick Farm R7,#13 Loera,W2.35 / P1.60,WON,
