@@ -248,14 +248,20 @@
             type="button"
             class="btn-primary"
             id="trackiq-login-button"
+            data-o-anonymous
+            data-o-auth="1"
+            data-mode="popup"
+            data-widget-mode="login"
+            disabled
+            aria-disabled="true"
           >
-            Login
+            Loading secure login...
           </button>
           <a href="products.html" class="btn-ghost">View Membership Options</a>
         </div>
 
         <div class="access-meta">
-          <div><strong>How it works:</strong> The Outseta login popup returns to the worker callback, which then redirects you to your correct TrackIQ subscription page.</div>
+          <div><strong>How it works:</strong> Login opens in a secure popup, then redirects you to your correct TrackIQ subscription page.</div>
           <div><strong>Current routing:</strong> Starter, Value, and Pro members each land on separate protected TrackIQ pages.</div>
         </div>
 
@@ -310,7 +316,6 @@
   (function () {
     var authScriptPromise;
     var fallbackOrigin = "https://puntingiq.com.au";
-    var loginUrl = "https://puntingiq.outseta.com/auth?widgetMode=login#o-anonymous";
 
     function getSiteOrigin() {
       return window.location.protocol.indexOf("http") === 0 ? window.location.origin : fallbackOrigin;
@@ -327,18 +332,13 @@
       };
     }
 
-    function loadOutsetaAuth(button) {
+    function loadOutsetaAuth() {
       if (window.Outseta) {
         return Promise.resolve();
       }
 
       if (!authScriptPromise) {
         window.o_options = getOutsetaOptions();
-
-        button.setAttribute("data-o-anonymous", "");
-        button.setAttribute("data-o-auth", "1");
-        button.setAttribute("data-mode", "popup");
-        button.setAttribute("data-widget-mode", "login");
 
         authScriptPromise = new Promise(function (resolve, reject) {
           var settled = false;
@@ -347,7 +347,27 @@
               settled = true;
               reject(new Error("Outseta load timed out"));
             }
-          }, 4000);
+          }, 5000);
+
+          var existingScript = document.querySelector('script[src="https://cdn.outseta.com/outseta.min.js"]');
+          if (existingScript) {
+            existingScript.addEventListener("load", function () {
+              if (!settled) {
+                settled = true;
+                window.clearTimeout(timeoutId);
+                resolve();
+              }
+            }, { once: true });
+            existingScript.addEventListener("error", function () {
+              if (!settled) {
+                settled = true;
+                window.clearTimeout(timeoutId);
+                reject(new Error("Outseta failed to load"));
+              }
+            }, { once: true });
+            return;
+          }
+
           var script = document.createElement("script");
           script.src = "https://cdn.outseta.com/outseta.min.js";
           script.defer = true;
@@ -379,33 +399,25 @@
         return;
       }
 
-      var originalLabel = loginButton.textContent;
-
-      function handleLoginClick() {
-        if (window.Outseta) {
-          return;
-        }
-
-        loginButton.disabled = true;
-        loginButton.textContent = "Loading...";
-
-        loadOutsetaAuth(loginButton)
-          .then(function () {
-            loginButton.disabled = false;
-            loginButton.textContent = originalLabel;
-            loginButton.removeEventListener("click", handleLoginClick);
-            window.setTimeout(function () {
-              loginButton.click();
-            }, 250);
-          })
-          .catch(function () {
-            loginButton.disabled = false;
-            loginButton.textContent = originalLabel;
-            window.location.href = loginUrl;
-          });
+      function markReady() {
+        loginButton.disabled = false;
+        loginButton.removeAttribute("aria-disabled");
+        loginButton.textContent = "Login";
       }
 
-      loginButton.addEventListener("click", handleLoginClick);
+      function markUnavailable() {
+        loginButton.disabled = true;
+        loginButton.setAttribute("aria-disabled", "true");
+        loginButton.textContent = "Login unavailable";
+      }
+
+      loadOutsetaAuth()
+        .then(markReady)
+        .catch(markUnavailable);
+
+      if (window.Outseta) {
+        markReady();
+      }
     });
   })();
 </script>
