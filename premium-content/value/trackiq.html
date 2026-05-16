@@ -46,6 +46,15 @@
             margin-top: 56px;
         }
 
+        .viewer-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
         .viewer-title {
             font-size: 20px;
             letter-spacing: -0.02em;
@@ -70,15 +79,24 @@
 
         .viewer-frame {
             width: 100%;
-            height: 1300px;
+            min-height: 960px;
+            height: 960px;
             border: 0;
             display: block;
-            background: #ffffff;
+            background: transparent;
         }
 
         @media (max-width: 900px) {
-            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 20px;
+                margin-top: 32px;
+            }
             .hero-logo { margin: 0 auto; }
+            .viewer { margin-top: 32px; }
+            .viewer-toolbar { align-items: stretch; }
+            .viewer-frame { min-height: 74svh; }
         }
     </style>
 </head>
@@ -124,10 +142,15 @@
     </section>
 
     <section class="viewer" aria-label="Daily intelligence brief viewer">
-        <h2 class="viewer-title">Today’s TrackIQ Intelligence Brief</h2>
-        <p class="viewer-sub">
-            Live view of today’s generated brief for Value members.
-        </p>
+        <div class="viewer-toolbar">
+            <div>
+                <h2 class="viewer-title">Today’s TrackIQ Intelligence Brief</h2>
+                <p class="viewer-sub">
+                    Live view of today’s generated brief for Value members.
+                </p>
+            </div>
+            <a href="daily-intelligence.html" class="btn-ghost" target="_blank" rel="noopener noreferrer">Open full brief</a>
+        </div>
 
         <div class="viewer-frame-wrap">
             <iframe
@@ -154,5 +177,48 @@
 
 </div>
 </div>
+<script>
+    (function () {
+        function resizeViewerFrame() {
+            var frame = document.querySelector(".viewer-frame");
+            if (!frame) {
+                return;
+            }
+
+            try {
+                var doc = frame.contentDocument || frame.contentWindow.document;
+                if (!doc) {
+                    return;
+                }
+
+                var height = Math.max(
+                    doc.body ? doc.body.scrollHeight : 0,
+                    doc.documentElement ? doc.documentElement.scrollHeight : 0
+                );
+
+                if (height > 0) {
+                    frame.style.height = height + "px";
+                }
+            } catch (error) {
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var frame = document.querySelector(".viewer-frame");
+            if (!frame) {
+                return;
+            }
+
+            frame.addEventListener("load", function () {
+                resizeViewerFrame();
+                window.setTimeout(resizeViewerFrame, 180);
+            });
+
+            window.addEventListener("resize", function () {
+                window.requestAnimationFrame(resizeViewerFrame);
+            });
+        });
+    })();
+</script>
 </body>
 </html>

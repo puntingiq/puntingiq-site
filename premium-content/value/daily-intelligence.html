@@ -4,6 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PuntingIQ – Value Daily Intelligence Brief (2026-05-16)</title>
+    <script>
+      (function () {
+        if (window.self !== window.top) {
+          document.documentElement.classList.add("embedded-view");
+        }
+      })();
+    </script>
     <style>
     :root {
       --bg: #0b0f19;
@@ -60,10 +67,54 @@
     .logo-row { display:flex; align-items:center; gap:10px; justify-content:center; margin-top: 10px; }
     .logo-row img { width: 160px; max-width: 60vw; }
 
+    .embedded-view .header,
+    .embedded-view footer,
+    .embedded-view .banner,
+    .embedded-view .logo-row,
+    .embedded-view .title,
+    .embedded-view .subtitle {
+      display: none;
+    }
+
+    .embedded-view .wrap {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .embedded-view .hero {
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .embedded-view .meta {
+      margin: 0;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      text-align: center;
+    }
+
+    .embedded-view .grid {
+      margin-top: 14px;
+    }
+
+    .embedded-view .section:first-of-type {
+      margin-top: 0;
+    }
+
     details { border: 1px solid var(--line); background: rgba(0,0,0,0.18); border-radius: 16px; padding: 10px 12px; }
     summary { cursor:pointer; font-weight: 700; }
 
     footer { margin-top: 22px; color: var(--muted); font-size: 12px; text-align:center; }
+
+    @media (max-width: 900px) {
+      .embedded-view .meta {
+        padding: 12px 14px;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+    }
   </style>
 
     <link rel="stylesheet" href="../../css/style.css">
