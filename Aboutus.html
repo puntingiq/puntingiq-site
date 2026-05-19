@@ -69,9 +69,78 @@
     .brand-text-sub { font-size: 11px; color: var(--text-muted); }
 
     .nav { display: flex; align-items: center; gap: 18px; font-size: 13px; color: var(--text-muted); }
+    .nav summary { list-style: none; }
+    .nav summary::-webkit-details-marker { display: none; }
     .nav a { padding: 6px 10px; border-radius: 999px; transition: background 0.18s ease, color 0.18s ease; }
     .nav a:hover, .nav a:focus-visible { background: rgba(15,23,36,0.9); color: var(--text-main); outline: none; }
     .nav a.active { background: rgba(47,123,255,0.14); color: var(--text-main); }
+
+    .nav-more {
+      position: relative;
+    }
+
+    .nav-more-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(47,123,255,0.24);
+      background: rgba(15,23,36,0.88);
+      color: var(--text-main);
+      cursor: pointer;
+      transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+    }
+
+    .nav-more-toggle:hover,
+    .nav-more[open] .nav-more-toggle {
+      background: rgba(47,123,255,0.14);
+      border-color: rgba(47,123,255,0.45);
+    }
+
+    .nav-more-icon {
+      width: 14px;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .nav-more-icon span {
+      display: block;
+      width: 14px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+    }
+
+    .nav-more-label {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .nav-more-menu {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 10px);
+      min-width: 190px;
+      padding: 10px;
+      border-radius: 16px;
+      border: 1px solid rgba(47,123,255,0.24);
+      background: rgba(11,16,24,0.98);
+      box-shadow: var(--shadow-subtle);
+      display: grid;
+      gap: 4px;
+    }
+
+    .nav-more-menu a {
+      display: block;
+      padding: 9px 10px;
+      border-radius: 10px;
+    }
+
+    .nav-more-menu a:hover {
+      background: rgba(47,123,255,0.14);
+    }
 
     .nav-cta {
       padding: 7px 14px; border-radius: 999px;
@@ -637,7 +706,6 @@
 
     @media (max-width: 600px) {
       .shell { padding-inline: 16px; }
-      .nav { display: none; }
       .results-grid { grid-template-columns: minmax(0, 1fr); }
       .hero { margin-top: 28px; }
       .why-items { grid-template-columns: minmax(0, 1fr); }
@@ -665,12 +733,21 @@
   <nav class="nav">
     <a href="index.html">Home</a>
     <a href="trackiq.html">TrackIQ</a>
+    <a href="what-you-get.html">What You Get</a>
     <a href="results.html">Results</a>
-    <a href="Aboutus.html" class="active">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="help.html">Help</a>
-    <a href="https://puntingiq.outseta.com/profile#o-anonymous" target="_blank" rel="noopener noreferrer">Account</a>
     <a href="products.html">Products</a>
+    <details class="nav-more">
+      <summary class="nav-more-toggle" aria-label="Open more navigation">
+        <span class="nav-more-icon"><span></span><span></span><span></span></span>
+        <span class="nav-more-label">More</span>
+      </summary>
+      <div class="nav-more-menu">
+        <a href="Aboutus.html" class="active">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="help.html">Help</a>
+        <a href="https://puntingiq.outseta.com/profile#o-anonymous" target="_blank" rel="noopener noreferrer">Accounts</a>
+      </div>
+    </details>
     <button class="nav-cta" onclick="location.href='products.html'">Become a member</button>
   </nav>
 </header>
