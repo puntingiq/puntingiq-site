@@ -8,11 +8,25 @@
 
     <link rel="stylesheet" href="../../css/style.css">
     <style>
+        .banner {
+            width: 100%;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-subtle);
+            margin-top: 28px;
+        }
+
+        .banner img {
+            width: 100%;
+            display: block;
+        }
+
         .hero {
             display: grid;
             grid-template-columns: auto 1fr;
             gap: 32px;
-            margin-top: 56px;
+            margin-top: 32px;
             align-items: center;
         }
 
@@ -117,15 +131,28 @@
         <nav class="nav">
             <a href="../../index.html">Home</a>
             <a href="trackiq.html" class="active">TrackIQ</a>
+            <a href="../../what-you-get.html">What You Get</a>
             <a href="../../results.html">Results</a>
-            <a href="../../Aboutus.html">About Us</a>
-            <a href="../../contact.html">Contact Us</a>
-            <a href="../../help.html">Help</a>
-            <a href="https://puntingiq.outseta.com/profile#o-anonymous">Account</a>
             <a href="../../products.html">Products</a>
+            <details class="nav-more">
+                <summary class="nav-more-toggle" aria-label="Open more navigation">
+                    <span class="nav-more-icon"><span></span><span></span><span></span></span>
+                    <span class="nav-more-label">More</span>
+                </summary>
+                <div class="nav-more-menu">
+                    <a href="../../Aboutus.html">About Us</a>
+                    <a href="../../contact.html">Contact Us</a>
+                    <a href="../../help.html">Help</a>
+                    <a href="https://puntingiq.outseta.com/profile#o-anonymous" target="_blank" rel="noopener noreferrer">Accounts</a>
+                </div>
+            </details>
             <button class="nav-cta" onclick="location.href='../../products.html'">Become a member</button>
         </nav>
     </header>
+
+    <div class="banner">
+        <img src="../../assets/PuntingIQemailbanner.png" alt="PuntingIQ" />
+    </div>
 
     <section class="hero" aria-label="TrackIQ hero section">
         <img src="../../assets/TrackIQ logo 2.png" alt="TrackIQ Horse Head" class="hero-logo" />
