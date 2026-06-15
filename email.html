@@ -1,6 +1,19 @@
 <html>
   <body style="font-family: Arial, sans-serif; font-size: 14px; color: #222;">
 
+        <style>
+            a {
+                text-decoration: none;
+                color: #464feb;
+            }
+            tr th, tr td {
+                border: 1px solid #e6e6e6;
+            }
+            tr th {
+                background-color: #f5f5f5;
+            }
+        </style>
+
     <div style="text-align:center;">
 
       <!-- PuntingIQ Banner -->
@@ -33,6 +46,7 @@
 
             <div style="text-align:left; max-width:650px; margin:0 auto 16px auto;">
                 <p style="margin-top:0; margin-bottom:12px;">Hi {{CUSTOMER_NAME}},</p>
+                {{DAILY_SCRIPT_MESSAGE}}
                 {{PERSONAL_MESSAGE}}
             </div>
 
@@ -536,7 +550,7 @@
             </div>
 
             <p style="font-size:14px; margin-top:14px;">
-                <a href="https://puntingiq.com.au/" style="color:#0066cc; text-decoration:none;">
+                <a href="https://puntingiq.com.au/" style="color:#464feb; text-decoration:none;">
                     https://puntingiq.com.au/
                 </a>
             </p>
