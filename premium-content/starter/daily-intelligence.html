@@ -96,18 +96,18 @@
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+            gap: 8px;
             width: 100%;
-            max-width: 940px;
+            max-width: 900px;
             margin: 18px auto 0;
             justify-items: center;
         }
         .pill {
-            width: 104px;
-            min-height: 104px;
+            width: 92px;
+            min-height: 92px;
             border-radius: 999px;
-            padding: 12px;
+            padding: 10px;
             align-items: center;
             text-align: center;
             background: radial-gradient(circle at 30% 20%, rgba(110,231,255,0.18), rgba(11,15,25,0.96) 68%);
@@ -119,18 +119,21 @@
             color: rgba(255,255,255,0.72);
         }
         .pill .v {
-            margin-top: 7px;
-            font-size: 28px;
+            margin-top: 6px;
+            font-size: 24px;
             line-height: 1;
             color: #ffffff;
+        }
+        .section {
+            scroll-margin-top: 14px;
         }
         @media (max-width: 900px) {
             .header { margin-bottom: 20px; }
             .pill {
-                width: 98px;
-                min-height: 98px;
+                width: 88px;
+                min-height: 88px;
             }
-            .pill .v { font-size: 24px; }
+            .pill .v { font-size: 22px; }
         }
     </style>
     
@@ -214,6 +217,8 @@
 
         
 
+        
+
     <footer>
       <p>☒ PuntingIQ Edge — Australia’s most disciplined, data-driven racing intelligence.</p>
       <p class="muted">Notes: Odds are SP and indicative only and subject to change. We prioritise quality over quantity — no forced tips.</p>
@@ -236,6 +241,46 @@
 
 </div>
 </div>
+
+
+<script>
+    (function () {
+        function scrollToHash(hash) {
+            if (!hash || hash.charAt(0) !== '#') {
+                return;
+            }
+            var target = document.querySelector(hash);
+            if (!target) {
+                return;
+            }
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        document.addEventListener('click', function (event) {
+            var link = event.target.closest('a.pill[href^="#"]');
+            if (!link) {
+                return;
+            }
+            var hash = link.getAttribute('href');
+            if (!hash || hash === '#') {
+                return;
+            }
+            event.preventDefault();
+            scrollToHash(hash);
+            if (window.history && window.history.replaceState) {
+                window.history.replaceState(null, '', hash);
+            } else {
+                window.location.hash = hash;
+            }
+        });
+
+        if (window.location.hash) {
+            window.setTimeout(function () {
+                scrollToHash(window.location.hash);
+            }, 80);
+        }
+    })();
+</script>
 
 </body>
 </html>
