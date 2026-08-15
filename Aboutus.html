@@ -469,7 +469,7 @@
     /* RESULTS SECTION */
     .results-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
     }
 
@@ -477,9 +477,12 @@
       border-radius: var(--radius-md);
       background: var(--bg-elevated-soft);
       border: 1px solid var(--border-subtle);
-      padding: 12px 12px 10px;
+      padding: 16px 14px 14px;
       font-size: 11px;
       color: var(--text-muted);
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
       transition: border-color 0.2s ease, background 0.2s ease;
     }
 
@@ -505,7 +508,40 @@
 
     .result-note {
       font-size: 10px;
+      line-height: 1.55;
+    }
+
+    .result-card--wide { grid-column: span 2; }
+
+    .result-card--flagship {
+      border-color: rgba(56, 211, 159, 0.5);
+      background: rgba(7, 20, 19, 0.92);
+    }
+
+    .result-card--positive .result-value { color: #8af0be; }
+
+    .result-card--baseline {
+      background: rgba(10, 16, 26, 0.82);
+    }
+
+    .result-chip {
+      align-self: flex-start;
+      margin-top: auto;
+      padding-top: 12px;
+      font-size: 9px;
       line-height: 1.4;
+      color: var(--accent-green);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .result-card--baseline .result-chip { color: var(--text-muted); }
+
+    .result-period {
+      margin-top: 5px;
+      font-size: 9px;
+      line-height: 1.45;
+      color: var(--text-muted);
     }
 
     /* WHY SECTION */
@@ -612,6 +648,56 @@
       font-weight: 500;
     }
 
+    .product-card--featured {
+      border-color: rgba(56, 211, 159, 0.5);
+      background: rgba(7, 14, 17, 0.96);
+    }
+
+    .product-proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin: 12px 0;
+      padding: 10px 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .product-proof-item {
+      min-width: 0;
+      padding: 0 9px;
+    }
+
+    .product-proof-item:first-child { padding-left: 0; }
+    .product-proof-item + .product-proof-item { border-left: 1px solid var(--border-subtle); }
+
+    .product-proof-value {
+      font-size: 18px;
+      line-height: 1.2;
+      color: #f5f7ff;
+      font-weight: 600;
+    }
+
+    .product-proof-label {
+      margin-top: 3px;
+      font-size: 9px;
+      line-height: 1.35;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .product-disclaimer {
+      margin: 10px 0;
+      font-size: 9px;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+
+    a.product-cta {
+      display: inline-flex;
+      text-decoration: none;
+    }
+
     /* SUBSCRIPTION SECTION */
     .subscribe {
       border-radius: var(--radius-lg);
@@ -706,7 +792,10 @@
 
     @media (max-width: 600px) {
       .shell { padding-inline: 16px; }
+      .nav { gap: 0; }
+      .nav > a, .nav-cta { display: none; }
       .results-grid { grid-template-columns: minmax(0, 1fr); }
+      .result-card--wide { grid-column: span 1; }
       .hero { margin-top: 28px; }
       .why-items { grid-template-columns: minmax(0, 1fr); }
       .trackiq-table-header,
@@ -767,8 +856,7 @@
         <p class="hero-sub">
           PuntingIQ is a structured intelligence layer for racing – engineered data pipelines,
           system‑driven classifications, and <strong>TrackIQ</strong>, your daily racing intelligence brief.
-          Best & Elite Bets have delivered <strong>38 winners from 67 selections</strong>,
-          a <strong>56.7% WIN strike rate</strong> including winners at $31, $19, $18, $14, $11, $9, $8, $7.50, $6, $5.50 and $5.00.
+          <span id="aboutus-best-hero">Best Bets have delivered <strong>39 winners from 74 settled selections</strong>, a <strong>52.7% WIN strike rate</strong> and <strong>+202.03% flat-stake ROI</strong>.</span>
         </p>
 
         <div class="hero-ctas">
@@ -814,19 +902,19 @@
           <div class="metric-card">
             <div class="metric-label">
               <span>Strike rate</span>
-              <span class="metric-tag">Best & Elite Bets</span>
+              <span class="metric-tag">Best Bets</span>
             </div>
-            <div class="metric-value">49.50%</div>
-            <div class="metric-note">49 winners from 99 selections.</div>
+            <div class="metric-value" id="aboutus-best-strike-rate">52.7%</div>
+            <div class="metric-note" id="aboutus-best-snapshot-note">39 winners from 74 settled WIN bets.</div>
           </div>
 
           <div class="metric-card">
             <div class="metric-label">
-              <span>Since 11 May ROI</span>
-              <span class="metric-tag">System</span>
+              <span>Place ROI</span>
+              <span class="metric-tag">System Bets</span>
             </div>
-            <div class="metric-value">+19.74%</div>
-            <div class="metric-note">Structured, audited, repeatable logic.</div>
+            <div class="metric-value" id="aboutus-system-roi">-7.74%</div>
+            <div class="metric-note" id="aboutus-system-snapshot-note">484 settled bets at a flat $10 PLACE stake.</div>
           </div>
         </div>
 
@@ -880,9 +968,8 @@
           <div class="pillar-label">Repeatable edge</div>
           <h3 class="pillar-title">Systems that scale across tracks.</h3>
           <div class="pillar-body">
-            Best & Elite Bets have delivered a <strong>56.7% WIN strike rate</strong> (38 winners from 67),
-            including winners at <strong>$31, $19, $18, $14, $11, $9, $8, $7.50, $6, $5.50 and $5.00</strong>.
-            This is value‑driven edge, not favourites‑driven noise.
+            <span id="aboutus-best-pillar">Best Bets have delivered a <strong>52.7% WIN strike rate</strong> (39 winners from 74 settled bets) and <strong>+202.03% flat-stake ROI</strong>.</span>
+            This is value-driven edge, not favourites-driven noise.
           </div>
         </div>
 
@@ -905,8 +992,8 @@
         <div class="section-kicker">Results</div>
         <h2 class="section-title">Audited performance. No screenshots.</h2>
         <p class="section-sub">
-          PuntingIQ is built to be measured. System Bets, Best Bets, and Elite Bets are all tracked
-          through the same data layer – so performance can be audited, not cherry‑picked.
+          PuntingIQ is built to be measured. Every tracked category is shown with its full settled sample,
+          including any negative baseline – so performance can be audited, not cherry-picked.
         </p>
 
         <a href="results.html" class="results-link">
@@ -915,31 +1002,46 @@
       </div>
 
       <div class="results-grid">
-        <div class="result-card" style="display: flex; flex-direction: column; gap: 12px;">
-          <div style="border-radius: 12px; background: rgba(15,23,36,0.6); border: 1px solid #232b3a; padding: 14px 12px 10px; margin-bottom: 0;">
-            <div class="result-label">Best & Elite Bets</div>
-            <div class="result-value">+186.69% ROI</div>
-            <div class="result-note">High‑confidence, high‑edge selections.</div>
-          </div>
-          <div style="border-radius: 12px; background: rgba(15,23,36,0.6); border: 1px solid #232b3a; padding: 14px 12px 10px; margin-bottom: 0;">
-            <div class="result-label">Strike Rate – Best & Elite Bets</div>
-            <div class="result-value">49.50%</div>
-            <div class="result-note">49 winners from 99 selections.</div>
-          </div>
-        </div>
+        <article class="result-card result-card--flagship result-card--wide result-card--positive" id="aboutus-best-card">
+          <div class="result-label">Best Bets · WIN</div>
+          <div class="result-value" id="aboutus-best-roi">+202.03% ROI</div>
+          <div class="result-note" id="aboutus-best-note">39 winners from 74 settled bets · 52.7% WIN strike rate</div>
+          <div class="result-note" id="aboutus-best-profit">$2,990 profit from $1,480 staked at a flat $20 per bet.</div>
+          <div class="result-chip" id="aboutus-best-chip">Flagship recorded performance</div>
+          <div class="result-period" id="aboutus-best-period">13 December 2025 – 15 August 2026</div>
+        </article>
 
-        <div class="result-card" style="display: flex; flex-direction: column; gap: 12px;">
-          <div style="border-radius: 12px; background: rgba(15,23,36,0.6); border: 1px solid #232b3a; padding: 14px 12px 10px; margin-bottom: 0;">
-            <div class="result-label">System Bets & Place Bets</div>
-            <div class="result-value">+2.23% ROI</div>
-            <div class="result-note">Stable, rules‑based foundation.</div>
-          </div>
-          <div style="border-radius: 12px; background: rgba(15,23,36,0.6); border: 1px solid #232b3a; padding: 14px 12px 10px; margin-bottom: 0;">
-            <div class="result-label">Strike Rate – System & Place Bets</div>
-            <div class="result-value">55.16%</div>
-            <div class="result-note">Recent place prices: $12.00, $4.20, $3.60.</div>
-          </div>
-        </div>
+        <article class="result-card result-card--positive" id="aboutus-elite-card">
+          <div class="result-label">Elite Winners · WIN</div>
+          <div class="result-value" id="aboutus-elite-roi">+3.18% ROI</div>
+          <div class="result-note" id="aboutus-elite-note">15 winners from 34 settled selections · 44.12% strike rate</div>
+          <div class="result-chip" id="aboutus-elite-chip">Positive · early sample</div>
+          <div class="result-period" id="aboutus-elite-period">Recommended-unit staking · 27 March – 9 August 2026</div>
+        </article>
+
+        <article class="result-card result-card--positive" id="aboutus-place-card">
+          <div class="result-label">Place Bankers · PLACE</div>
+          <div class="result-value" id="aboutus-place-roi">+1.68% ROI</div>
+          <div class="result-note" id="aboutus-place-note">86 placers from 121 settled selections · 71.07% place strike rate</div>
+          <div class="result-chip" id="aboutus-place-chip">Positive tracked return</div>
+          <div class="result-period" id="aboutus-place-period">Recommended-unit staking · 26 March – 2 August 2026</div>
+        </article>
+
+        <article class="result-card result-card--positive" id="aboutus-value-card">
+          <div class="result-label">Value Edge · WIN</div>
+          <div class="result-value" id="aboutus-value-roi">+1.91% ROI</div>
+          <div class="result-note" id="aboutus-value-note">19 winners from 44 settled published selections · 43.18% strike rate</div>
+          <div class="result-chip" id="aboutus-value-chip">Positive published return</div>
+          <div class="result-period" id="aboutus-value-period">Recommended-unit staking · 19 June – 15 August 2026</div>
+        </article>
+
+        <article class="result-card result-card--baseline" id="aboutus-system-card">
+          <div class="result-label">System Bets · PLACE</div>
+          <div class="result-value" id="aboutus-system-card-roi">-7.74% ROI</div>
+          <div class="result-note" id="aboutus-system-note">255 placers from 484 settled $10 PLACE bets · 52.69% strike rate</div>
+          <div class="result-chip" id="aboutus-system-chip">Current transparent baseline</div>
+          <div class="result-period" id="aboutus-system-period">4 March – 15 August 2026 · Scratches and abandoned/no-market runners excluded</div>
+        </article>
       </div>
     </section>
 
@@ -992,7 +1094,7 @@
             </div>
             <div class="why-item good">
               <span aria-hidden="true"></span>
-              <div>A portfolio view of the day – System, Best, and Elite Bets with defined roles.</div>
+              <div>A portfolio view of the day – place-oriented System Bets and selective WIN-only Best Bets.</div>
             </div>
             <div class="why-item good">
               <span aria-hidden="true"></span>
@@ -1036,22 +1138,36 @@
 
         <article class="product-card">
           <div class="product-tag">System Bets</div>
-          <h3 class="product-title">Rules‑based foundation.</h3>
-          <div class="product-body">
-            Stable, explainable logic applied across tracks and conditions. Designed to be audited,
-            stress‑tested, and run as a long‑term engine – not a short‑term tipping stream.
-          </div>
-          <div class="product-cta">Runs daily across active tracks.</div>
+          <h3 class="product-title">Broader, rules-based PLACE selections.</h3>
+          <div class="product-body" id="aboutus-system-product-summary">Explainable logic applied across tracks and conditions for punters seeking broader daily coverage. The current record is 255 placers from 484 settled $10 PLACE bets: a 52.69% strike rate and -7.74% ROI. Every result is retained so members can judge the system on the full record.</div>
+          <div class="product-cta">Transparent results. Runs daily across active tracks.</div>
         </article>
 
-        <article class="product-card">
-          <div class="product-tag">Best & Elite Bets</div>
-          <h3 class="product-title">High‑confidence, high‑edge.</h3>
+        <article class="product-card product-card--featured">
+          <div class="product-tag">Best Bets</div>
+          <h3 class="product-title">Selective WIN bets. Every filter must agree.</h3>
           <div class="product-body">
-            Founder‑curated selections drawn from the full system universe – the highest‑conviction
-            opportunities, including winners at $31, $19, $18, $14, $11, $9 and more.
+            Best Bets are the runners that clear the engine's strictest form, weight, barrier, jockey,
+            trainer and tempo checks. They are WIN-only selections, published when the evidence aligns
+            rather than to fill a daily quota. Recorded winners include $31, $19, $18, $14 and $11.
           </div>
-          <div class="product-cta">Limited volume. Defined role.</div>
+          <div class="product-proof" aria-label="Best Bets recorded performance">
+            <div class="product-proof-item">
+              <div class="product-proof-value" id="aboutus-best-proof-record">39/74</div>
+              <div class="product-proof-label">Winners / settled bets</div>
+            </div>
+            <div class="product-proof-item">
+              <div class="product-proof-value" id="aboutus-best-proof-strike">52.7%</div>
+              <div class="product-proof-label">WIN strike rate</div>
+            </div>
+            <div class="product-proof-item">
+              <div class="product-proof-value" id="aboutus-best-proof-roi">+202.03%</div>
+              <div class="product-proof-label">Flat-stake ROI</div>
+            </div>
+          </div>
+          <div class="product-body" id="aboutus-best-product-summary">Across 74 settled bets, a flat $20 WIN stake produced $4,470 in returns from $1,480 staked: <strong>$2,990 recorded profit</strong>.</div>
+          <div class="product-disclaimer" id="aboutus-best-product-period">Recorded 13 December 2025 to 15 August 2026. Settled bets only, using captured selection-time win odds and a flat $20 stake. Past performance is not a guarantee of future results.</div>
+          <a class="product-cta" href="products.html">See membership options →</a>
         </article>
       </div>
     </section>
@@ -1062,8 +1178,8 @@
         <div class="subscribe-text">
           <h2 class="subscribe-title">Become a PuntingIQ member.</h2>
           <div class="subscribe-sub">
-            Access TrackIQ, System Bets, and founder‑curated Best & Elite Bets – all anchored to a single,
-            structured intelligence layer. No screenshots. No hype. Just a daily operating rhythm.
+            Access TrackIQ, place-oriented System Bets, and selective WIN-only Best Bets – all anchored
+            to a single, structured intelligence layer. No screenshots. No hype. Just a daily operating rhythm.
           </div>
         </div>
 
