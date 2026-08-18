@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T01:05:58",
+  "generated_at": "2026-08-19T01:06:26",
   "products": [
     {
       "name": "Best Bets",
@@ -26,16 +26,16 @@
       "staking": "Flat 1u ($10) per bet",
       "record_label": "Transparent recorded baseline",
       "unit_based": false,
-      "bets": 485,
+      "bets": 486,
       "successes": 255,
-      "stake": 4850.0,
+      "stake": 4860.0,
       "returns": 4465.5,
-      "profit": -384.5,
-      "net_units": -38.45,
-      "roi": -7.93,
-      "strike_rate": 52.58,
+      "profit": -394.5,
+      "net_units": -39.45,
+      "roi": -8.12,
+      "strike_rate": 52.47,
       "first_date": "2026-03-04",
-      "last_date": "2026-08-16"
+      "last_date": "2026-08-18"
     },
     {
       "name": "Elite Winners",
@@ -98,16 +98,16 @@
       "staking": "Recommended WIN units",
       "record_label": "Published win-only record",
       "unit_based": true,
-      "bets": 47,
-      "successes": 20,
-      "stake": 72.0,
-      "returns": 72.18,
-      "profit": 0.18,
+      "bets": 49,
+      "successes": 21,
+      "stake": 74.0,
+      "returns": 74.58,
+      "profit": 0.58,
       "net_units": null,
-      "roi": 0.25,
-      "strike_rate": 42.55,
+      "roi": 0.78,
+      "strike_rate": 42.86,
       "first_date": "2026-06-19",
-      "last_date": "2026-08-17"
+      "last_date": "2026-08-18"
     },
     {
       "name": "Value Hunt",
@@ -116,16 +116,16 @@
       "staking": "1u WIN + 1u PLACE (2u total)",
       "record_label": "Published each-way record",
       "unit_based": true,
-      "bets": 10,
+      "bets": 11,
       "successes": 8,
-      "stake": 20.0,
+      "stake": 22.0,
       "returns": 18.35,
-      "profit": -1.65,
+      "profit": -3.65,
       "net_units": null,
-      "roi": -8.25,
-      "strike_rate": 80.0,
+      "roi": -16.59,
+      "strike_rate": 72.73,
       "first_date": "2026-06-19",
-      "last_date": "2026-08-16"
+      "last_date": "2026-08-18"
     }
   ]
 }
