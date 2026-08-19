@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T01:06:26",
+  "generated_at": "2026-08-20T01:05:17",
   "products": [
     {
       "name": "Best Bets",
@@ -8,16 +8,16 @@
       "staking": "Flat 1u ($20) per bet",
       "record_label": "Flagship recorded performance",
       "unit_based": false,
-      "bets": 74,
+      "bets": 75,
       "successes": 39,
-      "stake": 1480.0,
+      "stake": 1500.0,
       "returns": 4470.0,
-      "profit": 2990.0,
-      "net_units": 149.5,
-      "roi": 202.03,
-      "strike_rate": 52.7,
+      "profit": 2970.0,
+      "net_units": 148.5,
+      "roi": 198.0,
+      "strike_rate": 52.0,
       "first_date": "2025-12-13",
-      "last_date": "2026-08-15"
+      "last_date": "2026-08-19"
     },
     {
       "name": "System Bets",
@@ -26,16 +26,16 @@
       "staking": "Flat 1u ($10) per bet",
       "record_label": "Transparent recorded baseline",
       "unit_based": false,
-      "bets": 486,
-      "successes": 255,
-      "stake": 4860.0,
-      "returns": 4465.5,
-      "profit": -394.5,
-      "net_units": -39.45,
-      "roi": -8.12,
-      "strike_rate": 52.47,
+      "bets": 494,
+      "successes": 260,
+      "stake": 4940.0,
+      "returns": 4536.5,
+      "profit": -403.5,
+      "net_units": -40.35,
+      "roi": -8.17,
+      "strike_rate": 52.63,
       "first_date": "2026-03-04",
-      "last_date": "2026-08-18"
+      "last_date": "2026-08-19"
     },
     {
       "name": "Elite Winners",
@@ -98,16 +98,16 @@
       "staking": "Recommended WIN units",
       "record_label": "Published win-only record",
       "unit_based": true,
-      "bets": 49,
+      "bets": 50,
       "successes": 21,
-      "stake": 74.0,
+      "stake": 76.0,
       "returns": 74.58,
-      "profit": 0.58,
+      "profit": -1.42,
       "net_units": null,
-      "roi": 0.78,
-      "strike_rate": 42.86,
+      "roi": -1.87,
+      "strike_rate": 42.0,
       "first_date": "2026-06-19",
-      "last_date": "2026-08-18"
+      "last_date": "2026-08-19"
     },
     {
       "name": "Value Hunt",
