@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T03:05:59",
+  "generated_at": "2026-08-25T01:05:56",
   "products": [
     {
       "name": "Best Bets",
@@ -62,16 +62,16 @@
       "staking": "Flat 1u ($10) per bet",
       "record_label": "Flat-stake place record",
       "unit_based": false,
-      "bets": 129,
+      "bets": 130,
       "successes": 94,
-      "stake": 1290.0,
+      "stake": 1300.0,
       "returns": 1349.3,
-      "profit": 59.3,
-      "net_units": 5.93,
-      "roi": 4.6,
-      "strike_rate": 72.87,
+      "profit": 49.3,
+      "net_units": 4.93,
+      "roi": 3.79,
+      "strike_rate": 72.31,
       "first_date": "2026-03-26",
-      "last_date": "2026-08-23"
+      "last_date": "2026-08-24"
     },
     {
       "name": "Top Picks",
@@ -80,16 +80,16 @@
       "staking": "Published units (flat 1u from 17 August 2026)",
       "record_label": "Published staking record",
       "unit_based": true,
-      "bets": 47,
+      "bets": 45,
       "successes": 23,
-      "stake": 68.0,
+      "stake": 66.0,
       "returns": 54.57,
-      "profit": -13.43,
+      "profit": -11.43,
       "net_units": null,
-      "roi": -19.75,
-      "strike_rate": 48.94,
+      "roi": -17.32,
+      "strike_rate": 51.11,
       "first_date": "2026-07-28",
-      "last_date": "2026-08-23"
+      "last_date": "2026-08-17"
     },
     {
       "name": "Value Edge",
