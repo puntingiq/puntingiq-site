@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T11:31:05",
+  "generated_at": "2026-08-28T01:06:06",
   "products": [
     {
       "name": "Best Bets",
@@ -26,16 +26,16 @@
       "staking": "Flat 1u ($10): PLACE when available, otherwise WIN",
       "record_label": "Recorded member staking rule",
       "unit_based": false,
-      "bets": 516,
-      "successes": 270,
-      "stake": 5160.0,
-      "returns": 4676.2,
-      "profit": -483.8,
-      "net_units": -48.38,
-      "roi": -9.38,
-      "strike_rate": 52.33,
+      "bets": 517,
+      "successes": 271,
+      "stake": 5170.0,
+      "returns": 4687.2,
+      "profit": -482.8,
+      "net_units": -48.28,
+      "roi": -9.34,
+      "strike_rate": 52.42,
       "first_date": "2026-03-04",
-      "last_date": "2026-08-25"
+      "last_date": "2026-08-27"
     },
     {
       "name": "Elite Winners",
@@ -62,16 +62,16 @@
       "staking": "Flat 1u ($10) per bet",
       "record_label": "Flat-stake place record",
       "unit_based": false,
-      "bets": 115,
+      "bets": 116,
       "successes": 80,
-      "stake": 1150.0,
+      "stake": 1160.0,
       "returns": 1202.1,
-      "profit": 52.1,
-      "net_units": 5.21,
-      "roi": 4.53,
-      "strike_rate": 69.57,
+      "profit": 42.1,
+      "net_units": 4.21,
+      "roi": 3.63,
+      "strike_rate": 68.97,
       "first_date": "2026-03-31",
-      "last_date": "2026-08-26"
+      "last_date": "2026-08-27"
     },
     {
       "name": "Top Picks",
