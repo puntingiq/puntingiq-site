@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T03:08:00",
+  "generated_at": "2026-08-30T01:30:03",
   "products": [
     {
       "name": "Best Bets",
@@ -8,16 +8,16 @@
       "staking": "Flat 1u ($20) per bet",
       "record_label": "Flagship recorded performance",
       "unit_based": false,
-      "bets": 77,
+      "bets": 80,
       "successes": 39,
-      "stake": 1540.0,
+      "stake": 1600.0,
       "returns": 4470.0,
-      "profit": 2930.0,
-      "net_units": 146.5,
-      "roi": 190.26,
-      "strike_rate": 50.65,
+      "profit": 2870.0,
+      "net_units": 143.5,
+      "roi": 179.38,
+      "strike_rate": 48.75,
       "first_date": "2025-12-13",
-      "last_date": "2026-08-22"
+      "last_date": "2026-08-29"
     },
     {
       "name": "System Bets",
@@ -26,16 +26,16 @@
       "staking": "Flat 1u ($10): PLACE when available, otherwise WIN",
       "record_label": "Recorded member staking rule",
       "unit_based": false,
-      "bets": 519,
-      "successes": 272,
-      "stake": 5190.0,
-      "returns": 4699.2,
-      "profit": -490.8,
-      "net_units": -49.08,
-      "roi": -9.46,
-      "strike_rate": 52.41,
+      "bets": 527,
+      "successes": 278,
+      "stake": 5270.0,
+      "returns": 4777.3,
+      "profit": -492.7,
+      "net_units": -49.27,
+      "roi": -9.35,
+      "strike_rate": 52.75,
       "first_date": "2026-03-04",
-      "last_date": "2026-08-28"
+      "last_date": "2026-08-29"
     },
     {
       "name": "Elite Winners",
@@ -62,16 +62,16 @@
       "staking": "Flat 1u ($10) per bet",
       "record_label": "Flat-stake place record",
       "unit_based": false,
-      "bets": 118,
-      "successes": 81,
-      "stake": 1180.0,
-      "returns": 1218.8,
-      "profit": 38.8,
-      "net_units": 3.88,
-      "roi": 3.29,
-      "strike_rate": 68.64,
+      "bets": 120,
+      "successes": 83,
+      "stake": 1200.0,
+      "returns": 1266.8,
+      "profit": 66.8,
+      "net_units": 6.68,
+      "roi": 5.57,
+      "strike_rate": 69.17,
       "first_date": "2026-03-31",
-      "last_date": "2026-08-28"
+      "last_date": "2026-08-29"
     },
     {
       "name": "Top Picks",
@@ -98,16 +98,16 @@
       "staking": "Recommended WIN units",
       "record_label": "Published win-only record",
       "unit_based": true,
-      "bets": 57,
-      "successes": 23,
-      "stake": 83.0,
-      "returns": 82.38,
-      "profit": -0.62,
+      "bets": 58,
+      "successes": 24,
+      "stake": 84.0,
+      "returns": 87.18,
+      "profit": 3.18,
       "net_units": null,
-      "roi": -0.75,
-      "strike_rate": 40.35,
+      "roi": 3.79,
+      "strike_rate": 41.38,
       "first_date": "2026-06-19",
-      "last_date": "2026-08-25"
+      "last_date": "2026-08-29"
     },
     {
       "name": "Value Hunt",
@@ -116,16 +116,16 @@
       "staking": "1u WIN + 1u PLACE (2u total)",
       "record_label": "Published each-way record",
       "unit_based": true,
-      "bets": 13,
-      "successes": 10,
-      "stake": 26.0,
-      "returns": 26.66,
-      "profit": 0.66,
+      "bets": 14,
+      "successes": 11,
+      "stake": 28.0,
+      "returns": 33.36,
+      "profit": 5.36,
       "net_units": null,
-      "roi": 2.54,
-      "strike_rate": 76.92,
+      "roi": 19.14,
+      "strike_rate": 78.57,
       "first_date": "2026-06-19",
-      "last_date": "2026-08-22"
+      "last_date": "2026-08-29"
     }
   ]
 }
