@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T03:06:52",
+  "generated_at": "2026-08-31T01:05:19",
   "products": [
     {
       "name": "Best Bets",
@@ -62,16 +62,16 @@
       "staking": "Flat 1u ($10) per bet",
       "record_label": "Flat-stake place record",
       "unit_based": false,
-      "bets": 120,
-      "successes": 83,
-      "stake": 1200.0,
-      "returns": 1266.8,
-      "profit": 66.8,
-      "net_units": 6.68,
-      "roi": 5.57,
-      "strike_rate": 69.17,
+      "bets": 122,
+      "successes": 85,
+      "stake": 1220.0,
+      "returns": 1297.0,
+      "profit": 77.0,
+      "net_units": 7.7,
+      "roi": 6.31,
+      "strike_rate": 69.67,
       "first_date": "2026-03-31",
-      "last_date": "2026-08-29"
+      "last_date": "2026-08-30"
     },
     {
       "name": "Top Picks",
