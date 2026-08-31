@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T09:56:08",
+  "generated_at": "2026-09-01T01:06:21",
   "products": [
     {
       "name": "Best Bets",
@@ -65,16 +65,16 @@
       "staking": "Flat 1u ($10) per bet",
       "record_label": "Current policy record",
       "unit_based": false,
-      "bets": 18,
+      "bets": 19,
       "successes": 15,
-      "stake": 180.0,
+      "stake": 190.0,
       "returns": 289.0,
-      "profit": 109.0,
-      "net_units": 10.9,
-      "roi": 60.56,
-      "strike_rate": 83.33,
+      "profit": 99.0,
+      "net_units": 9.9,
+      "roi": 52.11,
+      "strike_rate": 78.95,
       "first_date": "2026-08-20",
-      "last_date": "2026-08-30",
+      "last_date": "2026-08-31",
       "policy_start_date": "2026-08-20"
     },
     {
