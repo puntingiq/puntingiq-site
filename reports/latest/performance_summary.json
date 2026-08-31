@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-31T03:05:26",
+  "generated_at": "2026-08-31T09:56:08",
   "products": [
     {
       "name": "Best Bets",
       "bet_type": "WIN",
       "success_noun": "winners",
       "staking": "Flat 1u ($20) per bet",
-      "record_label": "Flagship recorded performance",
+      "record_label": "Current policy record",
       "unit_based": false,
       "bets": 80,
       "successes": 39,
@@ -17,32 +17,34 @@
       "roi": 179.38,
       "strike_rate": 48.75,
       "first_date": "2025-12-13",
-      "last_date": "2026-08-29"
+      "last_date": "2026-08-29",
+      "policy_start_date": "2025-12-13"
     },
     {
       "name": "System Bets",
       "bet_type": "PLACE / WIN",
       "success_noun": "successful bets",
       "staking": "Flat 1u ($10): PLACE when available, otherwise WIN",
-      "record_label": "Recorded member staking rule",
+      "record_label": "Current policy early sample",
       "unit_based": false,
-      "bets": 527,
-      "successes": 278,
-      "stake": 5270.0,
-      "returns": 4777.3,
-      "profit": -492.7,
-      "net_units": -49.27,
-      "roi": -9.35,
-      "strike_rate": 52.75,
-      "first_date": "2026-03-04",
-      "last_date": "2026-08-29"
+      "bets": 12,
+      "successes": 9,
+      "stake": 120.0,
+      "returns": 116.6,
+      "profit": -3.4,
+      "net_units": -0.34,
+      "roi": -2.83,
+      "strike_rate": 75.0,
+      "first_date": "2026-08-25",
+      "last_date": "2026-08-29",
+      "policy_start_date": "2026-08-24"
     },
     {
       "name": "Elite Winners",
       "bet_type": "WIN",
       "success_noun": "winners",
       "staking": "Recommended units",
-      "record_label": "Recommended-unit record",
+      "record_label": "Current policy record",
       "unit_based": true,
       "bets": 28,
       "successes": 12,
@@ -53,32 +55,34 @@
       "roi": 3.75,
       "strike_rate": 42.86,
       "first_date": "2026-04-03",
-      "last_date": "2026-08-09"
+      "last_date": "2026-08-09",
+      "policy_start_date": "2026-03-27"
     },
     {
       "name": "Place Bankers",
       "bet_type": "PLACE",
       "success_noun": "placers",
       "staking": "Flat 1u ($10) per bet",
-      "record_label": "Flat-stake place record",
+      "record_label": "Current policy record",
       "unit_based": false,
-      "bets": 122,
-      "successes": 85,
-      "stake": 1220.0,
-      "returns": 1297.0,
-      "profit": 77.0,
-      "net_units": 7.7,
-      "roi": 6.31,
-      "strike_rate": 69.67,
-      "first_date": "2026-03-31",
-      "last_date": "2026-08-30"
+      "bets": 18,
+      "successes": 15,
+      "stake": 180.0,
+      "returns": 289.0,
+      "profit": 109.0,
+      "net_units": 10.9,
+      "roi": 60.56,
+      "strike_rate": 83.33,
+      "first_date": "2026-08-20",
+      "last_date": "2026-08-30",
+      "policy_start_date": "2026-08-20"
     },
     {
       "name": "Top Picks",
       "bet_type": "WIN",
       "success_noun": "winners",
       "staking": "Published units (flat 1u from 17 August 2026)",
-      "record_label": "Published staking record",
+      "record_label": "Current policy record",
       "unit_based": true,
       "bets": 3,
       "successes": 1,
@@ -89,14 +93,15 @@
       "roi": 0.0,
       "strike_rate": 33.33,
       "first_date": "2026-08-17",
-      "last_date": "2026-08-25"
+      "last_date": "2026-08-25",
+      "policy_start_date": "2026-08-17"
     },
     {
       "name": "Value Edge",
       "bet_type": "WIN",
       "success_noun": "winners",
       "staking": "Recommended WIN units",
-      "record_label": "Published win-only record",
+      "record_label": "Current policy record",
       "unit_based": true,
       "bets": 58,
       "successes": 24,
@@ -107,14 +112,15 @@
       "roi": 3.79,
       "strike_rate": 41.38,
       "first_date": "2026-06-19",
-      "last_date": "2026-08-29"
+      "last_date": "2026-08-29",
+      "policy_start_date": "2026-06-15"
     },
     {
       "name": "Value Hunt",
       "bet_type": "EACH WAY",
       "success_noun": "placers",
       "staking": "1u WIN + 1u PLACE (2u total)",
-      "record_label": "Published each-way record",
+      "record_label": "Current policy record",
       "unit_based": true,
       "bets": 14,
       "successes": 11,
@@ -125,7 +131,8 @@
       "roi": 19.14,
       "strike_rate": 78.57,
       "first_date": "2026-06-19",
-      "last_date": "2026-08-29"
+      "last_date": "2026-08-29",
+      "policy_start_date": "2026-06-15"
     }
   ]
 }
