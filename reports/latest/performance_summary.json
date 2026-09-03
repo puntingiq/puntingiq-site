@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T03:05:38",
+  "generated_at": "2026-09-04T01:05:48",
   "products": [
     {
       "name": "Best Bets",
@@ -27,16 +27,16 @@
       "staking": "Flat 1u ($10): PLACE when available, otherwise WIN",
       "record_label": "Current policy early sample",
       "unit_based": false,
-      "bets": 17,
-      "successes": 14,
-      "stake": 170.0,
-      "returns": 175.1,
-      "profit": 5.1,
-      "net_units": 0.51,
-      "roi": 3.0,
-      "strike_rate": 82.35,
+      "bets": 19,
+      "successes": 16,
+      "stake": 190.0,
+      "returns": 199.4,
+      "profit": 9.4,
+      "net_units": 0.94,
+      "roi": 4.95,
+      "strike_rate": 84.21,
       "first_date": "2026-08-25",
-      "last_date": "2026-09-02",
+      "last_date": "2026-09-03",
       "policy_start_date": "2026-08-24"
     },
     {
