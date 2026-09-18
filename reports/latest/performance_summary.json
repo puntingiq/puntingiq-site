@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T01:09:04",
+  "generated_at": "2026-09-19T03:08:04",
   "products": [
     {
       "name": "Best Bets",
@@ -169,20 +169,20 @@
       "staking": "Flat 1u ($10) WIN",
       "record_label": "Live Trial",
       "unit_based": true,
-      "bets": 9,
+      "bets": 10,
       "successes": 4,
-      "stake": 9.0,
+      "stake": 10.0,
       "returns": 10.8,
-      "profit": 1.8,
+      "profit": 0.8,
       "net_units": null,
-      "roi": 20.0,
-      "strike_rate": 44.44,
+      "roi": 8.0,
+      "strike_rate": 40.0,
       "first_date": "2026-09-06",
-      "last_date": "2026-09-16",
+      "last_date": "2026-09-18",
       "policy_start_date": "2026-09-06",
-      "average_odds": 3.12,
-      "peak_drawdown": 3.0,
-      "current_losing_run": 1,
+      "average_odds": 3.05,
+      "peak_drawdown": 3.2,
+      "current_losing_run": 2,
       "download_path": "reports/latest/founders_premium_live_results.csv"
     }
   ]
