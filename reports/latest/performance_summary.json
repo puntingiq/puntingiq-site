@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T03:08:04",
+  "generated_at": "2026-09-19T09:46:38",
   "products": [
     {
       "name": "Best Bets",
@@ -22,7 +22,7 @@
       "average_odds": null,
       "peak_drawdown": null,
       "current_losing_run": null,
-      "download_path": null
+      "download_path": "reports/latest/best_bets_live_results.csv"
     },
     {
       "name": "System Bets",
@@ -45,7 +45,7 @@
       "average_odds": null,
       "peak_drawdown": null,
       "current_losing_run": null,
-      "download_path": null
+      "download_path": "reports/latest/system_bets_live_results.csv"
     },
     {
       "name": "Elite Winners",
@@ -68,7 +68,7 @@
       "average_odds": null,
       "peak_drawdown": null,
       "current_losing_run": null,
-      "download_path": null
+      "download_path": "reports/latest/elite_winners_live_results.csv"
     },
     {
       "name": "Place Bankers",
@@ -91,7 +91,7 @@
       "average_odds": null,
       "peak_drawdown": null,
       "current_losing_run": null,
-      "download_path": null
+      "download_path": "reports/latest/place_bankers_live_results.csv"
     },
     {
       "name": "Top Picks",
@@ -114,7 +114,7 @@
       "average_odds": null,
       "peak_drawdown": null,
       "current_losing_run": null,
-      "download_path": null
+      "download_path": "reports/latest/top_picks_live_results.csv"
     },
     {
       "name": "Value Edge",
@@ -137,7 +137,7 @@
       "average_odds": null,
       "peak_drawdown": null,
       "current_losing_run": null,
-      "download_path": null
+      "download_path": "reports/latest/value_edge_live_results.csv"
     },
     {
       "name": "Value Hunt",
@@ -160,7 +160,7 @@
       "average_odds": null,
       "peak_drawdown": null,
       "current_losing_run": null,
-      "download_path": null
+      "download_path": "reports/latest/value_hunt_live_results.csv"
     },
     {
       "name": "Founder's Premium",
