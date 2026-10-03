@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T03:08:42",
+  "generated_at": "2026-10-03T12:23:49",
   "products": [
     {
       "name": "Best Bets",
@@ -26,10 +26,10 @@
     },
     {
       "name": "System Bets",
-      "bet_type": "PLACE / WIN",
+      "bet_type": "PLACE / WIN \u2192 EACH WAY / WIN",
       "success_noun": "successful bets",
-      "staking": "Flat 1u ($10): PLACE when available, otherwise WIN; field-size place terms from 4 Sep 2026",
-      "record_label": "Current policy early sample",
+      "staking": "Historical 1u PLACE/WIN through 2 October 2026; from 3 October, 5u total: 1u WIN + 4u PLACE at place odds \u22651.25, otherwise 5u WIN",
+      "record_label": "Historical + current staking record",
       "unit_based": false,
       "bets": 58,
       "successes": 45,
