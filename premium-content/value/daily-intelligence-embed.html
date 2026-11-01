@@ -54,6 +54,8 @@
 
     .muted { color: var(--muted); }
     .trophies { margin-left: 6px; }
+    .runner-identity { display:flex; align-items:center; gap:10px; min-width:180px; }
+    .runner-silk { width:32px; height:36px; object-fit:contain; flex:0 0 auto; }
     .conviction { display:inline-block; margin-left:8px; padding:2px 8px; border-radius:999px; font-size:11px; font-weight:700; white-space:nowrap; }
     .conviction-founders-pick { background:linear-gradient(135deg, #c79a00, #8a6a00); color:#fff4bf; box-shadow:0 6px 18px rgba(138,106,0,0.28); }
     .conviction-founders-premium { background:#176b45; color:#fff; box-shadow:0 6px 18px rgba(23,107,69,0.24); }
@@ -153,8 +155,7 @@
             
             <tr>
               <td>Nowra R1</td>
-              <td><strong>#2 Cool As Ted</strong> <span class='muted'>(Barrier 1)</span><br>
-                  <span class='muted'>Jockey:</span> B.Loy <span class='muted'>| Trainer:</span> S.R.Collings</td>
+              <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/83660.png" alt="Cool As Ted silks" class="runner-silk" loading="lazy"><div><strong>#2 Cool As Ted</strong> <span class='muted'>(Barrier 1)</span><br><span class='muted'>Jockey:</span> B.Loy <span class='muted'>| Trainer:</span> S.R.Collings</div></div></td>
               <td><div>Form: 49-22</div><div>Track: 1:0-1-0</div><div>Distance: 3:0-2-1</div><div class='muted'>Comment: </div></td>
               <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
               <td>W1.60 / P1.13</td>
@@ -167,16 +168,16 @@
             </div>
         </section>
 
-        <section class="section" id="place-bankers">
+        <section class="section" id="trophy-horses">
             <div class="section-h">
                 <div>
-                    <h2>PLACE BANKERS (PLACE Product)</h2>
-                    <p>Place Bankers are temporarily suspended while we rework the AI over the weekend. No Place Banker selections or bets will be published during the suspension.</p>
+                    <h2>TROPHY HORSES</h2>
+                    <p>Place Bankers have been retired for now and replaced by Trophy Horses. Bronze: 1 unit PLACE when place odds are $1.25 or higher; Silver: 2 units PLACE when place odds are $1.25 or higher; Gold: 1 unit WIN on the nose. Bronze and Silver runners below $1.25 for the place are displayed with their trophy tier but are not recommended bets. The official live ledger starts prospectively on 2 November 2026.</p>
                 </div>
-                <div class="tag">Suspended</div>
+                <div class="tag">0 recommended bets</div>
             </div>
             <div class="content">
-                
+                <p class='muted'>No selections available.</p>
             </div>
         </section>
 
@@ -215,7 +216,7 @@
             
             <tr>
               <td>Albany R3</td>
-                            <td><strong>#1 Fantaxtic</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/150050.png" alt="Fantaxtic silks" class="runner-silk" loading="lazy"><div><strong>#1 Fantaxtic</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>40.8</div></td>
                             <td class='units-cell'><div class='units-value'>1</div></td>
               <td>Win Chance=35.2%, Executable Edge=14.4%<br>Place Chance=57.6%, Place Edge=14.1%</td>

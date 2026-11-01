@@ -54,6 +54,8 @@
 
     .muted { color: var(--muted); }
     .trophies { margin-left: 6px; }
+    .runner-identity { display:flex; align-items:center; gap:10px; min-width:180px; }
+    .runner-silk { width:32px; height:36px; object-fit:contain; flex:0 0 auto; }
     .conviction { display:inline-block; margin-left:8px; padding:2px 8px; border-radius:999px; font-size:11px; font-weight:700; white-space:nowrap; }
     .conviction-founders-pick { background:linear-gradient(135deg, #c79a00, #8a6a00); color:#fff4bf; box-shadow:0 6px 18px rgba(138,106,0,0.28); }
     .conviction-founders-premium { background:#176b45; color:#fff; box-shadow:0 6px 18px rgba(23,107,69,0.24); }
@@ -185,7 +187,7 @@
             <a href="#best-bets" class="pill"><div class="k">Best Bets</div><div class="v">0</div></a>
             
             <a href="#system-bets" class="pill"><div class="k">System Bets</div><div class="v">1</div></a>
-            <a href="#place-bankers" class="pill"><div class="k">Place Bankers</div><div class="v">0</div></a>
+            <a href="#trophy-horses" class="pill"><div class="k">Trophy Horses</div><div class="v">0</div></a>
             <a href="#value-edge" class="pill"><div class="k">Value Edge</div><div class="v">1</div></a>
             <a href="#value-hunt" class="pill"><div class="k">Value Hunt</div><div class="v">0</div></a>
             <a href="#top-picks" class="pill"><div class="k">Top Picks</div><div class="v">0</div></a>
@@ -232,8 +234,7 @@
             
             <tr>
               <td>Nowra R1</td>
-              <td><strong>#2 Cool As Ted</strong> <span class='muted'>(Barrier 1)</span><br>
-                  <span class='muted'>Jockey:</span> B.Loy <span class='muted'>| Trainer:</span> S.R.Collings</td>
+              <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/83660.png" alt="Cool As Ted silks" class="runner-silk" loading="lazy"><div><strong>#2 Cool As Ted</strong> <span class='muted'>(Barrier 1)</span><br><span class='muted'>Jockey:</span> B.Loy <span class='muted'>| Trainer:</span> S.R.Collings</div></div></td>
               <td><div>Form: 49-22</div><div>Track: 1:0-1-0</div><div>Distance: 3:0-2-1</div><div class='muted'>Comment: </div></td>
               <td><div>Tempo Profile: On‑Pace Early + Strong Late</div><div>Tempo Match: ✔ Ideal — Forward Early + Strong Late</div><div class='muted'>Tempo Risk: Low</div></td>
               <td>W1.60 / P1.13</td>
@@ -246,16 +247,16 @@
             </div>
         </section>
 
-        <section class="section" id="place-bankers">
+        <section class="section" id="trophy-horses">
             <div class="section-h">
                 <div>
-                    <h2>PLACE BANKERS (PLACE Product)</h2>
-                    <p>Place Bankers are temporarily suspended while we rework the AI over the weekend. No Place Banker selections or bets will be published during the suspension.</p>
+                    <h2>TROPHY HORSES</h2>
+                    <p>Place Bankers have been retired for now and replaced by Trophy Horses. Bronze: 1 unit PLACE when place odds are $1.25 or higher; Silver: 2 units PLACE when place odds are $1.25 or higher; Gold: 1 unit WIN on the nose. Bronze and Silver runners below $1.25 for the place are displayed with their trophy tier but are not recommended bets. The official live ledger starts prospectively on 2 November 2026.</p>
                 </div>
-                <div class="tag">Suspended</div>
+                <div class="tag">0 recommended bets</div>
             </div>
             <div class="content">
-                
+                <p class='muted'>No selections available.</p>
             </div>
         </section>
 
@@ -294,7 +295,7 @@
             
             <tr>
               <td>Albany R3</td>
-                            <td><strong>#1 Fantaxtic</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/150050.png" alt="Fantaxtic silks" class="runner-silk" loading="lazy"><div><strong>#1 Fantaxtic</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>40.8</div></td>
                             <td class='units-cell'><div class='units-value'>1</div></td>
               <td>Win Chance=35.2%, Executable Edge=14.4%<br>Place Chance=57.6%, Place Edge=14.1%</td>
@@ -358,7 +359,7 @@
             
             <tr>
               <td>Albany R1</td>
-                            <td><strong>#7 Sign Of The Times</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/29543.png" alt="Sign Of The Times silks" class="runner-silk" loading="lazy"><div><strong>#7 Sign Of The Times</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>44.0</div></td>
                             
               <td>Win Chance=35.5%, Executable Edge=-13.3%<br>Place Chance=69.5%, Place Edge=-13.8%</td>
@@ -367,7 +368,7 @@
             
             <tr>
               <td>Albany R2</td>
-                            <td><strong>#4 Beyond A Doubt</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/179685.png" alt="Beyond A Doubt silks" class="runner-silk" loading="lazy"><div><strong>#4 Beyond A Doubt</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>27.9</div></td>
                             
               <td>Win Chance=20.4%, Executable Edge=-48.5%<br>Place Chance=50.1%, Place Edge=-44.2%</td>
@@ -376,7 +377,7 @@
             
             <tr>
               <td>Albany R3</td>
-                            <td><strong>#1 Fantaxtic</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/150050.png" alt="Fantaxtic silks" class="runner-silk" loading="lazy"><div><strong>#1 Fantaxtic</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>40.8</div></td>
                             
               <td>Win Chance=35.2%, Executable Edge=14.4%<br>Place Chance=57.6%, Place Edge=14.1%</td>
@@ -385,7 +386,7 @@
             
             <tr>
               <td>Albany R4</td>
-                            <td><strong>#2 Nailed'em</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/1160.png" alt="Nailed&#x27;em silks" class="runner-silk" loading="lazy"><div><strong>#2 Nailed'em</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>41.7</div></td>
                             
               <td>Win Chance=35.3%, Executable Edge=-1.7%<br>Place Chance=60.7%, Place Edge=-18.6%</td>
@@ -394,7 +395,7 @@
             
             <tr>
               <td>Albany R5</td>
-                            <td><strong>#7 Beaumont Miss</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/14224.png" alt="Beaumont Miss silks" class="runner-silk" loading="lazy"><div><strong>#7 Beaumont Miss</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>35.5</div></td>
                             
               <td>Win Chance=31.7%, Executable Edge=20.6%<br>Place Chance=47.0%, Place Edge=5.3%</td>
@@ -403,7 +404,7 @@
             
             <tr>
               <td>Albany R6</td>
-                            <td><strong>#9 Desert Ora</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/188134.png" alt="Desert Ora silks" class="runner-silk" loading="lazy"><div><strong>#9 Desert Ora</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>34.1</div></td>
                             
               <td>Win Chance=30.6%, Executable Edge=-22.0%<br>Place Chance=44.7%, Place Edge=-40.8%</td>
@@ -412,7 +413,7 @@
             
             <tr>
               <td>Albany R7</td>
-                            <td><strong>#11 Kidding Me</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/180796.png" alt="Kidding Me silks" class="runner-silk" loading="lazy"><div><strong>#11 Kidding Me</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>24.4</div></td>
                             
               <td>Win Chance=20.1%, Executable Edge=13.0%<br>Place Chance=37.1%, Place Edge=9.3%</td>
@@ -421,7 +422,7 @@
             
             <tr>
               <td>Kilcoy R1</td>
-                            <td><strong>#6 Michifuku</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/208401.png" alt="Michifuku silks" class="runner-silk" loading="lazy"><div><strong>#6 Michifuku</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>19.6</div></td>
                             
               <td>Win Chance=16.7%, Executable Edge=0.0%<br>Place Chance=28.2%, Place Edge=0.0%</td>
@@ -430,7 +431,7 @@
             
             <tr>
               <td>Kilcoy R2</td>
-                            <td><strong>#0 Scartoon</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/193138.png" alt="Scartoon silks" class="runner-silk" loading="lazy"><div><strong>#0 Scartoon</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>21.4</div></td>
                             
               <td>Win Chance=21.3%, Executable Edge=0.0%<br>Place Chance=21.7%, Place Edge=0.0%</td>
@@ -439,7 +440,7 @@
             
             <tr>
               <td>Kilcoy R3</td>
-                            <td><strong>#0 Far Cry</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/206268.png" alt="Far Cry silks" class="runner-silk" loading="lazy"><div><strong>#0 Far Cry</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>18.3</div></td>
                             
               <td>Win Chance=14.0%, Executable Edge=0.0%<br>Place Chance=31.2%, Place Edge=0.0%</td>
@@ -448,7 +449,7 @@
             
             <tr>
               <td>Kilcoy R4</td>
-                            <td><strong>#0 Terrax</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/65335.png" alt="Terrax silks" class="runner-silk" loading="lazy"><div><strong>#0 Terrax</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>19.8</div></td>
                             
               <td>Win Chance=17.6%, Executable Edge=0.0%<br>Place Chance=26.5%, Place Edge=0.0%</td>
@@ -457,7 +458,7 @@
             
             <tr>
               <td>Kilcoy R5</td>
-                            <td><strong>#2 Final Voyage</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/135276.png" alt="Final Voyage silks" class="runner-silk" loading="lazy"><div><strong>#2 Final Voyage</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>19.7</div></td>
                             
               <td>Win Chance=16.7%, Executable Edge=0.0%<br>Place Chance=28.6%, Place Edge=0.0%</td>
@@ -466,7 +467,7 @@
             
             <tr>
               <td>Kilcoy R6</td>
-                            <td><strong>#0 Lettie's Lot</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/208723.png" alt="Lettie&#x27;s Lot silks" class="runner-silk" loading="lazy"><div><strong>#0 Lettie's Lot</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>34.8</div></td>
                             
               <td>Win Chance=36.5%, Executable Edge=0.0%<br>Place Chance=29.5%, Place Edge=0.0%</td>
@@ -475,7 +476,7 @@
             
             <tr>
               <td>Kilcoy R7</td>
-                            <td><strong>#5 Real Kiss</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/163957.png" alt="Real Kiss silks" class="runner-silk" loading="lazy"><div><strong>#5 Real Kiss</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>18.7</div></td>
                             
               <td>Win Chance=16.2%, Executable Edge=0.0%<br>Place Chance=26.1%, Place Edge=0.0%</td>
@@ -484,7 +485,7 @@
             
             <tr>
               <td>Mornington R1</td>
-                            <td><strong>#11 Star Je Taime</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/2350.png" alt="Star Je Taime silks" class="runner-silk" loading="lazy"><div><strong>#11 Star Je Taime</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>39.5</div></td>
                             
               <td>Win Chance=32.0%, Executable Edge=-26.8%<br>Place Chance=62.0%, Place Edge=-20.0%</td>
@@ -493,7 +494,7 @@
             
             <tr>
               <td>Mornington R2</td>
-                            <td><strong>#9 Oceans Blue</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/2350.png" alt="Oceans Blue silks" class="runner-silk" loading="lazy"><div><strong>#9 Oceans Blue</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>35.6</div></td>
                             
               <td>Win Chance=24.7%, Executable Edge=-34.1%<br>Place Chance=68.2%, Place Edge=-22.7%</td>
@@ -502,7 +503,7 @@
             
             <tr>
               <td>Mornington R3</td>
-                            <td><strong>#2 Buffalo Milk</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/70539.png" alt="Buffalo Milk silks" class="runner-silk" loading="lazy"><div><strong>#2 Buffalo Milk</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>19.2</div></td>
                             
               <td>Win Chance=9.7%, Executable Edge=7.7%<br>Place Chance=47.7%, Place Edge=38.4%</td>
@@ -511,7 +512,7 @@
             
             <tr>
               <td>Mornington R4</td>
-                            <td><strong>#6 Shalwedash</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/52323.png" alt="Shalwedash silks" class="runner-silk" loading="lazy"><div><strong>#6 Shalwedash</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>19.8</div></td>
                             
               <td>Win Chance=11.1%, Executable Edge=1.1%<br>Place Chance=46.0%, Place Edge=7.6%</td>
@@ -520,7 +521,7 @@
             
             <tr>
               <td>Mornington R5</td>
-                            <td><strong>#5 Invincible Lover</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/181958.png" alt="Invincible Lover silks" class="runner-silk" loading="lazy"><div><strong>#5 Invincible Lover</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>42.5</div></td>
                             
               <td>Win Chance=33.0%, Executable Edge=-7.0%<br>Place Chance=70.9%, Place Edge=1.9%</td>
@@ -529,7 +530,7 @@
             
             <tr>
               <td>Mornington R6</td>
-                            <td><strong>#5 Presser</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/186080.png" alt="Presser silks" class="runner-silk" loading="lazy"><div><strong>#5 Presser</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>31.5</div></td>
                             
               <td>Win Chance=21.9%, Executable Edge=1.0%<br>Place Chance=60.2%, Place Edge=16.7%</td>
@@ -538,7 +539,7 @@
             
             <tr>
               <td>Mornington R7</td>
-                            <td><strong>#3 Mickio</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/186265.png" alt="Mickio silks" class="runner-silk" loading="lazy"><div><strong>#3 Mickio</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>29.6</div></td>
                             
               <td>Win Chance=19.9%, Executable Edge=1.8%<br>Place Chance=58.5%, Place Edge=7.2%</td>
@@ -547,7 +548,7 @@
             
             <tr>
               <td>Mornington R8</td>
-                            <td><strong>#8 Sixty Grand</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/195037.png" alt="Sixty Grand silks" class="runner-silk" loading="lazy"><div><strong>#8 Sixty Grand</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>27.6</div></td>
                             
               <td>Win Chance=20.8%, Executable Edge=-1.9%<br>Place Chance=48.0%, Place Edge=-7.6%</td>
@@ -556,7 +557,7 @@
             
             <tr>
               <td>Mornington R9</td>
-                            <td><strong>#4 Master Of The Air</strong><span class='trophies'></span><span class='conviction conviction-founders-premium'>🏅 Founder's Premium</span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/179881.png" alt="Master Of The Air silks" class="runner-silk" loading="lazy"><div><strong>#4 Master Of The Air</strong><span class='trophies'></span><span class='conviction conviction-founders-premium'>🏅 Founder's Premium</span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>28.7</div></td>
                             
               <td>Win Chance=21.0%, Executable Edge=1.0%<br>Place Chance=51.9%, Place Edge=-8.8%</td>
@@ -565,7 +566,7 @@
             
             <tr>
               <td>Muswellbrook R1</td>
-                            <td><strong>#3 Rothfield</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/194143.png" alt="Rothfield silks" class="runner-silk" loading="lazy"><div><strong>#3 Rothfield</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>31.6</div></td>
                             
               <td>Win Chance=23.0%, Executable Edge=19.2%<br>Place Chance=57.3%, Place Edge=39.9%</td>
@@ -574,7 +575,7 @@
             
             <tr>
               <td>Muswellbrook R2</td>
-                            <td><strong>#15 Oakfield Kansas</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/160913.png" alt="Oakfield Kansas silks" class="runner-silk" loading="lazy"><div><strong>#15 Oakfield Kansas</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>24.8</div></td>
                             
               <td>Win Chance=15.5%, Executable Edge=6.4%<br>Place Chance=52.8%, Place Edge=17.1%</td>
@@ -583,7 +584,7 @@
             
             <tr>
               <td>Muswellbrook R3</td>
-                            <td><strong>#13 Sheer Shame</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/195342.png" alt="Sheer Shame silks" class="runner-silk" loading="lazy"><div><strong>#13 Sheer Shame</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>23.6</div></td>
                             
               <td>Win Chance=15.7%, Executable Edge=13.2%<br>Place Chance=47.2%, Place Edge=33.4%</td>
@@ -592,7 +593,7 @@
             
             <tr>
               <td>Muswellbrook R4</td>
-                            <td><strong>#11 Magic Storm</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/208375.png" alt="Magic Storm silks" class="runner-silk" loading="lazy"><div><strong>#11 Magic Storm</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>29.7</div></td>
                             
               <td>Win Chance=23.7%, Executable Edge=3.7%<br>Place Chance=47.8%, Place Edge=-9.3%</td>
@@ -601,7 +602,7 @@
             
             <tr>
               <td>Muswellbrook R5</td>
-                            <td><strong>#8 Blue Dane</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/12472.png" alt="Blue Dane silks" class="runner-silk" loading="lazy"><div><strong>#8 Blue Dane</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>28.1</div></td>
                             
               <td>Win Chance=19.8%, Executable Edge=-5.2%<br>Place Chance=53.1%, Place Edge=-7.5%</td>
@@ -610,7 +611,7 @@
             
             <tr>
               <td>Muswellbrook R6</td>
-                            <td><strong>#8 Chamber Of Secrets</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/129314.png" alt="Chamber Of Secrets silks" class="runner-silk" loading="lazy"><div><strong>#8 Chamber Of Secrets</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>21.3</div></td>
                             
               <td>Win Chance=16.5%, Executable Edge=-23.5%<br>Place Chance=35.8%, Place Edge=-41.2%</td>
@@ -619,7 +620,7 @@
             
             <tr>
               <td>Muswellbrook R7</td>
-                            <td><strong>#11 Velia</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/199023.png" alt="Velia silks" class="runner-silk" loading="lazy"><div><strong>#11 Velia</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>26.4</div></td>
                             
               <td>Win Chance=17.3%, Executable Edge=9.0%<br>Place Chance=53.7%, Place Edge=23.3%</td>
@@ -628,7 +629,7 @@
             
             <tr>
               <td>Naracoorte R1</td>
-                            <td><strong>#1 Arizona Wildfire</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/165235.png" alt="Arizona Wildfire silks" class="runner-silk" loading="lazy"><div><strong>#1 Arizona Wildfire</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>24.1</div></td>
                             
               <td>Win Chance=13.2%, Executable Edge=2.1%<br>Place Chance=56.9%, Place Edge=16.9%</td>
@@ -637,7 +638,7 @@
             
             <tr>
               <td>Naracoorte R2</td>
-                            <td><strong>#5 Shujinko</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/191427.png" alt="Shujinko silks" class="runner-silk" loading="lazy"><div><strong>#5 Shujinko</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>32.1</div></td>
                             
               <td>Win Chance=27.3%, Executable Edge=-13.5%<br>Place Chance=46.5%, Place Edge=-41.3%</td>
@@ -646,7 +647,7 @@
             
             <tr>
               <td>Naracoorte R3</td>
-                            <td><strong>#4 Magic Princess</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/174894.png" alt="Magic Princess silks" class="runner-silk" loading="lazy"><div><strong>#4 Magic Princess</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>21.7</div></td>
                             
               <td>Win Chance=20.8%, Executable Edge=6.5%<br>Place Chance=24.3%, Place Edge=-17.7%</td>
@@ -655,7 +656,7 @@
             
             <tr>
               <td>Naracoorte R4</td>
-                            <td><strong>#1 Exalted Fire</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/176367.png" alt="Exalted Fire silks" class="runner-silk" loading="lazy"><div><strong>#1 Exalted Fire</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>30.0</div></td>
                             
               <td>Win Chance=22.4%, Executable Edge=-5.4%<br>Place Chance=52.8%, Place Edge=-11.7%</td>
@@ -664,7 +665,7 @@
             
             <tr>
               <td>Naracoorte R5</td>
-                            <td><strong>#3 Streetcar Fury</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/2986.png" alt="Streetcar Fury silks" class="runner-silk" loading="lazy"><div><strong>#3 Streetcar Fury</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>28.9</div></td>
                             
               <td>Win Chance=20.8%, Executable Edge=-41.7%<br>Place Chance=53.4%, Place Edge=-39.2%</td>
@@ -673,7 +674,7 @@
             
             <tr>
               <td>Naracoorte R6</td>
-                            <td><strong>#6 Showtime Kistena</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/12131.png" alt="Showtime Kistena silks" class="runner-silk" loading="lazy"><div><strong>#6 Showtime Kistena</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>24.0</div></td>
                             
               <td>Win Chance=21.4%, Executable Edge=11.4%<br>Place Chance=31.5%, Place Edge=-0.7%</td>
@@ -682,7 +683,7 @@
             
             <tr>
               <td>Naracoorte R7</td>
-                            <td><strong>#3 Thermodynamic</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/133031.png" alt="Thermodynamic silks" class="runner-silk" loading="lazy"><div><strong>#3 Thermodynamic</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>20.1</div></td>
                             
               <td>Win Chance=12.8%, Executable Edge=-11.0%<br>Place Chance=42.2%, Place Edge=-17.7%</td>
@@ -691,7 +692,7 @@
             
             <tr>
               <td>Nowra R1</td>
-                            <td><strong>#2 Cool As Ted</strong><span class='trophies'></span><span class='conviction conviction-founders-pick'>🏅 Founder's Pick</span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/83660.png" alt="Cool As Ted silks" class="runner-silk" loading="lazy"><div><strong>#2 Cool As Ted</strong><span class='trophies'></span><span class='conviction conviction-founders-pick'>🏅 Founder's Pick</span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>45.9</div></td>
                             
               <td>Win Chance=37.0%, Executable Edge=-25.5%<br>Place Chance=72.7%, Place Edge=-15.8%</td>
@@ -700,7 +701,7 @@
             
             <tr>
               <td>Nowra R2</td>
-                            <td><strong>#5 Babyfaced Assassin</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/73364.png" alt="Babyfaced Assassin silks" class="runner-silk" loading="lazy"><div><strong>#5 Babyfaced Assassin</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>28.7</div></td>
                             
               <td>Win Chance=18.2%, Executable Edge=-3.6%<br>Place Chance=60.3%, Place Edge=-6.4%</td>
@@ -709,7 +710,7 @@
             
             <tr>
               <td>Nowra R3</td>
-                            <td><strong>#2 Kendalia</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/7266.png" alt="Kendalia silks" class="runner-silk" loading="lazy"><div><strong>#2 Kendalia</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>32.7</div></td>
                             
               <td>Win Chance=22.5%, Executable Edge=-4.5%<br>Place Chance=63.4%, Place Edge=0.9%</td>
@@ -718,7 +719,7 @@
             
             <tr>
               <td>Nowra R4</td>
-                            <td><strong>#6 Eternal Torment</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/91256.png" alt="Eternal Torment silks" class="runner-silk" loading="lazy"><div><strong>#6 Eternal Torment</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>30.7</div></td>
                             
               <td>Win Chance=24.0%, Executable Edge=7.3%<br>Place Chance=51.0%, Place Edge=5.6%</td>
@@ -727,7 +728,7 @@
             
             <tr>
               <td>Nowra R5</td>
-                            <td><strong>#7 Diamond Dice</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/197186.png" alt="Diamond Dice silks" class="runner-silk" loading="lazy"><div><strong>#7 Diamond Dice</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>26.7</div></td>
                             
               <td>Win Chance=18.5%, Executable Edge=-14.8%<br>Place Chance=51.4%, Place Edge=-22.7%</td>
@@ -736,7 +737,7 @@
             
             <tr>
               <td>Nowra R6</td>
-                            <td><strong>#4 Hey Jude</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/66347.png" alt="Hey Jude silks" class="runner-silk" loading="lazy"><div><strong>#4 Hey Jude</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>28.3</div></td>
                             
               <td>Win Chance=20.0%, Executable Edge=-30.0%<br>Place Chance=52.9%, Place Edge=-21.1%</td>
@@ -745,7 +746,7 @@
             
             <tr>
               <td>Nowra R7</td>
-                            <td><strong>#3 Cosmic Eagle</strong><span class='trophies'></span></td>
+                            <td><div class='runner-identity'><img src="https://cdn.silks.racing.com/bb/201738.png" alt="Cosmic Eagle silks" class="runner-silk" loading="lazy"><div><strong>#3 Cosmic Eagle</strong><span class='trophies'></span></div></div></td>
                             <td class='ai-confidence-cell'><div class='ai-confidence-value'>26.6</div></td>
                             
               <td>Win Chance=18.0%, Executable Edge=-20.5%<br>Place Chance=52.4%, Place Edge=-21.7%</td>

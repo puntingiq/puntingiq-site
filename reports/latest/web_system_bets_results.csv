@@ -1,9 +1,9 @@
-race,runner,odds,result,note
-Ascot R1,#3 I Love Ya Money,W2.60 / P1.25,WON,"Form, Distance, Track, Jockey, Trainer, Barrier, Tempo"
-Ascot R5,#11 Anaconda Jones,W2.60 / P1.30,6,"Form, Fit, Distance, Track, Jockey, Barrier, Tempo"
-Ascot R6,#1 Afireofgidgeecoals,W1.80 / P1.10,2,"Form, Fit, Distance, Track, Jockey, Trainer, Barrier, Tempo"
-Flemington R2,#1 Regal Ambition,W2.05 / P1.20,WON,"Form, Distance, Track, Jockey, Trainer, Barrier, Tempo"
-Ladbrokes Pioneer Park R1,#3 Millionaire Lover,W2.50 / P1.17,2,"Form, Fit, Distance, Track, Jockey, Trainer, Barrier, Tempo"
-Ladbrokes Pioneer Park R5,#2 Starton,W2.70 / P1.33,10,"Form, Distance, Track, Jockey, Trainer, Barrier, Tempo"
-Morphettville R5,#3 Extra Fling,W2.40 / P1.25,4,"Form, Fit, Distance, Track, Jockey, Trainer, Barrier, Tempo"
-Newcastle R4,#5 Imelda,W2.35 / P1.20,WON,"Form, Fit, Distance, Track, Jockey, Trainer, Barrier, Tempo"
+race,runner,odds,result,note,silk_url
+Ascot R1,#3 I Love Ya Money,W2.60 / P1.25,WON,"Form, Distance, Track, Jockey, Trainer, Barrier, Tempo",https://cdn.silks.racing.com/bb/93922.png
+Ascot R5,#11 Anaconda Jones,W2.60 / P1.30,6,"Form, Fit, Distance, Track, Jockey, Barrier, Tempo",https://cdn.silks.racing.com/bb/29543.png
+Ascot R6,#1 Afireofgidgeecoals,W1.80 / P1.10,2,"Form, Fit, Distance, Track, Jockey, Trainer, Barrier, Tempo",https://cdn.silks.racing.com/bb/6899.png
+Flemington R2,#1 Regal Ambition,W2.05 / P1.20,WON,"Form, Distance, Track, Jockey, Trainer, Barrier, Tempo",https://cdn.silks.racing.com/bb/196847.png
+Ladbrokes Pioneer Park R1,#3 Millionaire Lover,W2.50 / P1.17,2,"Form, Fit, Distance, Track, Jockey, Trainer, Barrier, Tempo",https://cdn.silks.racing.com/bb/93697.png
+Ladbrokes Pioneer Park R5,#2 Starton,W2.70 / P1.33,10,"Form, Distance, Track, Jockey, Trainer, Barrier, Tempo",https://cdn.silks.racing.com/bb/206539.png
+Morphettville R5,#3 Extra Fling,W2.40 / P1.25,4,"Form, Fit, Distance, Track, Jockey, Trainer, Barrier, Tempo",https://cdn.silks.racing.com/bb/76.png
+Newcastle R4,#5 Imelda,W2.35 / P1.20,WON,"Form, Fit, Distance, Track, Jockey, Trainer, Barrier, Tempo",https://cdn.silks.racing.com/bb/899.png

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T10:02:07",
+  "generated_at": "2026-11-01T21:28:16",
   "products": [
     {
       "name": "Best Bets",
@@ -71,27 +71,27 @@
       "download_path": "reports/latest/elite_winners_live_results.csv"
     },
     {
-      "name": "Place Bankers",
-      "bet_type": "PLACE",
-      "success_noun": "placers",
-      "staking": "Flat 1u ($10); field-size place terms from 4 Sep 2026",
-      "record_label": "Current policy record",
+      "name": "Trophy Horses",
+      "bet_type": "PLACE / WIN",
+      "success_noun": "successful bets",
+      "staking": "Bronze 1u PLACE and Silver 2u PLACE at odds \u22651.25; Gold 1u WIN",
+      "record_label": "Prospective live record",
       "unit_based": false,
-      "bets": 101,
-      "successes": 45,
-      "stake": 1010.0,
-      "returns": 846.0,
-      "profit": -164.0,
-      "net_units": -16.4,
-      "roi": -16.24,
-      "strike_rate": 44.55,
-      "first_date": "2026-08-20",
-      "last_date": "2026-10-28",
-      "policy_start_date": "2026-08-20",
+      "bets": 0,
+      "successes": 0,
+      "stake": 0.0,
+      "returns": 0.0,
+      "profit": 0.0,
+      "net_units": 0.0,
+      "roi": 0.0,
+      "strike_rate": 0.0,
+      "first_date": "2026-11-02",
+      "last_date": "2026-11-02",
+      "policy_start_date": "2026-11-02",
       "average_odds": null,
       "peak_drawdown": null,
       "current_losing_run": null,
-      "download_path": "reports/latest/place_bankers_live_results.csv"
+      "download_path": "reports/latest/trophy_horses_live_results.csv"
     },
     {
       "name": "Top Picks",
