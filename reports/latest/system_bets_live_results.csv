@@ -10,7 +10,6 @@ Date,Course,Race,Horse,Bet Type,Odds,Result,Stake Units,Return Units,Profit Unit
 2026-08-29,Eagle Farm,8,Polyglot,PLACE,1.33,Placed,1.00,1.33,0.33
 2026-08-29,Rosehill Gardens,3,Aethelwulf,PLACE,1.05,Placed,1.00,1.05,0.05
 2026-08-29,Rosehill Gardens,8,Blue Door,PLACE,1.20,Placed,1.00,1.20,0.20
-2026-08-29,Eagle Farm,3,Wrigley Field,PLACE,1.57,Lost,1.00,0.00,-1.00
 2026-09-01,Scone,1,The Cristal,PLACE,1.20,Placed,1.00,1.20,0.20
 2026-09-01,Scone,5,Magic Merlin,PLACE,1.30,Placed,1.00,1.30,0.30
 2026-09-02,Devonport Tapeta Synthetic,1,Azonto,PLACE,1.20,Placed,1.00,1.20,0.20
@@ -25,7 +24,7 @@ Date,Course,Race,Horse,Bet Type,Odds,Result,Stake Units,Return Units,Profit Unit
 2026-09-09,Belmont,4,Star Martini,PLACE,1.25,Placed,1.00,1.25,0.25
 2026-09-09,Devonport Tapeta Synthetic,1,Ozonica,PLACE,1.10,Lost,1.00,0.00,-1.00
 2026-09-09,Ipswich,5,Barrelling,PLACE,1.40,Lost,1.00,0.00,-1.00
-2026-09-10,Hawkesbury,5,Not On My Watch,PLACE,1.02,Placed,1.00,1.02,0.02
+2026-09-10,Hawkesbury,5,Not On My Watch,PLACE,1.13,Placed,1.00,1.13,0.13
 2026-09-11,Tuncurry,1,Zous Apollo,PLACE,1.25,Lost,1.00,0.00,-1.00
 2026-09-12,Doomben,6,Spiethtacular,PLACE,1.25,Placed,1.00,1.25,0.25
 2026-09-12,Flemington,9,Gold Coast Belle,PLACE,1.25,Lost,1.00,0.00,-1.00
@@ -57,13 +56,13 @@ Date,Course,Race,Horse,Bet Type,Odds,Result,Stake Units,Return Units,Profit Unit
 2026-09-30,Balaklava,3,Simply Sid,PLACE,1.25,Placed,1.00,1.25,0.25
 2026-09-30,Rosehill Gardens,3,Concrete Storm,PLACE,1.33,Placed,1.00,1.33,0.33
 2026-10-02,Launceston,5,Wolf Junior,PLACE,1.17,Placed,1.00,1.17,0.17
-2026-10-03,Eagle Farm,3,Global Eclipse,WIN,W 2.05 / P 1.20,Lost,5.00,0.00,-5.00
+2026-10-03,Eagle Farm,3,Global Eclipse,WIN,2.05,Lost,5.00,0.00,-5.00
 2026-10-03,Royal Randwick,1,Columbus,EACH WAY,W 2.90 / P 1.33,Placed,5.00,5.32,0.32
-2026-10-03,Royal Randwick,7,Aethelwulf,WIN,W 2.30 / P 1.20,Lost,5.00,0.00,-5.00
+2026-10-03,Royal Randwick,7,Aethelwulf,WIN,2.30,Lost,5.00,0.00,-5.00
 2026-10-04,Ladbrokes Pioneer Park,5,Mummsie,EACH WAY,W 2.05 / P 1.33,Placed,5.00,5.32,0.32
 2026-10-05,Warwick Farm,1,True Tone,EACH WAY,W 2.60 / P 1.30,Won & Placed,5.00,7.80,2.80
 2026-10-05,Warwick Farm,3,Millie De Lune,EACH WAY,W 2.80 / P 1.50,Won & Placed,5.00,8.80,3.80
-2026-10-07,Ladbrokes Geelong,3,Hedjet,WIN,W 1.85 / P 1.13,Won,5.00,9.25,4.25
+2026-10-07,Ladbrokes Geelong,3,Hedjet,WIN,1.85,Won,5.00,9.25,4.25
 2026-10-07,Ladbrokes Geelong,5,Turbo Saint,EACH WAY,W 2.90 / P 1.70,Placed,5.00,6.80,1.80
 2026-10-09,Launceston,7,Merlin Beach,EACH WAY,W 2.05 / P 1.30,Lost,5.00,0.00,-5.00
 2026-10-10,Ascot,2,Abissi,EACH WAY,W 2.70 / P 1.57,Won & Placed,5.00,8.98,3.98
@@ -73,55 +72,55 @@ Date,Course,Race,Horse,Bet Type,Odds,Result,Stake Units,Return Units,Profit Unit
 2026-10-10,Rosehill Gardens,10,Fierce,EACH WAY,W 2.35 / P 1.25,Won & Placed,5.00,7.35,2.35
 2026-10-11,Ladbrokes Cannon Park,3,Hot Digity Boom,EACH WAY,W 2.05 / P 1.33,Won & Placed,5.00,7.37,2.37
 2026-10-14,Caulfield,4,Leonchroi,EACH WAY,W 2.45 / P 1.30,Lost,5.00,0.00,-5.00
-2026-10-14,Eagle Farm,6,Monotone,WIN,W 1.60 / P 1.10,Lost,5.00,0.00,-5.00
+2026-10-14,Eagle Farm,6,Monotone,WIN,1.60,Lost,5.00,0.00,-5.00
 2026-10-14,Rosehill Gardens,1,Affari,EACH WAY,W 2.35 / P 1.25,Won & Placed,5.00,7.35,2.35
 2026-10-15,Northam,2,Star Martini,EACH WAY,W 2.70 / P 1.50,Won & Placed,5.00,8.70,3.70
 2026-10-16,Launceston,5,Fighting For Gold,EACH WAY,W 2.80 / P 1.30,Won & Placed,5.00,8.00,3.00
-2026-10-16,Launceston,8,Agadoo,WIN,W 1.90 / P 1.20,Won,5.00,9.50,4.50
+2026-10-16,Launceston,8,Agadoo,WIN,1.90,Won,5.00,9.50,4.50
 2026-10-17,Doomben,1,Apostle,EACH WAY,W 2.00 / P 1.25,Lost,5.00,0.00,-5.00
 2026-10-17,Doomben,2,Taravia,EACH WAY,W 2.80 / P 1.50,Placed,5.00,6.00,1.00
 2026-10-17,Newcastle,7,Oakfield Utah,EACH WAY,W 2.45 / P 1.30,Won & Placed,5.00,7.65,2.65
 2026-10-17,Wagga,5,Star Of Lily,EACH WAY,W 2.60 / P 1.30,Won & Placed,5.00,7.80,2.80
-2026-10-18,Horsham,1,Courting,WIN,W 1.85 / P 1.10,Lost,5.00,0.00,-5.00
+2026-10-18,Horsham,1,Courting,WIN,1.85,Lost,5.00,0.00,-5.00
 2026-10-18,Kalgoorlie,2,Hello Veneta,EACH WAY,W 2.20 / P 1.40,Lost,5.00,0.00,-5.00
 2026-10-21,Eagle Farm,1,Kalamia King,EACH WAY,W 2.70 / P 1.50,Lost,5.00,0.00,-5.00
 2026-10-23,Launceston,1,Vabuiagi,EACH WAY,W 2.70 / P 1.30,Won & Placed,5.00,7.90,2.90
-2026-10-23,Launceston,8,Eaglefurther,WIN,W 2.25 / P 1.40,Lost,5.00,0.00,-5.00
+2026-10-23,Launceston,8,Eaglefurther,EACH WAY,W 2.25 / P 1.40,Lost,5.00,0.00,-5.00
 2026-10-23,Southside Cranbourne,2,Killenaule,EACH WAY,W 2.80 / P 1.40,Won & Placed,5.00,8.40,3.40
-2026-10-23,Southside Cranbourne,4,Cashout,WIN,W 1.65 / P 1.05,Won,5.00,8.25,3.25
+2026-10-23,Southside Cranbourne,4,Cashout,WIN,1.65,Won,5.00,8.25,3.25
 2026-10-23,Southside Cranbourne,6,Headbanger,EACH WAY,W 2.90 / P 1.33,Lost,5.00,0.00,-5.00
 2026-10-24,Ascot,2,So Si God,EACH WAY,W 2.60 / P 1.30,Won & Placed,5.00,7.80,2.80
 2026-10-24,Eagle Farm,2,Taravia,EACH WAY,W 2.60 / P 1.33,Lost,5.00,0.00,-5.00
-2026-10-24,Flemington,5,Jigsaw,WIN,W 2.50 / P 1.20,Lost,5.00,0.00,-5.00
+2026-10-24,Flemington,5,Jigsaw,WIN,2.50,Lost,5.00,0.00,-5.00
 2026-10-24,Flemington,5,Extragalactic,EACH WAY,W 2.80 / P 1.30,Placed,5.00,5.20,0.20
 2026-10-24,Flemington,6,Surfin' Bird,EACH WAY,W 2.90 / P 1.40,Won & Placed,5.00,8.50,3.50
 2026-10-24,Royal Randwick,4,Ciaron's Star,EACH WAY,W 2.60 / P 1.50,Lost,5.00,0.00,-5.00
-2026-10-27,Rockhampton,2,Pulsating,WIN,W 1.40 / P 1.04,Lost,5.00,0.00,-5.00
+2026-10-27,Rockhampton,2,Pulsating,WIN,1.40,Lost,5.00,0.00,-5.00
 2026-10-27,Rockhampton,3,Metalcraft,EACH WAY,W 2.50 / P 1.50,Won & Placed,5.00,8.50,3.50
-2026-10-28,Belmont,1,One Last Resort,WIN,W 2.30 / P 1.20,Won,5.00,11.50,6.50
+2026-10-28,Belmont,1,One Last Resort,WIN,2.30,Won,5.00,11.50,6.50
 2026-10-28,Bendigo,1,Scoville,EACH WAY,W 2.50 / P 1.40,Lost,5.00,0.00,-5.00
-2026-10-29,Northam,1,Saisoku,WIN,W 1.50 / P 1.10,Won,5.00,7.50,2.50
-2026-10-30,Launceston,1,Sounds Of Peace,WIN,W 1.60 / P 1.10,Won,5.00,8.00,3.00
+2026-10-29,Northam,1,Saisoku,WIN,1.50,Won,5.00,7.50,2.50
+2026-10-30,Launceston,1,Sounds Of Peace,WIN,1.60,Won,5.00,8.00,3.00
 2026-10-30,Launceston,5,Novalargo,EACH WAY,W 2.25 / P 1.30,Placed,5.00,5.20,0.20
 2026-10-30,Launceston,6,Fighting For Gold,EACH WAY,W 2.35 / P 1.25,Placed,5.00,5.00,0.00
 2026-10-31,Ascot,1,I Love Ya Money,EACH WAY,W 2.60 / P 1.25,Won & Placed,5.00,7.60,2.60
 2026-10-31,Ascot,5,Anaconda Jones,EACH WAY,W 2.60 / P 1.30,Lost,5.00,0.00,-5.00
-2026-10-31,Ascot,6,Afireofgidgeecoals,WIN,W 1.80 / P 1.10,Lost,5.00,0.00,-5.00
-2026-10-31,Flemington,2,Regal Ambition,WIN,W 2.05 / P 1.20,Won,5.00,10.25,5.25
-2026-10-31,Ladbrokes Pioneer Park,1,Millionaire Lover,WIN,W 2.50 / P 1.17,Lost,5.00,0.00,-5.00
+2026-10-31,Ascot,6,Afireofgidgeecoals,WIN,1.80,Lost,5.00,0.00,-5.00
+2026-10-31,Flemington,2,Regal Ambition,WIN,2.05,Won,5.00,10.25,5.25
+2026-10-31,Ladbrokes Pioneer Park,1,Millionaire Lover,WIN,2.50,Lost,5.00,0.00,-5.00
 2026-10-31,Ladbrokes Pioneer Park,5,Starton,EACH WAY,W 2.70 / P 1.33,Lost,5.00,0.00,-5.00
 2026-10-31,Morphettville,5,Extra Fling,EACH WAY,W 2.40 / P 1.25,Lost,5.00,0.00,-5.00
-2026-10-31,Newcastle,4,Imelda,WIN,W 2.35 / P 1.20,Won,5.00,11.75,6.75
-2026-11-01,Nowra,1,Cool As Ted,WIN,W 1.60 / P 1.13,Won,5.00,8.00,3.00
+2026-10-31,Newcastle,4,Imelda,WIN,2.35,Won,5.00,11.75,6.75
+2026-11-01,Nowra,1,Cool As Ted,WIN,1.60,Won,5.00,8.00,3.00
 2026-11-02,Sportsbet-Ballarat,4,Best Terms,EACH WAY,W 2.35 / P 1.25,Lost,5.00,0.00,-5.00
-2026-11-03,Ascot,1,Official Business,WIN,W 2.00 / P 1.20,Lost,5.00,0.00,-5.00
-2026-11-03,Bunbury,4,Ruthless Bloom,WIN,W 2.15 / P 1.20,Lost,5.00,0.00,-5.00
-2026-11-03,Bunbury,5,South Hoba,WIN,W 2.35 / P 1.20,Lost,5.00,0.00,-5.00
-2026-11-03,Hobart,1,Native Clan,WIN,W 2.05 / P 1.30,Lost,5.00,0.00,-5.00
-2026-11-03,Muswellbrook,2,Costa Del Sol,WIN,W 1.30 / P 1.02,Won,5.00,6.50,1.50
+2026-11-03,Ascot,1,Official Business,WIN,2.00,Lost,5.00,0.00,-5.00
+2026-11-03,Bunbury,4,Ruthless Bloom,WIN,2.15,Lost,5.00,0.00,-5.00
+2026-11-03,Bunbury,5,South Hoba,WIN,2.35,Lost,5.00,0.00,-5.00
+2026-11-03,Hobart,1,Native Clan,EACH WAY,W 2.05 / P 1.30,Lost,5.00,0.00,-5.00
+2026-11-03,Muswellbrook,2,Costa Del Sol,WIN,1.30,Won,5.00,6.50,1.50
 2026-11-06,Gatton,1,Zandari,EACH WAY,W 2.80 / P 1.50,Won & Placed,5.00,8.80,3.80
-2026-11-07,Ascot,6,Beatty,WIN,W 1.70 / P 1.17,Won,5.00,8.50,3.50
-2026-11-07,Ascot,7,Ourgirlcanrun,WIN,W 1.80 / P 1.06,Won,5.00,9.00,4.00
+2026-11-07,Ascot,6,Beatty,WIN,1.70,Won,5.00,8.50,3.50
+2026-11-07,Ascot,7,Ourgirlcanrun,WIN,1.80,Won,5.00,9.00,4.00
 2026-11-07,Ladbrokes Pioneer Park,3,Tellez,EACH WAY,W 2.35 / P 1.40,Lost,5.00,0.00,-5.00
 2026-11-07,Morphettville Parks,5,Virtual Illusion,EACH WAY,W 2.15 / P 1.30,Lost,5.00,0.00,-5.00
 2026-11-07,Rosehill Gardens,9,Agatha,EACH WAY,W 2.90 / P 1.57,Won & Placed,5.00,9.18,4.18
