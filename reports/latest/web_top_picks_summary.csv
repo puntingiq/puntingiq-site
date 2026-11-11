@@ -1,17 +1,43 @@
 race,runner,odds,result,tier,silk_url
-Mornington R1,#9 Sentaloa,W2.60 / P1.28,5,,https://cdn.silks.racing.com/bb/210969.png
-Mornington R2,#4 Diamond Heist,W3.60 / P1.65,2,,https://cdn.silks.racing.com/bb/208796.png
-Mornington R3,#8 Pinamilloy,W2.30 / P1.20,2,,https://cdn.silks.racing.com/bb/100520.png
-Mornington R4,#9 Bliss Bomb,W3.70 / P1.60,4,,https://cdn.silks.racing.com/bb/183322.png
-Mornington R5,#10 Up And Under,W3.70 / P1.65,2,,https://cdn.silks.racing.com/bb/209277.png
-Mornington R6,#2 Just Remember It,W13.00 / P2.80,3,,https://cdn.silks.racing.com/bb/118463.png
-Mornington R7,#4 Two To Tango,W3.50 / P1.35,4,,https://cdn.silks.racing.com/bb/78980.png
-Mornington R8,#4 Our Pierro,W8.00 / P2.60,3,,https://cdn.silks.racing.com/bb/199467.png
-Queanbeyan R1,#7 Ulysses Blue,W3.20 / P1.50,WON,,https://cdn.silks.racing.com/bb/29814.png
-Queanbeyan R2,#6 Head Capitalist,W2.45 / P1.16,WON,,https://cdn.silks.racing.com/bb/173244.png
-Queanbeyan R3,#6 Hard Grunt,W3.70 / P2.00,WON,,https://cdn.silks.racing.com/bb/3239.png
-Queanbeyan R4,#6 Dirty Dani,W1.65 / P1.09,5,,https://cdn.silks.racing.com/bb/205609.png
-Queanbeyan R5,#1 Alabama Hammer,W3.00 / P1.40,WON,,https://cdn.silks.racing.com/bb/173591.png
-Queanbeyan R6,#4 Our Huntress,W5.00 / P2.35,5,,https://cdn.silks.racing.com/bb/306.png
-Queanbeyan R7,#4 On The Fly,W2.90 / P1.35,2,,https://cdn.silks.racing.com/bb/161345.png
-Queanbeyan R8,#8 Seaton Moon,W2.90 / P1.35,8,,https://cdn.silks.racing.com/bb/3241.png
+Balaklava R1,#6 Ludina,W1.26 / P1.07,WON,,https://cdn.silks.racing.com/bb/1189.png
+Balaklava R2,#4 Mean Mazzle,W2.70 / P1.30,3,,https://cdn.silks.racing.com/bb/39881.png
+Balaklava R3,#1 Four On The Floor,W4.60 / P2.25,5,,https://cdn.silks.racing.com/bb/127284.png
+Balaklava R4,#5 Exonumia,W6.50 / P2.00,2,,https://cdn.silks.racing.com/bb/154723.png
+Balaklava R5,#4 Chilli Reaper,W4.20 / P1.55,3,,https://cdn.silks.racing.com/bb/61195.png
+Balaklava R6,#6 Gruelling,W2.40 / P1.18,2,,https://cdn.silks.racing.com/bb/86874.png
+Belmont R1,#3 She's Capitana,W13.00 / P3.90,4,,https://cdn.silks.racing.com/bb/8768.png
+Belmont R2,#3 Luminous Lil,W4.40 / P1.40,WON,,https://cdn.silks.racing.com/bb/139385.png
+Belmont R3,#1 Don't Declare,W2.70 / P1.35,WON,,https://cdn.silks.racing.com/bb/142909.png
+Belmont R4,#10 Broda,W3.40 / P1.45,WON,,https://cdn.silks.racing.com/bb/141763.png
+Belmont R5,#1 Diamond Dancer,W9.50 / P2.25,3,,https://cdn.silks.racing.com/bb/186701.png
+Belmont R6,#4 Joyoh,W3.50 / P1.40,2,,https://cdn.silks.racing.com/bb/3631.png
+Belmont R7,#3 Barron Bill,W3.80 / P1.62,6,,https://cdn.silks.racing.com/bb/199193.png
+Eagle Farm R2,#2 Firebreak,W34.00 / P6.00,6,,https://cdn.silks.racing.com/bb/185762.png
+Eagle Farm R3,#3 Auric Star,W8.50 / P2.10,,,https://cdn.silks.racing.com/bb/176104.png
+Eagle Farm R4,#2 Castaway,W4.40 / P1.70,,,https://cdn.silks.racing.com/bb/41428.png
+Eagle Farm R5,#2 Mazis,W5.00 / P2.00,,,https://cdn.silks.racing.com/bb/200007.png
+Eagle Farm R6,#4 Diamantina Rose,W15.00 / P3.40,,,https://cdn.silks.racing.com/bb/94002.png
+Eagle Farm R7,#2 Keep It Real,W14.00 / P3.40,,,https://cdn.silks.racing.com/bb/207208.png
+Launceston R1,#4 Mr Tod,W4.40 / P1.80,6,,https://cdn.silks.racing.com/bb/93302.png
+Launceston R2,#6 Waltzing Matilda,W7.50 / P2.25,3,,https://cdn.silks.racing.com/bb/88289.png
+Launceston R3,#2 Mcveigh,W3.60 / P1.75,WON,Bronze,https://cdn.silks.racing.com/bb/147214.png
+Launceston R4,#1 Taroona,W6.50 / P3.00,2,,https://cdn.silks.racing.com/bb/111226.png
+Launceston R5,#1 Kakia,W3.90 / P1.55,8,,https://cdn.silks.racing.com/bb/203399.png
+Launceston R6,#9 Garcon D'espoir,W2.80 / P1.25,3,,https://cdn.silks.racing.com/bb/194279.png
+Launceston R7,#2 Summit,W2.05 / P1.16,WON,,https://cdn.silks.racing.com/bb/207506.png
+Launceston R8,#7 Little El,W1.75 / P1.12,WON,,https://cdn.silks.racing.com/bb/163049.png
+Sportsbet-Ballarat R1,#6 Gun City,W6.50 / P2.70,4,,https://cdn.silks.racing.com/bb/165984.png
+Sportsbet-Ballarat R2,#7 Lucifer's Girl,W5.50 / P1.65,6,,https://cdn.silks.racing.com/bb/151206.png
+Sportsbet-Ballarat R3,#6 Pretty Panther,W41.00 / P6.00,6,,https://cdn.silks.racing.com/bb/120461.png
+Sportsbet-Ballarat R4,#5 Tauri,W31.00 / P5.00,6,,https://cdn.silks.racing.com/bb/85759.png
+Sportsbet-Ballarat R5,#9 Lavancher,W11.00 / P2.60,4,,https://cdn.silks.racing.com/bb/185049.png
+Sportsbet-Ballarat R6,#5 Trebilco,W8.00 / P2.45,8,,https://cdn.silks.racing.com/bb/111628.png
+Sportsbet-Ballarat R7,#7 Aubaine,W4.80 / P1.65,4,,https://cdn.silks.racing.com/bb/177945.png
+Sportsbet-Ballarat R8,#3 Hook 'N' Spur,W7.50 / P2.40,4,,https://cdn.silks.racing.com/bb/186537.png
+Warwick Farm R1,#2 Bogey Free,W3.50 / P1.75,6,,https://cdn.silks.racing.com/bb/196813.png
+Warwick Farm R2,#5 Single Ladies,W4.40 / P1.60,3,,https://cdn.silks.racing.com/bb/3011.png
+Warwick Farm R3,#1 Priory Park,W1.45 / P1.12,WON,,https://cdn.silks.racing.com/bb/16818.png
+Warwick Farm R4,#3 Zonkstar,W4.20 / P2.05,6,,https://cdn.silks.racing.com/bb/36807.png
+Warwick Farm R5,#4 Shady Road,W2.80 / P1.40,2,,https://cdn.silks.racing.com/bb/193268.png
+Warwick Farm R6,#4 Bondi Blossom,W21.00 / P3.60,5,,https://cdn.silks.racing.com/bb/192420.png
+Warwick Farm R7,#2 Outta Line,W3.20 / P1.45,4,,https://cdn.silks.racing.com/bb/160731.png
