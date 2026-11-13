@@ -1,0 +1,98 @@
+.nr-dashboard{margin-top:36px;color:var(--text-main,#edf3ff)}
+.nr-dashboard [hidden]{display:none!important}
+.nr-dashboard button,.nr-dashboard select{font:inherit}
+.nr-dashboard button:focus-visible,.nr-dashboard select:focus-visible{outline:3px solid #76a9ff;outline-offset:3px}
+.nr-intro,.nr-toolbar,.nr-race-heading,.nr-pick-heading{display:flex;justify-content:space-between;align-items:center;gap:18px}
+.nr-intro h2{font-size:30px;letter-spacing:-1px;margin:6px 0}
+.nr-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1.3px;color:#99bfff}
+.nr-muted{color:#9baec7;font-size:12px;line-height:1.6}
+.nr-intro p{margin:5px 0 18px}
+.nr-refresh,.nr-next-button,.nr-tab{border:1px solid #45658f;border-radius:7px;background:#1a304f;color:#e5efff;padding:10px 14px;cursor:pointer;font-size:12px}
+.nr-dashboard button:disabled{opacity:.55;cursor:wait}
+.nr-toolbar{background:#101b2c;padding:16px;border:1px solid #2b3c55;border-radius:12px;margin:10px 0}
+.nr-toolbar label{display:grid;gap:6px;flex:1;font-size:11px;color:#a6bad4}
+.nr-select{background:#19283e;border:1px solid #3c5372;border-radius:6px;color:#edf3ff;padding:11px;min-width:0;width:100%;font-size:13px}
+.nr-next-label{display:block;color:#9baec7;font-size:10px;letter-spacing:1px;text-transform:uppercase;margin:16px 0 8px}
+.nr-next-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.nr-tab{background:#142135;border-color:#304662}
+.nr-tab-active{border-color:#82b4ff;color:#cbe1ff;background:#233e61}
+.nr-message,.nr-notice{border:1px solid #475874;background:#152236;padding:16px;border-radius:8px;color:#c1d0e5;font-size:13px}
+.nr-error{border-color:#8c6740;background:#302518;color:#f0d7b6}
+.nr-race{border:1px solid #354c6c;border-radius:14px;overflow:hidden;background:linear-gradient(140deg,#142238,#0e1725 65%);box-shadow:0 12px 40px #0002}
+.nr-race-heading{padding:24px}
+.nr-race-heading h3{font-size:27px;margin:7px 0;letter-spacing:-.7px}
+.nr-race-heading p{margin:0}
+.nr-clock{text-align:right;max-width:230px}
+.nr-clock small{display:block;color:#9baec7;font-size:10px}
+.nr-countdown{display:block;font-size:27px;font-variant-numeric:tabular-nums;line-height:1.3;margin:4px 0}
+.nr-freshness{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0 24px;padding:15px 0 18px;border-top:1px solid #293a52}
+.nr-freshness small{display:block;color:#8da4c2;text-transform:uppercase;letter-spacing:.7px;font-size:9px}
+.nr-freshness strong{display:block;font-weight:500;font-size:11px;margin-top:5px}
+.nr-market{padding:20px 24px;background:#0d1726;border-top:1px solid #293a52}
+.nr-dashboard h4{font-size:16px;margin:0 0 6px}
+.nr-market>p{margin:0 0 15px}
+.nr-market-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.nr-market-grid>.nr-notice{grid-column:1/-1}
+.nr-market-card{padding:13px;background:#152237;border:1px solid #2d405b;border-radius:10px;min-width:0}
+.nr-matched{background:linear-gradient(135deg,#203b5e,#152237);border-color:#4b6f9e}
+.nr-market-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.nr-price{font-size:23px;font-variant-numeric:tabular-nums;letter-spacing:-.6px}
+.nr-horse{display:flex;align-items:center;gap:10px;min-width:0}
+.nr-horse>div{min-width:0;overflow-wrap:anywhere}
+.nr-horse strong{display:block;font-size:13px}
+.nr-horse small{display:block;font-size:10px;margin-top:4px}
+.nr-silk,.nr-silk-placeholder{width:37px;height:40px;object-fit:contain;flex-shrink:0}
+.nr-silk-placeholder{display:grid;place-items:center;background:#243550;border-radius:6px;color:#becfe5;font-size:12px}
+.nr-market-card .nr-horse{margin:11px 0}
+.nr-market-profile{font-size:11px;color:#bdcfe7;margin:8px 0}
+.nr-system,.nr-overlap,.nr-shortlist{display:inline-block;font-size:9px;padding:4px 7px;border-radius:5px;margin:3px 4px 3px 0;line-height:1.4}
+.nr-system{color:#a1edc9;background:#173d32;border:1px solid #31644e}
+.nr-overlap{color:#c6dfff;background:#233f63;border:1px solid #4e77aa}
+.nr-shortlist{color:#adbed6;background:#1c293c;border:1px solid #35465e}
+.nr-pick-heading{padding:15px 24px;background:#192a41;border-top:1px solid #304762}
+.nr-pick-heading h4{margin:0}
+.nr-table-head,.nr-runner{display:grid;grid-template-columns:35px minmax(150px,1.3fr) 90px minmax(145px,1.15fr) minmax(130px,.8fr);gap:12px;padding:0 24px;align-items:center}
+.nr-table-head{min-height:40px;font-size:9px;color:#8fa6c3;text-transform:uppercase;letter-spacing:.6px}
+.nr-table-head span:last-child{text-align:right}
+.nr-runner{min-height:110px;border-top:1px solid #26384f;position:relative;padding-top:15px;padding-bottom:15px}
+.nr-tip{background:linear-gradient(90deg,#153b3060,transparent 80%)}
+.nr-tip:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#62dca8}
+.nr-rank{color:#8ea6c5;font-size:18px;font-weight:650}
+.nr-probability{font-size:21px}
+.nr-advice{display:block;color:#91d9b8;font-size:10px;line-height:1.6}
+.nr-runner-systems>.nr-muted,.nr-runner-price small{display:block;font-size:10px}
+.nr-runner-price{text-align:right}
+.nr-runner-price .nr-price{font-size:21px}
+.nr-other-selections{padding:17px 24px;border-top:1px solid #293d57}
+.nr-other-selections summary{cursor:pointer;font-size:12px;color:#c1d6f1}
+.nr-other-selections>div{padding-top:12px}
+.nr-other-selections strong{font-size:13px}
+.nr-footer{border-top:1px solid #293a52;padding:15px 24px;font-size:11px;color:#8ea4c0;line-height:1.7;margin:0;background:#0b1421}
+@media(max-width:850px){
+.nr-market-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.nr-table-head{display:none}
+.nr-runner{grid-template-columns:25px minmax(0,1fr) 110px;gap:10px;padding:16px}
+.nr-rank{grid-column:1;grid-row:1}
+.nr-runner>.nr-horse{grid-column:2;grid-row:1}
+.nr-runner-price{grid-column:3;grid-row:1}
+.nr-runner-systems{grid-column:2;grid-row:2}
+.nr-probability{grid-column:3;grid-row:2;text-align:right;font-size:17px}
+.nr-probability:after{content:" win";font-size:10px;color:#9baec7}
+.nr-freshness{margin:0 16px}
+.nr-pick-heading{padding:14px 16px;align-items:start;flex-direction:column;gap:3px}
+}
+@media(max-width:520px){
+.nr-intro{align-items:start;gap:12px}
+.nr-intro h2{font-size:26px}
+.nr-refresh{padding:8px 10px}
+.nr-toolbar{align-items:stretch;flex-direction:column;padding:13px}
+.nr-race-heading{padding:20px 16px;gap:10px}
+.nr-race-heading h3{font-size:23px}
+.nr-clock{max-width:130px}
+.nr-countdown{font-size:20px}
+.nr-freshness{grid-template-columns:1fr;gap:12px}
+.nr-market{padding:17px 16px}
+.nr-market-grid{grid-template-columns:1fr}
+.nr-footer{padding:15px 16px}
+.nr-next-button{align-self:start}
+}

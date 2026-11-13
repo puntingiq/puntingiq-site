@@ -7,6 +7,8 @@
     <meta name="description" content="TrackIQ — daily racing intelligence powered by the PuntingIQ intelligence layer." />
 
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../assets/next-race.css?v=1794528080838473500">
+    <script type="module" src="../../assets/next-race.mjs?v=1794528080838473500"></script>
     <style>
         .hero {
             display: grid;
@@ -141,6 +143,27 @@
         </div>
     </section>
 
+
+    <section id="next-race-dashboard" class="nr-dashboard" aria-label="TrackIQ Next Race"
+             data-daily-url="next-race-data.json" data-live-url="next-race-live.json">
+        <div class="nr-intro">
+            <div><span class="nr-eyebrow">TrackIQ Pro · PuntersEdge live market</span>
+                <h2>Next Race</h2>
+                <p class="nr-muted">Your TrackIQ rankings, published selections and the market, side by side.</p></div>
+            <button type="button" class="nr-refresh">Refresh</button>
+        </div>
+        <p class="nr-message" role="status" aria-live="polite">Loading today's verified race data...</p>
+        <noscript><p class="nr-notice">Enable JavaScript for the live dashboard. The full daily brief remains available below.</p></noscript>
+        <div class="nr-content" hidden>
+            <div class="nr-toolbar">
+                <label>Choose an upcoming race<select class="nr-select" aria-label="Choose an upcoming race"></select></label>
+                <button type="button" class="nr-next-button">Go to next race</button>
+            </div>
+            <span class="nr-next-label">Next to jump</span>
+            <div class="nr-next-tabs" aria-label="Next races"></div>
+            <div class="nr-race"></div>
+        </div>
+    </section>
     <section class="viewer" aria-label="Daily intelligence brief viewer">
         <div class="viewer-toolbar">
             <div>
