@@ -81,6 +81,15 @@ export function createDashboard(daily, feed, now = Date.now()) {
   return { races, upcoming, next };
 }
 
+export function resolveSelectedRace(dashboard, selectedId, previousUpcoming = []) {
+  if (dashboard.races.some(race => race.id === selectedId)) return selectedId;
+  const previousIndex = previousUpcoming.findIndex(race => race.id === selectedId);
+  const successor = previousIndex < 0 ? null :
+    previousUpcoming.slice(previousIndex + 1).find(race =>
+      dashboard.upcoming.some(upcoming => upcoming.id === race.id));
+  return successor?.id || dashboard.upcoming[0]?.id || null;
+}
+
 function node(tag, className = "", text) {
   const item = document.createElement(tag);
   if (className) item.className = className;
@@ -357,8 +366,9 @@ export function mountDashboard(root) {
   }
 
   function render() {
+    const previousUpcoming = dashboard?.upcoming || [];
     dashboard = createDashboard(daily, feed);
-    if (selectedId === null) selectedId = dashboard.upcoming[0]?.id || null;
+    selectedId = resolveSelectedRace(dashboard, selectedId, previousUpcoming);
     select.replaceChildren();
     const choices = [...dashboard.upcoming];
     const current = dashboard.races.find(race => race.id === selectedId);
