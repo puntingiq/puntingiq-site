@@ -49,6 +49,20 @@ export function mergeRace(saved, live, now, maxQuoteAge = 900) {
   };
 }
 
+function venueFamily(key) {
+  return ({ sandownhillside: "sandown", sandownlakeside: "sandown",
+    morphettvilleparks: "morphettville" })[key] || key;
+}
+
+function matchesVenueField(saved, live) {
+  if (saved.number !== live.number || venueFamily(saved.venue_key) !== venueFamily(live.venue_key)) return false;
+  const locals = new Map(saved.runners.map(runner => [runner.number, runner.name_key]));
+  const supplied = new Map([...live.runners, ...(live.scratchings || [])]
+    .map(runner => [runner.number, runner.name_key]));
+  return saved.runners.every(runner => supplied.get(runner.number) === runner.name_key) &&
+    live.runners.every(runner => locals.get(runner.number) === runner.name_key);
+}
+
 export function createDashboard(daily, feed, now = Date.now()) {
   const today = businessDate(now);
   if (daily.schema_version !== 1 || feed.schema_version !== 1 ||
@@ -65,10 +79,16 @@ export function createDashboard(daily, feed, now = Date.now()) {
   const liveMap = new Map();
   const savedKeys = new Set(daily.races.map(race => `${race.venue_key}:${race.number}`));
   for (const race of feed.races) {
-    const key = `${race.venue_key}:${race.number}`;
+    let matched = race;
+    let key = `${race.venue_key}:${race.number}`;
+    if (!savedKeys.has(key)) {
+      const candidates = daily.races.filter(saved => matchesVenueField(saved, race));
+      if (candidates.length !== 1) throw new Error("Today's TrackIQ export does not cover all live races. Please contact Support.");
+      matched = { ...race, venue_key: candidates[0].venue_key };
+      key = `${matched.venue_key}:${matched.number}`;
+    }
     if (liveMap.has(key)) throw new Error("Conflicting live races; the dashboard needs a data refresh.");
-    if (!savedKeys.has(key)) throw new Error("Today's TrackIQ export does not cover all live races. Please contact Support.");
-    liveMap.set(key, race);
+    liveMap.set(key, matched);
   }
   const races = daily.races.filter(race => liveMap.has(`${race.venue_key}:${race.number}`))
     .map(race => mergeRace(race, liveMap.get(`${race.venue_key}:${race.number}`),
