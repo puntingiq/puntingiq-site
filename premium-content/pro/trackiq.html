@@ -7,8 +7,8 @@
     <meta name="description" content="TrackIQ — daily racing intelligence powered by the PuntingIQ intelligence layer." />
 
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../assets/next-race.css?v=1794532124790615500">
-    <script type="module" src="../../assets/next-race.mjs?v=1794532124790615500"></script>
+    <link rel="stylesheet" href="../../assets/next-race.css?v=1794540277718066100">
+    <script type="module" src="../../assets/next-race.mjs?v=1794540277718066100"></script>
     <style>
             .header .brand { flex-shrink: 0; }
     .header .nav { min-width: 0; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
@@ -161,6 +161,12 @@
 
     <section id="next-race-dashboard" class="nr-dashboard" aria-label="TrackIQ Next Race"
              data-daily-url="next-race-data.json" data-live-url="next-race-live.json">
+        <nav class="nr-jump-banner" aria-label="Upcoming Australian horse races" hidden>
+            <div class="nr-jump-heading"><strong>Next to Jump</strong><small>AU horse racing</small></div>
+            <button type="button" class="nr-jump-prev" aria-label="Scroll to earlier races">&lsaquo;</button>
+            <div class="nr-jump-list" aria-label="Live upcoming races"></div>
+            <button type="button" class="nr-jump-next" aria-label="Scroll to later races">&rsaquo;</button>
+        </nav>
         <div class="nr-intro">
             <div><span class="nr-eyebrow">TrackIQ Pro · PuntersEdge live market</span>
                 <h2>Next Race</h2>
@@ -176,7 +182,7 @@
             </div>
             <span class="nr-next-label">Next to jump</span>
             <div class="nr-next-tabs" aria-label="Next races"></div>
-            <div class="nr-race"></div>
+            <div id="nr-race-card" class="nr-race"></div>
         </div>
     </section>
     <section class="viewer" aria-label="Daily intelligence brief viewer">

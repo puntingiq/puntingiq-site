@@ -134,6 +134,14 @@ export function raceWeather(view) {
     "Weather: not reported by the race feed";
 }
 
+export function raceCountdown(view, now = Date.now()) {
+  if (view.closed) return raceStatus(view, now);
+  const seconds = Math.ceil((Date.parse(view.start_time) - now) / 1000);
+  if (seconds <= 0) return "Awaiting start";
+  if (seconds >= 3600) return `${Math.floor(seconds / 3600)}h ${Math.floor(seconds % 3600 / 60)}m`;
+  return `${Math.floor(seconds / 60)}m ${seconds % 60}s`;
+}
+
 async function loadJSON(url) {
   const response = await fetch(url, { credentials: "same-origin", cache: "no-store",
     headers: { Accept: "application/json" }, signal: AbortSignal.timeout(25000) });
@@ -152,6 +160,11 @@ export function mountDashboard(root) {
   const content = root.querySelector(".nr-content");
   const select = root.querySelector(".nr-select");
   const retry = root.querySelector(".nr-refresh");
+  const jumpBanner = root.querySelector(".nr-jump-banner");
+  const jumpList = root.querySelector(".nr-jump-list");
+  const jumpPrev = root.querySelector(".nr-jump-prev");
+  const jumpNext = root.querySelector(".nr-jump-next");
+  const jumpClocks = new Map();
 
   function showError(error) {
     console.error("TrackIQ Next Race:", error);
@@ -159,7 +172,51 @@ export function mountDashboard(root) {
     status.hidden = false;
     status.classList.add("nr-error");
     content.hidden = true;
+    jumpBanner.hidden = true;
     dashboard = null;
+  }
+
+  function updateJumpControls() {
+    jumpPrev.disabled = jumpList.scrollLeft <= 1;
+    jumpNext.disabled = jumpList.scrollLeft + jumpList.clientWidth >= jumpList.scrollWidth - 1;
+  }
+
+  function renderJumpBanner() {
+    const focusedId = jumpList.contains(document.activeElement) ?
+      document.activeElement.dataset.raceId : null;
+    const scrollLeft = jumpList.scrollLeft;
+    jumpList.replaceChildren();
+    jumpClocks.clear();
+    jumpBanner.hidden = false;
+    for (const race of dashboard.upcoming) {
+      const tile = node("button", "nr-jump-tile" + (race.id === selectedId ? " nr-jump-selected" : ""));
+      tile.type = "button";
+      tile.dataset.raceId = race.id;
+      tile.setAttribute("aria-pressed", String(race.id === selectedId));
+      tile.setAttribute("aria-controls", "nr-race-card");
+      tile.setAttribute("aria-label", `${race.venue} race ${race.number}, scheduled ${time(race.start_time)}. Show TrackIQ picks.`);
+      tile.title = `${race.venue} R${race.number} · ${time(race.start_time)}` +
+        (race.selectedCount ? " · Published system selection" : "");
+      const icon = node("span", "nr-jump-icon", "\u265e");
+      icon.setAttribute("aria-hidden", "true");
+      const label = node("span", "nr-jump-name", `R${race.number} ${race.venue}`);
+      if (race.selectedCount) {
+        label.append(node("small", "nr-jump-tip", "System selection"));
+      }
+      const clock = node("span", "nr-jump-clock");
+      jumpClocks.set(race.id, clock);
+      tile.append(icon, label, clock);
+      tile.addEventListener("click", () => { selectedId = race.id; render(); });
+      jumpList.append(tile);
+    }
+    if (!dashboard.upcoming.length) {
+      jumpList.append(node("span", "nr-jump-empty", "No upcoming AU horse races reported."));
+    }
+    jumpList.scrollLeft = scrollLeft;
+    if (focusedId) {
+      [...jumpList.children].find(tile => tile.dataset.raceId === focusedId)?.focus({ preventScroll: true });
+    }
+    updateJumpControls();
   }
 
   function renderSelected() {
@@ -273,11 +330,19 @@ export function mountDashboard(root) {
     }
     card.append(heading, freshness, market, picks,
       node("p", "nr-footer", "Live WIN prices, scratchings and race-weather reports: PuntersEdge. TrackIQ probabilities and published system advice: today's morning export. A shortlist or Model + Market badge is not a new betting recommendation. Check current prices and deductions before betting."));
-    updateClock();
   }
 
   function updateClock() {
     if (!dashboard) return;
+    const now = Date.now();
+    for (const race of dashboard.upcoming) {
+      const clock = jumpClocks.get(race.id);
+      if (!clock) continue;
+      const seconds = (Date.parse(race.start_time) - now) / 1000;
+      clock.textContent = raceCountdown(race, now);
+      clock.classList.toggle("nr-jump-soon", seconds > 0 && seconds <= 300);
+      clock.classList.toggle("nr-jump-awaiting", seconds <= 0);
+    }
     const view = dashboard.races.find(race => race.id === selectedId);
     const clock = root.querySelector(".nr-countdown");
     if (!view || !clock) return;
@@ -320,7 +385,9 @@ export function mountDashboard(root) {
     status.hidden = true;
     status.classList.remove("nr-error");
     content.hidden = false;
+    renderJumpBanner();
     renderSelected();
+    updateClock();
   }
 
   async function refresh() {
@@ -345,6 +412,16 @@ export function mountDashboard(root) {
   }
 
   select.addEventListener("change", () => { selectedId = select.value; render(); });
+  jumpList.addEventListener("scroll", updateJumpControls, { passive: true });
+  window.addEventListener("resize", updateJumpControls);
+  for (const [button, direction] of [[jumpPrev, -1], [jumpNext, 1]]) {
+    button.addEventListener("click", () => {
+      jumpList.scrollBy({
+        left: direction * Math.max(180, jumpList.clientWidth * 0.8),
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+      });
+    });
+  }
   root.querySelector(".nr-next-button").addEventListener("click", () => {
     selectedId = dashboard?.upcoming[0]?.id || null;
     if (dashboard) render();
