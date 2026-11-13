@@ -129,6 +129,11 @@ export function raceDetails(view, now = Date.now()) {
   ].join(" · ");
 }
 
+export function raceWeather(view) {
+  return view.live.weather ? `Weather (PuntersEdge): ${view.live.weather}` :
+    "Weather: not reported by the race feed";
+}
+
 async function loadJSON(url) {
   const response = await fetch(url, { credentials: "same-origin", cache: "no-store",
     headers: { Accept: "application/json" }, signal: AbortSignal.timeout(25000) });
@@ -173,7 +178,8 @@ export function mountDashboard(root) {
     const details = node("div");
     details.append(node("div", "nr-eyebrow", "Australian thoroughbreds"),
       node("h3", "", `${view.venue} R${view.number}`),
-      node("p", "nr-muted", raceDetails(view, now)));
+      node("p", "nr-muted", raceDetails(view, now)),
+      node("p", "nr-muted nr-weather", raceWeather(view)));
     const clock = node("div", "nr-clock");
     clock.append(node("small", "", "Scheduled countdown"), node("strong", "nr-countdown", ""),
       node("small", "", "Race status, not zero, controls progression"));
@@ -266,7 +272,7 @@ export function mountDashboard(root) {
       picks.append(more);
     }
     card.append(heading, freshness, market, picks,
-      node("p", "nr-footer", "Live WIN prices and scratchings: PuntersEdge. TrackIQ probabilities and published system advice: today's morning export. A shortlist or Model + Market badge is not a new betting recommendation. Check current prices and deductions before betting."));
+      node("p", "nr-footer", "Live WIN prices, scratchings and race-weather reports: PuntersEdge. TrackIQ probabilities and published system advice: today's morning export. A shortlist or Model + Market badge is not a new betting recommendation. Check current prices and deductions before betting."));
     updateClock();
   }
 
