@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="../../assets/next-race.css?v=1794528080838473500">
     <script type="module" src="../../assets/next-race.mjs?v=1794528080838473500"></script>
     <style>
+            .header .brand { flex-shrink: 0; }
+    .header .nav { min-width: 0; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+    @media (max-width: 900px) {
+        .header {
+            position: static;
+            flex-direction: column;
+            align-items: stretch;
+            border-radius: 20px;
+            padding: 14px;
+        }
+        .header .brand { justify-content: center; }
+        .header .nav { justify-content: center; gap: 6px; }
+        .header .nav a { font-size: 12px; padding: 6px 8px; }
+    }
+
         .hero {
             display: grid;
             grid-template-columns: auto 1fr;
@@ -178,7 +193,7 @@
         <div class="viewer-frame-wrap">
             <iframe
                 class="viewer-frame"
-                src="daily-intelligence.html?v=1794523578088637900"
+                src="daily-intelligence-embed.html?v=1794523578088637900"
                 title="PuntingIQ Daily Intelligence Brief"
                 loading="lazy">
             </iframe>

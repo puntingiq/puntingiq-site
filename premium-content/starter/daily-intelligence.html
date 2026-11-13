@@ -144,7 +144,22 @@
             .pill .v { font-size: 22px; }
         }
     </style>
-    
+    <style>    .header .brand { flex-shrink: 0; }
+    .header .nav { min-width: 0; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+    @media (max-width: 900px) {
+        .header {
+            position: static;
+            flex-direction: column;
+            align-items: stretch;
+            border-radius: 20px;
+            padding: 14px;
+        }
+        .header .brand { justify-content: center; }
+        .header .nav { justify-content: center; gap: 6px; }
+        .header .nav a { font-size: 12px; padding: 6px 8px; }
+    }
+</style>
+
 </head>
 <body>
 
