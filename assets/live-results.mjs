@@ -14,12 +14,22 @@ export function formatNet(value) {
 export function resultText(row, betting) {
   if (!row) return "Pending";
   const interim = row.status === "interim" ? " (interim)" : "";
-  return row.label + interim + (betting && Number.isFinite(row.profit_units) ?
+  const retry = row.status === "pending" && row.next_check_at ? " \u00b7 auto-rechecking" : "";
+  return row.label + interim + retry + (betting && Number.isFinite(row.profit_units) ?
     ` \u00b7 ${formatNet(row.profit_units)}` : "");
 }
 
 export function renderResult(cell, row, betting) {
   cell.title = row.place_terms_source || "";
+  if (row.next_check_at && ["pending", "interim"].includes(row.status)) {
+    const format = value => new Date(value).toLocaleString("en-AU", {
+      timeZone: "Australia/Sydney", day: "numeric", month: "short",
+      hour: "numeric", minute: "2-digit", timeZoneName: "short",
+    });
+    const checks = (row.last_checked_at ? `Last automatic check: ${format(row.last_checked_at)}. ` : "") +
+      `Next automatic check due: ${format(row.next_check_at)}.`;
+    cell.title = [cell.title, checks].filter(Boolean).join("\n");
+  }
   cell.replaceChildren();
   if (row.trophy) {
     const colours = { gold: "#ffd65a", silver: "#c9d3df", bronze: "#cd8a55" };
@@ -158,6 +168,10 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
         (row.trophy !== undefined && row.trophy !== null && !["gold", "silver", "bronze"].includes(row.trophy)) ||
         (row.profit_units !== undefined && row.profit_units !== null && !Number.isFinite(row.profit_units))) {
       throw new Error("Invalid live result identity or settlement");
+    }
+    if ([row.last_checked_at, row.next_check_at]
+      .some(value => value != null && !Number.isFinite(Date.parse(value)))) {
+      throw new Error("Invalid automatic result retry time");
     }
   }
   if (!Array.isArray(data.quaddie_races)) throw new Error("Quaddie race results are unavailable");
