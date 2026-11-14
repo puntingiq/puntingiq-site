@@ -85,6 +85,49 @@ export function renderQuaddieLeg(row, race) {
     score.status === "won" ? "Selected winner in this leg" : end.textContent.trim());
 }
 
+export function renderHotTracks(host, tracks, date, storage) {
+  const signature = JSON.stringify([date, tracks]);
+  if (host.dataset.hotSignature === signature) return;
+  host.replaceChildren();
+  const doc = host.ownerDocument;
+  for (const track of tracks) {
+    const key = `trackiq-hot-dismissed:${date}:${track.venue}`;
+    if (storage.getItem(key) === "1") continue;
+    const card = doc.createElement("aside");
+    card.className = "hot-track-alert";
+    card.setAttribute("role", "status");
+    card.style.cssText = "position:relative;margin:16px 0;padding:18px 56px 18px 20px;" +
+      "border:1px solid #d9a843;border-radius:14px;background:#26221a;color:#f3f3f3;";
+    const title = doc.createElement("strong");
+    title.style.cssText = "display:block;color:#ffd65a;font-size:18px;margin-bottom:8px;";
+    title.textContent = `\uD83D\uDD25 TrackIQ HOT TRACK ALERT \u2014 ${track.venue}`;
+    const score = doc.createElement("p");
+    score.style.cssText = "margin:0 0 8px;font-size:16px;font-weight:600;";
+    score.textContent = `${track.wins} winners, ${track.seconds} ${track.seconds === 1 ? "second" : "seconds"} from ${track.final_races} races`;
+    const basis = doc.createElement("small");
+    basis.textContent = "Top-ranked TrackIQ runners in final races. Model accuracy, not betting profit.";
+    const close = doc.createElement("button");
+    close.type = "button";
+    close.setAttribute("aria-label", `Dismiss ${track.venue} HOT Track alert for today`);
+    close.style.cssText = "position:absolute;right:16px;top:12px;background:transparent;" +
+      "border:0;color:#f3f3f3;font-size:26px;cursor:pointer;";
+    close.textContent = "\u00D7";
+    close.addEventListener("click", () => {
+      try {
+        storage.setItem(key, "1");
+      } catch (error) {
+        console.error("HOT Track dismissal could not be saved:", error);
+      }
+      card.remove();
+      host.hidden = !host.children.length;
+    });
+    card.append(title, score, basis, close);
+    host.append(card);
+  }
+  host.dataset.hotSignature = signature;
+  host.hidden = !host.children.length;
+}
+
 export function validateLiveResults(data, expectedDate, now = Date.now()) {
   if (!data || data.schema_version !== 1 || data.business_date !== expectedDate ||
       expectedDate !== businessDate(now) || !data.systems || !Array.isArray(data.summaries)) {
@@ -114,9 +157,50 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
       throw new Error("Invalid quaddie race identity or winner");
     }
   }
+  if (!Array.isArray(data.hot_tracks)) throw new Error("HOT Track results are unavailable");
+  for (const track of data.hot_tracks) {
+    if (!track || typeof track.venue !== "string" || !track.venue ||
+        !Number.isInteger(track.final_races) || track.final_races < 5 ||
+        !Number.isInteger(track.wins) || track.wins < 2 ||
+        !Number.isInteger(track.seconds) || track.seconds < 0 ||
+        track.wins + track.seconds > track.final_races ||
+        (track.wins + track.seconds) * 5 < track.final_races * 4) {
+      throw new Error("Invalid HOT Track counts or threshold");
+    }
+  }
 }
 
 export function mountLiveResults(script) {
+  let hotHost = null;
+  const dismissedTracks = new Map();
+  const hotStorage = {
+    getItem(key) {
+      if (dismissedTracks.has(key)) return dismissedTracks.get(key);
+      try {
+        return hotHost.ownerDocument.defaultView.sessionStorage.getItem(key);
+      } catch (error) {
+        console.error("HOT Track dismissal storage is unavailable:", error);
+        return null;
+      }
+    },
+    setItem(key, value) {
+      dismissedTracks.set(key, value);
+      hotHost.ownerDocument.defaultView.sessionStorage.setItem(key, value);
+    },
+  };
+  if (script.dataset.resultsUrl === "/premium-content/pro/live-results.json") {
+    const owner = window.frameElement?.ownerDocument || document;
+    hotHost = owner.getElementById("trackiq-hot-tracks");
+    if (!hotHost) {
+      hotHost = owner.createElement("div");
+      hotHost.id = "trackiq-hot-tracks";
+      hotHost.setAttribute("aria-label", "TrackIQ Hot Track alerts");
+      const racing = owner.getElementById("next-race-dashboard") || owner.querySelector(".wrap");
+      if (racing) racing.before(hotHost);
+      else owner.body.prepend(hotHost);
+    }
+    hotHost.hidden = true;
+  }
   const sections = [];
   for (const [id, product] of Object.entries(SECTIONS)) {
     const section = document.getElementById(id);
@@ -211,8 +295,14 @@ export function mountLiveResults(script) {
           result.number === Number(row.dataset.quaddieRace));
         renderQuaddieLeg(row, race);
       }
+      if (hotHost) renderHotTracks(hotHost, delayed ? [] : data.hot_tracks, data.business_date, hotStorage);
     } catch (error) {
       console.error("TrackIQ live results:", error);
+      if (hotHost) {
+        hotHost.replaceChildren();
+        delete hotHost.dataset.hotSignature;
+        hotHost.hidden = true;
+      }
       sections.forEach(section => { section.status.textContent = error.message; });
       quaddieStatuses.forEach(status => { status.textContent = error.message; });
     } finally { busy = false; }
