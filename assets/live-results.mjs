@@ -123,15 +123,20 @@ function renderHotAlerts(host, items, date, storage, kind) {
       "border:1px solid #d9a843;border-radius:14px;background:#26221a;color:#f3f3f3;";
     const title = doc.createElement("strong");
     title.style.cssText = "display:block;color:#ffd65a;font-size:18px;margin-bottom:8px;";
-    title.textContent = `\uD83D\uDD25 ${system ? "HOT SYSTEM" : "TrackIQ HOT TRACK ALERT"} \u2014 ${name}`;
+    title.textContent = !system && item.completed ?
+      `\uD83D\uDD25 TrackIQ had a HOT track today at ${name}` :
+      `\uD83D\uDD25 ${system ? "HOT SYSTEM" : "TrackIQ HOT TRACK ALERT"} \u2014 ${name}`;
     const score = doc.createElement("p");
     score.style.cssText = "margin:0 0 8px;font-size:16px;font-weight:600;";
     score.textContent = system ?
       `${item.wins} winners from ${item.settled_races} settled races \u00b7 ${formatNet(item.profit_units)}` :
-      `${item.wins} winners, ${item.seconds} ${item.seconds === 1 ? "second" : "seconds"} from ${item.final_races} races`;
+      item.completed ?
+        `${item.wins} wins, ${item.seconds} ${item.seconds === 1 ? "second" : "seconds"}, ${item.thirds} ${item.thirds === 1 ? "third" : "thirds"} out of ${item.final_races} assessed races` :
+        `${item.wins} winners, ${item.seconds} ${item.seconds === 1 ? "second" : "seconds"} from ${item.final_races} races`;
     const basis = doc.createElement("small");
     basis.textContent = system ? "Published morning odds. Each system is assessed separately." :
-      "Top-ranked TrackIQ runners in final races.";
+      item.completed ? "Top-ranked TrackIQ runners. All races final; scratchings and abandoned races excluded." :
+        "Top-ranked TrackIQ runners in final races.";
     const close = doc.createElement("button");
     close.type = "button";
     close.setAttribute("aria-label", `Dismiss ${name} HOT ${system ? "System" : "Track"} alert for today`);
@@ -194,13 +199,20 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
     }
   }
   if (!Array.isArray(data.hot_tracks)) throw new Error("HOT Track results are unavailable");
-  for (const track of data.hot_tracks) {
+  if (!Array.isArray(data.hot_track_recaps) ||
+      data.hot_track_recaps.some(track => !track || track.completed !== true)) {
+    throw new Error("Completed HOT Track results are unavailable");
+  }
+  for (const track of [...data.hot_tracks, ...data.hot_track_recaps]) {
     if (!track || typeof track.venue !== "string" || !track.venue ||
         !Number.isInteger(track.final_races) || track.final_races < 5 ||
         !Number.isInteger(track.wins) || track.wins < 2 ||
         !Number.isInteger(track.seconds) || track.seconds < 0 ||
         track.wins + track.seconds > track.final_races ||
-        (track.wins + track.seconds) * 5 < track.final_races * 4) {
+        (track.completed !== undefined && track.completed !== true) ||
+        (track.completed ? (!Number.isInteger(track.thirds) || track.thirds < 0 ||
+          track.wins + track.seconds + track.thirds > track.final_races) :
+          (track.wins + track.seconds) * 5 < track.final_races * 4)) {
       throw new Error("Invalid HOT Track counts or threshold");
     }
   }
@@ -354,7 +366,11 @@ export function mountLiveResults(script) {
           result.number === Number(row.dataset.quaddieRace));
         renderQuaddieLeg(row, race);
       }
-      if (hotHost) renderHotTracks(hotHost, delayed ? [] : data.hot_tracks, data.business_date, hotStorage);
+      if (hotHost) {
+        const completed = new Set(data.hot_track_recaps.map(track => track.venue));
+        const tracks = [...data.hot_tracks.filter(track => !completed.has(track.venue)), ...data.hot_track_recaps];
+        renderHotTracks(hotHost, delayed ? [] : tracks, data.business_date, hotStorage);
+      }
       if (systemHost) renderHotSystems(systemHost, delayed ? [] : data.hot_systems, data.business_date, hotStorage);
     } catch (error) {
       console.error("TrackIQ live results:", error);
