@@ -19,6 +19,7 @@ export function resultText(row, betting) {
 }
 
 export function renderResult(cell, row, betting) {
+  cell.title = row.place_terms_source || "";
   cell.replaceChildren();
   if (row.trophy) {
     const colours = { gold: "#ffd65a", silver: "#c9d3df", bronze: "#cd8a55" };
