@@ -86,29 +86,42 @@ export function renderQuaddieLeg(row, race) {
 }
 
 export function renderHotTracks(host, tracks, date, storage) {
-  const signature = JSON.stringify([date, tracks]);
+  return renderHotAlerts(host, tracks, date, storage, "track");
+}
+
+export function renderHotSystems(host, systems, date, storage) {
+  return renderHotAlerts(host, systems, date, storage, "system");
+}
+
+function renderHotAlerts(host, items, date, storage, kind) {
+  const system = kind === "system";
+  const signature = JSON.stringify([date, items]);
   if (host.dataset.hotSignature === signature) return;
   host.replaceChildren();
   const doc = host.ownerDocument;
-  for (const track of tracks) {
-    const key = `trackiq-hot-dismissed:${date}:${track.venue}`;
+  for (const item of items) {
+    const name = system ? item.system : item.venue;
+    const key = `trackiq-hot-${system ? "system-" : ""}dismissed:${date}:${name}`;
     if (storage.getItem(key) === "1") continue;
     const card = doc.createElement("aside");
-    card.className = "hot-track-alert";
+    card.className = `hot-${kind}-alert`;
     card.setAttribute("role", "status");
     card.style.cssText = "position:relative;margin:16px 0;padding:18px 56px 18px 20px;" +
       "border:1px solid #d9a843;border-radius:14px;background:#26221a;color:#f3f3f3;";
     const title = doc.createElement("strong");
     title.style.cssText = "display:block;color:#ffd65a;font-size:18px;margin-bottom:8px;";
-    title.textContent = `\uD83D\uDD25 TrackIQ HOT TRACK ALERT \u2014 ${track.venue}`;
+    title.textContent = `\uD83D\uDD25 ${system ? "HOT SYSTEM" : "TrackIQ HOT TRACK ALERT"} \u2014 ${name}`;
     const score = doc.createElement("p");
     score.style.cssText = "margin:0 0 8px;font-size:16px;font-weight:600;";
-    score.textContent = `${track.wins} winners, ${track.seconds} ${track.seconds === 1 ? "second" : "seconds"} from ${track.final_races} races`;
+    score.textContent = system ?
+      `${item.wins} winners from ${item.settled_races} settled races \u00b7 ${formatNet(item.profit_units)}` :
+      `${item.wins} winners, ${item.seconds} ${item.seconds === 1 ? "second" : "seconds"} from ${item.final_races} races`;
     const basis = doc.createElement("small");
-    basis.textContent = "Top-ranked TrackIQ runners in final races.";
+    basis.textContent = system ? "Published morning odds. Each system is assessed separately." :
+      "Top-ranked TrackIQ runners in final races.";
     const close = doc.createElement("button");
     close.type = "button";
-    close.setAttribute("aria-label", `Dismiss ${track.venue} HOT Track alert for today`);
+    close.setAttribute("aria-label", `Dismiss ${name} HOT ${system ? "System" : "Track"} alert for today`);
     close.style.cssText = "position:absolute;right:16px;top:12px;background:transparent;" +
       "border:0;color:#f3f3f3;font-size:26px;cursor:pointer;";
     close.textContent = "\u00D7";
@@ -116,7 +129,7 @@ export function renderHotTracks(host, tracks, date, storage) {
       try {
         storage.setItem(key, "1");
       } catch (error) {
-        console.error("HOT Track dismissal could not be saved:", error);
+        console.error(`HOT ${system ? "System" : "Track"} dismissal could not be saved:`, error);
       }
       card.remove();
       host.hidden = !host.children.length;
@@ -168,23 +181,35 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
       throw new Error("Invalid HOT Track counts or threshold");
     }
   }
+  if (!Array.isArray(data.hot_systems)) throw new Error("HOT System results are unavailable");
+  const seen = new Set();
+  for (const system of data.hot_systems) {
+    if (!system || !Object.values(SECTIONS).includes(system.system) || !data.systems[system.system] ||
+        seen.has(system.system) || !Number.isInteger(system.settled_races) ||
+        !Number.isInteger(system.wins) || system.wins < 2 || system.wins > system.settled_races ||
+        system.wins * 3 < system.settled_races * 2 ||
+        !Number.isFinite(system.profit_units) || system.profit_units <= 0) {
+      throw new Error("Invalid HOT System counts, threshold or net units");
+    }
+    seen.add(system.system);
+  }
 }
 
 export function mountLiveResults(script) {
-  let hotHost = null;
-  const dismissedTracks = new Map();
+  let hotHost = null, systemHost = null;
+  const dismissedAlerts = new Map();
   const hotStorage = {
     getItem(key) {
-      if (dismissedTracks.has(key)) return dismissedTracks.get(key);
+      if (dismissedAlerts.has(key)) return dismissedAlerts.get(key);
       try {
         return hotHost.ownerDocument.defaultView.sessionStorage.getItem(key);
       } catch (error) {
-        console.error("HOT Track dismissal storage is unavailable:", error);
+        console.error("HOT alert dismissal storage is unavailable:", error);
         return null;
       }
     },
     setItem(key, value) {
-      dismissedTracks.set(key, value);
+      dismissedAlerts.set(key, value);
       hotHost.ownerDocument.defaultView.sessionStorage.setItem(key, value);
     },
   };
@@ -200,6 +225,14 @@ export function mountLiveResults(script) {
       else owner.body.prepend(hotHost);
     }
     hotHost.hidden = true;
+    systemHost = owner.getElementById("trackiq-hot-systems");
+    if (!systemHost) {
+      systemHost = owner.createElement("div");
+      systemHost.id = "trackiq-hot-systems";
+      systemHost.setAttribute("aria-label", "Hot betting system alerts");
+      hotHost.after(systemHost);
+    }
+    systemHost.hidden = true;
   }
   const sections = [];
   for (const [id, product] of Object.entries(SECTIONS)) {
@@ -296,12 +329,18 @@ export function mountLiveResults(script) {
         renderQuaddieLeg(row, race);
       }
       if (hotHost) renderHotTracks(hotHost, delayed ? [] : data.hot_tracks, data.business_date, hotStorage);
+      if (systemHost) renderHotSystems(systemHost, delayed ? [] : data.hot_systems, data.business_date, hotStorage);
     } catch (error) {
       console.error("TrackIQ live results:", error);
       if (hotHost) {
         hotHost.replaceChildren();
         delete hotHost.dataset.hotSignature;
         hotHost.hidden = true;
+      }
+      if (systemHost) {
+        systemHost.replaceChildren();
+        delete systemHost.dataset.hotSignature;
+        systemHost.hidden = true;
       }
       sections.forEach(section => { section.status.textContent = error.message; });
       quaddieStatuses.forEach(status => { status.textContent = error.message; });
