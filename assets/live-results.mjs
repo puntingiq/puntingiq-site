@@ -21,6 +21,9 @@ export function resultText(row, betting) {
 
 export function renderResult(cell, row, betting) {
   cell.title = row.place_terms_source || "";
+  if (row.estimated_loss) {
+    cell.title = [cell.title, "Interim estimate from final paid-place results, not a confirmed finishing position. The full field may confirm the loss or report a scratching/refund."].filter(Boolean).join("\n");
+  }
   if (row.next_check_at && ["pending", "interim"].includes(row.status)) {
     const format = value => new Date(value).toLocaleString("en-AU", {
       timeZone: "Australia/Sydney", day: "numeric", month: "short",
@@ -158,7 +161,8 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
   }
   for (const system of Object.values(data.systems)) {
     if (!system || !Number.isFinite(system.profit_units) || !Number.isInteger(system.pending) ||
-        system.pending < 0 || !Array.isArray(system.rows)) throw new Error("Incomplete live result totals");
+        system.pending < 0 || !Number.isInteger(system.interim) || system.interim < 0 ||
+        !Array.isArray(system.rows)) throw new Error("Incomplete live result totals");
   }
   for (const row of [...data.summaries, ...Object.values(data.systems).flatMap(system => system.rows)]) {
     if (!row || typeof row.venue !== "string" || !row.venue || !Number.isInteger(row.number) ||
@@ -172,6 +176,11 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
     if ([row.last_checked_at, row.next_check_at]
       .some(value => value != null && !Number.isFinite(Date.parse(value)))) {
       throw new Error("Invalid automatic result retry time");
+    }
+    if (row.estimated_loss !== undefined && (row.estimated_loss !== true ||
+        row.status !== "interim" || row.label !== "Unplaced" ||
+        (row.profit_units !== undefined && !(row.profit_units <= 0)))) {
+      throw new Error("Invalid interim unplaced estimate");
     }
   }
   if (!Array.isArray(data.quaddie_races)) throw new Error("Quaddie race results are unavailable");
@@ -314,13 +323,16 @@ export function mountLiveResults(script) {
         if (section.product && !system) throw new Error("Results do not cover the visible betting system");
         const reported = system ? system.rows : data.summaries;
         if (system) {
-          section.net.textContent = ` ${formatNet(system.profit_units)}`;
+          section.net.textContent = ` ${formatNet(system.profit_units)}${system.interim ? " (interim)" : ""}`;
           section.net.classList.toggle("live-result-loss", system.profit_units < 0);
           section.net.title = data.price_basis;
         }
-        section.status.textContent = delayed ? "Live result updates are delayed; shown totals are confirmed results only." :
-          `Final results only${system?.pending ? ` \u00b7 ${system.pending} pending` : ""}. ` +
-          "First check 10 minutes after confirmed start/closure; interim results do not enter totals.";
+        section.status.textContent = delayed ?
+          "Live result updates are delayed; shown results may include labelled interim unplaced estimates." :
+          (system ? (system.interim ? `${system.interim} interim unplaced ${system.interim === 1 ? "estimate" : "estimates"} included in total` :
+            "Confirmed settlements only") + (system.pending ? ` \u00b7 ${system.pending} pending` : "") :
+            "Interim finishes are labelled") + ". " +
+          "First check 10 minutes after confirmed start/closure; exact finishes and any refunds update automatically.";
         section.status.title = data.price_basis;
         for (const row of section.rows) {
           const result = reported.find(item => item.venue === row.venue && item.number === row.number &&
