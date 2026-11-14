@@ -18,6 +18,39 @@ export function resultText(row, betting) {
     ` \u00b7 ${formatNet(row.profit_units)}` : "");
 }
 
+export function renderResult(cell, row, betting) {
+  cell.replaceChildren();
+  if (row.trophy) {
+    const colours = { gold: "#ffd65a", silver: "#c9d3df", bronze: "#cd8a55" };
+    const labels = { gold: "Winner", silver: "Second place", bronze: "Third place - paid dividend" };
+    const document = cell.ownerDocument;
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("width", "26");
+    svg.setAttribute("height", "26");
+    svg.setAttribute("class", `live-result-trophy live-result-trophy-${row.trophy}`);
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", labels[row.trophy]);
+    const title = document.createElementNS(svg.namespaceURI, "title");
+    title.textContent = labels[row.trophy];
+    svg.append(title);
+    for (const [shape, fill] of [
+      ["M7 5H3v3a4 4 0 0 0 4 4M17 5h4v3a4 4 0 0 1-4 4", "none"],
+      ["M7 3h10v5a5 5 0 0 1-10 0Z", colours[row.trophy]],
+      ["M11 13h2v5h3v3H8v-3h3Z", colours[row.trophy]],
+    ]) {
+      const path = document.createElementNS(svg.namespaceURI, "path");
+      path.setAttribute("d", shape);
+      path.setAttribute("fill", fill);
+      path.setAttribute("stroke", colours[row.trophy]);
+      path.setAttribute("stroke-width", "1.5");
+      svg.append(path);
+    }
+    cell.append(svg);
+  }
+  cell.append(cell.ownerDocument.createTextNode(resultText(row, betting)));
+}
+
 export function validateLiveResults(data, expectedDate, now = Date.now()) {
   if (!data || data.schema_version !== 1 || data.business_date !== expectedDate ||
       expectedDate !== businessDate(now) || !data.systems || !Array.isArray(data.summaries)) {
@@ -32,6 +65,7 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
         row.number < 1 || !Number.isInteger(row.runner_number) || row.runner_number < 1 ||
         typeof row.horse !== "string" || !row.horse || typeof row.label !== "string" ||
         !["pending", "interim", "final", "refunded"].includes(row.status) ||
+        (row.trophy !== undefined && row.trophy !== null && !["gold", "silver", "bronze"].includes(row.trophy)) ||
         (row.profit_units !== undefined && row.profit_units !== null && !Number.isFinite(row.profit_units))) {
       throw new Error("Invalid live result identity or settlement");
     }
@@ -112,7 +146,7 @@ export function mountLiveResults(script) {
             row.cell.textContent = "Result identity needs review";
             continue;
           }
-          row.cell.textContent = resultText(result, Boolean(section.product));
+          renderResult(row.cell, result, Boolean(section.product));
           row.cell.classList.toggle("live-result-loss", result?.profit_units < 0);
         }
       }
