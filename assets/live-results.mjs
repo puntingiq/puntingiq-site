@@ -52,6 +52,39 @@ export function renderResult(cell, row, betting) {
   cell.append(cell.ownerDocument.createTextNode(resultText(row, betting)));
 }
 
+export function scoreQuaddieLeg(race, selections) {
+  if (!race) throw new Error("Quaddie race is not covered by the verified daily results");
+  if (race.status !== "final") return { status: race.status, winning_numbers: [] };
+  if (!race.winners.length) throw new Error("Final quaddie winner is unavailable");
+  const matched = [];
+  for (const winner of race.winners) {
+    const selection = selections.find(runner => runner.number === winner.number);
+    if (selection && selection.name !== winner.name) throw new Error("Quaddie winner identity needs review");
+    if (selection) matched.push(winner.number);
+  }
+  return { status: matched.length ? "won" : "lost", winning_numbers: matched };
+}
+
+export function renderQuaddieLeg(row, race) {
+  const runners = [...row.querySelectorAll("[data-quaddie-number]")];
+  const score = scoreQuaddieLeg(race, runners.map(runner => ({
+    number: Number(runner.dataset.quaddieNumber), name: runner.dataset.quaddieHorse,
+  })));
+  for (const runner of runners) {
+    const won = score.winning_numbers.includes(Number(runner.dataset.quaddieNumber));
+    const check = runner.querySelector(".live-quaddie-check");
+    check.textContent = won ? " \u2713" : "";
+    if (won) check.setAttribute("aria-label", "Won this quaddie leg");
+    else check.removeAttribute("aria-label");
+  }
+  const end = row.querySelector(".live-quaddie-leg-result");
+  end.classList.toggle("live-quaddie-miss", score.status === "lost");
+  end.textContent = ({ lost: " \u2717", pending: " (pending)", interim: " (interim)",
+    refunded: " (abandoned)" })[score.status] || "";
+  end.setAttribute("aria-label", score.status === "lost" ? "No selected horse won this leg" :
+    score.status === "won" ? "Selected winner in this leg" : end.textContent.trim());
+}
+
 export function validateLiveResults(data, expectedDate, now = Date.now()) {
   if (!data || data.schema_version !== 1 || data.business_date !== expectedDate ||
       expectedDate !== businessDate(now) || !data.systems || !Array.isArray(data.summaries)) {
@@ -69,6 +102,16 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
         (row.trophy !== undefined && row.trophy !== null && !["gold", "silver", "bronze"].includes(row.trophy)) ||
         (row.profit_units !== undefined && row.profit_units !== null && !Number.isFinite(row.profit_units))) {
       throw new Error("Invalid live result identity or settlement");
+    }
+  }
+  if (!Array.isArray(data.quaddie_races)) throw new Error("Quaddie race results are unavailable");
+  for (const race of data.quaddie_races) {
+    if (!race || typeof race.venue !== "string" || !race.venue || !Number.isInteger(race.number) ||
+        race.number < 1 || !["pending", "interim", "final", "refunded"].includes(race.status) ||
+        !Array.isArray(race.winners) || (race.status === "final" && !race.winners.length) ||
+        race.winners.some(runner => !Number.isInteger(runner.number) || runner.number < 1 ||
+          typeof runner.name !== "string" || !runner.name)) {
+      throw new Error("Invalid quaddie race identity or winner");
     }
   }
 }
@@ -109,6 +152,15 @@ export function mountLiveResults(script) {
     }
     sections.push({ product, net, status, rows });
   }
+  const quaddieRows = [...document.querySelectorAll("tr[data-quaddie-venue]")];
+  const quaddieStatuses = [...new Set(quaddieRows.map(row => row.closest("section")))].map(section => {
+    const status = document.createElement("p");
+    status.className = "live-result-status";
+    status.setAttribute("role", "status");
+    status.textContent = "Quaddie legs: awaiting final results.";
+    section.querySelector(".content").prepend(status);
+    return status;
+  });
   let busy = false;
   async function refresh() {
     if (busy || document.hidden) return;
@@ -151,9 +203,18 @@ export function mountLiveResults(script) {
           row.cell.classList.toggle("live-result-loss", result?.profit_units < 0);
         }
       }
+      for (const status of quaddieStatuses) status.textContent = delayed ?
+        "Quaddie updates are delayed; marks show confirmed final results only." :
+        "Final results only: a green tick marks a selected winner; a red cross marks a losing leg.";
+      for (const row of quaddieRows) {
+        const race = data.quaddie_races.find(result => result.venue === row.dataset.quaddieVenue &&
+          result.number === Number(row.dataset.quaddieRace));
+        renderQuaddieLeg(row, race);
+      }
     } catch (error) {
       console.error("TrackIQ live results:", error);
       sections.forEach(section => { section.status.textContent = error.message; });
+      quaddieStatuses.forEach(status => { status.textContent = error.message; });
     } finally { busy = false; }
   }
   refresh();
