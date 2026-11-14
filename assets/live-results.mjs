@@ -105,7 +105,7 @@ export function renderHotTracks(host, tracks, date, storage) {
     score.style.cssText = "margin:0 0 8px;font-size:16px;font-weight:600;";
     score.textContent = `${track.wins} winners, ${track.seconds} ${track.seconds === 1 ? "second" : "seconds"} from ${track.final_races} races`;
     const basis = doc.createElement("small");
-    basis.textContent = "Top-ranked TrackIQ runners in final races. Model accuracy, not betting profit.";
+    basis.textContent = "Top-ranked TrackIQ runners in final races.";
     const close = doc.createElement("button");
     close.type = "button";
     close.setAttribute("aria-label", `Dismiss ${track.venue} HOT Track alert for today`);
