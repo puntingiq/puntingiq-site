@@ -20,7 +20,7 @@ export function resultText(row, betting) {
 }
 
 export function renderResult(cell, row, betting) {
-  cell.title = row.place_terms_source || "";
+  cell.title = [row.place_terms_source, row.race_status_source].filter(Boolean).join("\n");
   if (row.estimated_loss) {
     cell.title = [cell.title, "Interim estimate from final paid-place results, not a confirmed finishing position. The full field may confirm the loss or report a scratching/refund."].filter(Boolean).join("\n");
   }
@@ -135,7 +135,8 @@ function renderHotAlerts(host, items, date, storage, kind) {
       "border:1px solid #d9a843;border-radius:14px;background:#26221a;color:#f3f3f3;";
     const title = doc.createElement("strong");
     title.style.cssText = "display:block;color:#ffd65a;font-size:18px;margin-bottom:8px;";
-    title.textContent = participant ? `\uD83D\uDD25 HOT ${kind.toUpperCase()} \u2014 ${name}` :
+    title.textContent = participant ?
+      `\uD83D\uDD25 HOT ${kind.toUpperCase()} \u2014 ${name}${item.provisional ? " (provisional)" : ""}` :
       !system && item.completed ?
       `\uD83D\uDD25 TrackIQ had a HOT track today at ${name}` :
       `\uD83D\uDD25 ${system ? "HOT SYSTEM" : "TrackIQ HOT TRACK ALERT"} \u2014 ${name}`;
@@ -150,7 +151,10 @@ function renderHotAlerts(host, items, date, storage, kind) {
         `${item.wins} winners, ${item.seconds} ${item.seconds === 1 ? "second" : "seconds"} from ${item.final_races} races`;
     const basis = doc.createElement("small");
     basis.textContent = participant ?
-      "All runners, not just TrackIQ picks. Official names and confirmed starts in final results; full-field updates may arrive later. Meeting form, not additional betting advice." :
+      (item.provisional ?
+        "Final results confirm the winners and starts. Jockey/trainer attribution uses an identity-verified racecard pending result-field confirmation; late changes may correct it. " :
+        "All runners, not just TrackIQ picks. Official names and confirmed starts in final results; full-field updates may arrive later. ") +
+      "Meeting form, not additional betting advice." :
       system ? "Published morning odds. Each system is assessed separately." :
       item.completed ? "Top-ranked TrackIQ runners. All races final; scratchings and abandoned races excluded." :
         "Top-ranked TrackIQ runners in final races.";
@@ -181,6 +185,8 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
       expectedDate !== businessDate(now) || !data.systems || !Array.isArray(data.summaries)) {
     throw new Error("Today's matching live results are unavailable");
   }
+  if (data.participant_error != null && (typeof data.participant_error !== "string" ||
+      !data.participant_error.trim())) throw new Error("Invalid participant update status");
   for (const system of Object.values(data.systems)) {
     if (!system || !Number.isFinite(system.profit_units) || !Number.isInteger(system.pending) ||
         system.pending < 0 || !Number.isInteger(system.interim) || system.interim < 0 ||
@@ -203,6 +209,11 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
         row.status !== "interim" || row.label !== "Unplaced" ||
         (row.profit_units !== undefined && !(row.profit_units <= 0)))) {
       throw new Error("Invalid interim unplaced estimate");
+    }
+    if (row.race_status_source !== undefined && (row.status !== "refunded" ||
+        row.label !== "No race / refunded" || typeof row.race_status_source !== "string" ||
+        !row.race_status_source.trim())) {
+      throw new Error("Invalid owner-confirmed race status source");
     }
   }
   if (!Array.isArray(data.quaddie_races)) throw new Error("Quaddie race results are unavailable");
@@ -253,6 +264,7 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
           typeof item.name !== "string" || !item.name.trim() ||
           !Number.isInteger(item.wins) || item.wins < 2 ||
           !Number.isInteger(item.starts) || item.starts < item.wins ||
+          (item.provisional !== undefined && item.provisional !== true) ||
           identities.has(JSON.stringify([item.venue, item.name]))) {
         throw new Error("Invalid HOT participant identity or counts");
       }
@@ -364,7 +376,8 @@ export function mountLiveResults(script) {
     busy = true;
     try {
       const response = await fetch(script.dataset.resultsUrl, {
-        credentials: "same-origin", cache: "no-store", headers: { Accept: "application/json" },
+        credentials: "same-origin", cache: "no-store", headers: { Accept: "application/json",
+          "X-PuntingIQ-Participant-Attribution": "racecard-v1" },
         signal: AbortSignal.timeout(15000),
       });
       if (!response.ok || response.redirected ||
@@ -419,6 +432,17 @@ export function mountLiveResults(script) {
       if (systemHost) renderHotSystems(systemHost, delayed ? [] : data.hot_systems, data.business_date, hotStorage);
       if (jockeyHost) renderHotJockeys(jockeyHost, delayed ? [] : data.hot_jockeys, data.business_date, hotStorage);
       if (trainerHost) renderHotTrainers(trainerHost, delayed ? [] : data.hot_trainers, data.business_date, hotStorage);
+      if (jockeyHost) {
+        jockeyHost.querySelector(".hot-participant-warning")?.remove();
+        if (data.participant_error) {
+          const warning = jockeyHost.ownerDocument.createElement("p");
+          warning.className = "hot-participant-warning";
+          warning.setAttribute("role", "status");
+          warning.textContent = data.participant_error;
+          jockeyHost.append(warning);
+          jockeyHost.hidden = false;
+        } else jockeyHost.hidden = !jockeyHost.children.length;
+      }
     } catch (error) {
       console.error("TrackIQ live results:", error);
       for (const host of [hotHost, systemHost, jockeyHost, trainerHost]) {
