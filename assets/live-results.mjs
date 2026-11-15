@@ -123,6 +123,7 @@ function renderHotAlerts(host, items, date, storage, kind) {
   host.replaceChildren();
   const doc = host.ownerDocument;
   for (const item of items) {
+    if (participant && Array.isArray(item.remaining) && !item.remaining.length) continue;
     const name = participant ? `${item.name} at ${item.venue}` : system ? item.system : item.venue;
     const key = participant ?
       `trackiq-hot-${kind}-dismissed:${date}:${JSON.stringify([item.venue, item.name])}` :
@@ -185,11 +186,6 @@ function renderHotAlerts(host, items, date, storage, kind) {
         status.style.cssText = "margin:0;font-size:13px;";
         status.textContent = `Bookings awaiting verification: ${item.remaining_error}`;
         card.append(status);
-      } else if (!item.remaining.length) {
-        const recap = doc.createElement("p");
-        recap.style.cssText = "margin:0;font-size:13px;";
-        recap.textContent = "No remaining bookings at this meeting. Performance recap only.";
-        card.append(recap);
       } else {
         const list = doc.createElement("ul");
         list.style.cssText = "margin:0 0 8px;padding-left:20px;font-size:14px;line-height:1.7;";

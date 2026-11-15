@@ -52,8 +52,9 @@ does not remove an open race.
 The minute poller verifies upcoming racecards for HOT meetings; the member read
 reuses the shared one-minute live feed for current lifecycle/scratching status.
 Missing/unverified data shows an explicit awaiting-verification status rather
-than a false zero count. A verified empty list labels the card a performance
-recap. Bookings remain subject to late rider/trainer changes.
+than a false zero count. A verified empty list hides the jockey/trainer alert,
+even if other participants still have races left at that meeting. HOT Track and
+HOT System alerts are unchanged. Bookings remain subject to late rider/trainer changes.
 
 ## Owner-confirmed individual no-race decisions
 
