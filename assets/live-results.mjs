@@ -174,6 +174,44 @@ function renderHotAlerts(host, items, date, storage, kind) {
       host.hidden = !host.children.length;
     });
     card.append(title, score, basis, close);
+    if (participant && item.remaining !== undefined) {
+      const heading = doc.createElement("strong");
+      heading.style.cssText = "display:block;margin:14px 0 6px;font-size:14px;";
+      heading.textContent = `Remaining booked ${kind === "jockey" ? "rides" : "runners"}` +
+        (Array.isArray(item.remaining) ? ` (${item.remaining.length})` : "");
+      card.append(heading);
+      if (item.remaining === null) {
+        const status = doc.createElement("p");
+        status.style.cssText = "margin:0;font-size:13px;";
+        status.textContent = `Bookings awaiting verification: ${item.remaining_error}`;
+        card.append(status);
+      } else if (!item.remaining.length) {
+        const recap = doc.createElement("p");
+        recap.style.cssText = "margin:0;font-size:13px;";
+        recap.textContent = "No remaining bookings at this meeting. Performance recap only.";
+        card.append(recap);
+      } else {
+        const list = doc.createElement("ul");
+        list.style.cssText = "margin:0 0 8px;padding-left:20px;font-size:14px;line-height:1.7;";
+        for (const booking of item.remaining) {
+          const row = doc.createElement("li");
+          const time = new Date(booking.start_time).toLocaleTimeString("en-AU", {
+            hour: "numeric", minute: "2-digit", timeZoneName: "short",
+          });
+          row.append(doc.createTextNode(`R${booking.number} \u2014 #${booking.runner_number} ${booking.horse} \u00b7 ${time}`));
+          if (booking.selections.length) {
+            const badge = doc.createElement("strong");
+            badge.style.cssText = "color:#ffd65a;font-size:12px;";
+            badge.textContent = ` \u00b7 TrackIQ: ${booking.selections.join(", ")}`;
+            row.append(badge);
+          }
+          list.append(row);
+        }
+        const note = doc.createElement("small");
+        note.textContent = "Racecard bookings are subject to late changes. Live race status and scratchings applied; not new betting recommendations.";
+        card.append(list, note);
+      }
+    }
     host.append(card);
   }
   host.dataset.hotSignature = signature;
@@ -269,6 +307,29 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
         throw new Error("Invalid HOT participant identity or counts");
       }
       identities.add(JSON.stringify([item.venue, item.name]));
+      if (item.remaining !== undefined) {
+        if (item.remaining === null) {
+          if (typeof item.remaining_error !== "string" || !item.remaining_error.trim()) {
+            throw new Error("Missing remaining booking verification status");
+          }
+        } else {
+          if (!Array.isArray(item.remaining)) throw new Error("Invalid remaining booking list");
+          const bookings = new Set();
+          for (const booking of item.remaining) {
+            const key = JSON.stringify([booking?.number, booking?.runner_number]);
+            if (!booking || booking.venue !== item.venue || !Number.isInteger(booking.number) ||
+                booking.number < 1 || !Number.isInteger(booking.runner_number) || booking.runner_number < 1 ||
+                typeof booking.horse !== "string" || !booking.horse.trim() ||
+                !Number.isFinite(Date.parse(booking.start_time)) ||
+                businessDate(Date.parse(booking.start_time)) !== expectedDate ||
+                !Array.isArray(booking.selections) ||
+                booking.selections.some(system => !data.systems[system]) || bookings.has(key)) {
+              throw new Error("Invalid remaining booking identity");
+            }
+            bookings.add(key);
+          }
+        }
+      }
     }
   }
 }
@@ -377,7 +438,7 @@ export function mountLiveResults(script) {
     try {
       const response = await fetch(script.dataset.resultsUrl, {
         credentials: "same-origin", cache: "no-store", headers: { Accept: "application/json",
-          "X-PuntingIQ-Participant-Attribution": "racecard-v1" },
+          "X-PuntingIQ-Participant-Attribution": "racecard-v2" },
         signal: AbortSignal.timeout(15000),
       });
       if (!response.ok || response.redirected ||

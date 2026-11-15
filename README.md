@@ -29,7 +29,8 @@ Racecards are fetched per meeting when required and cached for 15 minutes; a new
 qualifying race can request a fresh read. Errors remain visible alongside the
 participant alerts without interfering with normal result polling.
 The updated renderer opts into provisional attribution with
-`X-PuntingIQ-Participant-Attribution: racecard-v1`. Older open pages retain
+`X-PuntingIQ-Participant-Attribution: racecard-v2` (v1 remains supported without
+remaining bookings). Older open pages retain
 official-only attribution until reloaded, so they cannot show provisional names
 without the appropriate label.
 Full-field enrichment can arrive after the initial winner confirmation, so the
@@ -39,6 +40,20 @@ not additional betting advice, and do not send email notifications.
 
 Alerts refresh with live results, are hidden when updates are delayed, and can be
 dismissed separately by participant, meeting and day.
+
+Each participant card lists remaining booked rides/runners at the same meeting,
+with race, saddlecloth, horse and the live scheduled start in the viewer's local
+timezone. Existing published systems and Top Picks are highlighted, not promoted
+into new recommendations. Trainers count each horse separately, including
+multiple starters in a race. Live scratchings, racecard scratchings, confirmed
+starts, closed races and owner-voided races are excluded. Zero countdown alone
+does not remove an open race.
+
+The minute poller verifies upcoming racecards for HOT meetings; the member read
+reuses the shared one-minute live feed for current lifecycle/scratching status.
+Missing/unverified data shows an explicit awaiting-verification status rather
+than a false zero count. A verified empty list labels the card a performance
+recap. Bookings remain subject to late rider/trainer changes.
 
 ## Owner-confirmed individual no-race decisions
 
