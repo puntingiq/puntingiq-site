@@ -119,7 +119,7 @@ function node(tag, className = "", text) {
 
 function time(value, seconds = false) {
   return new Intl.DateTimeFormat("en-AU", {
-    timeZone: "Australia/Sydney", hour: "2-digit", minute: "2-digit",
+    hour: "2-digit", minute: "2-digit",
     ...(seconds ? { second: "2-digit" } : {}), timeZoneName: "short",
   }).format(new Date(value));
 }

@@ -26,7 +26,7 @@ export function renderResult(cell, row, betting) {
   }
   if (row.next_check_at && ["pending", "interim"].includes(row.status)) {
     const format = value => new Date(value).toLocaleString("en-AU", {
-      timeZone: "Australia/Sydney", day: "numeric", month: "short",
+      day: "numeric", month: "short",
       hour: "numeric", minute: "2-digit", timeZoneName: "short",
     });
     const checks = (row.last_checked_at ? `Last automatic check: ${format(row.last_checked_at)}. ` : "") +

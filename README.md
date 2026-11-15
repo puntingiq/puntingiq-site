@@ -1,5 +1,16 @@
 # puntingiq-site
 
+## Live TrackIQ time display
+
+Live race start times, feed/export/price timestamps and automatic result retry
+times use the viewer's browser timezone, with its timezone abbreviation shown.
+Adelaide viewers see ACDT in summer and ACST in winter.
+
+Countdowns still compare absolute zoned race timestamps against the device clock;
+changing the displayed timezone does not change the time remaining. The device
+clock must be accurate. The canonical Sydney business date used for matching the
+daily publication is unchanged.
+
 ## TrackIQ HOT Jockey and HOT Trainer alerts
 
 Pro TrackIQ shows a dismissible alert when a jockey or trainer has two confirmed
