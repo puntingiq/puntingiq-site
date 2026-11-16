@@ -1,55 +1,16 @@
 race,runner,odds,result,tier,silk_url
-Donald R1,#8 Ted Percy,W12.00 / P3.10,10,,https://cdn.silks.racing.com/bb/149960.png
-Donald R2,#2 Royal Infantry,W5.50 / P2.70,5,,https://cdn.silks.racing.com/bb/177741.png
-Donald R3,#2 Ateyate,W11.00 / P3.20,5,,https://cdn.silks.racing.com/bb/114924.png
-Donald R4,#4 Mickio,W4.20 / P1.70,2,,https://cdn.silks.racing.com/bb/186265.png
-Donald R5,#10 Flare Of Grace,W2.50 / P1.22,4,,https://cdn.silks.racing.com/bb/204959.png
-Donald R6,#8 Fox Appeal,W31.00 / P7.00,6,,https://cdn.silks.racing.com/bb/187663.png
-Donald R7,#2 Alternate,W11.00 / P3.20,8,,https://cdn.silks.racing.com/bb/164888.png
-Donald R8,#3 Shalailed,W6.50 / P2.70,6,,https://cdn.silks.racing.com/bb/2092.png
-Geraldton R1,#3 Diver Dan,W2.40 / P1.24,WON,,https://cdn.silks.racing.com/bb/114287.png
-Geraldton R2,#11 Elite Enough,W6.00 / P2.05,12,,https://cdn.silks.racing.com/bb/114287.png
-Geraldton R3,#1 Andershine,W3.00 / P1.40,3,,https://cdn.silks.racing.com/bb/88470.png
-Geraldton R4,#9 Admire The Girl,W10.00 / P3.30,7,,https://cdn.silks.racing.com/bb/56653.png
-Geraldton R5,#7 Ihtsaking,W4.80 / P1.75,13,,https://cdn.silks.racing.com/bb/8768.png
-Geraldton R6,#4 In Situ,W1.65 / P1.14,WON,,https://cdn.silks.racing.com/bb/205127.png
-Geraldton R7,#7 Bolta,W5.00 / P1.90,WON,,https://cdn.silks.racing.com/bb/37935.png
-Geraldton R8,#2 Gypsy Rhyme,W2.25 / P1.28,WON,,https://cdn.silks.racing.com/bb/31578.png
-Hobart R1,#1 John Of Jane,W1.08 / P1.01,WON,Bronze,https://cdn.silks.racing.com/bb/86678.png
-Hobart R2,#7 Smith 'N' West,W5.25 / P1.95,,,https://cdn.silks.racing.com/bb/155737.png
-Hobart R3,#3 Night Invader,W2.25 / P1.40,WON,,https://cdn.silks.racing.com/bb/822.png
-Hobart R4,#3 Joejoe,W3.00 / P1.45,2,,https://cdn.silks.racing.com/bb/169793.png
-Hobart R5,#1 Kion's Kingdom,W3.70 / P1.65,WON,,https://cdn.silks.racing.com/bb/13768.png
-Hobart R6,#9 White Moon,W5.50 / P1.70,2,,https://cdn.silks.racing.com/bb/203399.png
-Hobart R7,#3 Street Diva,W6.00 / P2.00,6,,https://cdn.silks.racing.com/bb/203399.png
-Hobart R8,#4 Roxy Dancer,W6.50 / P2.15,2,,https://cdn.silks.racing.com/bb/203399.png
-Moe R1,#7 Chantess,W3.90 / P1.50,WON,,https://cdn.silks.racing.com/bb/75185.png
-Moe R2,#4 Boss Bundle,W19.00 / P4.20,8,,https://cdn.silks.racing.com/bb/178256.png
-Moe R3,#15 Hansard,W91.00 / P13.00,8,,https://cdn.silks.racing.com/bb/963.png
-Moe R4,#9 Hedjet,W1.75 / P1.10,5,,https://cdn.silks.racing.com/bb/208796.png
-Moe R5,#8 Siriusly Bright,W19.00 / P3.10,3,,https://cdn.silks.racing.com/bb/176820.png
-Moe R6,#5 Mckeyla,W5.50 / P1.70,WON,,https://cdn.silks.racing.com/bb/205516.png
-Moe R7,#8 Real Alliance,W5.50 / P1.95,6,,https://cdn.silks.racing.com/bb/87217.png
-Moe R9,#4 Mickidabeel,W3.50 / P1.40,WON,,https://cdn.silks.racing.com/bb/185154.png
-Strathalbyn R1,#5 Wild Is The Wind,W3.00 / P1.40,2,,https://cdn.silks.racing.com/bb/35641.png
-Strathalbyn R2,#2 Danny's Dilemma,W11.00 / P3.00,12,,https://cdn.silks.racing.com/bb/210014.png
-Strathalbyn R3,#3 Fast Food,W3.40 / P1.40,WON,,https://cdn.silks.racing.com/bb/178256.png
-Strathalbyn R4,#5 Bouzy's Babe,W51.00 / P9.50,10,,https://cdn.silks.racing.com/bb/168821.png
-Strathalbyn R5,#1 He's A Cool Cat,W3.60 / P1.55,7,,https://cdn.silks.racing.com/bb/8553.png
-Strathalbyn R6,#8 Sir Leapalot,W26.00 / P6.50,4,,https://cdn.silks.racing.com/bb/204751.png
-Strathalbyn R7,#2 Tan Tat Gold,W4.60 / P1.70,3,,https://cdn.silks.racing.com/bb/35641.png
-Wellington R1,#2 Spectacular Star,W4.50 / P2.10,WON,,https://cdn.silks.racing.com/bb/56569.png
-Wellington R2,#2 Mr Cacciatore,W1.30 / P1.09,WON,,https://cdn.silks.racing.com/bb/187759.png
-Wellington R3,#14 Long Live,W2.15 / P1.18,3,,https://cdn.silks.racing.com/bb/188943.png
-Wellington R4,#8 Blighty Boy,W3.00 / P1.30,4,,https://cdn.silks.racing.com/bb/896.png
-Wellington R5,#6 Penciller,W11.00 / P3.20,7,,https://cdn.silks.racing.com/bb/65219.png
-Wellington R6,#2 Divine Conclusion,W5.00 / P2.00,2,,https://cdn.silks.racing.com/bb/11876.png
-Wellington R7,#9 Quasimoto,W6.50 / P2.15,5,,https://cdn.silks.racing.com/bb/191854.png
-Wyong R1,#7 Astrogazer,W8.00 / P3.50,WON,,https://cdn.silks.racing.com/bb/150756.png
-Wyong R2,#10 I Love Prague,W3.10 / P1.35,WON,,https://cdn.silks.racing.com/bb/91256.png
-Wyong R3,#4 No No Yes,W7.50 / P3.40,3,,https://cdn.silks.racing.com/bb/38623.png
-Wyong R4,#1 Crossways,W2.60 / P1.55,5,,https://cdn.silks.racing.com/bb/91564.png
-Wyong R5,#1 Bremel,W5.50 / P2.35,6,,https://cdn.silks.racing.com/bb/8460.png
-Wyong R6,#7 Stunning Future,W3.90 / P1.90,WON,,https://cdn.silks.racing.com/bb/6713.png
-Wyong R7,#1 Jaguar Paw,W2.10 / P1.16,WON,,https://cdn.silks.racing.com/bb/129819.png
-Wyong R8,#7 Pyra,W23.00 / P3.70,5,,https://cdn.silks.racing.com/bb/176104.png
+Goulburn R2,#4 Autumn Sky,W2.50 / P1.50,4,,https://cdn.silks.racing.com/bb/9291.png
+Goulburn R3,#11 Lighthorseman,W3.50 / P1.25,2,,https://cdn.silks.racing.com/bb/172240.png
+Goulburn R4,#6 O'hellyeah,W3.30 / P1.50,WON,,https://cdn.silks.racing.com/bb/173244.png
+Goulburn R5,#3 Reinczech,W8.50 / P1.95,6,,https://cdn.silks.racing.com/bb/137360.png
+Goulburn R6,#11 Forsaken,W2.15 / P1.12,2,,https://cdn.silks.racing.com/bb/3332.png
+Goulburn R7,#2 Adaptation,W7.00 / P2.30,3,,https://cdn.silks.racing.com/bb/6713.png
+Goulburn R8,#6 Cosmic Eagle,W2.90 / P1.70,5,,https://cdn.silks.racing.com/bb/201738.png
+Sportsbet-Wangaratta R1,#9 Pray For Elegance,W2.10 / P1.18,2,,https://cdn.silks.racing.com/bb/207354.png
+Sportsbet-Wangaratta R2,#7 Kinky Mistress,W3.40 / P1.45,6,,https://cdn.silks.racing.com/bb/120180.png
+Sportsbet-Wangaratta R3,#15 Thankful Smile,W1.35 / P1.04,2,,https://cdn.silks.racing.com/bb/184967.png
+Sportsbet-Wangaratta R4,#7 Volestain,W2.50 / P1.22,3,,https://cdn.silks.racing.com/bb/145478.png
+Sportsbet-Wangaratta R5,#11 Snakeinthegrass,W17.00 / P4.60,3,,https://cdn.silks.racing.com/bb/192394.png
+Sportsbet-Wangaratta R6,#3 Cashemcowboy,W8.00 / P2.60,3,,https://cdn.silks.racing.com/bb/177741.png
+Sportsbet-Wangaratta R7,#11 Three Musketeers,W5.50 / P2.20,WON,,https://cdn.silks.racing.com/bb/192394.png
+Sportsbet-Wangaratta R8,#6 Hellberg,W8.50 / P2.80,2,,https://cdn.silks.racing.com/bb/197538.png
