@@ -84,6 +84,11 @@ export function createDashboard(daily, feed, now = Date.now()) {
     let key = `${race.venue_key}:${race.number}`;
     if (!savedKeys.has(key)) {
       const candidates = daily.races.filter(saved => matchesVenueField(saved, race));
+      if (!candidates.length && !daily.races.some(saved =>
+        saved.number === race.number && venueFamily(saved.venue_key) === venueFamily(race.venue_key))) {
+        console.warn(`Next Race: ignored live race not in today's TrackIQ export: ${race.venue} R${race.number}`);
+        continue;
+      }
       if (candidates.length !== 1) throw new Error("Today's TrackIQ export does not cover all live races. Please contact Support.");
       matched = { ...race, venue_key: candidates[0].venue_key };
       key = `${matched.venue_key}:${matched.number}`;

@@ -1,5 +1,12 @@
 # puntingiq-site
 
+## Next Race coverage
+
+Next Race displays live races matched to today's TrackIQ export. Live listings
+not in the export are skipped and logged in the browser console; a genuine race
+missing from the export will therefore not appear. Ambiguous venue matches,
+runner identity conflicts and stale data still stop the dashboard.
+
 ## Live TrackIQ time display
 
 Live race start times, feed/export/price timestamps and automatic result retry
