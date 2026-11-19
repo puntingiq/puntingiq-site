@@ -51,7 +51,8 @@ export function mergeRace(saved, live, now, maxQuoteAge = 900) {
 
 function venueFamily(key) {
   return ({ sandownhillside: "sandown", sandownlakeside: "sandown",
-    morphettvilleparks: "morphettville", parkkyneton: "kyneton" })[key] || key;
+    morphettvilleparks: "morphettville", parkkyneton: "kyneton",
+    parkgoldcoast: "goldcoast" })[key] || key;
 }
 
 function matchesVenueField(saved, live) {
