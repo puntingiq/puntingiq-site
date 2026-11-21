@@ -149,7 +149,8 @@ function renderHotAlerts(host, items, date, storage, kind) {
       `${item.wins} winners from ${item.settled_races} settled races \u00b7 ${formatNet(item.profit_units)}` :
       item.completed ?
         `${item.wins} wins, ${item.seconds} ${item.seconds === 1 ? "second" : "seconds"}, ${item.thirds} ${item.thirds === 1 ? "third" : "thirds"} out of ${item.final_races} assessed races` :
-        `${item.wins} winners, ${item.seconds} ${item.seconds === 1 ? "second" : "seconds"} from ${item.final_races} races`;
+        `${item.wins} winners, ${item.seconds} ${item.seconds === 1 ? "second" : "seconds"} from ${item.final_races} races` +
+        (item.interim_races ? ` \u00b7 ${item.interim_races} interim` : "");
     const basis = doc.createElement("small");
     basis.textContent = participant ?
       (item.provisional ?
@@ -158,7 +159,9 @@ function renderHotAlerts(host, items, date, storage, kind) {
       "Meeting form, not additional betting advice." :
       system ? "Published morning odds. Each system is assessed separately." :
       item.completed ? "Top-ranked TrackIQ runners. All races final; scratchings and abandoned races excluded." :
-        "Top-ranked TrackIQ runners in final races.";
+        item.interim_races ?
+          "Top-ranked TrackIQ runners. Reported interim finishes and estimated unplaced results count; totals update when confirmed." :
+          "Top-ranked TrackIQ runners in final races.";
     const close = doc.createElement("button");
     close.type = "button";
     close.setAttribute("aria-label", `Dismiss ${name} HOT ${label} alert for today`);
@@ -271,6 +274,8 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
         !Number.isInteger(track.wins) || track.wins < 2 ||
         !Number.isInteger(track.seconds) || track.seconds < 0 ||
         track.wins + track.seconds > track.final_races ||
+        (track.interim_races !== undefined && (!Number.isInteger(track.interim_races) ||
+          track.interim_races < 1 || track.interim_races > track.final_races || track.completed)) ||
         (track.completed !== undefined && track.completed !== true) ||
         (track.completed ? (!Number.isInteger(track.thirds) || track.thirds < 0 ||
           track.wins + track.seconds + track.thirds > track.final_races) :
