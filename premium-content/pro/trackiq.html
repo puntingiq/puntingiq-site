@@ -225,6 +225,9 @@
 </div>
 <script>
     (function () {
+        var contentObserver;
+        var observedContent;
+
         function resizeViewerFrame() {
             var frame = document.querySelector(".viewer-frame");
             if (!frame) {
@@ -237,13 +240,25 @@
                     return;
                 }
 
-                var height = Math.max(
+                var content = doc.querySelector(".wrap");
+                var height = content ? Math.ceil(content.getBoundingClientRect().height) : Math.max(
                     doc.body ? doc.body.scrollHeight : 0,
                     doc.documentElement ? doc.documentElement.scrollHeight : 0
                 );
 
                 if (height > 0) {
+                    frame.style.minHeight = "0";
                     frame.style.height = height + "px";
+                }
+                if (content && content !== observedContent && window.ResizeObserver) {
+                    if (contentObserver) {
+                        contentObserver.disconnect();
+                    }
+                    observedContent = content;
+                    contentObserver = new ResizeObserver(function () {
+                        window.requestAnimationFrame(resizeViewerFrame);
+                    });
+                    contentObserver.observe(content);
                 }
             } catch (error) {
                 // Same-origin viewer sizing can fail only if the source changes; keep the static fallback height.
