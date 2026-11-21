@@ -144,7 +144,7 @@ function renderHotAlerts(host, items, date, storage, kind) {
     const score = doc.createElement("p");
     score.style.cssText = "margin:0 0 8px;font-size:16px;font-weight:600;";
     score.textContent = participant ?
-      `${item.wins} winners from ${item.starts} confirmed ${kind === "jockey" ? "rides" : "starters"}` :
+      `${item.wins} winners from ${item.starts} confirmed ${kind === "jockey" ? "rides" : "starters"} \u00b7 ${(100 * item.wins / item.starts).toFixed(0)}% WIN` :
       system ?
       `${item.wins} winners from ${item.settled_races} settled races \u00b7 ${formatNet(item.profit_units)}` :
       item.completed ?
@@ -154,9 +154,9 @@ function renderHotAlerts(host, items, date, storage, kind) {
     const basis = doc.createElement("small");
     basis.textContent = participant ?
       (item.provisional ?
-        "Final results confirm the winners and starts. Jockey/trainer attribution uses an identity-verified racecard pending result-field confirmation; late changes may correct it. " :
+        "Final race results with identity-verified racecard attribution and provisional unplaced starts while full fields are pending; late changes may correct totals. " :
         "All runners, not just TrackIQ picks. Official names and confirmed starts in final results; full-field updates may arrive later. ") +
-      "Meeting form, not additional betting advice." :
+      "At least two winners and a 50% WIN strike rate at this meeting. Meeting form, not additional betting advice." :
       system ? "Published morning odds. Each system is assessed separately." :
       item.completed ? "Top-ranked TrackIQ runners. All races final; scratchings and abandoned races excluded." :
         item.interim_races ?
@@ -303,6 +303,7 @@ export function validateLiveResults(data, expectedDate, now = Date.now()) {
           typeof item.name !== "string" || !item.name.trim() ||
           !Number.isInteger(item.wins) || item.wins < 2 ||
           !Number.isInteger(item.starts) || item.starts < item.wins ||
+          item.wins * 2 < item.starts ||
           (item.provisional !== undefined && item.provisional !== true) ||
           identities.has(JSON.stringify([item.venue, item.name]))) {
         throw new Error("Invalid HOT participant identity or counts");
