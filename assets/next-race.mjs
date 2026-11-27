@@ -79,11 +79,13 @@ export function createDashboard(daily, feed, now = Date.now()) {
     throw new Error("Live race updates are delayed. Please refresh shortly.");
   }
   const liveMap = new Map();
+  const liveDirect = new Map();
   const savedKeys = new Set(daily.races.map(race => `${race.venue_key}:${race.number}`));
   for (const race of feed.races) {
     let matched = race;
     let key = `${race.venue_key}:${race.number}`;
-    if (!savedKeys.has(key)) {
+    const direct = savedKeys.has(key);
+    if (!direct) {
       const candidates = daily.races.filter(saved => matchesVenueField(saved, race));
       if (!candidates.length && !daily.races.some(saved =>
         saved.number === race.number && venueFamily(saved.venue_key) === venueFamily(race.venue_key))) {
@@ -94,8 +96,15 @@ export function createDashboard(daily, feed, now = Date.now()) {
       matched = { ...race, venue_key: candidates[0].venue_key };
       key = `${matched.venue_key}:${matched.number}`;
     }
-    if (liveMap.has(key)) throw new Error("Conflicting live races; the dashboard needs a data refresh.");
+    if (liveMap.has(key)) {
+      // The provider can list one race under both its plain and track-specific
+      // venue names; keep the listing whose key matches the export directly.
+      if (direct === liveDirect.get(key)) throw new Error("Conflicting live races; the dashboard needs a data refresh.");
+      console.warn(`Next Race: ignored duplicate live listing: ${race.venue} R${race.number}`);
+      if (!direct) continue;
+    }
     liveMap.set(key, matched);
+    liveDirect.set(key, direct);
   }
   const races = daily.races.filter(race => liveMap.has(`${race.venue_key}:${race.number}`))
     .map(race => mergeRace(race, liveMap.get(`${race.venue_key}:${race.number}`),
