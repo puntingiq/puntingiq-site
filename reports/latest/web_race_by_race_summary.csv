@@ -1,30 +1,62 @@
 race,runner,odds,result,conviction,silk_url
-Geraldton R1,#1 Talk Too Much,W1.80 / P1.12,WON,,https://cdn.silks.racing.com/bb/184742.png
-Geraldton R2,#9 Perfect Score,W1.95 / P1.08,WON,,https://cdn.silks.racing.com/bb/181913.png
-Geraldton R3,#1 Snippety Legend,W2.05 / P1.33,WON,,https://cdn.silks.racing.com/bb/195932.png
-Geraldton R4,#5 Diver Dan,W11.00 / P3.50,9,,https://cdn.silks.racing.com/bb/114287.png
-Geraldton R5,#9 Jewel Of Zavala,W5.50 / P2.10,2,,https://cdn.silks.racing.com/bb/74121.png
-Geraldton R6,#3 Gypsy Rhyme,W1.70 / P1.14,WON,,https://cdn.silks.racing.com/bb/31578.png
-Geraldton R7,#5 Lieutenant Dunbar,W3.70 / P1.65,WON,,https://cdn.silks.racing.com/bb/11518.png
-Geraldton R8,#1 Southland,W1.90 / P1.16,WON,,https://cdn.silks.racing.com/bb/6678.png
-Hawkesbury R1,#5 Stonecrest,W2.15 / P1.35,5,founders-pick,https://cdn.silks.racing.com/bb/202826.png
-Hawkesbury R2,#3 Hey Furston,W26.00 / P5.00,3,,https://cdn.silks.racing.com/bb/1761.png
-Hawkesbury R3,#1 Alabama Showdown,W5.00 / P1.67,4,,https://cdn.silks.racing.com/bb/112689.png
-Hawkesbury R4,#4 Perini Miss,W4.40 / P1.55,8,,https://cdn.silks.racing.com/bb/16041.png
-Hawkesbury R5,#9 Pearl Of Dubai,W4.60 / P1.70,2,founders-pick,https://cdn.silks.racing.com/bb/61233.png
-Hawkesbury R6,#14 Wootton Touch It,W6.25 / P2.25,WON,,https://cdn.silks.racing.com/bb/198840.png
-Hawkesbury R7,#6 Won'thearmecoming,W3.80 / P1.50,2,,https://cdn.silks.racing.com/bb/20523.png
-Mornington R1,#7 Cirque De Coco,W5.50 / P1.50,4,,https://cdn.silks.racing.com/bb/193289.png
-Mornington R2,#12 The Secret,W8.50 / P2.15,4,,https://cdn.silks.racing.com/bb/210957.png
-Mornington R3,#5 Slick Vixen,W71.00 / P10.00,7,,https://cdn.silks.racing.com/bb/60516.png
-Mornington R4,#10 Soaring Legend,W2.35 / P1.30,2,,https://cdn.silks.racing.com/bb/176866.png
-Mornington R5,#7 Ole Daze,W3.40 / P1.50,4,,https://cdn.silks.racing.com/bb/52.png
-Mornington R6,#10 Lotta City,W5.00 / P2.00,3,,https://cdn.silks.racing.com/bb/11016.png
-Mornington R7,#3 Ilovediamonds,W6.00 / P2.20,7,,https://cdn.silks.racing.com/bb/147290.png
-Mornington R8,#6 Goodness,W3.00 / P1.30,4,,https://cdn.silks.racing.com/bb/30380.png
-Rockhampton R1,#1 Gathers No Stone,W1.75 / P1.06,WON,,https://cdn.silks.racing.com/bb/169749.png
-Rockhampton R2,#1 Bold Blaze,W2.15 / P1.35,2,,https://cdn.silks.racing.com/bb/31216.png
-Rockhampton R3,#2 King's Duty,W2.05 / P1.35,WON,,https://cdn.silks.racing.com/bb/193054.png
-Rockhampton R4,#2 Metalcraft,W1.55 / P1.16,WON,,https://cdn.silks.racing.com/bb/150392.png
-Rockhampton R5,#5 La Narradora,W4.80 / P1.70,8,,https://cdn.silks.racing.com/bb/91853.png
-Rockhampton R6,#6 Elegant Venus,W26.00 / P4.60,3,,https://cdn.silks.racing.com/bb/133559.png
+Canterbury Park R1,#3 Auric Star,W26.00 / P5.00,6,,https://cdn.silks.racing.com/bb/176104.png
+Canterbury Park R2,#3 Sacred Vow,W5.75 / P1.70,5,,https://cdn.silks.racing.com/bb/167744.png
+Canterbury Park R3,#4 Darn Sure,W2.60 / P1.28,2,,https://cdn.silks.racing.com/bb/10.png
+Canterbury Park R4,#4 Threesome,W9.50 / P2.50,4,,https://cdn.silks.racing.com/bb/207104.png
+Canterbury Park R5,#4 Malbork Castle,W5.00 / P2.30,5,founders-pick,https://cdn.silks.racing.com/bb/156541.png
+Canterbury Park R6,#2 Il Passero,W3.60 / P1.65,9,,https://cdn.silks.racing.com/bb/40617.png
+Canterbury Park R7,#11 Celestial Charm,W3.50 / P1.55,3,,https://cdn.silks.racing.com/bb/57109.png
+Canterbury Park R8,#2 Komodo Dragon,W4.80 / P1.90,WON,,https://cdn.silks.racing.com/bb/202577.png
+Ladbrokes Cannon Park R1,#4 Roth Authority,W2.50 / P0.00,WON,,https://cdn.silks.racing.com/bb/210183.png
+Ladbrokes Cannon Park R2,#2 Ziggy Starcraft,W2.20 / P0.00,2,,https://cdn.silks.racing.com/bb/181316.png
+Ladbrokes Cannon Park R3,#1 Mr Strong,W1.04 / P0.00,2,,https://cdn.silks.racing.com/bb/128059.png
+Ladbrokes Cannon Park R4,#5 Catch A Break,W3.70 / P0.00,3,,https://cdn.silks.racing.com/bb/123518.png
+Ladbrokes Cannon Park R5,#1 Worthy Gem,W3.00 / P0.00,4,,https://cdn.silks.racing.com/bb/68771.png
+Ladbrokes Cannon Park R6,#2 Coppabella Road,W7.00 / P0.00,4,,https://cdn.silks.racing.com/bb/68771.png
+Ladbrokes Cannon Park R7,#1 Turn Bird,W3.10 / P0.00,WON,,https://cdn.silks.racing.com/bb/102736.png
+Mount Gambier R1,#9 Serilo,W3.10 / P1.37,WON,,https://cdn.silks.racing.com/bb/1430.png
+Mount Gambier R2,#9 Iskadeel,W8.00 / P2.40,10,,https://cdn.silks.racing.com/bb/198122.png
+Mount Gambier R3,#1 Van Roy,W4.40 / P2.10,5,,https://cdn.silks.racing.com/bb/67815.png
+Mount Gambier R4,#7 Chilli Reaper,W5.00 / P1.80,2,,https://cdn.silks.racing.com/bb/61195.png
+Mount Gambier R5,#2 Positive Image,W7.50 / P2.40,7,,https://cdn.silks.racing.com/bb/201856.png
+Mount Gambier R6,#3 Sotomayor,W3.40 / P1.45,3,,https://cdn.silks.racing.com/bb/115866.png
+Mount Gambier R7,#10 Steely Hustler,W3.90 / P1.75,4,,https://cdn.silks.racing.com/bb/1277.png
+Muswellbrook R1,#9 Vaguely Red,W2.40 / P1.20,3,,https://cdn.silks.racing.com/bb/899.png
+Muswellbrook R2,#4 Honest Doll,W19.00 / P4.00,2,,https://cdn.silks.racing.com/bb/93692.png
+Muswellbrook R3,#1 Cape Cod,W1.85 / P1.24,WON,,https://cdn.silks.racing.com/bb/899.png
+Muswellbrook R4,#2 Nearest,W2.00 / P1.25,WON,,https://cdn.silks.racing.com/bb/148765.png
+Muswellbrook R5,#1 Charm Destination,W10.00 / P3.00,3,,https://cdn.silks.racing.com/bb/198617.png
+Muswellbrook R6,#6 Prince De Vega,W6.00 / P1.73,3,,https://cdn.silks.racing.com/bb/91256.png
+Muswellbrook R7,#4 Planet Nero,W2.00 / P1.20,2,,https://cdn.silks.racing.com/bb/181291.png
+Muswellbrook R8,#1 Shihab,W6.00 / P1.95,6,,https://cdn.silks.racing.com/bb/12912.png
+Picklebet Park Wodonga R1,#6 Borata's Girl,W4.80 / P2.10,7,,https://cdn.silks.racing.com/bb/30415.png
+Picklebet Park Wodonga R2,#2 Doctorate,W126.00 / P21.00,8,,https://cdn.silks.racing.com/bb/181630.png
+Picklebet Park Wodonga R3,#2 Scorpion,W4.20 / P1.65,10,,https://cdn.silks.racing.com/bb/209708.png
+Picklebet Park Wodonga R4,#1 Just Call Me Jonny,W2.90 / P1.45,WON,,https://cdn.silks.racing.com/bb/196947.png
+Picklebet Park Wodonga R5,#8 Bottas,W3.80 / P1.62,3,,https://cdn.silks.racing.com/bb/208521.png
+Picklebet Park Wodonga R6,#5 Presser,W7.00 / P2.20,4,,https://cdn.silks.racing.com/bb/186080.png
+Picklebet Park Wodonga R7,#9 Hazardous,W2.40 / P1.35,6,,https://cdn.silks.racing.com/bb/187663.png
+Picklebet Park Wodonga R8,#1 Tanganyika,W4.80 / P1.90,3,,https://cdn.silks.racing.com/bb/104305.png
+Queanbeyan R1,#6 Ponzi Scheme,W6.00 / P2.05,11,,https://cdn.silks.racing.com/bb/143859.png
+Queanbeyan R2,#2 On The Fly,W1.80 / P1.14,WON,,https://cdn.silks.racing.com/bb/161345.png
+Queanbeyan R3,#4 In Circles,W3.80 / P1.60,2,,https://cdn.silks.racing.com/bb/3241.png
+Queanbeyan R4,#8 Pasifae,W4.00 / P1.45,2,,https://cdn.silks.racing.com/bb/168834.png
+Queanbeyan R5,#2 Behtar,W7.50 / P2.38,7,,https://cdn.silks.racing.com/bb/84211.png
+Queanbeyan R6,#7 Royal Memory,W6.00 / P1.95,6,founders-pick,https://cdn.silks.racing.com/bb/46801.png
+Queanbeyan R7,#4 Acheson,W5.00 / P1.95,3,,https://cdn.silks.racing.com/bb/8309.png
+Queanbeyan R8,#1 Action King,W10.00 / P2.40,WON,,https://cdn.silks.racing.com/bb/169892.png
+Southside Pakenham R1,#7 Majestic Son,W1.85 / P1.14,2,,https://cdn.silks.racing.com/bb/23669.png
+Southside Pakenham R2,#13 Amber Queen,W7.00 / P2.35,Scratched,,https://cdn.silks.racing.com/bb/186080.png
+Southside Pakenham R3,#11 Red Tide,W10.00 / P2.90,WON,,https://cdn.silks.racing.com/bb/207641.png
+Southside Pakenham R4,#6 Montesquieu,W2.50 / P1.30,WON,,https://cdn.silks.racing.com/bb/143859.png
+Southside Pakenham R5,#4 Alexander Thegreat,W6.50 / P3.00,Scratched,,https://cdn.silks.racing.com/bb/202225.png
+Southside Pakenham R6,#4 Surperb Frost,W11.00 / P3.40,8,,https://cdn.silks.racing.com/bb/192539.png
+Southside Pakenham R7,#8 Astiquer,W3.20 / P1.40,Scratched,,https://cdn.silks.racing.com/bb/198826.png
+Southside Pakenham R8,#10 Headbanger,W7.00 / P2.40,Scratched,,https://cdn.silks.racing.com/bb/29158.png
+Sunshine Coast R1,#5 Brilliant Disguise,W71.00 / P10.25,6,,https://cdn.silks.racing.com/bb/196673.png
+Sunshine Coast R2,#5 Zoubuca Shots,W3.80 / P1.50,7,,https://cdn.silks.racing.com/bb/210247.png
+Sunshine Coast R3,#1 Larusso,W4.80 / P1.85,8,,https://cdn.silks.racing.com/bb/194117.png
+Sunshine Coast R4,#15 Zoureka,W13.00 / P3.40,5,,https://cdn.silks.racing.com/bb/86701.png
+Sunshine Coast R5,#7 Talk About Layla,W3.10 / P1.28,2,,https://cdn.silks.racing.com/bb/143859.png
+Sunshine Coast R6,#5 Russian Escape,W7.00 / P2.40,9,,https://cdn.silks.racing.com/bb/199855.png
+Sunshine Coast R7,#1 Hard Knox,W5.75 / P2.10,8,,https://cdn.silks.racing.com/bb/199147.png
