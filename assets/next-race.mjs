@@ -1,3 +1,5 @@
+import { VENUE_FAMILIES } from "./venue-aliases.mjs";
+
 export function businessDate(now = Date.now()) {
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Australia/Sydney", year: "numeric", month: "2-digit", day: "2-digit",
@@ -50,10 +52,7 @@ export function mergeRace(saved, live, now, maxQuoteAge = 900) {
 }
 
 function venueFamily(key) {
-  return ({ sandownhillside: "sandown", sandownlakeside: "sandown",
-    morphettvilleparks: "morphettville", parkkyneton: "kyneton",
-    parkgoldcoast: "goldcoast", rosehillgardens: "rosehill",
-    waggariverside: "wagga", beaumontnewcastle: "newcastle" })[key] || key;
+  return VENUE_FAMILIES[key] || key;
 }
 
 function matchesVenueField(saved, live) {
